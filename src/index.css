@@ -1,0 +1,15 @@
+/* -------Tailwind------ */
+@import "tailwindcss";
+
+/* ----------Container-------- */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 0rem;
+}
+/* ----------Themes-------- */
+@theme{
+    --font-poppins: "Poppins", "sans-serif";
+    --font-soldier: "Big Shoulders", "sans-serif";
+    --color-Primary: #4B5563;
+    --color-second: #111827;
+}

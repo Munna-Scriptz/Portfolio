@@ -4,8 +4,6 @@ import { Link } from 'react-router'
 import { LuDot } from "react-icons/lu";
 // ---------Gsap Imports 
 import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { Draggable } from "gsap/Draggable";
 
 export const Navbar = () => {
 

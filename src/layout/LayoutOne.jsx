@@ -5,7 +5,7 @@ import { Navbar } from '../components/Navbar'
 
 export const LayoutOne = () => {
   return (
-    <div>
+    <div> 
         <Navbar/>
         <Outlet/>
     </div>

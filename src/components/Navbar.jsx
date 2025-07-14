@@ -41,13 +41,6 @@ export const Navbar = () => {
       scale: 1,
       ease: param.ease,
     });
-
-    gsap.to(textRef.current, {
-      duration: param.duration,
-      x: 0,
-      y: 0,
-      ease: param.ease,
-    });
   };
 
 //   ----------Button Move 
@@ -64,14 +57,14 @@ export const Navbar = () => {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    const offsetX = ((x - rect.width / 2) / rect.width) * 50;
-    const offsetY = ((y - rect.height / 2) / rect.height) * 50;
+    const offsetX = ((x - rect.width / 2) / rect.width) * 20;
+    const offsetY = ((y - rect.height / 2) / rect.height) * 20;
 
     gsap.to(btn, {
       duration: param2.duration,
       x: offsetX,
       y: offsetY,
-      scale: 1.1,
+      scale: 1,
       ease: param2.ease,
     });
   };
@@ -85,7 +78,7 @@ export const Navbar = () => {
       ease: param2.ease,
     });
   };
-  
+
   return (
     <>
         <nav className='py-5 overflow-hidden'>

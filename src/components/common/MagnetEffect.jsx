@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-import { gsap } from "gsap";
+import { gsap, Power2  } from "gsap";
 
 const MagnetEffect = () => {
 
@@ -8,7 +8,7 @@ const MagnetEffect = () => {
     
       const param2 = {
         duration: 0.3,
-        ease: 'Power2.easeOut',
+        ease: Power2.easeOut,
       };
     
       const handleHover = (e) => {
@@ -17,8 +17,8 @@ const MagnetEffect = () => {
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
     
-        const offsetX = ((x - rect.width / 2) / rect.width) * 20;
-        const offsetY = ((y - rect.height / 2) / rect.height) * 20;
+        const offsetX = ((x - rect.width / 2) / rect.width) * 60;
+        const offsetY = ((y - rect.height / 2) / rect.height) * 60;
     
         gsap.to(btn, {
           duration: param2.duration,

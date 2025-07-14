@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router';
+import { gsap } from "gsap";
 
 // -----Animation Npm 
 import { TypeAnimation } from 'react-type-animation';
@@ -17,7 +18,7 @@ const Banner = () => {
             <div className="container">
                 <div className="bannerText">
                     <p className='font-medium text-base tracking-[3px] text-[#212428]'>WELCOME TO MY PORTFOLIO</p>
-                    <h1 className='font-poppins text-Primary text-[64px] font-medium mt-2'>Hi, i'm <span className='text-[#BF4A1A]'>Munna</span></h1>
+                    <h1 className='font-poppins text-Primary text-[68px] font-medium mt-2'>Hi, i'm <span className='text-[#BF4A1A]'>Munna</span></h1>
                     {/* -----animated Text------- */}
                     <div>
                         <TypeAnimation
@@ -36,6 +37,7 @@ const Banner = () => {
                             repeat={Infinity}
                         />
                     </div>
+                    <p className='font-medium font-poppins text-sm text-[#2d2e30be] mt-4 w-[435px]'>Driven by passion and defined by precision, I craft impactful digital experiences with purpose, creativity, and a relentless focus on excellence.</p>
                     {/* -----Text Button-------ref={btnRef} className="magnetic-btn" onMouseMove={HandleContactHover} onMouseLeave={HandleContactLeave} */}
                     <div className='mt-6 flex items-center gap-3'>
                         <Link {...contactEffect} className='ContactButton font-poppins font-medium text-base text-Primary'>CONTACT</Link>

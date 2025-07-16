@@ -4,14 +4,10 @@ import { gsap } from "gsap";
 import PortfolioPic from "../assets/images/PortfolioShape.png"
 // -----Animation Npm 
 import { TypeAnimation } from 'react-type-animation';
-import MagnetAnimation from './common/MagnetEffect'
+import Magnet from './common/Magnet'
 
 
 const Banner = () => {
-
-    const contactEffect = MagnetAnimation();
-    const CvEffect = MagnetAnimation();
-    
   return (
     <>
        <section id="Banner" className='pt-22 h-screen'>
@@ -41,10 +37,14 @@ const Banner = () => {
                         <p className='font-medium font-poppins text-sm text-[#2d2e30be] mt-4 w-[435px]'>Driven by passion and defined by precision, I craft impactful digital experiences with purpose, creativity, and a relentless focus on excellence.</p>
                         {/* -----Text Button-------ref={btnRef} className="magnetic-btn" onMouseMove={HandleContactHover} onMouseLeave={HandleContactLeave} */}
                         <div className='mt-6 flex items-center gap-3'>
-                            <Link {...contactEffect} className='ContactButton font-poppins font-medium text-base text-Primary'>CONTACT</Link>
-                            <Link {...CvEffect} className='DownloadCv font-poppins font-medium text-base text-Primary'>
-                                <span>Download CV</span>
-                            </Link>
+                            <Magnet padding={30} disabled={false} magnetStrength={5}>
+                              <Link className='ContactButton font-poppins font-medium text-base text-Primary'>CONTACT</Link>
+                            </Magnet>
+                            <Magnet padding={30} disabled={false} magnetStrength={5}>
+                              <Link className='DownloadCv font-poppins font-medium text-base text-Primary'>
+                                  <span>Download CV</span>
+                              </Link>
+                            </Magnet>
                         </div>
                     </div>
                     <div id="bannerPhoto">

@@ -64,6 +64,7 @@ const Counter = () => {
             </div>
         </section>
     </div>
+    
   )
 }
 

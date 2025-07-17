@@ -8,6 +8,7 @@ import Magnet from './common/Magnet'
 
 
 const Banner = () => {
+  
   return (
     <>
        <section id="Banner" className='pt-22 h-screen'>

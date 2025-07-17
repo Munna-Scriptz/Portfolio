@@ -4,6 +4,7 @@ import Counter from '../components/Counter'
 import AboutMe from '../components/AboutMe'
 
 export const Home = () => {
+  
   return (
     <>
       <Banner/>

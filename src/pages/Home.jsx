@@ -2,6 +2,7 @@ import React from 'react'
 import Banner from '../components/Banner'
 import Counter from '../components/Counter'
 import AboutMe from '../components/AboutMe'
+import { Skills } from '../components/Skills'
 
 export const Home = () => {
   
@@ -13,9 +14,8 @@ export const Home = () => {
             <div className="sticky top-0 h-[1000px] py-[120px] bg-[#E4E2DB]">
               <AboutMe/>
             </div>
-            <div className="sticky top-0 h-[110vh] flex flex-col items-center justify-center bg-gradient-to-b from-indigo-800 to-purple-800 text-white">
-              <h2 className="text-4xl font-bold">The Second slide</h2>
-              <p className="mt-2">Scroll Down for next slide</p>
+            <div className="sticky top-0 h-[110vh] bg-blue-100">
+              <Skills/>
             </div>
             <div className="sticky top-0 h-[110vh] flex flex-col items-center justify-center bg-gradient-to-b from-purple-800 to-pink-800 text-white">
               <h2 className="text-4xl font-bold">The Third slide</h2>

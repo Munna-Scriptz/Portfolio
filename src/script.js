@@ -32,3 +32,15 @@ function smoothScroll() {
 
 
 // ----------Vertical Slider--------
+gsap.to( '.slider-track', {
+  scrollTrigger: {
+    trigger: '.slider-mask',
+    start: 'top right',
+    end: '+=300%',
+    pin: true,
+    scrub: true,
+    markers: true,
+  },
+  x: '-75%',
+  ease: 'sine.inOut',
+});

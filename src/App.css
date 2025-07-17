@@ -4,13 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* ---------Common Css--------- */
-html{
-  scroll-behavior: smooth;
-
-}
 body{
   background-color: #E5E3DC;
-
 }
 
 
@@ -200,19 +195,48 @@ body{
   transition: all ease 300ms;
 
 }
-.slide-progress {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  height: 4px;
-  background-color: rgb(221, 76, 76);
+/* --------Horizontal Scroll--------- */
+.spacer {
+  height: 100vh;
+  margin-block: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    #606dbc33,
+    #606dbc33 10px,
+    #606dbc00 10px,
+    #606dbc00 20px
+  );
 }
 
-.progress-thumb {
-  display: block;
+.h-50  { height: 50vh; }
+.h-75  { height: 75vh; }
+.h-100 { height: 100vh; }
+
+
+/* slider mask */
+.slider-mask {
+  border: 5px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* slider track */
+.slider-track {
   height: 100%;
-  background-color: rgb(25, 0, 255);
-  transform: scaleX(0);
-  transform-origin: left;
+  display: inline-flex;
+  border: 5px solid red;
+  border-radius: 5px;
+}
+
+/* slider item (screen) */
+.slider-track .screen {
+  width: calc(100vw - 30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid blue;
 }

@@ -6,6 +6,8 @@
 /* ---------Common Css--------- */
 body{
   background-color: #E5E3DC;
+    overscroll-behavior: none;
+
 }
 
 

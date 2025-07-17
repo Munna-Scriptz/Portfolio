@@ -5,7 +5,12 @@ import PortfolioPic from "../assets/images/PortfolioShape.png"
 // -----Animation Npm 
 import { TypeAnimation } from 'react-type-animation';
 import Magnet from './common/Magnet'
-
+// ---------Icons 
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const Banner = () => {
   
@@ -36,15 +41,34 @@ const Banner = () => {
                             />
                         </div>
                         <p className='font-medium font-poppins text-sm text-[#2d2e30be] mt-4 w-[435px]'>Driven by passion and defined by precision, I craft impactful digital experiences with purpose, creativity, and a relentless focus on excellence.</p>
-                        {/* -----Text Button-------ref={btnRef} className="magnetic-btn" onMouseMove={HandleContactHover} onMouseLeave={HandleContactLeave} */}
+                        {/* -----Text Button------- */}
                         <div className='mt-6 flex items-center gap-3'>
-                            <Magnet padding={30} disabled={false} magnetStrength={5}>
+                            <Magnet padding={10} disabled={false} magnetStrength={5}>
                               <Link className='ContactButton font-poppins font-medium text-base text-Primary'>CONTACT</Link>
                             </Magnet>
-                            <Magnet padding={30} disabled={false} magnetStrength={5}>
+                            <Magnet padding={10} disabled={false} magnetStrength={5}>
                               <Link className='DownloadCv font-poppins font-medium text-base text-Primary'>
                                   <span>Download CV</span>
                               </Link>
+                            </Magnet>
+                        </div>
+                        {/* -----Social Media Button------- */}
+                        
+                        <div className='mt-10 flex items-center gap-7'>
+                            <Magnet padding={20} disabled={false} magnetStrength={2}>
+                              <Link><FaFacebookF className='text-[18px]'/></Link>
+                            </Magnet>
+                            <Magnet padding={20} disabled={false} magnetStrength={2}>
+                              <Link><FaInstagram className='text-[18px]'/></Link>
+                            </Magnet>
+                            <Magnet padding={20} disabled={false} magnetStrength={2}>
+                              <Link><FaXTwitter className='text-[18px]'/></Link>
+                            </Magnet>
+                            <Magnet padding={20} disabled={false} magnetStrength={2}>
+                              <Link><FaGithub className='text-[18px]'/></Link>
+                            </Magnet>
+                            <Magnet padding={20} disabled={false} magnetStrength={2}>
+                              <Link><FaLinkedinIn className='text-[18px]'/></Link>
                             </Magnet>
                         </div>
                     </div>

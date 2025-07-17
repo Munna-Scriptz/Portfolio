@@ -200,3 +200,19 @@ body{
   transition: all ease 300ms;
 
 }
+.slide-progress {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  height: 4px;
+  background-color: rgb(221, 76, 76);
+}
+
+.progress-thumb {
+  display: block;
+  height: 100%;
+  background-color: rgb(25, 0, 255);
+  transform: scaleX(0);
+  transform-origin: left;
+}

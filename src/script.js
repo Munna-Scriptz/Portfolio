@@ -31,4 +31,4 @@ function smoothScroll() {
 }
 
 
-// ----------Box Width--------
+// ----------Vertical Slider--------

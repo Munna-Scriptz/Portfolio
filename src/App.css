@@ -195,10 +195,10 @@ body{
   transition: all ease 300ms;
 
 }
-/* --------Horizontal Scroll--------- */
+/* --------Loader--------- */
 :root {
-  --white-color: #fff;
-  --black-color: #171010;
+  --white-color: #E5E3DC;
+  --black-color: #161616;
 }
 /*loader style*/
 .loader { position: fixed; top: 0; left: 0; width: 100vw; height: 100%; z-index: 9999; }
@@ -215,3 +215,50 @@ body{
 
 .dark-theme .dark-arrow, .dark-theme.light-theme .light-arrow { display: none; }
 .dark-theme.light-theme .dark-arrow { display: block; }
+.loader-text h3{
+  font-family: "Big Shoulders", "sans-serif";
+  font-weight: 600;
+}
+
+/* -------Animated Cursor ---------- */
+
+
+.hover-this {
+  transition: all 0.3s ease;
+}
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  padding: 1.2rem;
+  background-color: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.644);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  transform:translate(-50%, -50%);
+  
+}
+
+.hover-this:hover ~ .cursor {
+  mix-blend-mode: difference;
+  transform:translate(-50%, -50%) scale(8);
+}
+
+@media(min-width: 900px) {
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media(max-width: 900px) {
+  nav {
+    top: 30%;
+  }
+  
+  .hover-this {
+    width: 100%;
+    padding: 20px 0;
+    display: inline-block;
+  }
+}

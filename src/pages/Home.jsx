@@ -6,6 +6,7 @@ import { Skills } from '../components/Skills'
 import Footer from '../components/Footer'
 import Projects from '../components/Projects'
 import { LetsWorkTogether } from '../components/LetsWorkTogether'
+import { AllProjects } from '../components/AllProjects'
 
 export const Home = () => {
   
@@ -27,7 +28,8 @@ export const Home = () => {
             <div className="sticky top-0 h-[300px] bg-[#E4E2DB]">
               <Footer/>
             </div>
-        </div>
+      </div>
+      <AllProjects/>
     </>
   )
 }

@@ -127,3 +127,5 @@ function smoothScroll() {
       window.addEventListener('mousemove', editCursor);
 
 })();
+
+

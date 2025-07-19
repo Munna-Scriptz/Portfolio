@@ -40,7 +40,7 @@ const Banner = () => {
                                 repeat={Infinity}
                             />
                         </div>
-                        <p className='font-medium font-poppins text-sm text-[#2d2e30be] mt-4 w-[435px]'>Driven by passion and defined by precision, I craft impactful digital experiences with purpose, creativity, and a relentless focus on excellence.</p>
+                        <p className='font-medium font-poppins text-sm text-[#2d2e30be] mt-4 w-[435px] hover-this'>Driven by passion and defined by precision, I craft impactful digital experiences with purpose, creativity, and a relentless focus on excellence.</p>
                         {/* -----Text Button------- */}
                         <div className='mt-6 flex items-center gap-3'>
                             <Magnet padding={10} disabled={false} magnetStrength={5}>

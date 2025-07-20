@@ -83,21 +83,21 @@ export const Navbar = () => {
             <div className="container">
                 <div id='NavRow' className='flex items-center justify-between'>
                     {/* ----Logo---- */}
-                    <Link to={'/'} className='w-[60px]' ref={LogoMove} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+                    <Link to={'/'} className='w-[60px] hover-this' ref={LogoMove} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
                         <img src={Logo} alt="Logo" className='circle'  ref={InnerMove}/>
                     </Link>
                     {/* ----NavLinks---- */}
                     <div>
                         <ul className='font-soldier flex items-center gap-3 text-2xl text-Primary'>
-                            <li><Link to={'/'} className='flex items-center NavLinks'>HOME<LuDot/></Link></li>
-                            <li><Link to={'/'} className='flex items-center NavLinks'>ABOUT<LuDot/></Link></li>
-                            <li><Link to={'/'} className='flex items-center NavLinks'>PROJECTS<LuDot/></Link></li>
-                            <li><Link to={'/'} className='flex items-center NavLinks'>CONTACT<LuDot/></Link></li>
+                            <li><Link to={'/'} className='flex items-center NavLinks hover-this'>HOME<LuDot/></Link></li>
+                            <li><Link to={'/'} className='flex items-center NavLinks hover-this'>ABOUT<LuDot/></Link></li>
+                            <li><Link to={'/'} className='flex items-center NavLinks hover-this'>PROJECTS<LuDot/></Link></li>
+                            <li><Link to={'/'} className='flex items-center NavLinks hover-this'>CONTACT<LuDot/></Link></li>
                         </ul>
                     </div>
                     {/* ----Button---- */}
                     <div ref={btnRef} className="magnetic-btn" onMouseMove={HandleContactHover} onMouseLeave={HandleContactLeave}>
-                        <Link className='ContactButton font-poppins font-medium text-base text-Primary'>CONTACT</Link>
+                        <Link className='ContactButton font-poppins font-medium text-base text-Primary hover-this'>CONTACT</Link>
                     </div>
                 </div>
             </div>

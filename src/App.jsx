@@ -4,8 +4,11 @@ import { createBrowserRouter, createRoutesFromElements, Route } from 'react-rout
 import { LayoutOne } from './layout/LayoutOne'
 import { Home } from './pages/Home'
 import { RouterProvider } from 'react-router'
+import Loader from './components/Loader'
+import Cursor from './components/Cursor'
 
 export const App = () => {
+  
 
   const MyRoute = createBrowserRouter(createRoutesFromElements(
     <Route>
@@ -19,6 +22,8 @@ export const App = () => {
   return (
 
     <>
+    <Cursor/>
+    <Loader/>
       <RouterProvider router={MyRoute}></RouterProvider>
     </>
   )

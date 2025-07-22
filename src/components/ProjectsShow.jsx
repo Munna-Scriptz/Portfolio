@@ -12,6 +12,26 @@ import { Link } from 'react-router';
 
 
 const ProjectsShow = () => {
+
+    const MyProjects = [
+
+        {
+            'ProjectName' : 'nexton e - commerce',
+            'Description' : 'Nexton is a sleek and modern e-commerce platform designed to offer a smooth shopping experience with dynamic product listings, variant selection, and responsive design. Built with React and crafted for performance and style',
+            'technologies' : [ReactIcon , TailwindCss , JsIcon ,FigmaIcon , HtmlIcon , CssIcon]
+        },
+        {
+            'ProjectName' : 'nexton e - commerce',
+            'Description' : 'Nexton is a sleek and modern e-commerce platform designed to offer a smooth shopping experience with dynamic product listings, variant selection, and responsive design. Built with React and crafted for performance and style',
+            'technologies' : [ReactIcon , TailwindCss , JsIcon ,FigmaIcon , HtmlIcon , CssIcon]
+        },
+        {
+            'ProjectName' : 'nexton e - commerce',
+            'Description' : 'Nexton is a sleek and modern e-commerce platform designed to offer a smooth shopping experience with dynamic product listings, variant selection, and responsive design. Built with React and crafted for performance and style',
+            'technologies' : [ReactIcon , TailwindCss , JsIcon ,FigmaIcon , HtmlIcon , CssIcon]
+        },
+    ]
+    console.log(MyProjects)
   return (
 
     <>
@@ -21,7 +41,7 @@ const ProjectsShow = () => {
             </div>
             {/* -------Project Details  */}
             <div className='w-[650px]'>
-                <h2 className='font-soldier text-[44px] text-Primary font-medium mb-4'>NEXTON E-COMMERCE</h2>
+                <h2 className='font-soldier text-[44px] text-Primary font-medium mb-4 uppercase'>NEXTON E-COMMERCE</h2>
                 <h2 className='font-poppins text-[19px] text-Primary font-normal mb-6'>Nexton is a sleek and modern e-commerce platform designed to offer a smooth shopping experience with dynamic product listings, variant selection, and responsive design. Built with React and crafted for performance and style</h2>
                 
                 <div className='flex items-center gap-4'>

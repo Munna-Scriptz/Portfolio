@@ -126,8 +126,8 @@ body{
   text-decoration: none;
   color: #fff;
   display: inline-block;
-  font-family: sans-serif;
-  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   border: 1px solid #4f4f4f;
   overflow: hidden;
   position: relative;

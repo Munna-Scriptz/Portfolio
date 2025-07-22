@@ -7,6 +7,8 @@ import TailwindCss from '../assets/images/TailwindCssIcon.svg'
 import JsIcon from '../assets/images/JsIcon.jpg'
 import HtmlIcon from '../assets/images/HtmlIcon.svg'
 import CssIcon from '../assets/images/CssIcon.svg'
+import Magnet from './common/Magnet'
+import { Link } from 'react-router';
 
 
 const ProjectsShow = () => {
@@ -20,7 +22,7 @@ const ProjectsShow = () => {
             {/* -------Project Details  */}
             <div className='w-[650px]'>
                 <h2 className='font-soldier text-[44px] text-Primary font-medium mb-4'>NEXTON E-COMMERCE</h2>
-                <h2 className='font-poppins text-[19px] text-Primary font-normal mb-7'>Nexton is a sleek and modern e-commerce platform designed to offer a smooth shopping experience with dynamic product listings, variant selection, and responsive design. Built with React and crafted for performance and style</h2>
+                <h2 className='font-poppins text-[19px] text-Primary font-normal mb-6'>Nexton is a sleek and modern e-commerce platform designed to offer a smooth shopping experience with dynamic product listings, variant selection, and responsive design. Built with React and crafted for performance and style</h2>
                 
                 <div className='flex items-center gap-4'>
                     <p className='font-poppins text-[19px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
@@ -32,6 +34,16 @@ const ProjectsShow = () => {
                         <img src={HtmlIcon} alt="Icon" />
                         <img src={CssIcon} alt="Icon" />
                     </div>
+                </div>
+                <div className='mt-7 flex items-center gap-4'>
+                    <Magnet padding={30} disabled={false} magnetStrength={5}>
+                        <Link className='ContactButton font-poppins font-medium text-base text-Primary'>VIEW FULL PROJECT</Link>
+                    </Magnet>
+                    <Magnet padding={10} disabled={false} magnetStrength={5}>
+                         <Link className='DownloadCv font-poppins font-medium text-base text-Primary'>
+                             <span>GITHUB REPO</span>
+                        </Link>
+                    </Magnet>
                 </div>
             </div>
         </div>

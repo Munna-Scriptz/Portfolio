@@ -16,9 +16,16 @@ const ProjectsShow = () => {
     const MyProjects = [
 
         {
+            'ProjectImage' : ProjectImg1,
             'ProjectName' : 'nexton e - commerce',
             'Description' : 'Nexton is a sleek and modern e-commerce platform designed to offer a smooth shopping experience with dynamic product listings, variant selection, and responsive design. Built with React and crafted for performance and style',
             'technologies' : [ReactIcon , TailwindCss , JsIcon ,FigmaIcon , HtmlIcon , CssIcon]
+        },
+        {
+            'ProjectName' : 'nexton e - commerce',
+            'Description' : 'Nexton is a sleek and modern e-commerce platform designed to offer a smooth shopping experience with dynamic product listings, variant selection, and responsive design. Built with React and crafted for performance and style',
+            'technologies' : [ReactIcon , TailwindCss , JsIcon ,FigmaIcon , HtmlIcon , CssIcon],
+            'Direction': 'flex-row-reverse'
         },
         {
             'ProjectName' : 'nexton e - commerce',
@@ -28,43 +35,52 @@ const ProjectsShow = () => {
         {
             'ProjectName' : 'nexton e - commerce',
             'Description' : 'Nexton is a sleek and modern e-commerce platform designed to offer a smooth shopping experience with dynamic product listings, variant selection, and responsive design. Built with React and crafted for performance and style',
-            'technologies' : [ReactIcon , TailwindCss , JsIcon ,FigmaIcon , HtmlIcon , CssIcon]
-        },
+            'technologies' : [ReactIcon , TailwindCss , JsIcon ,FigmaIcon , HtmlIcon , CssIcon],
+            'Direction': 'flex-row-reverse'
+        }
     ]
     console.log(MyProjects)
   return (
 
     <>
-        <div className='flex items-center gap-25 px-10'>
-            <div className='w-[640px]'>
-                <img className='rounded-xl' src={ProjectImg1} alt="Project Image" />
-            </div>
+        <div>
             {/* -------Project Details  */}
-            <div className='w-[650px]'>
-                <h2 className='font-soldier text-[44px] text-Primary font-medium mb-4 uppercase'>NEXTON E-COMMERCE</h2>
-                <h2 className='font-poppins text-[19px] text-Primary font-normal mb-6'>Nexton is a sleek and modern e-commerce platform designed to offer a smooth shopping experience with dynamic product listings, variant selection, and responsive design. Built with React and crafted for performance and style</h2>
-                
-                <div className='flex items-center gap-4'>
-                    <p className='font-poppins text-[19px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
-                    <div className='w-[30px] flex items-center gap-2'>
-                        <img src={ReactIcon} alt="Icon" />
-                        <img src={TailwindCss} alt="Icon" />
-                        <img src={JsIcon} alt="Icon" />
-                        <img src={FigmaIcon} alt="Icon" />
-                        <img src={HtmlIcon} alt="Icon" />
-                        <img src={CssIcon} alt="Icon" />
-                    </div>
-                </div>
-                <div className='mt-7 flex items-center gap-4'>
-                    <Magnet padding={30} disabled={false} magnetStrength={5}>
-                        <Link className='ContactButton font-poppins font-medium text-base text-Primary'>VIEW FULL PROJECT</Link>
-                    </Magnet>
-                    <Magnet padding={10} disabled={false} magnetStrength={5}>
-                         <Link className='DownloadCv font-poppins font-medium text-base text-Primary'>
-                             <span>GITHUB REPO</span>
-                        </Link>
-                    </Magnet>
-                </div>
+            <div className='flex flex-col gap-20 px-12'>
+                {
+                    MyProjects.map((items)=>(
+                        <div className={`flex items-center ${items.Direction} gap-20`}>
+                            <div className='w-[640px]'>
+                                <img className='rounded-xl' src={ProjectImg1} alt="Project Image" />
+                            </div>
+                            <div className='w-[650px]'>
+                                <h2 className='font-soldier text-[44px] text-Primary font-medium mb-4 uppercase'>NEXTON E-COMMERCE</h2>
+                                <h2 className='font-poppins text-[19px] text-Primary font-normal mb-6'>Nexton is a sleek and modern e-commerce platform designed to offer a smooth shopping experience with dynamic product listings, variant selection, and responsive design. Built with React and crafted for performance and style</h2>
+                                
+                                <div className='flex items-center gap-4'>
+                                    <p className='font-poppins text-[19px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
+                                    <div className='w-[30px] flex items-center gap-2'>
+                                        <img src={ReactIcon} alt="Icon" />
+                                        <img src={TailwindCss} alt="Icon" />
+                                        <img src={JsIcon} alt="Icon" />
+                                        <img src={FigmaIcon} alt="Icon" />
+                                        <img src={HtmlIcon} alt="Icon" />
+                                        <img src={CssIcon} alt="Icon" />
+                                    </div>
+                                </div>
+                                <div className='mt-7 flex items-center gap-4'>
+                                    <Magnet padding={30} disabled={false} magnetStrength={5}>
+                                        <Link className='ContactButton font-poppins font-medium text-base text-Primary'>VIEW FULL PROJECT</Link>
+                                    </Magnet>
+                                    <Magnet padding={10} disabled={false} magnetStrength={5}>
+                                        <Link className='DownloadCv font-poppins font-medium text-base text-Primary'>
+                                            <span>GITHUB REPO</span>
+                                        </Link>
+                                    </Magnet>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
             </div>
         </div>
     </>

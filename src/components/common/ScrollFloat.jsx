@@ -73,7 +73,7 @@ const ScrollFloat = ({
   ]);
 
   return (
-    <h2
+    <div
       ref={containerRef}
       className={`overflow-hidden ${containerClassName}`}
     >
@@ -82,7 +82,7 @@ const ScrollFloat = ({
       >
         {splitText}
       </span>
-    </h2>
+    </div>
   );
 };
 

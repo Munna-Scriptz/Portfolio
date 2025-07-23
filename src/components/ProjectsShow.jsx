@@ -17,6 +17,7 @@ import Bootstrap from '../assets/images/BootStrapIcon.svg'
 // -----other Import 
 import Magnet from './common/Magnet'
 import { Link } from 'react-router';
+import BlurText from './common/BlurText'
 
 
 const ProjectsShow = () => {
@@ -63,8 +64,8 @@ const ProjectsShow = () => {
                                 <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
                             </div>
                             <div className='w-[650px]'>
-                                <h2 className='font-soldier text-[44px] text-Primary font-medium mb-4 uppercase'>{items.ProjectName}</h2>
-                                <h2 className='font-poppins text-[19px] text-Primary font-normal mb-6'>{items.Description}</h2>
+                                <h2 className='font-soldier text-[44px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={150} animateBy="words" direction="bottom"/></h2>
+                                <h2 className='font-poppins text-[19px] text-Primary font-normal mb-6'><BlurText text={items.Description} delay={150} animateBy="words" direction="top"/></h2>
                                 
                                 <div className='flex items-center gap-4'>
                                     <p className='font-poppins text-[19px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>

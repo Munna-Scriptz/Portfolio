@@ -16,6 +16,7 @@ import HtmlIcon from '../assets/images/HtmlIcon.svg'
 import FigmaIcon from '../assets/images/FigmaIcon.svg'
 import VsCodeIcon from '../assets/images/VsCodeICon.svg'
 import GithubIcon from '../assets/images/GithubIcon.svg'
+import ScrollFloat from './common/ScrollFloat';
 
 
 
@@ -28,8 +29,8 @@ export const Skills = () => {
         <section className='pt-20'>
             <div className="container">
                 <div className="header">
-                    <p className='flex items-center justify-center font-poppins text-Primary font-medium text-2xl'>MY SKILLS</p>
-                    <h2 className='flex items-center justify-center font-soldier text-Primary font-medium text-4xl tracking-[5px] mt-5'>TECHNOLOGIES & EXPERTISE</h2>
+                    <div className='flex items-center justify-center font-poppins text-Primary font-medium text-2xl'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=50%' scrollEnd='bottom bottom-=40%' stagger={0.03}>MY SKILLS</ScrollFloat></div>
+                    <div className='flex items-center justify-center font-soldier text-Primary font-medium text-4xl tracking-[5px] mt-5'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=30%' scrollEnd='bottom bottom-=60%' stagger={0.03}>TECHNOLOGIES & EXPERTISE</ScrollFloat></div>
                 </div>
                 {/* -----Skill Show Case------ */}
                 <div id='SkillItems' className='mt-20'>

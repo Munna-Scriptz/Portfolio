@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 // ---------Project images 
 import ProjectImg1 from '../assets/images/Project1.jpg'
 import ProjectImg2 from '../assets/images/Project2.png'
@@ -18,10 +18,18 @@ import Bootstrap from '../assets/images/BootStrapIcon.svg'
 import Magnet from './common/Magnet'
 import { Link } from 'react-router';
 import BlurText from './common/BlurText'
-
+// --------Aos 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ProjectsShow = () => {
-
+    // --------Aos Fun 
+        useEffect(() => {
+        AOS.init({
+          duration: 800,
+        });
+    }, []);
+    // --------Project Array 
     const MyProjects = [
 
         {
@@ -60,7 +68,7 @@ const ProjectsShow = () => {
                 {
                     MyProjects.map((items, i)=>(
                         <div key={i} className={`flex items-center ${items.Direction} gap-20`}>
-                            <div className='w-[640px]'>
+                            <div className='w-[640px]' data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                 <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
                             </div>
                             <div className='w-[650px]'>

@@ -76,7 +76,7 @@ export const Navbar = () => {
       ease: param2.ease,
     });
   };
-
+  
   return (
     <>
         <nav className='py-5 overflow-hidden'>

@@ -221,17 +221,3 @@ body{
 }
 
 /* -------Animated Cursor ---------- */
-.cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: white;
-  pointer-events: none;
-  transform: translate(-50%, -50%) scale(1);
-  mix-blend-mode: difference;
-  z-index: 9999;
-  transition: background-color 0.3s ease;
-}

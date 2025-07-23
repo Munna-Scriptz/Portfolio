@@ -6,7 +6,6 @@ import { Skills } from '../components/Skills'
 import Footer from '../components/Footer'
 import Projects from '../components/Projects'
 import { LetsWorkTogether } from '../components/LetsWorkTogether'
-import { AllProjects } from '../components/AllProjects'
 
 export const Home = () => {
   
@@ -29,7 +28,6 @@ export const Home = () => {
               <Footer/>
             </div>
       </div>
-      <AllProjects/>
     </>
   )
 }

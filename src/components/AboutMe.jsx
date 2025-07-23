@@ -30,7 +30,7 @@ const AboutMe = () => {
                             </div>
                         </div>
                         <Magnet padding={30} disabled={false} magnetStrength={5}>
-                              <Link className='ContactButton font-poppins font-medium text-base text-Primary'>MORE ABOUT ME</Link>
+                              <Link className='ContactButton font-poppins font-medium text-base text-Primary hover-this'>MORE ABOUT ME</Link>
                         </Magnet>
                     </div>
                 </div>

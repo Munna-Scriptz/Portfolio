@@ -7,6 +7,7 @@ const Cursor = () => {
   useEffect(() => {
     const cursor = cursorRef.current
     const hoverEls = document.querySelectorAll('.hover-this')
+    const brownEls = document.querySelectorAll('.hover-brown')
 
     const moveCursor = (e) => {
       gsap.to(cursor, {
@@ -36,12 +37,34 @@ const Cursor = () => {
         background: 'transparent'
       })
     }
+    const handleBrownEnter = () => {
+    gsap.to(cursor, {
+      duration: 0.3,
+      scale: 1.5,
+      ease: 'power3.out',
+      borderColor: '#BF4A1A',
+      background: 'transparent'
+    })
+  }
+
+  const handleBrownLeave = () => {
+    gsap.to(cursor, {
+      duration: 0.3,
+      scale: 1,
+      ease: 'power3.out',
+      borderColor: '#adadace3',
+      background: 'transparent'
+    })
+  }
 
     hoverEls.forEach(el => {
       el.addEventListener('mouseenter', handleMouseEnter)
       el.addEventListener('mouseleave', handleMouseLeave)
     })
-
+      brownEls.forEach(el => {
+    el.addEventListener('mouseenter', handleBrownEnter)
+    el.addEventListener('mouseleave', handleBrownLeave)
+  })
     window.addEventListener('mousemove', moveCursor)
 
     return () => {
@@ -49,6 +72,11 @@ const Cursor = () => {
         el.removeEventListener('mouseenter', handleMouseEnter)
         el.removeEventListener('mouseleave', handleMouseLeave)
       })
+       brownEls.forEach(el => {
+      el.removeEventListener('mouseenter', handleBrownEnter)
+      el.removeEventListener('mouseleave', handleBrownLeave)
+    })
+
       window.removeEventListener('mousemove', moveCursor)
     }
   }, [])

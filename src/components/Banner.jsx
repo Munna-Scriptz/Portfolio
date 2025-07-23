@@ -40,14 +40,14 @@ const Banner = () => {
                                 repeat={Infinity}
                             />
                         </div>
-                        <p className='font-medium font-poppins text-sm text-[#2d2e30be] mt-4 w-[435px] hover-this'>Driven by passion and defined by precision, I craft impactful digital experiences with purpose, creativity, and a relentless focus on excellence.</p>
+                        <p className='font-medium font-poppins text-sm text-[#2d2e30be] mt-4 w-[435px]'>Driven by passion and defined by precision, I craft impactful digital experiences with purpose, creativity, and a relentless focus on excellence.</p>
                         {/* -----Text Button------- */}
                         <div className='mt-6 flex items-center gap-3'>
                             <Magnet padding={10} disabled={false} magnetStrength={5}>
-                              <Link className='ContactButton font-poppins font-medium text-base text-Primary'>CONTACT</Link>
+                              <Link className='ContactButton font-poppins font-medium text-base text-Primary hover-this'>CONTACT</Link>
                             </Magnet>
                             <Magnet padding={10} disabled={false} magnetStrength={5}>
-                              <Link className='DownloadCv font-poppins font-medium text-base text-Primary'>
+                              <Link className='DownloadCv font-poppins font-medium text-base text-Primary hover-this'>
                                   <span>Download CV</span>
                               </Link>
                             </Magnet>
@@ -56,19 +56,19 @@ const Banner = () => {
                         
                         <div className='mt-10 flex items-center gap-7'>
                             <Magnet padding={20} disabled={false} magnetStrength={2}>
-                              <Link><FaFacebookF className='text-[18px]'/></Link>
+                              <Link><FaFacebookF className='text-[18px] hover-brown'/></Link>
                             </Magnet>
                             <Magnet padding={20} disabled={false} magnetStrength={2}>
-                              <Link><FaInstagram className='text-[18px]'/></Link>
+                              <Link><FaInstagram className='text-[18px] hover-brown'/></Link>
                             </Magnet>
                             <Magnet padding={20} disabled={false} magnetStrength={2}>
-                              <Link><FaXTwitter className='text-[18px]'/></Link>
+                              <Link><FaXTwitter className='text-[18px] hover-brown'/></Link>
                             </Magnet>
                             <Magnet padding={20} disabled={false} magnetStrength={2}>
-                              <Link><FaGithub className='text-[18px]'/></Link>
+                              <Link><FaGithub className='text-[18px] hover-brown'/></Link>
                             </Magnet>
                             <Magnet padding={20} disabled={false} magnetStrength={2}>
-                              <Link><FaLinkedinIn className='text-[18px]'/></Link>
+                              <Link><FaLinkedinIn className='text-[18px] hover-brown'/></Link>
                             </Magnet>
                         </div>
                     </div>

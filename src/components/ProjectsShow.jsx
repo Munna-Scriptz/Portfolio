@@ -78,10 +78,10 @@ const ProjectsShow = () => {
                                 </div>
                                 <div className='mt-7 flex items-center gap-4'>
                                     <Magnet padding={30} disabled={false} magnetStrength={5}>
-                                        <Link className='ContactButton font-poppins font-medium text-base text-Primary'>VIEW ALL PROJECT</Link>
+                                        <Link className='ContactButton font-poppins font-medium text-base text-Primary hover-this'>VIEW ALL PROJECT</Link>
                                     </Magnet>
                                     <Magnet padding={10} disabled={false} magnetStrength={5}>
-                                        <Link className='DownloadCv font-poppins font-medium text-base text-Primary'>
+                                        <Link className='DownloadCv font-poppins font-medium text-base text-Primary hover-brown'>
                                             <span>GITHUB REPO</span>
                                         </Link>
                                     </Magnet>

@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router';
-import { gsap } from "gsap";
 import PortfolioPic from "../assets/images/PortfolioShape.png"
 // -----Animation Npm 
 import { TypeAnimation } from 'react-type-animation';
@@ -12,16 +11,27 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import BlurText from './common/BlurText';
+// --------Aos 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Banner = () => {
-  
+
+    useEffect(() => {
+        AOS.init({
+          duration: 3000,
+        });
+    }, []);
+
   return (
     <>
        <section id="Banner" className='pt-22 h-screen'>
             <div className="container">
                 <div className='flex justify-between'>
-                    <div className="bannerText">
-                        <p className='font-medium text-base tracking-[3px] text-[#212428]'>WELCOME TO MY PORTFOLIO</p>
+                    <div className="bannerText" >
+                        <p data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" className='font-medium text-base tracking-[3px] text-[#212428]'>WELCOME TO MY PORTFOLIO</p>
                         <h1 className='font-poppins text-Primary text-[68px] font-medium mt-2'>Hi, i'm <span className='text-[#BF4A1A]'>Munna</span></h1>
                         {/* -----animated Text------- */}
                         <div>
@@ -41,7 +51,7 @@ const Banner = () => {
                                 repeat={Infinity}
                             />
                         </div>
-                        <p className='font-medium font-poppins text-sm text-[#2d2e30be] mt-4 w-[435px]'><BlurText text="Driven by passion and defined by precision, I craft impactful digital experiences with purpose, creativity, and a relentless focus on excellence." delay={350} animateBy="words" direction="top"/></p>
+                        <div className='font-medium font-poppins text-sm text-[#2d2e30be] mt-4 w-[435px]'><BlurText text="Driven by passion and defined by precision, I craft impactful digital experiences with purpose, creativity, and a relentless focus on excellence." delay={350} animateBy="words" direction="top"/></div>
                         {/* -----Text Button------- */}
                         <div className='mt-6 flex items-center gap-3'>
                             <Magnet padding={10} disabled={false} magnetStrength={5}>

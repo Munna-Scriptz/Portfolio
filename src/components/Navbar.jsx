@@ -79,7 +79,7 @@ export const Navbar = () => {
   
   return (
     <>
-        <nav className='py-5 overflow-hidden'>
+        <nav className='py-5 hidden lg:block'>
             <div className="container">
                 <div id='NavRow' className='flex items-center justify-between'>
                     {/* ----Logo---- */}

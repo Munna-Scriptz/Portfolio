@@ -220,4 +220,26 @@ body{
   font-weight: 600;
 }
 
-/* -------Animated Cursor ---------- */
+/* -------Responsive ---------- */
+@media  (min-width: 320px) and (max-width: 576px) { 
+  .loader{
+    display: none;
+  }
+  .revealer, .loader-text-wrapper, .progress-wrapper{
+    display: none;
+  }
+  .progress-line-wrapper{
+    display: none;
+  }
+  .loader-text{
+    display: none;
+  }
+}
+
+/* @media (max-width: 767.98px) { ... }
+
+@media (max-width: 991.98px) { ... }
+
+@media (max-width: 1199.98px) { ... }
+
+@media (max-width: 1399.98px) { ... } */

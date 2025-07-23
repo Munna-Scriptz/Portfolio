@@ -29,9 +29,7 @@ const Banner = () => {
             <div className="container">
                 <div className='flex justify-between'>
                     <div className="bannerText" >
-                        <p data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine" className='font-medium text-base tracking-[3px] text-[#212428]'>WELCOME TO MY PORTFOLIO</p>
+                        <p data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" className='font-medium text-base tracking-[3px] text-[#212428]'>WELCOME TO MY PORTFOLIO</p>
                         <h1 className='font-poppins text-Primary text-[68px] font-medium mt-2'>Hi, i'm <span className='text-[#BF4A1A]'>Munna</span></h1>
                         {/* -----animated Text------- */}
                         <div>

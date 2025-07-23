@@ -66,7 +66,7 @@ const Loader = () => {
 // ---------Animated Cursor --------
   return (
     <>
-            {/* <!-- ------Loader------- --> */}
+    {/* <!-- ------Loader------- --> */}
     <div className="loader">
       <div className="revealer"></div>
     <div className="loader-text-wrapper">

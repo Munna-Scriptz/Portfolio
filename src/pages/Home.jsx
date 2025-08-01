@@ -15,7 +15,7 @@ export const Home = () => {
       <Counter/>
       <LetsWorkTogether/>
       <div className="relative">
-            <div className="sticky top-0 h-[1000px] lg:py-[120px] py-[50px] bg-[#E4E2DB]">
+            <div className="sticky top-0 h-[1200px] lg:py-[120px] py-[20px] bg-[#E4E2DB]">
               <AboutMe/>
             </div>
             <div className="sticky top-0 h-[900px] bg-[#E4E2DB] border-t border-Primary">

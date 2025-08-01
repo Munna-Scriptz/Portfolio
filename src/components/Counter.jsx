@@ -30,9 +30,9 @@ const Counter = () => {
 
 
   return (
-    <div className='flex justify-center items-center'>
+    <div id='Counter' className='flex justify-center items-center lg:mt-0 mt-[140px]'>
         <section className='bg-[#212121] py-[25px] px-[30px] w-[50%] rounded-[10px] mb-20' ref={expandRef}>
-            <div id="counterDiv" className='flex items-center justify-around'>
+            <div id="counterDiv" className='flex lg:flex-row lg:gap-0 gap-7 flex-col  lg:items-center justify-around'>
                 <div className='flex items-center gap-5'>
                     <div><TfiFiles className='text-2xl text-brand'/></div>
                     <div>

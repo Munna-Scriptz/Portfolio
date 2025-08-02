@@ -21,8 +21,11 @@ export const Home = () => {
             <div className="sticky top-0 h-[900px] bg-[#E4E2DB] border-t border-Primary">
               <Skills/>
             </div>
-            <div className="sticky top-0 h-[2500px] bg-[#E4E2DB] py-[70px] border-t border-Primary">
+            <div className="sticky top-0 h-[2900px] bg-[#E4E2DB] py-[70px] border-t border-Primary">
               <Projects/>
+            </div>
+            <div className="sticky top-0 h-[750px] bg-[#E4E2DB] border-t border-Primary">
+              <Skills/>
             </div>
             <div className="sticky top-0 h-[300px] bg-[#E4E2DB]">
               <Footer/>

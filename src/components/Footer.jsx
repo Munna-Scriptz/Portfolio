@@ -13,9 +13,9 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-        <footer className='py-[50px] border-[#21212157] border-t-2'>
+        <footer className='py-[50px] border-[#21212157] border-t-2 lg:pb-0 pb-20'>
             <div className="container">
-                <div id="Footer_Row" className='flex items-center justify-between'>
+                <div id="Footer_Row" className='flex lg:flex-row flex-col lg:items-center justify-between lg:gap-0 gap-10'>
                     <div id="Row_1">
                         <Magnet padding={20} disabled={false} magnetStrength={2}>
                             <Link to={'/'}><img src={FooterLogo} alt="Logo" className='w-[150px]'/></Link>

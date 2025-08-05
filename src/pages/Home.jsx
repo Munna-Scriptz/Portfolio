@@ -6,6 +6,7 @@ import { Skills } from '../components/Skills'
 import Footer from '../components/Footer'
 import Projects from '../components/Projects'
 import { LetsWorkTogether } from '../components/LetsWorkTogether'
+import Contact from '../components/Contact'
 
 export const Home = () => {
   
@@ -18,14 +19,14 @@ export const Home = () => {
             <div className="lg:sticky top-0 lg:h-[1200px] lg:py-[120px] py-[110px] bg-[#E4E2DB]">
               <AboutMe/>
             </div>
-            <div className="lg:sticky top-0 h-[900px] bg-[#E4E2DB] border-t border-Primary">
+            <div className="lg:sticky top-0 h-[900px] bg-[#E4E2DB] lg:border-t border-Primary">
               <Skills/>
             </div>
             <div className="lg:sticky top-0 h-[2900px] bg-[#E4E2DB] py-[70px] border-t border-Primary">
               <Projects/>
             </div>
             <div className="lg:sticky top-0 h-[750px] bg-[#E4E2DB] border-t border-Primary">
-              <Skills/>
+              <Contact/>
             </div>
             <div className="lg:sticky top-0 h-[300px] bg-[#E4E2DB]">
               <Footer/>

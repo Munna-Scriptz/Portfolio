@@ -12,7 +12,7 @@ import CompleteICon from '../assets/images/ReviewCompleteICon.png'
 const Counter = () => {
 
     const expandRef = useRef(null);
-    const speed = 5;
+    const speed = 8;
 
   useEffect(() => {
     const handleScroll = () => {

@@ -22,13 +22,13 @@ export const Home = () => {
             <div className="lg:sticky top-0 h-[900px] bg-[#E4E2DB] lg:border-t border-Primary">
               <Skills/>
             </div>
-            <div className="lg:sticky top-0 lg:h-[3200px] h-[1850px] bg-[#E4E2DB] py-[70px] border-t border-Primary">
+            <div className="lg:sticky top-0 lg:h-[4000px] h-[1850px] bg-[#E4E2DB] py-[70px] border-t border-Primary">
               <Projects/>
             </div>
-            <div className="lg:sticky top-0 h-[1350px] bg-[#E4E2DB] border-t border-Primary">
+            <div className="lg:sticky top-0 h-[1600px] bg-[#E4E2DB] border-t border-Primary">
               <Contact/>
             </div>
-            <div className="lg:sticky top-0 h-[300px] bg-[#E4E2DB]">
+            <div className="lg:sticky top-0 h-[400px] bg-[#E4E2DB]">
               <Footer/>
             </div>
       </div>

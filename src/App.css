@@ -15,7 +15,15 @@ body{
   background-position: center;
   background-image: url(/src/assets/images/CounterBg.svg);
 }
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #BF4A1A;
+}
 
+::selection {
+  color: white;
+  background: #BF4A1A;
+}
 
 
 /* ---------Navbar Start--------- */

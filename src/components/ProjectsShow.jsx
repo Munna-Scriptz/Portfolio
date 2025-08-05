@@ -36,27 +36,29 @@ const ProjectsShow = () => {
             'ProjectImage' : ProjectImg1,
             'ProjectName' : 'nexton e - commerce',
             'Description' : 'Nexton is a sleek and modern e-commerce platform designed to offer a smooth shopping experience with dynamic product listings, variant selection, and responsive design. Built with React and crafted for performance and style',
-            'technologies' : [ReactIcon , TailwindCss , JsIcon ,FigmaIcon , HtmlIcon , CssIcon]
+            'technologies' : [ReactIcon , TailwindCss , JsIcon ,FigmaIcon , HtmlIcon , CssIcon],
+            'Direction': 'lg:flex-row'
         },
         {
             'ProjectImage' : ProjectImg2,
             'ProjectName' : 'future scooter',
             'Description' : 'A modern and vibrant landing page for an E-Scooter brand, highlighting features, community engagement, and sleek UI design. Built for performance and visual appeal, perfect for urban mobility startups',
             'technologies' : [JsIcon ,FigmaIcon ,Bootstrap, HtmlIcon , CssIcon],
-            'Direction': 'flex-row-reverse'
+            'Direction': 'lg:flex-row-reverse'
         },
         {
             'ProjectImage' : ProjectImg3,
             'ProjectName' : 'Nescafe foods',
             'Description' : 'A stylish and modern restaurant landing page for Nescafe-themed food services. Showcases menus, deals, and cozy vibes with a clean UI, perfect for cafes and food brands',
-            'technologies' : [JsIcon ,FigmaIcon, Bootstrap , HtmlIcon , CssIcon]
+            'technologies' : [JsIcon ,FigmaIcon, Bootstrap , HtmlIcon , CssIcon],
+            'Direction': 'lg:flex-row'
         },
         {
             'ProjectImage' : ProjectImg4,
             'ProjectName' : 'furniture landing page',
             'Description' : 'NexA minimal and elegant single-page website for a furniture brand, highlighting premium products with smooth UI, large visuals, and a modern layout designed for conversion',
             'technologies' : [JsIcon ,FigmaIcon ,Bootstrap, HtmlIcon , CssIcon],
-            'Direction': 'flex-row-reverse'
+            'Direction': 'lg:flex-row-reverse'
         }
     ]
   return (
@@ -64,20 +66,20 @@ const ProjectsShow = () => {
     <>
         <div>
             {/* -------Project Details  */}
-            <div className='flex flex-col gap-20 px-12'>
+            <div className='flex flex-col gap-20 lg:px-12 px-[24px]'>
                 {
                     MyProjects.map((items, i)=>(
-                        <div key={i} className={`flex items-center ${items.Direction} gap-20`}>
-                            <div className='w-[640px]' data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <div key={i} className={`flex items-center ${items.Direction} flex-col lg:gap-20 gap-5`}>
+                            <div className='lg:w-[640px] w-full' data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                 <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
                             </div>
-                            <div className='w-[650px]'>
-                                <h2 className='font-soldier text-[44px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={150} animateBy="words" direction="bottom"/></h2>
-                                <h2 className='font-poppins text-[19px] text-Primary font-normal mb-6'><BlurText text={items.Description} delay={150} animateBy="words" direction="top"/></h2>
+                            <div className='lg:w-[650px] w-full'>
+                                <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={150} animateBy="words" direction="bottom"/></h2>
+                                <h2 className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-6'><BlurText text={items.Description} delay={150} animateBy="words" direction="top"/></h2>
                                 
                                 <div className='flex items-center gap-4'>
-                                    <p className='font-poppins text-[19px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
-                                    <div className='w-[30px] flex items-center gap-2'>
+                                    <p className='font-poppins lg:text-[19px] text-[17px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
+                                    <div className='lg:w-[30px] w-[22px] flex items-center gap-2'>
                                         {
                                             items.technologies.map((img , i)=>(
                                                 <img src={img} key={i}/>
@@ -85,12 +87,12 @@ const ProjectsShow = () => {
                                         }
                                     </div>
                                 </div>
-                                <div className='mt-7 flex items-center gap-4'>
+                                <div className='mt-7 flex items-center lg:gap-4 gap-2'>
                                     <Magnet padding={30} disabled={false} magnetStrength={5}>
-                                        <Link className='ContactButton font-poppins font-medium text-base text-Primary hover-this'>VIEW ALL PROJECT</Link>
+                                        <Link className='ContactButton font-poppins font-medium lg:text-base text-sm text-Primary hover-this'>VIEW ALL PROJECT</Link>
                                     </Magnet>
                                     <Magnet padding={10} disabled={false} magnetStrength={5}>
-                                        <Link className='DownloadCv font-poppins font-medium text-base text-Primary hover-brown'>
+                                        <Link className='DownloadCv font-poppins font-medium lg:text-base text-sm text-Primary hover-brown'>
                                             <span>GITHUB REPO</span>
                                         </Link>
                                     </Magnet>

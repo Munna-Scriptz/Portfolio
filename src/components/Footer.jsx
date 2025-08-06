@@ -13,7 +13,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-        <footer className='py-[50px] border-[#21212157] border-t-2 lg:pb-0 pb-20'>
+        <footer className='pt-[50px] border-[#21212157] border-t-2 lg:pb-[50px] pb-20'>
             <div className="container">
                 <div id="Footer_Row" className='flex lg:flex-row flex-col lg:items-center justify-between lg:gap-0 gap-10'>
                     <div id="Row_1">

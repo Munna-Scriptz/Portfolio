@@ -14,24 +14,20 @@ export const Home = () => {
     <>
       <Banner/>
       <Counter/>
-      <LetsWorkTogether/>
       <div className="relative">
-            <div className="lg:sticky top-0 lg:h-[1200px] lg:py-[120px] py-[110px] bg-[#E4E2DB]">
-              <AboutMe/>
-            </div>
-            <div className="lg:sticky top-0 h-[900px] bg-[#E4E2DB] lg:border-t border-Primary">
-              <Skills/>
-            </div>
-            <div className="lg:sticky top-0 lg:h-[4000px] h-[1850px] bg-[#E4E2DB] py-[70px] border-t border-Primary">
-              <Projects/>
-            </div>
-            <div className="lg:sticky top-0 h-[1600px] bg-[#E4E2DB] border-t border-Primary">
-              <Contact/>
-            </div>
-            <div className="lg:sticky top-0 h-[400px] bg-[#E4E2DB]">
-              <Footer/>
-            </div>
+          <div className="lg:sticky top-0 lg:h-auto lg:py-[120px bg-[#E4E2DB]">
+            <LetsWorkTogether/>
+          </div>
+          <div className="lg:sticky top-0 lg:h-[1200px] lg:py-[120px] lg:border-t border-[#1616167e] mt-[100px] py-[110px] bg-[#E4E2DB]">
+            <AboutMe/>
+          </div>
+          <div className="lg:sticky top-0 h-[900px] bg-[#E4E2DB] lg:border-t border-Primary">
+            <Skills/>
+          </div>
       </div>
+      <Projects/>
+      <Contact/>
+      <Footer/>
     </>
   )
 }

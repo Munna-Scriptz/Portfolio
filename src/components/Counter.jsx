@@ -1,9 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import CountUp from 'react-countup';
-import { TfiFiles } from "react-icons/tfi";
-import { TfiCommentsSmiley } from "react-icons/tfi";
-import { GrGroup } from "react-icons/gr";
-import { RiCheckboxMultipleLine } from "react-icons/ri";
 import ProjectsIcon from '../assets/images/CounterProjectIcon.png'
 import TeamICon from '../assets/images/CounterTeamIcon.png'
 import ReviewIcon from '../assets/images/CounterReviewIcon.png'

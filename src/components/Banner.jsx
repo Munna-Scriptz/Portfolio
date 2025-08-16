@@ -11,18 +11,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import BlurText from './common/BlurText';
-// --------Aos 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
 const Banner = () => {
-
-    useEffect(() => {
-        AOS.init({
-          duration: 1000,
-        });
-    }, []);
-
   return (
     <>
        <section id="Banner" className='pt-8 lg:pt-22 h-screen'>

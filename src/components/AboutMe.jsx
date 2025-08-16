@@ -19,8 +19,8 @@ const AboutMe = () => {
             <div className="container overflow-x-hidden">
                 <div className="AboutMe flex lg:flex-row flex-col justify-between">
                     <div className="aboutMeText">
-                        <h2 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" className='lg:text-[58px] text-[28px] font-soldier text-Primary font-medium lg:mb-5 mb-2'>ABOUT ME</h2>
-                        <p className='lg:text-[68px] text-[40px] font-soldier lg:leading-[72px] text-Primary font-medium lg:w-[370px] w-full'>Creating Stuff That <span data-aos="fade-left" className='text-coffee'>Does More </span>Than Impress</p>
+                        <h2 data-aos="fade-right" className='lg:text-[58px] text-[28px] font-soldier text-Primary font-medium lg:mb-5 mb-2'>ABOUT ME</h2>
+                        <p data-aos="fade-right" className='lg:text-[68px] text-[40px] font-soldier lg:leading-[72px] text-Primary font-medium lg:w-[370px] w-full'>Creating Stuff That <span data-aos="fade-left" className='text-coffee'>Does More </span>Than Impress</p>
                         <div className='lg:text-[18px] text-[15px] font-poppins text-second font-normal lg:mt-10 lg:mb-0 mb-5 mt-5 lg:w-[370px] w-full'><BlurText text="Creative designer based in Melbourne" delay={250} animateBy="words" direction="top"/></div>
                     </div>
                     <div>

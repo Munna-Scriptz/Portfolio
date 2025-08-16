@@ -3,7 +3,6 @@ import Banner from '../components/Banner'
 import Counter from '../components/Counter'
 import AboutMe from '../components/AboutMe'
 import { Skills } from '../components/Skills'
-import Footer from '../components/Footer'
 import Projects from '../components/Projects'
 import { LetsWorkTogether } from '../components/LetsWorkTogether'
 import Contact from '../components/Contact'
@@ -27,7 +26,6 @@ export const Home = () => {
       </div>
       <Projects/>
       <Contact/>
-      <Footer/>
     </>
   )
 }

@@ -17,37 +17,37 @@ const Footer = () => {
             <div className="container">
                 <div id="Footer_Row" className='flex lg:flex-row flex-col lg:items-center justify-between lg:gap-0 gap-10'>
                     <div id="Row_1">
-                        <Magnet padding={20} disabled={false} magnetStrength={2}>
+                        <Magnet data-aos="fade-up" padding={20} disabled={false} magnetStrength={2}>
                             <Link to={'/'}><img src={FooterLogo} alt="Logo" className='w-[150px]'/></Link>
                         </Magnet>
-                        <p className='text-sm text-second font-poppins font-light w-[130px] mt-6'>©2025 By Munna. All rights reserved.</p>
+                        <p data-aos="fade-up" className='text-sm text-second font-poppins font-light w-[130px] mt-6'>©2025 By Munna. All rights reserved.</p>
                     </div>
                     <div id="Row_2">
-                        <h2 className='font-soldier text-6xl text-Primary mb-6'>LINKS</h2>
+                        <h2 data-aos="fade-up" className='font-soldier text-6xl text-Primary mb-6'>LINKS</h2>
                         <ul id='FooterLinks' className='flex flex-col gap-4 text-[#3f3f3f] font-poppins text-sm'>
-                            <li><Link to={'/'}>SUPPORT</Link></li>
-                            <li><Link to={'/'}>LICENSES</Link></li>
-                            <li><Link to={'/'}>TERMS OF USE</Link></li>
-                            <li><Link to={'/'}>PRIVACY POLICY</Link></li>
+                            <li data-aos="fade-up"><Link to={'/'}>SUPPORT</Link></li>
+                            <li data-aos="fade-up"><Link to={'/'}>LICENSES</Link></li>
+                            <li data-aos="fade-up"><Link to={'/'}>TERMS OF USE</Link></li>
+                            <li data-aos="fade-up"><Link to={'/'}>PRIVACY POLICY</Link></li>
                         </ul>
                     </div>
                     <div id="Row_3">
-                        <h2 className='font-soldier text-6xl text-Primary mb-6'>ABOUT ME</h2>
+                        <h2 data-aos="fade-up" className='font-soldier text-6xl text-Primary mb-6'>ABOUT ME</h2>
                         <ul id='FooterLinks' className='flex flex-col gap-4 text-[#3f3f3f] font-poppins text-sm'>
-                            <li><Link to={'/'}>ABOUT ME</Link></li>
-                            <li><Link to={'/'}>MY WORK</Link></li>
-                            <li><Link to={'/'}>DOWNLOAD CV</Link></li>
-                            <li><Link to={'/'}>CONTACT</Link></li>
+                            <li data-aos="fade-up"><Link to={'/'}>ABOUT ME</Link></li>
+                            <li data-aos="fade-up"><Link to={'/'}>MY WORK</Link></li>
+                            <li data-aos="fade-up"><Link to={'/'}>DOWNLOAD CV</Link></li>
+                            <li data-aos="fade-up"><Link to={'/'}>CONTACT</Link></li>
                         </ul>
                     </div>
                     <div id="Row_4">
-                        <h2 className='font-soldier text-6xl text-Primary mb-6'>CONTACT</h2>
+                        <h2 data-aos="fade-up" className='font-soldier text-6xl text-Primary mb-4'>CONTACT</h2>
                         <ul id='FooterLinks' className='flex flex-col gap-4 text-[#3f3f3f] font-poppins font-medium'>
-                            <li><Link to={'/'}>DHAKA, BANGLADESH</Link></li>
-                            <li><Link to={'/'}>munnascriptz@gmail.com</Link></li>
-                            <li><Link to={'/'}>+8801908905391</Link></li>
+                            <li data-aos="fade-up"><Link to={'/'}>DHAKA, BANGLADESH</Link></li>
+                            <li data-aos="fade-up"><Link to={'/'}>munnascriptz@gmail.com</Link></li>
+                            <li data-aos="fade-up"><Link to={'/'}>+8801908905391</Link></li>
 
-                            <div className='mt-3 flex items-center gap-7'>
+                            <div data-aos="fade-up" className='mt-3 flex items-center gap-7'>
                             <Magnet padding={20} disabled={false} magnetStrength={2}>
                               <Link><FaFacebookF className='text-[18px] hover-brown'/></Link>
                             </Magnet>

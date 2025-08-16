@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css'
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router'
 import { LayoutOne } from './layout/LayoutOne'
 import { Home } from './pages/Home'
 import { RouterProvider } from 'react-router'
 import Loader from './components/Loader'
-import Cursor from './components/Cursor'
+
 
 export const App = () => {
   // --------Smooth Scroll------------
@@ -41,6 +41,16 @@ function smoothScroll() {
   window.scrollTo(0, currentScroll);
 }
 
+// ------------------PreLoader 
+const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3400); // 2 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+// ---------------Routing 
   const MyRoute = createBrowserRouter(createRoutesFromElements(
     <Route>
       <Route path='/' element={<LayoutOne/>}>
@@ -51,11 +61,17 @@ function smoothScroll() {
 
 
   return (
-
     <>
-    <Cursor/>
-    <Loader/>
-      <RouterProvider router={MyRoute}></RouterProvider>
+    {
+      loading? (
+        <Loader/>
+      )
+      :
+      (
+        <RouterProvider router={MyRoute}></RouterProvider>
+      )
+      
+    }
     </>
   )
 }

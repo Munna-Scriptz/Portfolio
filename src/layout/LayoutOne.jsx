@@ -4,6 +4,7 @@ import { Home } from '../pages/Home'
 import { Navbar } from '../components/Navbar'
 import { ResNavbar } from '../components/ResNavbar'
 import Footer from '../components/Footer'
+import Cursor from '../components/Cursor'
 // --------Aos Imp 
 import Aos from 'aos'
 import "aos/dist/aos.css";
@@ -23,6 +24,7 @@ export const LayoutOne = () => {
   }, [location]);
   return (
     <> 
+    <Cursor/>
       <Navbar/>
       <ResNavbar/>
       <Outlet/>

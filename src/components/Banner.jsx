@@ -14,7 +14,7 @@ import BlurText from './common/BlurText';
 const Banner = () => {
   return (
     <>
-       <section id="Banner" className='pt-8 lg:pt-22 h-screen'>
+       <section id="Banner" className='pt-8 lg:pt-22 h-screen overflow-hidden'>
             <div className="container">
                 <div className='flex justify-between flex-col gap-10 lg:gap-0 lg:flex-row'>
                     <div className="bannerText" >

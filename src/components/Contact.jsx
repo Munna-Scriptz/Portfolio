@@ -53,7 +53,7 @@ const Contact = () => {
                 <textarea name="TextArea" cols={40} rows={5} maxLength={2000} className='w-full pt-3 md:pt-[15px] text-base md:text-[24px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='Hello, How can u help me with...'></textarea>
               </div>
               <div data-aos="fade-up">
-                <button className='bg-coffee text-white font-medium font-poppins py-3 md:py-[12px] px-7 md:px-[28px] rounded-full cursor-pointer border-3 border-white outline-4 outline-coffee duration-300 hover:scale-[1.05] hover:bg-Primary hover:outline-Primary hover:outline-6'>Send Message</button>
+                <button className='bg-coffee text-white font-medium font-poppins py-2 md:py-[12px] px-7 md:px-[28px] rounded-full cursor-pointer border-3 border-white outline-4 outline-coffee duration-300 hover:scale-[1.05] hover:bg-Primary hover:outline-Primary hover:outline-6'>Send Message</button>
               </div>
             </div>
             {/* -----------Right Side-------------- */}

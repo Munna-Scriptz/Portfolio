@@ -31,7 +31,7 @@ export const Skills = () => {
             <div className="container">
                 <div className="header">
                     <div className='flex items-center justify-center font-poppins text-Primary font-medium lg:text-2xl text-lg'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=50%' scrollEnd='bottom bottom-=40%' stagger={0.03}>MY SKILLS</ScrollFloat></div>
-                    <div className='flex items-center justify-center font-soldier text-Primary font-medium lg:text-4xl text-2xl tracking-[5px] lg:mt-5 mt-3'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=30%' scrollEnd='bottom bottom-=60%' stagger={0.03}>TECHNOLOGIES & EXPERTISE</ScrollFloat></div>
+                    <div className='flex items-center justify-center font-soldier text-Primary font-medium lg:text-4xl text-[22px] tracking-[5px] lg:mt-5 mt-3'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=30%' scrollEnd='bottom bottom-=60%' stagger={0.03}>TECHNOLOGIES & EXPERTISE</ScrollFloat></div>
                 </div>
                 {/* -----Skill Show Case------ */}
                 <div id='SkillItems' className='mt-20 lg:grid hidden'>

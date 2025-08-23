@@ -89,7 +89,7 @@ const ProjectsShow = () => {
                                 </div>
                                 <div className='mt-7 flex items-center lg:gap-4 gap-2'>
                                     <Magnet padding={30} disabled={false} magnetStrength={5}>
-                                        <Link className='ContactButton font-poppins font-medium lg:text-base text-sm text-Primary hover-this'>VIEW ALL PROJECT</Link>
+                                        <Link className='ContactButton font-poppins lg:px-[24px] py-[8px] px-[15px] font-medium lg:text-base text-sm text-Primary hover-this'>VIEW ALL PROJECT</Link>
                                     </Magnet>
                                     <Magnet padding={10} disabled={false} magnetStrength={5}>
                                         <Link className='DownloadCv font-poppins font-medium lg:text-base text-sm text-Primary hover-brown'>

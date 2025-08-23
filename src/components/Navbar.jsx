@@ -29,7 +29,7 @@ export const Navbar = () => {
                     {/* ----Button---- */}
                     <Magnet magnetStrength={4}>
                       <div className="magnetic-btn" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="1200" data-aos-easing="ease-in-sine">
-                        <Link className='ContactButton font-poppins font-medium text-base text-Primary hover-this'>CONTACT</Link>
+                        <Link className='ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this'>CONTACT</Link>
                       </div>
                     </Magnet>
                 </div>

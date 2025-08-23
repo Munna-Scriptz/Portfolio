@@ -21,7 +21,7 @@ const Cursor = () => {
     const handleMouseEnter = () => {
        gsap.to(cursor, {
          duration: 0.3,
-        scale: 2.5,
+        scale: 2,
         ease: 'power3.out',
         mixBlendMode: 'difference',
         background: 'white'

@@ -24,7 +24,7 @@ export const LayoutOne = () => {
   }, [location]);
   return (
     <> 
-    <Cursor/>
+      <Cursor/>
       <Navbar/>
       <ResNavbar/>
       <Outlet/>

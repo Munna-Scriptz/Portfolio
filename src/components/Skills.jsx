@@ -8,6 +8,7 @@ import { FaBootstrap } from "react-icons/fa";
 
 // ----------Ions
 import ReactImg from '../assets/images/react.svg'
+import NextJsIcon from '../assets/images/NextJsIcon.svg'
 import TailwindCssIcon from '../assets/images/TailwindCssIcon.svg'
 import BootstrapIcon from '../assets/images/BootStrapIcon.svg'
 import JqueryIcon from '../assets/images/JqueryIcon.svg'
@@ -167,6 +168,16 @@ export const Skills = () => {
                             </div>
                         </div>
                     </DecayCard>
+                    <DecayCard width={120} height={100}>
+                        <div id='MotherSkillBox' className='flex flex-col items-center gap-3'>
+                            <div id='skillBox' className='h-[80px] w-[80px] border p-4 bg-[#2C2C2C] flex items-center justify-center'>
+                                <img src={NextJsIcon} alt="Vs Code" className='w-full'/>
+                            </div>
+                            <div>
+                                <p className='flex items-center justify-center font-poppins text-Primary font-medium text-[20px]'>Next Js</p>
+                            </div>
+                        </div>
+                    </DecayCard>
                 </div>
                 {/* -----Skill Show Case For Small Devices------ */}
                 <div className='mt-20 lg:hidden flex flex-wrap justify-between gap-y-10 gap-x-5'>
@@ -272,6 +283,14 @@ export const Skills = () => {
                             </div>
                             <div>
                                 <p className='flex items-center justify-center font-poppins text-Primary font-medium text-[20px]'>Firebase</p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" id='MotherSkillBox' className='flex flex-col items-center gap-3'>
+                            <div id='skillBox' className='h-[70px] w-[70px] border p-4 bg-[#2C2C2C] flex items-center justify-center'>
+                                <img src={NextJsIcon} alt="Vs Code" className='w-full'/>
+                            </div>
+                            <div>
+                                <p className='flex items-center justify-center font-poppins text-Primary font-medium text-[20px]'>Next Js</p>
                             </div>
                         </div>
                 </div>

@@ -24,7 +24,7 @@ const AboutMe = () => {
                         <div className='lg:text-[18px] text-[15px] font-poppins text-second font-normal lg:mt-10 lg:mb-0 mb-5 mt-5 lg:w-[370px] w-full'><BlurText text="Creative designer based in Melbourne" delay={250} animateBy="words" direction="top"/></div>
                     </div>
                     <div>
-                        <div className='lg:mb-[50px] mb-[24px] font-poppins lg:text-[32px] text-[16px] font-medium text-Primary lg:w-[700px] w-[100%] '><BlurText text="I am dedicated to developing innovative solutions and impactful experiences that meet user needs and exceed expectations." delay={150} animateBy="words" direction="top"/></div>
+                        <div className='lg:mb-[50px] mb-[24px] font-poppins lg:text-[32px] text-[16px] font-medium text-Primary lg:w-[700px] w-[100%] overflow-hidden '><BlurText text="I am dedicated to developing innovative solutions and impactful experiences that meet user needs and exceed expectations." delay={150} animateBy="words" direction="top"/></div>
                         <div className='flex items-center justify-between lg:w-[500px] w-full lg:mb-[50px] mb-[30px]'>
                             <div className='flex flex-col gap-4'>
                                 <p className='flex items-center gap-3 font-poppins font-medium' data-aos="fade-right"><FaCheck />Mistakes To Avoid</p>

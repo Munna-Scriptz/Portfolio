@@ -37,28 +37,32 @@ const ProjectsShow = () => {
             'ProjectName' : 'nexton e - commerce',
             'Description' : 'Nexton is a sleek and modern e-commerce platform designed to offer a smooth shopping experience with dynamic product listings, variant selection, and responsive design. Built with React and crafted for performance and style',
             'technologies' : [ReactIcon , TailwindCss , JsIcon ,FigmaIcon , HtmlIcon , CssIcon],
-            'Direction': 'lg:flex-row'
+            'Direction': 'lg:flex-row',
+            'AosDir' : 'fade-right'
         },
         {
             'ProjectImage' : ProjectImg2,
             'ProjectName' : 'future scooter',
             'Description' : 'A modern and vibrant landing page for an E-Scooter brand, highlighting features, community engagement, and sleek UI design. Built for performance and visual appeal, perfect for urban mobility startups',
             'technologies' : [JsIcon ,FigmaIcon ,Bootstrap, HtmlIcon , CssIcon],
-            'Direction': 'lg:flex-row-reverse'
+            'Direction': 'lg:flex-row-reverse',
+            'AosDir' : 'fade-left'
         },
         {
             'ProjectImage' : ProjectImg3,
             'ProjectName' : 'Nescafe foods',
             'Description' : 'A stylish and modern restaurant landing page for Nescafe-themed food services. Showcases menus, deals, and cozy vibes with a clean UI, perfect for cafes and food brands',
             'technologies' : [JsIcon ,FigmaIcon, Bootstrap , HtmlIcon , CssIcon],
-            'Direction': 'lg:flex-row'
+            'Direction': 'lg:flex-row',
+            'AosDir' : 'fade-right'
         },
         {
             'ProjectImage' : ProjectImg4,
             'ProjectName' : 'furniture landing page',
             'Description' : 'NexA minimal and elegant single-page website for a furniture brand, highlighting premium products with smooth UI, large visuals, and a modern layout designed for conversion',
             'technologies' : [JsIcon ,FigmaIcon ,Bootstrap, HtmlIcon , CssIcon],
-            'Direction': 'lg:flex-row-reverse'
+            'Direction': 'lg:flex-row-reverse',
+            'AosDir' : 'fade-left'
         }
     ]
   return (
@@ -70,12 +74,12 @@ const ProjectsShow = () => {
                 {
                     MyProjects.map((items, i)=>(
                         <div key={i} className={`flex items-center ${items.Direction} flex-col lg:gap-20 gap-5`}>
-                            <div className='lg:w-[640px] w-full' data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                            <div className='lg:w-[640px] w-full' data-aos={`${items.AosDir}`} data-aos-offset="300" data-aos-easing="ease-in-sine">
                                 <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
                             </div>
                             <div className='lg:w-[650px] w-full'>
-                                <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={180} animateBy="words" direction="bottom"/></h2>
-                                <h2 className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-6'><BlurText text={items.Description} delay={100} animateBy="words" direction="top"/></h2>
+                                <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={280} animateBy="words" direction="bottom"/></h2>
+                                <h2 className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-6'><BlurText text={items.Description} delay={100} animateBy="words" direction="bottom"/></h2>
                                 
                                 <div className='flex items-center gap-4'>
                                     <p className='font-poppins lg:text-[19px] text-[17px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>

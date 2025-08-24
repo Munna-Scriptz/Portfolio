@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 // ---------Project images 
 import ProjectImg1 from '../assets/images/Project1.jpg'
+import HectoCommerce from '../assets/images/Hecto Thumbnail.png'
 import ProjectImg2 from '../assets/images/Project2.png'
 import ProjectImg3 from '../assets/images/Project3.png'
 import ProjectImg4 from '../assets/images/Project4.png'
@@ -38,7 +39,17 @@ const ProjectsShow = () => {
             'Description' : 'Nexton is a sleek and modern e-commerce platform designed to offer a smooth shopping experience with dynamic product listings, variant selection, and responsive design. Built with React and crafted for performance and style',
             'technologies' : [ReactIcon , TailwindCss , JsIcon ,FigmaIcon , HtmlIcon , CssIcon],
             'Direction': 'lg:flex-row',
-            'AosDir' : 'fade-right'
+            'AosDir' : 'fade-right',
+            'GithubRepo' : 'https://github.com/Munna-Scriptz/Nexton-E-Commerce.git'
+        },
+        {
+            'ProjectImage' : HectoCommerce,
+            'ProjectName' : 'Hecto E-Commerce',
+            'Description' : 'The Hecto E-Commerce project is a responsive 15-page website showcasing stylish furniture with a clean, user-friendly interface. Built with React.js, Tailwind CSS, Redux, and Firebase, it delivers a seamless shopping experience with smooth navigation, interactive components, and API integrations, highlighting advanced web development skills.',
+            'technologies' : [JsIcon ,FigmaIcon ,Bootstrap, HtmlIcon , CssIcon],
+            'Direction': 'lg:flex-row-reverse',
+            'AosDir' : 'fade-left',
+            'GithubRepo' : 'https://github.com/Munna-Scriptz/Hecto-E-Commerce.git'
         },
         {
             'ProjectImage' : ProjectImg2,
@@ -46,7 +57,8 @@ const ProjectsShow = () => {
             'Description' : 'A modern and vibrant landing page for an E-Scooter brand, highlighting features, community engagement, and sleek UI design. Built for performance and visual appeal, perfect for urban mobility startups',
             'technologies' : [JsIcon ,FigmaIcon ,Bootstrap, HtmlIcon , CssIcon],
             'Direction': 'lg:flex-row-reverse',
-            'AosDir' : 'fade-left'
+            'AosDir' : 'fade-left',
+            'GithubRepo' : 'https://github.com/Munna-Scriptz/E-Scooter.git'
         },
         {
             'ProjectImage' : ProjectImg3,
@@ -54,16 +66,9 @@ const ProjectsShow = () => {
             'Description' : 'A stylish and modern restaurant landing page for Nescafe-themed food services. Showcases menus, deals, and cozy vibes with a clean UI, perfect for cafes and food brands',
             'technologies' : [JsIcon ,FigmaIcon, Bootstrap , HtmlIcon , CssIcon],
             'Direction': 'lg:flex-row',
-            'AosDir' : 'fade-right'
+            'AosDir' : 'fade-right',
+            'GithubRepo' : 'https://github.com/Munna-Scriptz/Nescafe_web.git'
         },
-        {
-            'ProjectImage' : ProjectImg4,
-            'ProjectName' : 'furniture landing page',
-            'Description' : 'NexA minimal and elegant single-page website for a furniture brand, highlighting premium products with smooth UI, large visuals, and a modern layout designed for conversion',
-            'technologies' : [JsIcon ,FigmaIcon ,Bootstrap, HtmlIcon , CssIcon],
-            'Direction': 'lg:flex-row-reverse',
-            'AosDir' : 'fade-left'
-        }
     ]
   return (
 
@@ -93,12 +98,12 @@ const ProjectsShow = () => {
                                 </div>
                                 <div className='mt-7 flex items-center lg:gap-4 gap-2'>
                                     <Magnet padding={30} disabled={false} magnetStrength={5}>
-                                        <Link className='ContactButton font-poppins lg:px-[24px] py-[8px] px-[15px] font-medium lg:text-base text-sm text-Primary hover-this'>VIEW ALL PROJECT</Link>
+                                        <Link to={'/'} className='ContactButton font-poppins lg:px-[24px] py-[8px] px-[15px] font-medium lg:text-base text-sm text-Primary hover-this'>VIEW ALL PROJECT</Link>
                                     </Magnet>
                                     <Magnet padding={10} disabled={false} magnetStrength={5}>
-                                        <Link className='DownloadCv font-poppins font-medium lg:text-base text-sm text-Primary hover-brown'>
+                                        <a href={`${items.GithubRepo}`} target='_blank' className='DownloadCv font-poppins font-medium lg:text-base text-sm text-Primary hover-brown'>
                                             <span>GITHUB REPO</span>
-                                        </Link>
+                                        </a>
                                     </Magnet>
                                 </div>
                             </div>

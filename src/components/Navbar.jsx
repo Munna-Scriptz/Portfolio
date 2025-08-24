@@ -21,9 +21,9 @@ export const Navbar = () => {
                     <div>
                       <ul className='font-soldier flex items-center gap-3 text-2xl text-Primary'>
                         <li data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1200" data-aos-easing="ease-in-sine"><Link to={'/'} className='flex items-center NavLinks hover-brown'>HOME<LuDot/></Link></li>
-                        <li data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine"><Link to={'/'} className='flex items-center NavLinks hover-brown'>ABOUT<LuDot/></Link></li>
-                        <li data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1800" data-aos-easing="ease-in-sine"><Link to={'/'} className='flex items-center NavLinks hover-brown'>PROJECTS<LuDot/></Link></li>
-                        <li data-aos="fade-down" data-aos-duration="1500" data-aos-delay="2100" data-aos-easing="ease-in-sine"><Link to={'/'} className='flex items-center NavLinks hover-brown'>CONTACT<LuDot/></Link></li>
+                        <li data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine"><Link to={'/about'} className='flex items-center NavLinks hover-brown'>ABOUT<LuDot/></Link></li>
+                        <li data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1800" data-aos-easing="ease-in-sine"><Link to={'/projects'} className='flex items-center NavLinks hover-brown'>PROJECTS<LuDot/></Link></li>
+                        <li data-aos="fade-down" data-aos-duration="1500" data-aos-delay="2100" data-aos-easing="ease-in-sine"><Link to={'/contact'} className='flex items-center NavLinks hover-brown'>CONTACT<LuDot/></Link></li>
                       </ul>
                     </div>
                     {/* ----Button---- */}

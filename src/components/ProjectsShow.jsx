@@ -56,8 +56,8 @@ const ProjectsShow = () => {
             'ProjectName' : 'future scooter',
             'Description' : 'A modern and vibrant landing page for an E-Scooter brand, highlighting features, community engagement, and sleek UI design. Built for performance and visual appeal, perfect for urban mobility startups',
             'technologies' : [JsIcon ,FigmaIcon ,Bootstrap, HtmlIcon , CssIcon],
-            'Direction': 'lg:flex-row-reverse',
-            'AosDir' : 'fade-left',
+            'Direction': 'lg:flex-row',
+            'AosDir' : 'fade-right',
             'GithubRepo' : 'https://github.com/Munna-Scriptz/E-Scooter.git'
         },
         {
@@ -65,8 +65,8 @@ const ProjectsShow = () => {
             'ProjectName' : 'Nescafe foods',
             'Description' : 'A stylish and modern restaurant landing page for Nescafe-themed food services. Showcases menus, deals, and cozy vibes with a clean UI, perfect for cafes and food brands',
             'technologies' : [JsIcon ,FigmaIcon, Bootstrap , HtmlIcon , CssIcon],
-            'Direction': 'lg:flex-row',
-            'AosDir' : 'fade-right',
+            'Direction': 'lg:flex-row-reverse',
+            'AosDir' : 'fade-left',
             'GithubRepo' : 'https://github.com/Munna-Scriptz/Nescafe_web.git'
         },
     ]

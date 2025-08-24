@@ -5,6 +5,7 @@ import { LayoutOne } from './layout/LayoutOne'
 import { Home } from './pages/Home'
 import { RouterProvider } from 'react-router'
 import Loader from './components/Loader'
+import About from './pages/About'
 
 
 export const App = () => {
@@ -55,6 +56,7 @@ const [loading, setLoading] = useState(true)
     <Route>
       <Route path='/' element={<LayoutOne/>}>
         <Route index element={<Home/>}></Route>
+        <Route path='/about' element={<About/>}></Route>
       </Route>
     </Route>
   ))

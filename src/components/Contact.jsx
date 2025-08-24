@@ -82,19 +82,19 @@ const Contact = () => {
                 <p className='font-poppins text-borderCol text-base md:text-[18px] font-medium opacity-50 uppercase'>Socials</p>
                 <div className='mt-4 md:mt-7 flex items-center gap-4 md:gap-7'>
                   <Magnet padding={20} disabled={false} magnetStrength={2}>
-                    <Link><FaFacebookF className='text-[18px] hover-brown'/></Link>
+                    <a href='https://www.facebook.com/rexon.notfr' target='_blank'><FaFacebookF className='text-[18px] hover-brown'/></a>
                   </Magnet>
                   <Magnet padding={20} disabled={false} magnetStrength={2}>
-                    <Link><FaInstagram className='text-[18px] hover-brown'/></Link>
+                    <a href='https://www.instagram.com/rexon.notfr/?__pwa=1' target='_blank'><FaInstagram className='text-[18px] hover-brown'/></a>
                   </Magnet>
                   <Magnet padding={20} disabled={false} magnetStrength={2}>
-                    <Link><FaXTwitter className='text-[18px] hover-brown'/></Link>
+                    <a href='https://github.com/Munna-Scriptz' target='_blank'><FaXTwitter className='text-[18px] hover-brown'/></a>
                   </Magnet>
                   <Magnet padding={20} disabled={false} magnetStrength={2}>
-                    <Link><FaGithub className='text-[18px] hover-brown'/></Link>
+                    <a href='https://github.com/Munna-Scriptz' target='_blank'><FaGithub className='text-[18px] hover-brown'/></a>
                   </Magnet>
                   <Magnet padding={20} disabled={false} magnetStrength={2}>
-                    <Link><FaLinkedinIn className='text-[18px] hover-brown'/></Link>
+                    <a href='https://github.com/Munna-Scriptz' target='_blank'><FaLinkedinIn className='text-[18px] hover-brown'/></a>
                   </Magnet>
                 </div>
               </div>

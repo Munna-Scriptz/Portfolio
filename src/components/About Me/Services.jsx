@@ -3,8 +3,8 @@ import React from 'react'
 const Services = () => {
   return (
     <>
-        <div className="traineeship py-10">
-      <div className="container mx-auto">
+    <div className="traineeship py-10 mt-[70px]">
+      <div className="container">
         <div className="process-row flex gap-2">
           {/* Card 01 */}
           <div className="activity animate-from-bottom__0">
@@ -40,10 +40,10 @@ const Services = () => {
                 />
               </div>
               <div className="inactive">
-                <div className="title">Mobile App</div>
+                <div className="title">Api integration</div>
               </div>
               <div className="active">
-                <div className="title">Mobile App Development</div>
+                <div className="title">Api integration in website</div>
                 <div className="sub-title">
                   Customer interactions, study and analysis of company branding
                   through creative briefs. Creation of mock-up designs by using
@@ -64,10 +64,10 @@ const Services = () => {
                 />
               </div>
               <div className="inactive">
-                <div className="title">WordPress</div>
+                <div className="title">Figma to web </div>
               </div>
               <div className="active">
-                <div className="title">WordPress</div>
+                <div className="title">Converting figma to website</div>
                 <div className="sub-title">
                   Customer interactions, study and analysis of company branding
                   through creative briefs. Creation of mock-up designs by using
@@ -88,10 +88,10 @@ const Services = () => {
                 />
               </div>
               <div className="inactive">
-                <div className="title">Digital Marketing</div>
+                <div className="title">Responsive</div>
               </div>
               <div className="active">
-                <div className="title">Digital Marketing</div>
+                <div className="title">Responsive Web Design</div>
                 <div className="sub-title">
                   Customer interactions, study and analysis of company branding
                   through creative briefs. Creation of mock-up designs by using

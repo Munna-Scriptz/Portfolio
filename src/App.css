@@ -354,27 +354,11 @@ body{
 /* -----------------------------------------------------Services Hover Cards----------------------------------------------------------- */
 .process-row {
   background-color: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 .traineeship .activity {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  width: 267px;
-  background-color: #E5E3DC;
-  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .1);
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .1);
   cursor: pointer;
-  -webkit-transition: .3s;
   border: 1px solid #16161693;
   border-radius: 8px;
   transition: .3s;
@@ -499,11 +483,6 @@ body{
     font-size: 16px;
     line-height: 26px;
 }
-.traineeship .activity:hover {
-  width: 558px;
-  background-color: #161616;
-}
-
 .traineeship .activity:hover .title {
   color: #e5e5e5;
 }
@@ -514,10 +493,7 @@ body{
   display: none;
 }
 .traineeship .activity:hover .active {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  width: 340px;
 }
 
 

@@ -23,7 +23,7 @@ const Footer = () => {
                         <p data-aos="fade-up" className='text-sm text-second font-poppins font-light w-[130px] mt-6'>©2025 By Munna. All rights reserved.</p>
                     </div>
                     <div id="Row_2">
-                        <h2 data-aos="fade-up" className='font-soldier text-6xl text-Primary mb-6'>LINKS</h2>
+                        <h2 data-aos="fade-up" className='font-soldier lg:text-6xl text-5xl text-Primary mb-6'>LINKS</h2>
                         <ul id='FooterLinks' className='flex flex-col gap-4 text-[#3f3f3f] font-poppins text-sm'>
                             <li data-aos="fade-up"><Link to={'/'}>SUPPORT</Link></li>
                             <li data-aos="fade-up"><Link to={'/'}>LICENSES</Link></li>
@@ -32,7 +32,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div id="Row_3">
-                        <h2 data-aos="fade-up" className='font-soldier text-6xl text-Primary mb-6'>ABOUT ME</h2>
+                        <h2 data-aos="fade-up" className='font-soldier lg:text-6xl text-5xl text-Primary mb-6'>ABOUT ME</h2>
                         <ul id='FooterLinks' className='flex flex-col gap-4 text-[#3f3f3f] font-poppins text-sm'>
                             <li data-aos="fade-up"><Link to={'/'}>ABOUT ME</Link></li>
                             <li data-aos="fade-up"><Link to={'/'}>MY WORK</Link></li>
@@ -41,7 +41,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div id="Row_4">
-                        <h2 data-aos="fade-up" className='font-soldier text-6xl text-Primary mb-4'>CONTACT</h2>
+                        <h2 data-aos="fade-up" className='font-soldier lg:text-6xl text-5xl text-Primary mb-4'>CONTACT</h2>
                         <ul id='FooterLinks' className='flex flex-col gap-4 text-[#3f3f3f] font-poppins font-medium'>
                             <li data-aos="fade-up"><Link to={'/'}>DHAKA, BANGLADESH</Link></li>
                             <li data-aos="fade-up"><Link to={'/'}>munnascriptz@gmail.com</Link></li>

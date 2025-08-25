@@ -5,7 +5,7 @@ import ProjectsShow from './ProjectsShow';
 const Projects = () => {
   return (
     <>
-    <section id="Projects" className='lg:mt-0 mt-60 overflow-hidden'>
+    <section id="Projects" className='lg:mt-70 mt-60 overflow-hidden'>
       <div>
           <div className="header mb-20">
             <div className='flex items-center justify-center font-poppins text-Primary font-medium lg:text-2xl text-lg'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=50%' scrollEnd='bottom bottom-=40%' stagger={0.03}>MY PROJECTS</ScrollFloat></div>

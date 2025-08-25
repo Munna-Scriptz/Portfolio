@@ -351,33 +351,34 @@ body{
     padding: 30px 20px;
   }
 }
-
+/* -----------------------------------------------------Services Hover Cards----------------------------------------------------------- */
 .process-row {
-  background-color: #1e212b;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .traineeship .activity {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 267px;
-    margin: 30px 8px 50px;
-    background-color: #242835;
-    -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .1);
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .1);
-    cursor: pointer;
-    -webkit-transition: .3s;
-    transition: .3s;
-    overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 267px;
+  background-color: #E5E3DC;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .1);
+  cursor: pointer;
+  -webkit-transition: .3s;
+  border: 1px solid #16161693;
+  border-radius: 8px;
+  transition: .3s;
+  overflow: hidden;
 }
 .animate-from-bottom__0 {
     -webkit-animation-name: from-left;
@@ -451,15 +452,12 @@ body{
     padding: 30px;
 }
 .traineeship .inactive .title {
-    border-bottom: 3px solid #f5ca2a;
-    padding-bottom: 14px;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    color: #fff;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 28px;
+  border-bottom: 3px solid #161616;
+  font-family: "Big Shoulders", "sans-serif";
+  font-size: 28px;
+  padding-bottom: 5px;
+  width: max-content;
+  color: #161616;
 }
 .traineeship .activity .active {
     display: none;
@@ -476,14 +474,15 @@ body{
 }
 .traineeship .activity .active .title {
     color: #1f1f1f;
-    font-size: 22px;
-    font-weight: 600;
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 26px;
     line-height: 32px;
 }
 .traineeship .activity .active .sub-title {
     margin-top: 10px;
     color: #616161;
-    font-size: 16px;
+    font-family: "Poppins", "sans-serif";
+    font-size: 14px;
     line-height: 28px;
     text-align: left;
 }
@@ -500,28 +499,27 @@ body{
     font-size: 16px;
     line-height: 26px;
 }
-.traineeship .activity .active .li:before {
-    position: absolute;
-    content: "\f00c";
-    color: #e2b921;
-    font-family: FontAwesome;
-    display: inline-block;
-    margin-left: -1.6em;
-    width: 22px;
-}
 .traineeship .activity:hover {
-    width: 558px;
-    background-color: #fff;
+  width: 558px;
+  background-color: #161616;
+}
+
+.traineeship .activity:hover .title {
+  color: #e5e5e5;
+}
+.traineeship .activity:hover .sub-title {
+  color: #e5e5e5ad;
 }
 .traineeship .activity:hover .inactive {
-    display: none;
+  display: none;
 }
 .traineeship .activity:hover .active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 340px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 340px;
 }
+
 
 
 

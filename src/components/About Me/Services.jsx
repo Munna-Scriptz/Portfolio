@@ -3,82 +3,131 @@ import React from 'react'
 const Services = () => {
   return (
     <>
-    <div class="traineeship">
-<div class="process-row">
-    <div class="activity animate-from-bottom__0">
-        <div class="relative-block">
-            <div class="activity-icon">
-                <img alt="An image" src="https://i.ibb.co/ZWp3Yts/ad-operations-process-strategy.png"/>
+        <div className="traineeship py-10">
+      <div className="container mx-auto">
+        <div className="process-row flex gap-2">
+          {/* Card 01 */}
+          <div className="activity animate-from-bottom__0">
+            <div className="relative-block">
+              <div className="activity-icon">
+                <img
+                  alt="An image"
+                  src="https://i.ibb.co/ZWp3Yts/ad-operations-process-strategy.png"
+                />
+              </div>
+              <div className="inactive">
+                <div className="title">Web App</div>
+              </div>
+              <div className="active">
+                <div className="title">Web App Development</div>
+                <div className="sub-title">
+                  Customer interactions, study and analysis of company branding
+                  through creative briefs. Creation of mock-up designs by using
+                  UI tools that simulate actions and pre-visualize the
+                  reactions.
+                </div>
+              </div>
             </div>
-            <div class="inactive">
-                <div class="title">Web App </div>
+          </div>
+
+          {/* Card 02 */}
+          <div className="activity animate-from-bottom__1">
+            <div className="relative-block">
+              <div className="activity-icon">
+                <img
+                  alt="An image"
+                  src="https://i.ibb.co/s2nghrT/ad-operations-process-strategy-activation.png"
+                />
+              </div>
+              <div className="inactive">
+                <div className="title">Mobile App</div>
+              </div>
+              <div className="active">
+                <div className="title">Mobile App Development</div>
+                <div className="sub-title">
+                  Customer interactions, study and analysis of company branding
+                  through creative briefs. Creation of mock-up designs by using
+                  UI tools that simulate actions and pre-visualize the
+                  reactions.
+                </div>
+              </div>
             </div>
-            <div class="active">
-                <div class="title">Web App Development</div>
-                <div class="sub-title">Customer interactions, study and analysis of company branding through creative briefs. Creation of mock-up designs by using UI tools that simulate actions and pre-visualize the reactions.</div>
+          </div>
+
+          {/* Card 03 */}
+          <div className="activity animate-from-bottom__2">
+            <div className="relative-block">
+              <div className="activity-icon">
+                <img
+                  alt="An image"
+                  src="https://i.ibb.co/ZWp3Yts/ad-operations-process-strategy.png"
+                />
+              </div>
+              <div className="inactive">
+                <div className="title">WordPress</div>
+              </div>
+              <div className="active">
+                <div className="title">WordPress</div>
+                <div className="sub-title">
+                  Customer interactions, study and analysis of company branding
+                  through creative briefs. Creation of mock-up designs by using
+                  UI tools that simulate actions and pre-visualize the
+                  reactions.
+                </div>
+              </div>
             </div>
+          </div>
+
+          {/* Card 04 */}
+          <div className="activity animate-from-bottom__3">
+            <div className="relative-block">
+              <div className="activity-icon">
+                <img
+                  alt="An image"
+                  src="https://i.ibb.co/s2nghrT/ad-operations-process-strategy-activation.png"
+                />
+              </div>
+              <div className="inactive">
+                <div className="title">Digital Marketing</div>
+              </div>
+              <div className="active">
+                <div className="title">Digital Marketing</div>
+                <div className="sub-title">
+                  Customer interactions, study and analysis of company branding
+                  through creative briefs. Creation of mock-up designs by using
+                  UI tools that simulate actions and pre-visualize the
+                  reactions.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 05 */}
+          <div className="activity animate-from-bottom__4">
+            <div className="relative-block">
+              <div className="activity-icon">
+                <img
+                  alt="An image"
+                  src="https://i.ibb.co/ZWp3Yts/ad-operations-process-strategy.png"
+                />
+              </div>
+              <div className="inactive">
+                <div className="title">UI / UX Design</div>
+              </div>
+              <div className="active">
+                <div className="title">UI / UX Design</div>
+                <div className="sub-title">
+                  Customer interactions, study and analysis of company branding
+                  through creative briefs. Creation of mock-up designs by using
+                  UI tools that simulate actions and pre-visualize the
+                  reactions.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="activity animate-from-bottom__1">
-        <div class="relative-block">
-            <div class="activity-icon">
-                <img alt="An image" src="https://i.ibb.co/s2nghrT/ad-operations-process-strategy-activation.png"/>
-            </div>
-            <div class="inactive">
-                <div class="title">Mobile App </div>
-            </div>
-            <div class="active">
-                <div class="title">Mobile App Development</div>
-                <div class="sub-title">Customer interactions, study and analysis of company branding through creative briefs. Creation of mock-up designs by using UI tools that simulate actions and pre-visualize the reactions.</div>
-                
-            </div>
-        </div>
-    </div>
-    <div class="activity animate-from-bottom__2">
-        <div class="relative-block">
-            <div class="activity-icon">
-                <img alt="An image" src="https://i.ibb.co/ZWp3Yts/ad-operations-process-strategy.png"/>
-            </div>
-            <div class="inactive">
-                <div class="title">WordPress</div>
-            </div>
-            <div class="active">
-                <div class="title">WordPress</div>
-                <div class="sub-title">Customer interactions, study and analysis of company branding through creative briefs. Creation of mock-up designs by using UI tools that simulate actions and pre-visualize the reactions.</div>
-            </div>
-        </div>
-    </div>
-    <div class="activity animate-from-bottom__3">
-        <div class="relative-block">
-            <div class="activity-icon">
-                <img alt="An image" src="https://i.ibb.co/s2nghrT/ad-operations-process-strategy-activation.png"/>
-            </div>
-            <div class="inactive">
-                <div class="title">Digital Marketing</div>
-            </div>
-            <div class="active">
-                <div class="title">Digital Marketing</div>
-                <div class="sub-title">Customer interactions, study and analysis of company branding through creative briefs. Creation of mock-up designs by using UI tools that simulate actions and pre-visualize the reactions.</div>
-        
-            </div>
-        </div>
-    </div>
-    <div class="activity animate-from-bottom__4">
-        <div class="relative-block">
-            <div class="activity-icon">
-                <img alt="An image" src="https://i.ibb.co/ZWp3Yts/ad-operations-process-strategy.png"/>
-            </div>
-            <div class="inactive">
-                <div class="title">UI / UX Design</div>
-            </div>
-            <div class="active">
-                <div class="title">UI / UX Design</div>
-                <div class="sub-title">Customer interactions, study and analysis of company branding through creative briefs. Creation of mock-up designs by using UI tools that simulate actions and pre-visualize the reactions.</div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
     </>
   )
 }

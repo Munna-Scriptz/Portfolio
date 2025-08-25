@@ -6,7 +6,7 @@ const About = () => {
 
   return (
     <>
-    <section className='mt-[122px]'>
+    <section className='my-[122px]'>
       <AboutText/>
     </section>
     </>

@@ -1,6 +1,6 @@
 import React from 'react'
-import InfoCards from '../components/InfoCards'
 import AboutText from '../components/About Me/AboutText'
+import Services from '../components/About Me/Services'
 
 const About = () => {
 
@@ -8,6 +8,9 @@ const About = () => {
     <>
     <section className='my-[122px]'>
       <AboutText/>
+      <div className='mt-[112px]'>
+        <Services/>
+      </div>
     </section>
     </>
   )

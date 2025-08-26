@@ -47,7 +47,7 @@ const [loading, setLoading] = useState(true)
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 400); // 2 seconds
+    }, 3400); // 2 seconds
 
     return () => clearTimeout(timer);
   }, []);

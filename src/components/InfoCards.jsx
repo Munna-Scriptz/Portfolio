@@ -50,8 +50,8 @@ const InfoCards = () => {
             <div className="card__content">
               <h1 className="card__title font-soldier text-second text-5xl flex items-center justify-between uppercase">Web development <span className='text-second'>01</span></h1>
               <p className="card__description">I specialize in creating modern, responsive, and user-friendly websites using the latest frontend technologies. From clean UI design to smooth functionality, I build web experiences that are fast, scalable, and optimized for all devices.</p>
-              <Magnet magnetStrength={4} padding={50}>
-                <div className="magnetic-btn" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="1200" data-aos-easing="ease-in-sine">
+              <Magnet magnetStrength={4}>
+                <div className="magnetic-btn">
                   <Link className='ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this'>READ MORE</Link>
                 </div>
               </Magnet>
@@ -64,12 +64,13 @@ const InfoCards = () => {
             <div className="card__image-container">
             </div>
             <div className="card__content">
-              <h1 className="card__title">Card Title</h1>
-              <p className="card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta error nam eaque. 
-                Eum fuga laborum quos expedita iste saepe similique, unde possimus quia at magnam sed cupiditate?
-                Reprehenderit, harum!
-              </p>
+              <h1 className="card__title font-soldier text-second text-5xl flex items-center justify-between uppercase">Api integration <span className='text-second'>02</span></h1>
+              <p className="card__description">I integrate powerful APIs to connect frontend apps with real-time data and dynamic features. Whether it's fetching content, handling user inputs, or syncing services, I ensure seamless communication between the client and backend.</p>
+              <Magnet magnetStrength={4} >
+                <div className="magnetic-btn">
+                  <Link className='ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this'>READ MORE</Link>
+                </div>
+              </Magnet>
             </div>
           </div>
         </div>
@@ -79,12 +80,29 @@ const InfoCards = () => {
             <div className="card__image-container">
             </div>
             <div className="card__content">
-              <h1 className="card__title">Card Title</h1>
-              <p className="card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta error nam eaque. 
-                Eum fuga laborum quos expedita iste saepe similique, unde possimus quia at magnam sed cupiditate?
-                Reprehenderit, harum!
-              </p>
+              <h1 className="card__title font-soldier text-second text-5xl flex items-center justify-between uppercase">figma to responsive website <span className='text-second'>03</span></h1>
+              <p className="card__description">I convert Figma designs into fully responsive and functional websites with clean code and pixel-perfect accuracy. Every section is optimized for speed, usability, and smooth performance across all screen sizes.</p>
+              <Magnet magnetStrength={4}>
+                <div className="magnetic-btn">
+                  <Link className='ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this'>READ MORE</Link>
+                </div>
+              </Magnet>
+            </div>
+          </div>
+        </div>
+
+        <div className="card" data-index="3">
+          <div className="card__inner">
+            <div className="card__image-container">
+            </div>
+            <div className="card__content">
+              <h1 className="card__title font-soldier text-second text-5xl flex items-center justify-between uppercase">Web management <span className='text-second'>04</span></h1>
+              <p className="card__description">I convert Figma designs into fully responsive and functional websites with clean code and pixel-perfect accuracy. Every section is optimized for speed, usability, and smooth performance across all screen sizes.</p>
+              <Magnet magnetStrength={4}>
+                <div className="magnetic-btn">
+                  <Link className='ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this'>READ MORE</Link>
+                </div>
+              </Magnet>
             </div>
           </div>
         </div>

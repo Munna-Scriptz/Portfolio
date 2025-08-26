@@ -1,13 +1,13 @@
 import React from 'react'
-import FooterLogo from '../assets/images/Logo.png'
+import FooterLogo from '../../assets/images/Logo.png'
 import { Link } from 'react-router'
-import Magnet from './common/Magnet'
 // ---------Icons 
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import Magnet from '../effects/Magnet';
 
 
 const Footer = () => {

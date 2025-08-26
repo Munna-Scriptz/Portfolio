@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import Magnet from '../common/Magnet'
+import Magnet from '../effects/Magnet'
 
 const AboutText = () => {
   return (

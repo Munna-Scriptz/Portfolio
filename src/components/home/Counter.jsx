@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import CountUp from 'react-countup';
-import ProjectsIcon from '../assets/images/CounterProjectIcon.png'
-import TeamICon from '../assets/images/CounterTeamIcon.png'
-import ReviewIcon from '../assets/images/CounterReviewIcon.png'
-import CompleteICon from '../assets/images/ReviewCompleteICon.png'
+import ProjectsIcon from '../../assets/images/CounterProjectIcon.png'
+import TeamICon from '../../assets/images/CounterTeamIcon.png'
+import ReviewIcon from '../../assets/images/CounterReviewIcon.png'
+import CompleteICon from '../../assets/images/ReviewCompleteICon.png'
 
 const Counter = () => {
 

@@ -1,24 +1,24 @@
 import React, { useEffect } from 'react'
 // ---------Project images 
-import ProjectImg1 from '../assets/images/Project1.jpg'
-import HectoCommerce from '../assets/images/Hecto Thumbnail.png'
-import ProjectImg2 from '../assets/images/Project2.png'
-import ProjectImg3 from '../assets/images/Project3.png'
-import ProjectImg4 from '../assets/images/Project4.png'
+import ProjectImg1 from '../../assets/images/Project1.jpg'
+import HectoCommerce from '../../assets/images/HectoThumbnail.png'
+import ProjectImg2 from '../../assets/images/Project2.png'
+import ProjectImg3 from '../../assets/images/Project3.png'
 // -------icons 
 import { GrTechnology } from "react-icons/gr";
 // -------Technologies svg 
-import ReactIcon from '../assets/images/react.svg'
-import FigmaIcon from '../assets/images/FigmaIcon.svg'
-import TailwindCss from '../assets/images/TailwindCssIcon.svg'
-import JsIcon from '../assets/images/JsIcon.jpg'
-import HtmlIcon from '../assets/images/HtmlIcon.svg'
-import CssIcon from '../assets/images/CssIcon.svg'
-import Bootstrap from '../assets/images/BootStrapIcon.svg'
+import ReactIcon from '../../assets/images/react.svg'
+import FigmaIcon from '../../assets/images/FigmaIcon.svg'
+import TailwindCss from '../../assets/images/TailwindCssIcon.svg'
+import reduxIcon from '../../assets/images/ReduxIcon.svg'
+import JsIcon from '../../assets/images/JsIcon.jpg'
+import HtmlIcon from '../../assets/images/HtmlIcon.svg'
+import CssIcon from '../../assets/images/CssIcon.svg'
+import Bootstrap from '../../assets/images/BootStrapIcon.svg'
 // -----other Import 
-import Magnet from './common/Magnet'
+import Magnet from '../effects/Magnet'
+import BlurText from '../effects/BlurText'
 import { Link } from 'react-router';
-import BlurText from './common/BlurText'
 // --------Aos 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -37,7 +37,7 @@ const ProjectsShow = () => {
             'ProjectImage' : ProjectImg1,
             'ProjectName' : 'nexton e - commerce',
             'Description' : 'Nexton is a sleek and modern e-commerce platform designed to offer a smooth shopping experience with dynamic product listings, variant selection, and responsive design. Built with React and crafted for performance and style',
-            'technologies' : [ReactIcon , TailwindCss , JsIcon ,FigmaIcon , HtmlIcon , CssIcon],
+            'technologies' : [ReactIcon , TailwindCss , JsIcon , reduxIcon ,FigmaIcon , HtmlIcon , CssIcon],
             'Direction': 'lg:flex-row',
             'AosDir' : 'fade-right',
             'GithubRepo' : 'https://github.com/Munna-Scriptz/Nexton-E-Commerce.git'
@@ -46,7 +46,7 @@ const ProjectsShow = () => {
             'ProjectImage' : HectoCommerce,
             'ProjectName' : 'Hecto E-Commerce',
             'Description' : 'The Hecto E-Commerce project is a responsive 15-page website showcasing stylish furniture with a clean, user-friendly interface. Built with React.js, Tailwind CSS, Redux, and Firebase, it delivers a seamless shopping experience with smooth navigation, interactive components, and API integrations, highlighting advanced web development skills.',
-            'technologies' : [JsIcon ,FigmaIcon ,Bootstrap, HtmlIcon , CssIcon],
+            'technologies' : [ReactIcon , TailwindCss , JsIcon , reduxIcon , FigmaIcon , HtmlIcon , CssIcon],
             'Direction': 'lg:flex-row-reverse',
             'AosDir' : 'fade-left',
             'GithubRepo' : 'https://github.com/Munna-Scriptz/Hecto-E-Commerce.git'

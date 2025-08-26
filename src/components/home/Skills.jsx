@@ -1,26 +1,21 @@
 import React from 'react'
-import DecayCard from './common/DecayCard';
-import JsIcon from '../assets/images/JsIcon.jpg'
-import { LuFigma } from "react-icons/lu";
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3 } from "react-icons/fa";
-import { FaBootstrap } from "react-icons/fa";
-
+import DecayCard from '../effects/DecayCard';
 // ----------Ions
-import ReactImg from '../assets/images/react.svg'
-import NextJsIcon from '../assets/images/NextJsIcon.svg'
-import TailwindCssIcon from '../assets/images/TailwindCssIcon.svg'
-import BootstrapIcon from '../assets/images/BootStrapIcon.svg'
-import JqueryIcon from '../assets/images/JqueryIcon.svg'
-import GsapIcon from '../assets/images/GsapIcon.png'
-import CssIcon from '../assets/images/CssIcon.svg'
-import HtmlIcon from '../assets/images/HtmlIcon.svg'
-import FigmaIcon from '../assets/images/FigmaIcon.svg'
-import VsCodeIcon from '../assets/images/VsCodeICon.svg'
-import GithubIcon from '../assets/images/GithubIcon.svg'
-import ReduxIcon from '../assets/images/ReduxIcon.svg'
-import FirebaseIcon from '../assets/images/FirebaseIcon.svg'
-import ScrollFloat from './common/ScrollFloat';
+import ReactImg from '../../assets/images/react.svg'
+import JsIcon from '../../assets/images/JsIcon.jpg'
+import NextJsIcon from '../../assets/images/NextJsIcon.svg'
+import TailwindCssIcon from '../../assets/images/TailwindCssIcon.svg'
+import BootstrapIcon from '../../assets/images/BootStrapIcon.svg'
+import JqueryIcon from '../../assets/images/JqueryIcon.svg'
+import GsapIcon from '../../assets/images/GsapIcon.png'
+import CssIcon from '../../assets/images/CssIcon.svg'
+import HtmlIcon from '../../assets/images/HtmlIcon.svg'
+import FigmaIcon from '../../assets/images/FigmaIcon.svg'
+import VsCodeIcon from '../../assets/images/VsCodeICon.svg'
+import GithubIcon from '../../assets/images/GithubIcon.svg'
+import ReduxIcon from '../../assets/images/ReduxIcon.svg'
+import FirebaseIcon from '../../assets/images/FirebaseIcon.svg'
+import ScrollFloat from '../effects/ScrollFloat';
 
 
 

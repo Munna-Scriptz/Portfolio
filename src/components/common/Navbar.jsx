@@ -1,8 +1,8 @@
-import React, { useRef, useEffect } from 'react';
-import Logo from "../assets/images/Logo.png"
+import React from 'react';
+import Logo from "../../assets/images/Logo.png"
 import { Link } from 'react-router'
 import { LuDot } from "react-icons/lu";
-import Magnet from './common/Magnet';
+import Magnet from '../effects/Magnet';
 
 export const Navbar = () => {
   

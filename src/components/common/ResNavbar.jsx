@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router'
-import ResLogo from "../assets/images/Logo.png"
-import { MdOutlineGroup } from "react-icons/md";
-import { LuShoppingBag } from "react-icons/lu"
+import ResLogo from "../../assets/images/Logo.png"
 import { IoHomeOutline } from 'react-icons/io5';
-import { RiUserLine } from 'react-icons/ri';
-import { TbArrowsJoin } from 'react-icons/tb';
 import { GrContact, GrContactInfo, GrProjects } from 'react-icons/gr';
 
 export const ResNavbar = () => {

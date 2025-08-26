@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router'
-import { Home } from '../pages/Home'
-import { Navbar } from '../components/Navbar'
-import { ResNavbar } from '../components/ResNavbar'
-import Footer from '../components/Footer'
 import Cursor from '../components/Cursor'
+import { ResNavbar } from '../components/common/ResNavbar';
+import Footer from '../components/common/Footer';
 // --------Aos Imp 
 import Aos from 'aos'
 import "aos/dist/aos.css";
+import { Navbar } from '../components/common/Navbar';
 
 export const LayoutOne = () => {
   const location = useLocation()

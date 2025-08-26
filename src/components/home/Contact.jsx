@@ -8,9 +8,8 @@ import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
-import Magnet from './common/Magnet';
-import { Link } from 'react-router';
-import ScrollFloat from './common/ScrollFloat';
+import Magnet from '../effects/Magnet';
+import ScrollFloat from '../effects/ScrollFloat';
 
 const Contact = () => {
   return (

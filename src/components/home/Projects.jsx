@@ -1,5 +1,5 @@
 import React from 'react'
-import ScrollFloat from '../components/common/ScrollFloat';
+import ScrollFloat from '../effects/ScrollFloat';
 import ProjectsShow from './ProjectsShow';
 
 const Projects = () => {

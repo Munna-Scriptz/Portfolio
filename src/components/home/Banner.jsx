@@ -1,16 +1,16 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router';
-import PortfolioPic from "../assets/images/PortfolioShape.png"
+import PortfolioPic from "../../assets/images/PortfolioShape.png"
 // -----Animation Npm 
 import { TypeAnimation } from 'react-type-animation';
-import Magnet from './common/Magnet'
+import Magnet from '../effects/Magnet'
+import BlurText from '../effects/BlurText';
 // ---------Icons 
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
-import BlurText from './common/BlurText';
 const Banner = () => {
   return (
     <>

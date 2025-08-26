@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Magnet from './common/Magnet'
+import Magnet from '../effects/Magnet'
 import { Link } from 'react-router'
 
 const InfoCards = () => {

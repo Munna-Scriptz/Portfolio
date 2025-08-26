@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router'
-import Magnet from './common/Magnet'
+import Magnet from '../effects/Magnet'
+import BlurText from '../effects/BlurText';
 import { FaCheck } from "react-icons/fa6";
-import BlurText from './common/BlurText';
 // --------Aos 
 import AOS from 'aos';
 import 'aos/dist/aos.css';

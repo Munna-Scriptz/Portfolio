@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react'
-import Banner from '../components/Banner'
-import Counter from '../components/Counter'
-import AboutMe from '../components/AboutMe'
-import { Skills } from '../components/Skills'
-import Projects from '../components/Projects'
-import { LetsWorkTogether } from '../components/LetsWorkTogether'
-import Contact from '../components/Contact'
-import HomeServices from '../components/HomeServices'
+import React from 'react'
+import Banner from '../components/home/Banner'
+import Counter from '../components/home/Counter'
+import { LetsWorkTogether } from '../components/home/LetsWorkTogether'
+import AboutMe from '../components/home/AboutMe' 
+import { Skills } from '../components/home/Skills'
+import HomeServices from '../components/home/HomeServices'
+import Projects from '../components/home/Projects'
+import Contact from '../components/home/Contact'
 
 export const Home = () => {
   return (

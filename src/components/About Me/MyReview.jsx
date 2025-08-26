@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import Magnet from '../effects/Magnet'
-import { Link } from "react-router";
-
+import { FaQuoteLeft, FaStar } from "react-icons/fa";
+import reviewImg1 from '../../assets/images/reviewimg1.png'
 const MyReview = () => {
   const outerRef = useRef(null);
   const cardsRef = useRef(null);
@@ -15,7 +14,7 @@ const MyReview = () => {
     const cardElems = Array.from(cards.querySelectorAll(".card"));
     if (!cardElems.length) return;
 
-    const GAP = 40; // keep in sync with CSS gap
+    const GAP = 30; // keep in sync with CSS gap
     let count = cardElems.length;
     let cardWidth = cardElems[0].clientWidth;
     let cardHeight = cardElems[0].clientHeight;
@@ -110,21 +109,39 @@ const MyReview = () => {
     <div id="ScrollCardsHorizontal">
       <div ref={outerRef} className="cards-outer">
         <div ref={cardsRef} className="cards">
-          {/* keep your card markup (unchanged) */}
+
           <div className="card" data-index="0">
             <div className="card__inner">
               <div className="card__content">
-                <h1 className="card__title font-soldier text-second text-5xl flex items-center justify-between uppercase">
-                  Web development <span className="text-second">01</span>
-                </h1>
-                <p className="card__description">
-                  I specialize in creating modern, responsive, and user-friendly websites using the latest frontend technologies. From clean UI design to smooth functionality, I build web experiences that are fast, scalable, and optimized for all devices.
-                </p>
-                <Magnet magnetStrength={4}>
-                  <div className="magnetic-btn">
-                    <Link className="ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this">READ MORE</Link>
+                {/* ----------Quote And stars---------- */}
+                <div className="flex items-center justify-between mb-10">
+                  <div id='Quote' className='bg-Primary border-1 border-borderCol w-[52px] h-[52px] rounded-[6px] text-white flex items-center justify-center text-2xl'>
+                    <FaQuoteLeft />
                   </div>
-                </Magnet>
+                  <div className="flex items-center gap-2">
+                    <p className="text-brand font-poppins font-medium">Reviews</p>
+                    <div className="flex items-center gap-1 text-[#FBBF24]">
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                    </div>
+                  </div>
+                
+                </div>
+                {/* ----------Main Text---------- */}
+                <p className="card__description">
+                  A natural problem-solver. “Munna consistently delivered clean, scalable code and brought fresh ideas to the table. His ability to break down complex problems made him an invaluable part of our development team.”
+                </p>
+                {/* ----------User Reviewer---------- */}
+                <div className="mt-10 flex items-center gap-4">
+                  <div className="w-[50px] h-[50px] rounded-full"><img className="rounded-full" src={reviewImg1} alt="review profile" /></div>
+                  <div>
+                    <h2 className="text-brand font-poppins font-semibold text-md">John Smith</h2>
+                    <p className="text-[#e5e3dc9d] font-poppins font-semibold text-sm mt-1">Agency Client</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -139,11 +156,6 @@ const MyReview = () => {
                 <p className="card__description">
                   I integrate powerful APIs to connect frontend apps with real-time data and dynamic features. Whether it's fetching content, handling user inputs, or syncing services, I ensure seamless communication between the client and backend.
                 </p>
-                <Magnet magnetStrength={4}>
-                  <div className="magnetic-btn">
-                    <Link className="ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this">READ MORE</Link>
-                  </div>
-                </Magnet>
               </div>
             </div>
           </div>
@@ -158,11 +170,6 @@ const MyReview = () => {
                 <p className="card__description">
                   I convert Figma designs into fully responsive and functional websites with clean code and pixel-perfect accuracy. Every section is optimized for speed, usability, and smooth performance across all screen sizes.
                 </p>
-                <Magnet magnetStrength={4}>
-                  <div className="magnetic-btn">
-                    <Link className="ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this">READ MORE</Link>
-                  </div>
-                </Magnet>
               </div>
             </div>
           </div>
@@ -177,11 +184,6 @@ const MyReview = () => {
                 <p className="card__description">
                   I convert Figma designs into fully responsive and functional websites with clean code and pixel-perfect accuracy. Every section is optimized for speed, usability, and smooth performance across all screen sizes.
                 </p>
-                <Magnet magnetStrength={4}>
-                  <div className="magnetic-btn">
-                    <Link className="ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this">READ MORE</Link>
-                  </div>
-                </Magnet>
               </div>
             </div>
           </div>

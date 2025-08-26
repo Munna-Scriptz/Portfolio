@@ -333,7 +333,7 @@ body{
 #ScrollCardsHorizontal{
   width: 100%;
   background-image: url(../src/assets/images/reviewsBgDec.png);
-  background-color: #212121;
+  background-color: #0e0e0e;
   padding: 120px 0;
 }
 #ScrollCardsHorizontal .cards-outer {
@@ -344,7 +344,7 @@ body{
 /* the horizontal row that gets translated */
 #ScrollCardsHorizontal .cards {
   position: sticky;
-  top: calc(50vh - (var(--card-height) / 2)); /* vertically center the row */
+  top: calc(50vh - (var(--card-height) / 2));
   display: flex;
   gap: 40px; /* keep in sync with JS GAP */
   align-items: center;
@@ -356,18 +356,19 @@ body{
 /* each card is fixed width in the row */
 #ScrollCardsHorizontal .card {
   flex: 0 0 var(--card-width, 900px);
-  /* stacking visual offset is applied inline (padding-left) in JS */
 }
 
 #ScrollCardsHorizontal .card__inner {
   will-change: transform;
-  background: white;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(40px);
+  border: 1px solid #e5e3dc2f;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
   transform-origin: center center;
   transition: transform 180ms ease, filter 180ms ease;
-  padding: 0; /* inner contents keep their padding in .card__content */
+  padding: 0;
 }
 
 /* keep original content paddings */
@@ -377,7 +378,8 @@ body{
 
 /* description styles kept */
 #ScrollCardsHorizontal .card__description {
-  color: #212121;
+  color: #E5E3DC;
+  font-weight: 500;
   font-family: "Poppins", "sans-serif";
   margin-top: 25px;
   font-size: 18px;

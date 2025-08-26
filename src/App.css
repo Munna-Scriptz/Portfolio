@@ -335,6 +335,8 @@ body{
   background-image: url(../src/assets/images/reviewsBgDec.png);
   background-color: #0e0e0e;
   padding: 120px 0;
+  height: 100vh !important;
+  display: flex !important;
 }
 #ScrollCardsHorizontal .cards-outer {
   position: relative;

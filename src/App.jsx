@@ -43,13 +43,22 @@ function smoothScroll() {
 }
 
 // ------------------PreLoader 
-const [loading, setLoading] = useState(true)
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3400); // 2 seconds
+  const [loading, setLoading] = useState(true);
+  const [showContent, setShowContent] = useState(false);
 
-    return () => clearTimeout(timer);
+  useEffect(() => {
+    const handlePageLoad = () => {
+      setTimeout(() => setLoading(false), 6100);
+      setTimeout(() => setShowContent(true), 4500);
+    };
+
+    if (document.readyState === "complete") {
+      handlePageLoad();
+    } else {
+      window.addEventListener("load", handlePageLoad);
+    }
+
+    return () => window.removeEventListener("load", handlePageLoad);
   }, []);
 // ---------------Routing 
   const MyRoute = createBrowserRouter(createRoutesFromElements(
@@ -64,16 +73,12 @@ const [loading, setLoading] = useState(true)
 
   return (
     <>
-    {
-      loading? (
-        <Loader/>
-      )
-      :
-      (
-        <RouterProvider router={MyRoute}></RouterProvider>
-      )
-      
-    }
+      {
+        loading && <Loader />
+      }
+      {
+        showContent && <RouterProvider router={MyRoute} />
+      }
     </>
   )
 }

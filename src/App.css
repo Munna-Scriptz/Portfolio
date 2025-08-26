@@ -602,8 +602,8 @@ body{
   font-weight: 600;
 }
 
-/* -------Responsive ---------- */
-@media  (min-width: 320px) and (max-width: 576px) { 
+/* --------------Loader Responsive ----------------- */
+/* @media  (min-width: 320px) and (max-width: 576px) { 
   .loader{
     display: none;
   }
@@ -616,7 +616,7 @@ body{
   .loader-text{
     display: none;
   }
-}
+} */
 
 /* @media (max-width: 767.98px) { ... }
 

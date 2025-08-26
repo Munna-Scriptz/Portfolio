@@ -329,7 +329,13 @@ body{
     padding: 30px 20px;
   }
 }
-/* wrapper that creates vertical scroll space mapped to horizontal motion */
+/* -------------------------------------------About Page Review Slider-------------------------------------------- */
+#ScrollCardsHorizontal{
+  width: 100%;
+  background-image: url(../src/assets/images/reviewsBgDec.png);
+  background-color: #212121;
+  padding: 120px 0;
+}
 #ScrollCardsHorizontal .cards-outer {
   position: relative;
   width: 100%;

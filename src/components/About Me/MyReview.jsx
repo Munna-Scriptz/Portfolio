@@ -107,7 +107,7 @@ const MyReview = () => {
 
   return (
     <>
-    <div id="ScrollCardsHorizontal" className="container">
+    <div id="ScrollCardsHorizontal">
       <div ref={outerRef} className="cards-outer">
         <div ref={cardsRef} className="cards">
           {/* keep your card markup (unchanged) */}

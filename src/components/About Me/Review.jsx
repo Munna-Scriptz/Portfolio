@@ -17,8 +17,8 @@ const Review = () => {
                 <p className='font-poppins text-second lg:text-xl text-lg lg:w-[500px] uppercase lg:ml-[100px]'>eedback from those I’ve worked with — clients, collaborators, and mentors who’ve seen my code, communication, and consistency in action.</p>
             </div>
             {/* ---------------Slider------------------ */}
-            <MyReview/>
         </div>
+        <MyReview/>
     </section>
     </>
   )

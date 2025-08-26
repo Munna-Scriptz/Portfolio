@@ -329,6 +329,90 @@ body{
     padding: 30px 20px;
   }
 }
+/* wrapper that creates vertical scroll space mapped to horizontal motion */
+#ScrollCardsHorizontal .cards-outer {
+  position: relative;
+  width: 100%;
+}
+
+/* the horizontal row that gets translated */
+#ScrollCardsHorizontal .cards {
+  position: sticky;
+  top: calc(50vh - (var(--card-height) / 2)); /* vertically center the row */
+  display: flex;
+  gap: 40px; /* keep in sync with JS GAP */
+  align-items: center;
+  will-change: transform;
+  transform: translateX(0);
+  transition: transform 0.12s linear;
+}
+
+/* each card is fixed width in the row */
+#ScrollCardsHorizontal .card {
+  flex: 0 0 var(--card-width, 900px);
+  /* stacking visual offset is applied inline (padding-left) in JS */
+}
+
+#ScrollCardsHorizontal .card__inner {
+  will-change: transform;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
+  transform-origin: center center;
+  transition: transform 180ms ease, filter 180ms ease;
+  padding: 0; /* inner contents keep their padding in .card__content */
+}
+
+/* keep original content paddings */
+#ScrollCardsHorizontal .card__content {
+  padding: 40px 30px;
+}
+
+/* description styles kept */
+#ScrollCardsHorizontal .card__description {
+  color: #212121;
+  font-family: "Poppins", "sans-serif";
+  margin-top: 25px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* responsive adjustments */
+@media (max-width: 1024px) {
+  #ScrollCardsHorizontal .cards {
+    top: calc(50vh - (var(--card-height) / 2));
+    gap: 28px;
+  }
+  #ScrollCardsHorizontal .card {
+    flex: 0 0 calc(80vw);
+  }
+  #ScrollCardsHorizontal .card__title { font-size: 28px; }
+  #ScrollCardsHorizontal .card__description { font-size: 15px; }
+  #ScrollCardsHorizontal .card__content { padding: 28px 20px; }
+}
+
+@media (max-width: 600px) {
+  #ScrollCardsHorizontal .cards {
+    top: 20px; /* pin to top on small screens for simpler UX */
+  }
+  #ScrollCardsHorizontal .card {
+    flex: 0 0 calc(92vw);
+  }
+  #ScrollCardsHorizontal .card__inner {
+    border-radius: 12px;
+  }
+  #ScrollCardsHorizontal.card__title {
+    font-size: 22px;
+  }
+  #ScrollCardsHorizontal .card__description {
+    font-size: 14px;
+  }
+  #ScrollCardsHorizontal .card__content {
+    padding: 20px;
+  }
+}
+
 /* -----------------------------------------------------Services Hover Cards----------------------------------------------------------- */
 .process-row {
   background-color: transparent;

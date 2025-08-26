@@ -1,8 +1,23 @@
 import React from 'react'
 import lines from '../../assets/images/TextLines.svg'
+import { MdOutlineArrowBack } from 'react-icons/md'
 const Services = () => {
   return (
     <>
+    <section id='Services' className='mt-[112px]'>
+      <div className="container">
+        {/* --------------Header-------------- */}
+        <div>
+          <p className='font-poppins text-Primary text-lg font-semibold uppercase'>What I Do</p>
+            <div className='flex items-center justify-between'>
+              <h2 className='font-soldier text-Primary lg:text-[152px] text-[64px] font-medium uppercase'>Services</h2>
+              <MdOutlineArrowBack data-aos="fade-up" className='hidden md:block text-[200px] md:text-[300px] rotate-[-45deg] text-borderCol'/>
+            </div>
+          <p className='font-poppins text-second lg:text-xl text-lg lg:w-[400px] uppercase lg:ml-[100px]'>Comprehensive digital services to boost your online presence and achieve impactful results.</p>
+        </div>
+        {/* --------------Services Card-------------- */}
+      </div>
+    </section>
     <div className="traineeship py-10 mt-[70px]">
       <div className="container">
         <div className="process-row flex md:flex-row gap-y-5 items-center justify-between flex-col gap-2">

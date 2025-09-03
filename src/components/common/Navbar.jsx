@@ -19,7 +19,7 @@ export const Navbar = () => {
                     </Magnet>
                     {/* ----NavLinks---- */}
                     <div>
-                      <ul className='font-soldier flex items-center gap-3 text-2xl text-Primary'>
+                      <ul className='font-soldier flex items-center gap-6 text-2xl text-Primary'>
                         <li data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1200" data-aos-easing="ease-in-sine"><Link to={'/'} className='flex items-center NavLinks hover-brown'>HOME<LuDot/></Link></li>
                         <li data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1500" data-aos-easing="ease-in-sine"><Link to={'/about'} className='flex items-center NavLinks hover-brown'>ABOUT<LuDot/></Link></li>
                         <li data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1800" data-aos-easing="ease-in-sine"><Link to={'/projects'} className='flex items-center NavLinks hover-brown'>PROJECTS<LuDot/></Link></li>
@@ -29,7 +29,7 @@ export const Navbar = () => {
                     {/* ----Button---- */}
                     <Magnet magnetStrength={4}>
                       <div className="magnetic-btn" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="1200" data-aos-easing="ease-in-sine">
-                        <Link className='ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this'>CONTACT</Link>
+                        <Link to={'/contact'} className='ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this'>CONTACT</Link>
                       </div>
                     </Magnet>
                 </div>

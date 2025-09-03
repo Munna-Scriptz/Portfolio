@@ -42,7 +42,7 @@ const Banner = () => {
                         {/* -----Text Button------- */}
                         <div className='mt-6 flex items-center gap-3'>
                             <Magnet padding={10} disabled={false} magnetStrength={5}>
-                              <Link data-aos="fade-right" data-aos-duration="1600" data-aos-delay="5500" data-aos-easing="ease-in-sine" className='ContactButton px-[24px] py-[8px] font-poppins font-medium lg:text-base text-sm text-Primary hover-this'>CONTACT</Link>
+                              <Link to={'/contact'} data-aos="fade-right" data-aos-duration="1600" data-aos-delay="5500" data-aos-easing="ease-in-sine" className='ContactButton px-[24px] py-[8px] font-poppins font-medium lg:text-base text-sm text-Primary hover-this'>CONTACT</Link>
                             </Magnet>
                             <Magnet padding={10} disabled={false} magnetStrength={5}>
                               <Link data-aos="fade-right" data-aos-duration="1600" data-aos-delay="5500" data-aos-easing="ease-in-sine" className='DownloadCv px-[24px] py-[8px] font-poppins font-medium  text-Primary text-sm lg:py-[8px] lg:text-base hover-this'>

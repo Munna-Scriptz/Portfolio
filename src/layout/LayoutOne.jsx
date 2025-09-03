@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router'
 import Cursor from '../components/Cursor'
+import { Navbar } from '../components/common/Navbar';
 import { ResNavbar } from '../components/common/ResNavbar';
 import Footer from '../components/common/Footer';
+import ScrollToTop from '../components/effects/ScrollToTop';
 // --------Aos Imp 
 import Aos from 'aos'
 import "aos/dist/aos.css";
-import { Navbar } from '../components/common/Navbar';
 
 export const LayoutOne = () => {
   const location = useLocation()
@@ -23,6 +24,7 @@ export const LayoutOne = () => {
   }, [location]);
   return (
     <> 
+      <ScrollToTop/>
       <Cursor/>
       <Navbar/>
       <ResNavbar/>

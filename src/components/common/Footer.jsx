@@ -13,7 +13,7 @@ import Magnet from '../effects/Magnet';
 const Footer = () => {
   return (
     <>
-        <footer className='pt-[50px] border-[#21212157] border-t-2 pb-[50px]'>
+        <footer className='pt-[50px] border-[#21212157] border-t-2 pb-[120px]'>
             <div className="container">
                 <div id="Footer_Row" className='flex lg:flex-row flex-col lg:items-center justify-between lg:gap-0 gap-10'>
                     <div id="Row_1">
@@ -34,10 +34,10 @@ const Footer = () => {
                     <div id="Row_3">
                         <h2 data-aos="fade-up" className='font-soldier lg:text-6xl text-5xl text-Primary mb-6'>ABOUT ME</h2>
                         <ul id='FooterLinks' className='flex flex-col gap-4 text-[#3f3f3f] font-poppins text-sm'>
-                            <li data-aos="fade-up"><Link to={'/'}>ABOUT ME</Link></li>
-                            <li data-aos="fade-up"><Link to={'/'}>MY WORK</Link></li>
+                            <li data-aos="fade-up"><Link to={'/about'}>ABOUT ME</Link></li>
+                            <li data-aos="fade-up"><Link to={'/projects'}>MY WORK</Link></li>
                             <li data-aos="fade-up"><Link to={'/'}>DOWNLOAD CV</Link></li>
-                            <li data-aos="fade-up"><Link to={'/'}>CONTACT</Link></li>
+                            <li data-aos="fade-up"><Link to={'/contact'}>CONTACT</Link></li>
                         </ul>
                     </div>
                     <div id="Row_4">
@@ -49,19 +49,19 @@ const Footer = () => {
 
                             <div data-aos="fade-up" className='mt-3 flex items-center gap-7'>
                             <Magnet padding={20} disabled={false} magnetStrength={2}>
-                              <Link><FaFacebookF className='text-[18px] hover-brown'/></Link>
+                              <a href='https://www.facebook.com/rexon.notfr'><FaFacebookF className='text-[18px] hover-brown'/></a>
                             </Magnet>
                             <Magnet padding={20} disabled={false} magnetStrength={2}>
-                              <Link><FaInstagram className='text-[18px] hover-brown'/></Link>
+                              <a href='https://www.instagram.com/rexon.notfr/?__pwa=1'><FaInstagram className='text-[18px] hover-brown'/></a>
                             </Magnet>
                             <Magnet padding={20} disabled={false} magnetStrength={2}>
-                              <Link><FaXTwitter className='text-[18px] hover-brown'/></Link>
+                              <a href='https://github.com/Munna-Scriptz'><FaXTwitter className='text-[18px] hover-brown'/></a>
                             </Magnet>
                             <Magnet padding={20} disabled={false} magnetStrength={2}>
-                              <Link><FaGithub className='text-[18px] hover-brown'/></Link>
+                              <a href='https://github.com/Munna-Scriptz'><FaGithub className='text-[18px] hover-brown'/></a>
                             </Magnet>
                             <Magnet padding={20} disabled={false} magnetStrength={2}>
-                              <Link><FaLinkedinIn className='text-[18px] hover-brown'/></Link>
+                              <a href='https://github.com/Munna-Scriptz'><FaLinkedinIn className='text-[18px] hover-brown'/></a>
                             </Magnet>
                         </div>
                         </ul>

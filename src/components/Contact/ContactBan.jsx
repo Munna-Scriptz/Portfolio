@@ -1,17 +1,18 @@
 import React from 'react'
 import Magnet from '../effects/Magnet'
 // ---------Icons 
-import { FaFacebookF } from "react-icons/fa";
+import { FaArrowDown, FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import CircularText from '../effects/CircularText';
 const ContactBan = () => {
   return (
     <>
     <section id='ContactBanner' className='py-[112px]'>
         <div className="container">
-            <div id="Banner-Row" className='flex items-end justify-between'>
+            <div id="Banner-Row" className='flex items-end justify-between relative'>
                 {/* -----Social Media Button------- */}
                 <div data-aos="fade-right" data-aos-duration="2200" data-aos-delay="4500" data-aos-easing="ease-in-sine"  className='mt-10 flex flex-col gap-7'>
                             <Magnet padding={20} disabled={false} magnetStrength={2}>
@@ -37,7 +38,18 @@ const ContactBan = () => {
                     <p className='font-poppins uppercase text-lg text-[#525252] tracking-wide font-medium text-center mx-auto w-[400px]'>Excited about a new project? Let’s connect and bring it to life together</p>
                 </div>
                 {/* -----Explore More------- */}
-                <h1>asdas</h1>
+                <div className='absolute right-0 bottom-0'>
+                    <CircularText
+                        text=" SCROLL TO EXPLORE ✦ SCROLL TO EXPLORE  ✦ "
+                        onHover="speedUp"
+                        spinDuration={20}
+                        className="custom-class z-10"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <FaArrowDown className="text-xl text-[#242424]" />
+                    </div>
+                </div>
+                <div></div>
             </div>
         </div>
     </section>

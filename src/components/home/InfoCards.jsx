@@ -97,7 +97,7 @@ const InfoCards = () => {
             </div>
             <div className="card__content">
               <h1 className="card__title font-soldier text-second text-5xl flex items-center justify-between uppercase">Web management <span className='text-second'>04</span></h1>
-              <p className="card__description">I convert Figma designs into fully responsive and functional websites with clean code and pixel-perfect accuracy. Every section is optimized for speed, usability, and smooth performance across all screen sizes.</p>
+              <p className="card__description">Web Management services that keep your site running smoothly — from regular updates, security monitoring, and speed optimization to content management and backups. I ensure your website stays secure, fast, and user-friendly so you can focus on growing your business without worries.</p>
               <Magnet magnetStrength={4}>
                 <div className="magnetic-btn">
                   <Link className='ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this'>READ MORE</Link>

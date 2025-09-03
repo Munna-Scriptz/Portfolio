@@ -6,6 +6,8 @@ import { Home } from './pages/Home'
 import { RouterProvider } from 'react-router'
 import Loader from './components/Loader'
 import About from './pages/About'
+import Projects from './pages/Projects'
+import Contact from './pages/Contact'
 
 
 export const App = () => {
@@ -66,6 +68,8 @@ function smoothScroll() {
       <Route path='/' element={<LayoutOne/>}>
         <Route index element={<Home/>}></Route>
         <Route path='/about' element={<About/>}></Route>
+        <Route path='/projects' element={<Projects/>}></Route>
+        <Route path='/contact' element={<Contact/>}></Route>
       </Route>
     </Route>
   ))

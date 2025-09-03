@@ -1,6 +1,8 @@
 import React from 'react'
 import lines from '../../assets/images/TextLines.svg'
 import { MdOutlineArrowBack } from 'react-icons/md'
+import ScrollFloat from '../effects/ScrollFloat'
+import ScrollReveal from '../effects/ScrollReveal'
 const Services = () => {
   return (
     <>
@@ -8,12 +10,14 @@ const Services = () => {
       <div className="container">
         {/* --------------Header-------------- */}
         <div>
-          <p className='font-poppins text-Primary text-lg font-semibold uppercase'>What I Do</p>
+          <p className='font-poppins text-Primary text-lg font-semibold uppercase'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=50%' scrollEnd='bottom bottom-=40%' stagger={0.03}>What I Do</ScrollFloat></p>
             <div className='flex items-center justify-between'>
-              <h2 className='font-soldier text-Primary lg:text-[152px] text-[64px] font-medium uppercase'>Services</h2>
+              <h2 className='font-soldier text-Primary lg:text-[152px] text-[64px] font-medium uppercase'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=50%' scrollEnd='bottom bottom-=40%' stagger={0.03}>Services</ScrollFloat></h2>
               <MdOutlineArrowBack data-aos="fade-up" className='hidden md:block text-[200px] md:text-[300px] rotate-[-45deg] text-borderCol'/>
             </div>
-          <p className='font-poppins text-second lg:text-xl text-lg lg:w-[400px] uppercase lg:ml-[100px]'>Comprehensive digital services to boost your online presence and achieve impactful results.</p>
+            <ScrollReveal containerClassName='font-poppins text-second lg:text-xl text-lg lg:w-[400px] uppercase lg:ml-[100px]'>
+              Comprehensive digital services to boost your online presence and achieve impactful results.
+          </ScrollReveal>
         </div>
         {/* --------------Services Card-------------- */}
       </div>

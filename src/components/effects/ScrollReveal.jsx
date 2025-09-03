@@ -1,33 +1,35 @@
-import { useEffect, useRef, useMemo } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect, useRef, useMemo } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ScrollReveal = ({
   children,
   scrollContainerRef,
-  enableBlur = true,
-  baseOpacity = 0.1,
-  baseRotation = 3,
-  blurStrength = 4,
   containerClassName = "",
-  textClassName = "",
-  rotationEnd = "bottom bottom",
-  wordAnimationEnd = "bottom bottom"
+  wordAnimationEnd = "bottom bottom-=50%",
 }) => {
   const containerRef = useRef(null);
 
-  const splitText = useMemo(() => {
-    const text = typeof children === 'string' ? children : '';
-    return text.split(/(\s+)/).map((word, index) => {
-      if (word.match(/^\s+$/)) return word;
-      return (
-        <span className="inline-block word" key={index}>
-          {word}
-        </span>
-      );
-    });
+  // ✅ split text but keep existing JSX (like your <span className="text-coffee">)
+  const splitChildren = useMemo(() => {
+    const processNode = (node) => {
+      if (typeof node === "string") {
+        return node.split(/(\s+)/).map((word, i) =>
+          word.match(/^\s+$/) ? word : (
+            <span className="inline-block word" key={i}>
+              {word}
+            </span>
+          )
+        );
+      }
+      return node; // keep JSX elements intact
+    };
+
+    return Array.isArray(children)
+      ? children.map((child, i) => <span key={i}>{processNode(child)}</span>)
+      : processNode(children);
   }, [children]);
 
   useEffect(() => {
@@ -35,72 +37,35 @@ const ScrollReveal = ({
     if (!el) return;
 
     const scroller =
-      scrollContainerRef && scrollContainerRef.current
-        ? scrollContainerRef.current
-        : window;
+      scrollContainerRef?.current ? scrollContainerRef.current : window;
 
-    gsap.fromTo(
-      el,
-      { transformOrigin: '0% 50%', rotate: baseRotation },
-      {
-        ease: 'none',
-        rotate: 0,
-        scrollTrigger: {
-          trigger: el,
-          scroller,
-          start: 'top bottom',
-          end: rotationEnd,
-          scrub: true,
-        },
-      }
-    );
-
-    const wordElements = el.querySelectorAll('.word');
+    const wordElements = el.querySelectorAll(".word");
 
     gsap.fromTo(
       wordElements,
-      { opacity: baseOpacity, willChange: 'opacity' },
+      { color: "#B3B2AD" },
       {
-        ease: 'none',
-        opacity: 1,
-        stagger: 0.05,
+        color: "#212121",
+        ease: "none",
+        stagger: 0.8,
         scrollTrigger: {
           trigger: el,
           scroller,
-          start: 'top bottom-=20%',
+          start: "top bottom-=40%",
           end: wordAnimationEnd,
           scrub: true,
         },
       }
     );
 
-    if (enableBlur) {
-      gsap.fromTo(
-        wordElements,
-        { filter: `blur(${blurStrength}px)` },
-        {
-          ease: 'none',
-          filter: 'blur(0px)',
-          stagger: 0.05,
-          scrollTrigger: {
-            trigger: el,
-            scroller,
-            start: 'top bottom-=20%',
-            end: wordAnimationEnd,
-            scrub: true,
-          },
-        }
-      );
-    }
-
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((t) => t.kill());
     };
-  }, [scrollContainerRef, enableBlur, baseRotation, baseOpacity, rotationEnd, wordAnimationEnd, blurStrength]);
+  }, [scrollContainerRef, wordAnimationEnd]);
 
   return (
-    <h2 ref={containerRef} className={`my-5 ${containerClassName}`}>
-      <p className={`text-[clamp(1.6rem,4vw,3rem)] leading-[1.5] font-semibold ${textClassName}`}>{splitText}</p>
+    <h2 ref={containerRef} className={containerClassName}>
+      {splitChildren}
     </h2>
   );
 };

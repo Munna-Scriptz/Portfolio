@@ -11,7 +11,6 @@ import Contact from './pages/Contact'
 
 
 export const App = () => {
-  // --------Smooth Scroll------------
 let scrollTarget = window.scrollY;
 let currentScroll = window.scrollY;
 let isTicking = false;
@@ -28,14 +27,22 @@ window.addEventListener('wheel', (e) => {
   }
 }, { passive: false });
 
+// Sync scrollTarget when user drags scrollbar
+window.addEventListener('scroll', () => {
+  if (!isTicking) {
+    scrollTarget = window.scrollY;
+    currentScroll = window.scrollY;
+  }
+});
+
 function smoothScroll() {
   const distance = scrollTarget - currentScroll;
-  const delta = distance * 0.1; // easing factor, smaller is smoother/slower
+  const delta = distance * 0.1; // easing factor
 
   currentScroll += delta;
 
   if (Math.abs(distance) < 0.5) {
-    currentScroll = scrollTarget; // snap to target when close enough
+    currentScroll = scrollTarget;
     isTicking = false;
   } else {
     requestAnimationFrame(smoothScroll);

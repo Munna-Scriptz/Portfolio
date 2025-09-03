@@ -8,6 +8,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import CircularText from '../effects/CircularText';
 const ContactBan = () => {
+  
   return (
     <>
     <section id='ContactBanner' className='py-[112px]'>
@@ -38,17 +39,12 @@ const ContactBan = () => {
                     <p className='font-poppins uppercase text-lg text-[#525252] tracking-wide font-medium text-center mx-auto w-[400px]'>Excited about a new project? Let’s connect and bring it to life together</p>
                 </div>
                 {/* -----Explore More------- */}
-                <div className='absolute right-0 bottom-0'>
-                    <CircularText
-                        text=" SCROLL TO EXPLORE ✦ SCROLL TO EXPLORE  ✦ "
-                        onHover="speedUp"
-                        spinDuration={20}
-                        className="custom-class z-10"
-                    />
+                <a href='#Contact-Section' className='absolute right-0 bottom-0'>
+                    <CircularText text=" SCROLL TO EXPLORE ✦ SCROLL TO EXPLORE  ✦ " onHover="speedUp" spinDuration={20} className="custom-class z-10"/>
                     <div className="absolute inset-0 flex items-center justify-center">
                         <FaArrowDown className="text-xl text-[#242424]" />
                     </div>
-                </div>
+                </a>
                 <div></div>
             </div>
         </div>

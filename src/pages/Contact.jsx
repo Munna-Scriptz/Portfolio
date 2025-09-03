@@ -7,7 +7,9 @@ const Contact = () => {
   return (
     <>
         <ContactBan/>
-        <ContactMe/>
+        <div id='Contact-Section'>
+            <ContactMe/>
+        </div>
         <div className='pb-[130px]'>
             <ExploreMyWork/>
         </div>

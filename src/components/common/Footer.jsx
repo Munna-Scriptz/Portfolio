@@ -13,7 +13,7 @@ import Magnet from '../effects/Magnet';
 const Footer = () => {
   return (
     <>
-        <footer className='pt-[50px] border-[#21212157] border-t-2 pb-[120px]'>
+        <footer className='pt-[50px] border-[#21212157] border-t-2 lg:pb-[120px] pb-[100px]'>
             <div className="container">
                 <div id="Footer_Row" className='flex lg:flex-row flex-col lg:items-center justify-between lg:gap-0 gap-10'>
                     <div id="Row_1">
@@ -47,7 +47,7 @@ const Footer = () => {
                             <li data-aos="fade-up"><Link to={'/'}>munnascriptz@gmail.com</Link></li>
                             <li data-aos="fade-up"><Link to={'/'}>+8801908905391</Link></li>
 
-                            <div data-aos="fade-up" className='mt-3 flex items-center gap-7'>
+                            <div className='mt-3 flex items-center gap-7'>
                             <Magnet padding={20} disabled={false} magnetStrength={2}>
                               <a href='https://www.facebook.com/rexon.notfr'><FaFacebookF className='text-[18px] hover-brown'/></a>
                             </Magnet>

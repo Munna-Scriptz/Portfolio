@@ -11,7 +11,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import Magnet from '../effects/Magnet';
 import ScrollFloat from '../effects/ScrollFloat';
 
-const Contact = () => {
+const ContactMe = () => {
   return (
     <>
       <section id='Contact' className='my-10 md:my-[112px]'>
@@ -105,4 +105,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default ContactMe

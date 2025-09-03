@@ -42,7 +42,7 @@ const Footer = () => {
                     </div>
                     <div id="Row_4">
                         <h2 data-aos="fade-up" className='font-soldier lg:text-6xl text-5xl text-Primary mb-4'>CONTACT</h2>
-                        <ul id='FooterLinks' className='flex flex-col gap-4 text-[#3f3f3f] font-poppins font-medium'>
+                        <ul id='FooterLinks' className='flex flex-col gap-3 text-[#3f3f3f] font-poppins font-medium'>
                             <li data-aos="fade-up"><Link to={'/'}>DHAKA, BANGLADESH</Link></li>
                             <li data-aos="fade-up"><Link to={'/'}>munnascriptz@gmail.com</Link></li>
                             <li data-aos="fade-up"><Link to={'/'}>+8801908905391</Link></li>

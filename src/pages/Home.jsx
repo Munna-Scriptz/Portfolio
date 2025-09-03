@@ -6,7 +6,7 @@ import AboutMe from '../components/home/AboutMe'
 import { Skills } from '../components/home/Skills'
 import HomeServices from '../components/home/HomeServices'
 import Projects from '../components/home/Projects'
-import Contact from '../components/home/Contact'
+import ContactMe from '../components/home/ContactMe'
 
 export const Home = () => {
   return (
@@ -26,7 +26,7 @@ export const Home = () => {
       </div>
       <HomeServices/>
       <Projects/>
-      <Contact/>
+      <ContactMe/>
     </>
   )
 }

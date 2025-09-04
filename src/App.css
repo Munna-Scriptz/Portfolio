@@ -91,7 +91,6 @@ body{
   cursor: pointer;
   padding-left: 10px;
 }
-
 .NavLinks::before {
   content: "";
   position: absolute;
@@ -293,7 +292,6 @@ body{
 }
 
 .card__description {
-  color: #212121;
   font-family: "Poppins", "sans-serif";
   margin-top: 25px;
   font-size: 18px;

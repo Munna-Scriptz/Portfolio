@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 /* -------Tailwind------ */
 @import "tailwindcss";
 
@@ -11,6 +12,7 @@
     --font-poppins: "Poppins", "sans-serif";
     --font-soldier: "Big Shoulders", "sans-serif";
     --font-mont: "Montserrat", "sans-serif";
+    --font-manrope: "Manrope", "sans-serif";
     --color-Primary: #161616;
     --color-second: #212121;
     --color-borderCol: #333332;

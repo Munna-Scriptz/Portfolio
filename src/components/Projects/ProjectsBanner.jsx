@@ -39,7 +39,7 @@ const ProjectsBanner = () => {
                     <p className='font-poppins uppercase lg:text-lg text-base text-[#525252] tracking-wide font-medium text-center mx-auto lg:w-[500px] w-full' data-aos="fade-up" data-aos-duration="3000" data-aos-delay="2000">Explore a showcase of my creative journey, where passion meets design to craft engaging digital experiences.</p>
                 </div>
                 {/* -----Explore More------- */}
-                <a href='#Contact-Section' className='absolute right-0 bottom-0' data-aos="fade-up" data-aos-duration="3000" data-aos-delay="3500">
+                <a href='#AllProjects-Section' className='absolute right-0 bottom-0' data-aos="fade-up" data-aos-duration="3000" data-aos-delay="3500">
                   <div className='lg:block hidden'>
                     <CircularText text=" SCROLL TO EXPLORE ✦ SCROLL TO EXPLORE  ✦ " onHover="speedUp" spinDuration={20} className="custom-class z-10"/>
                   </div>

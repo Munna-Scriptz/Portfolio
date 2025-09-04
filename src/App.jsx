@@ -57,8 +57,8 @@ function smoothScroll() {
 
   useEffect(() => {
     const handlePageLoad = () => {
-      setTimeout(() => setLoading(false), 100);
-      setTimeout(() => setShowContent(true), 500);
+      setTimeout(() => setLoading(false), 6100);
+      setTimeout(() => setShowContent(true), 4500);
     };
 
     if (document.readyState === "complete") {

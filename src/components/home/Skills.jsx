@@ -15,6 +15,7 @@ import VsCodeIcon from '../../assets/images/VsCodeICon.svg'
 import GithubIcon from '../../assets/images/GithubIcon.svg'
 import ReduxIcon from '../../assets/images/ReduxIcon.svg'
 import FirebaseIcon from '../../assets/images/FirebaseIcon.svg'
+import AosIcon from '../../assets/images/AosIcon.png'
 import ScrollFloat from '../effects/ScrollFloat';
 
 
@@ -170,6 +171,16 @@ export const Skills = () => {
                             </div>
                             <div>
                                 <p className='flex items-center justify-center font-poppins text-Primary font-medium text-[20px]'>Next Js</p>
+                            </div>
+                        </div>
+                    </DecayCard>
+                    <DecayCard width={120} height={100}>
+                        <div id='MotherSkillBox' className='flex flex-col items-center gap-3'>
+                            <div id='skillBox' className='h-[80px] w-[80px] border p-4 bg-[#2C2C2C] flex items-center justify-center'>
+                                <img src={AosIcon} alt="Vs Code" className='w-full'/>
+                            </div>
+                            <div>
+                                <p className='flex items-center justify-center font-poppins text-Primary font-medium text-[20px]'>Aos</p>
                             </div>
                         </div>
                     </DecayCard>

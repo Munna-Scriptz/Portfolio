@@ -14,7 +14,7 @@ const ProjectsBanner = () => {
         <div className="container">
             <div id="Banner-Row" className='flex lg:flex-row flex-col-reverse lg:items-end items-start justify-between relative'>
                 {/* -----Social Media Button------- */}
-                <div data-aos="fade-right" data-aos-duration="2200" data-aos-delay="3500" data-aos-easing="ease-in-sine"  className='mt-10 flex lg:flex-col flex-row gap-7'>
+                <div data-aos="fade-right" data-aos-duration="2200" data-aos-delay="3500" data-aos-easing="ease-in-sine" data-aos-offset="50"  className='mt-10 flex lg:flex-col flex-row gap-7'>
                             <Magnet padding={20} disabled={false} magnetStrength={2}>
                               <a href='https://www.facebook.com/rexon.notfr' ><FaFacebookF className='text-[18px] text-second hover-brown'/></a>
                             </Magnet>

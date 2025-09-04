@@ -87,7 +87,7 @@ const ProjectsShow = () => {
                                 <h2 className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-6'><BlurText text={items.Description} delay={100} animateBy="words" direction="bottom"/></h2>
                                 
                                 <div className='flex items-center gap-4'>
-                                    <p className='font-poppins lg:text-[19px] text-[17px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
+                                    <p className='font-poppins lg:text-[19px] text-[14px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
                                     <div className='lg:w-[30px] w-[22px] flex items-center gap-2'>
                                         {
                                             items.technologies.map((img , i)=>(

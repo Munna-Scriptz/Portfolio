@@ -46,13 +46,13 @@ const InfoCards = () => {
     <section id='ScrollCards' className='container'>
       <div className="cards">
         <div className="card" data-index="0">
-          <div className="card__inner" id='CounterBG'>
+          <div className="card__inner" id='ServicesBG'>
             <div className="card__content">
               <h1 className="card__title font-soldier text-second text-5xl flex items-center justify-between uppercase">Web development <span className='text-brand'>01</span></h1>
               <p className="card__description text-brand">I specialize in creating modern, responsive, and user-friendly websites using the latest frontend technologies. From clean UI design to smooth functionality, I build web experiences that are fast, scalable, and optimized for all devices.</p>
               <Magnet magnetStrength={4}>
                 <div className="magnetic-btn">
-                  <Link to={'/about'} className='ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this'>READ MORE</Link>
+                  <Link to={'/about'} className='ReadMoreButton font-poppins font-medium px-[24px] py-[8px] text-base hover-this'>READ MORE</Link>
                 </div>
               </Magnet>
             </div>

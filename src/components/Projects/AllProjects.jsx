@@ -7,6 +7,7 @@ import HectoCommerce from '../../assets/images/HectoThumbnail.png'
 import prideAgency from '../../assets/images/PrideAgencyThumb.png'
 import appManagement from '../../assets/images/AppManagementThumb.png'
 import taskManage from '../../assets/images/TaskManageMentScroll.jpeg'
+import taskManageV2 from '../../assets/images/taskManagementV2.jpeg'
 
 import ProjectImg2 from '../../assets/images/Project2.png'
 import ProjectImg3 from '../../assets/images/Project3.png'
@@ -20,6 +21,7 @@ import HtmlIcon from '../../assets/images/HtmlIcon.svg'
 import CssIcon from '../../assets/images/CssIcon.svg'
 import Bootstrap from '../../assets/images/BootStrapIcon.svg'
 import firebase from '../../assets/images/FirebaseIcon.svg'
+import AosIcon from '../../assets/images/AosIcon.png'
 
 import Magnet from '../effects/Magnet'
 import BlurText from '../effects/BlurText'
@@ -62,7 +64,7 @@ const AllProjects = () => {
       'ProjectImage' : prideAgency,
       'ProjectName' : 'Pride Agency Domain Site',
       'Description' : 'A fully responsive Domain Hosting website built with React JS and Tailwind CSS, designed with a clean and modern UI. It showcases hosting plans, services, and features in a professional single landing page layout.',
-      'technologies' : [ReactIcon , TailwindCss , JsIcon , reduxIcon ,firebase , HtmlIcon , CssIcon],
+      'technologies' : [ReactIcon , TailwindCss , JsIcon , AosIcon , reduxIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row-reverse',
       'AosDir' : 'fade-left',
       'liveLink' : 'https://pride-agency.vercel.app/',
@@ -72,7 +74,7 @@ const AllProjects = () => {
       'ProjectImage' : appManagement,
       'ProjectName' : 'App Management Landing Page',
       'Description' : 'A responsive Mobile App landing page built with React JS and Tailwind CSS, featuring a clean UI and modern design. It highlights how to use and manage the app with an easy-to-navigate layout.',
-      'technologies' : [ReactIcon , TailwindCss , JsIcon , HtmlIcon , CssIcon],
+      'technologies' : [ReactIcon , TailwindCss ,AosIcon , JsIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row',
       'AosDir' : 'fade-right',
       'liveLink' : 'https://mobile-app-management.vercel.app/',
@@ -83,12 +85,22 @@ const AllProjects = () => {
     {
       'ProjectImage' : taskManage,
       'ProjectName' : 'Task Management Assistant',
-      'Description' : 'A responsive Mobile App landing page built with React JS and Tailwind CSS, featuring a clean UI and modern design. It highlights how to use and manage the app with an easy-to-navigate layout.',
-      'technologies' : [ReactIcon , TailwindCss , JsIcon , HtmlIcon , CssIcon],
+      'Description' : 'The Task Management Assistant is a modern landing page built with React JS and enhanced with AOS animations for smooth interactions. Designed to be fully responsive, it delivers a clean and engaging experience across all devices.',
+      'technologies' : [ReactIcon , TailwindCss , AosIcon , JsIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row-reverse',
       'AosDir' : 'fade-left',
-      'liveLink' : 'https://mobile-app-management.vercel.app/',
-      'GithubRepo' : 'https://mobile-app-management.vercel.app/'
+      'liveLink' : 'https://task-management-assistant.vercel.app/',
+      'GithubRepo' : 'https://github.com/Munna-Scriptz'
+    },
+    {
+      'ProjectImage' : taskManageV2,
+      'ProjectName' : 'Task Management Assistant V2',
+      'Description' : 'The Task Management Assistant is a modern landing page built with React JS and enhanced with AOS animations for smooth interactions. Designed to be fully responsive, it delivers a clean and engaging experience across all devices.',
+      'technologies' : [ReactIcon , TailwindCss , AosIcon , JsIcon , HtmlIcon , CssIcon],
+      'Direction': 'lg:flex-row',
+      'AosDir' : 'fade-right',
+      'liveLink' : 'https://task-management-assistant.vercel.app/',
+      'GithubRepo' : 'https://github.com/Munna-Scriptz'
     },
     ]
   return (

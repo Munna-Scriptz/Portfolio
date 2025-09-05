@@ -633,6 +633,26 @@ body{
 .traineeship .activity:hover .active {
   display: flex;
 }
+/* ----------------------------------------------------Scroll Image----------------------------------------------------- */
+.screen {
+  height: 360px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+}
+
+.screen img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: translateY(0);
+  transition: transform 10s ease; /* fast return */
+}
+
+#HoverDivImg:hover .screen img {
+  transform: translateY(calc(-100% + 360px));
+  transition: transform 10s linear; /* slow scroll up */
+}
 
 
 

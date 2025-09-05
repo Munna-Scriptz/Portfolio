@@ -6,6 +6,7 @@ import NoteAppThumb from '../../assets/images/NoteAppThumb.png'
 import HectoCommerce from '../../assets/images/HectoThumbnail.png'
 import prideAgency from '../../assets/images/PrideAgencyThumb.png'
 import appManagement from '../../assets/images/AppManagementThumb.png'
+import taskManage from '../../assets/images/TaskManageMentScroll.jpeg'
 
 import ProjectImg2 from '../../assets/images/Project2.png'
 import ProjectImg3 from '../../assets/images/Project3.png'
@@ -78,6 +79,18 @@ const AllProjects = () => {
       'GithubRepo' : 'https://mobile-app-management.vercel.app/'
     },
     ]
+    const MyProjectsScroll = [
+    {
+      'ProjectImage' : taskManage,
+      'ProjectName' : 'App Management Landing Page',
+      'Description' : 'A responsive Mobile App landing page built with React JS and Tailwind CSS, featuring a clean UI and modern design. It highlights how to use and manage the app with an easy-to-navigate layout.',
+      'technologies' : [ReactIcon , TailwindCss , JsIcon , HtmlIcon , CssIcon],
+      'Direction': 'lg:flex-row-reverse',
+      'AosDir' : 'fade-left',
+      'liveLink' : 'https://mobile-app-management.vercel.app/',
+      'GithubRepo' : 'https://mobile-app-management.vercel.app/'
+    },
+    ]
   return (
     <>
         <section className='my-[112px] overflow-hidden'>
@@ -118,6 +131,42 @@ const AllProjects = () => {
                         <div key={i} className={`flex items-center ${items.Direction} flex-col lg:gap-20 gap-5`}>
                             <div className='lg:w-[640px] w-full' data-aos={`${items.AosDir}`} data-aos-offset="200" data-aos-easing="ease-in-sine">
                                 <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
+                            </div>
+                            <div className='lg:w-[650px] w-full'>
+                                <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={280} animateBy="words" direction="bottom"/></h2>
+                                <h2 className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-6'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom"/></h2>
+                                
+                                <div className='flex items-center gap-4'>
+                                    <p className='font-poppins lg:text-[19px] text-[14px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
+                                    <div className='lg:w-[30px] w-[22px] flex items-center gap-2'>
+                                        {
+                                            items.technologies.map((img , i)=>(
+                                                <img src={img} key={i}/>
+                                            ))
+                                        }
+                                    </div>
+                                </div>
+                                <div className='mt-7 flex items-center lg:gap-4 gap-2'>
+                                    <Magnet padding={30} disabled={false} magnetStrength={5}>
+                                        <a href={items.liveLink} target='_blank' to={'/projects'} className='ContactButton font-poppins lg:px-[24px] py-[8px] px-[15px] font-medium lg:text-base text-sm text-Primary hover-this'>OPEN PROJECT</a>
+                                    </Magnet>
+                                    <Magnet padding={10} disabled={false} magnetStrength={5}>
+                                        <a href={`${items.GithubRepo}`} target='_blank' className='DownloadCv font-poppins font-medium lg:text-base text-sm text-Primary hover-brown'>
+                                            <span>GITHUB REPO</span>
+                                        </a>
+                                    </Magnet>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
+                {
+                    MyProjectsScroll.map((items, i)=>(
+                        <div key={i} id='HoverDivImg' className={`flex items-center ${items.Direction} flex-col lg:gap-20 gap-5`}>
+                            <div className='lg:w-[640px] w-full' data-aos={`${items.AosDir}`} data-aos-offset="200" data-aos-easing="ease-in-sine">
+                                <div className='screen'>
+                                    <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
+                                </div>
                             </div>
                             <div className='lg:w-[650px] w-full'>
                                 <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={280} animateBy="words" direction="bottom"/></h2>

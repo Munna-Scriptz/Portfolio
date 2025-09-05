@@ -10,9 +10,9 @@ const Services = () => {
       <div className="container">
         {/* --------------Header-------------- */}
         <div>
-          <p className='font-poppins text-Primary text-lg font-semibold uppercase'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=50%' scrollEnd='bottom bottom-=40%' stagger={0.03}>What I Do</ScrollFloat></p>
+          <div className='font-poppins text-Primary text-lg font-semibold uppercase'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=50%' scrollEnd='bottom bottom-=40%' stagger={0.03}>What I Do</ScrollFloat></div>
             <div className='flex items-center justify-between'>
-              <h2 className='font-soldier text-Primary lg:text-[152px] text-[64px] font-medium uppercase'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=50%' scrollEnd='bottom bottom-=40%' stagger={0.03}>Services</ScrollFloat></h2>
+              <div className='font-soldier text-Primary lg:text-[152px] text-[64px] font-medium uppercase'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=50%' scrollEnd='bottom bottom-=40%' stagger={0.03}>Services</ScrollFloat></div>
               <MdOutlineArrowBack data-aos="fade-up" className='hidden md:block text-[200px] md:text-[300px] rotate-[-45deg] text-borderCol'/>
             </div>
             <ScrollReveal containerClassName='font-poppins text-second lg:text-xl text-lg lg:w-[400px] uppercase lg:ml-[100px]'>

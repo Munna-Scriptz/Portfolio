@@ -646,12 +646,12 @@ body{
   height: auto;
   display: block;
   transform: translateY(0);
-  transition: transform 10s ease; /* fast return */
+  transition: transform 7s ease; /* fast return */
 }
 
-#HoverDivImg:hover .screen img {
+.screen:hover img {
   transform: translateY(calc(-100% + 360px));
-  transition: transform 10s linear; /* slow scroll up */
+  transition: transform 8s linear; /* slow scroll up */
 }
 
 

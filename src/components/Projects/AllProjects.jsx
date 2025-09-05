@@ -82,7 +82,7 @@ const AllProjects = () => {
     const MyProjectsScroll = [
     {
       'ProjectImage' : taskManage,
-      'ProjectName' : 'App Management Landing Page',
+      'ProjectName' : 'Task Management Assistant',
       'Description' : 'A responsive Mobile App landing page built with React JS and Tailwind CSS, featuring a clean UI and modern design. It highlights how to use and manage the app with an easy-to-navigate layout.',
       'technologies' : [ReactIcon , TailwindCss , JsIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row-reverse',
@@ -160,6 +160,7 @@ const AllProjects = () => {
                         </div>
                     ))
                 }
+                {/* ----------------------------------Hover Scroll Project------------------------------- */}
                 {
                     MyProjectsScroll.map((items, i)=>(
                         <div key={i} id='HoverDivImg' className={`flex items-center ${items.Direction} flex-col lg:gap-20 gap-5`}>
@@ -167,6 +168,7 @@ const AllProjects = () => {
                                 <div className='screen'>
                                     <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
                                 </div>
+                                <h1 className='text-center mt-2 text-sm text-[#646464] font-medium font-poppins'>Hover On the image To Seek</h1>
                             </div>
                             <div className='lg:w-[650px] w-full'>
                                 <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={280} animateBy="words" direction="bottom"/></h2>

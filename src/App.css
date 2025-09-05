@@ -20,7 +20,7 @@ body{
   background-image: url(/src/assets/images/CounterBg.svg);
 }
 #ServicesBG{
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(/src/assets/images/CounterBg.svg);
@@ -196,7 +196,7 @@ body{
 .ReadMoreButton {
   display: inline-block;
   color: #E5E3DC;
-  border: 1px solid #4f4f4f;
+  border: 1px solid #dddddd;
   border-radius: 20px;
   transition: all 0.2s ease-in;
   position: relative;

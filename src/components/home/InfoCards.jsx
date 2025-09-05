@@ -48,9 +48,9 @@ const InfoCards = () => {
         <div className="card" data-index="0">
           <div className="card__inner" id='ServicesBG'>
             <div className="card__content">
-              <h1 className="card__title font-soldier text-second text-5xl flex items-center justify-between uppercase">Web development <span className='text-brand'>01</span></h1>
+              <h1 className="card__title font-soldier text-brand text-5xl flex items-center justify-between uppercase">Web development <span className='text-brand'>01</span></h1>
               <p className="card__description text-brand">I specialize in creating modern, responsive, and user-friendly websites using the latest frontend technologies. From clean UI design to smooth functionality, I build web experiences that are fast, scalable, and optimized for all devices.</p>
-              <Magnet magnetStrength={4}>
+              <Magnet magnetStrength={4} padding={20}>
                 <div className="magnetic-btn">
                   <Link to={'/about'} className='ReadMoreButton font-poppins font-medium px-[24px] py-[8px] text-base hover-this'>READ MORE</Link>
                 </div>
@@ -76,15 +76,15 @@ const InfoCards = () => {
         </div>
 
         <div className="card" data-index="2">
-          <div className="card__inner">
+          <div className="card__inner" id='ServicesBG'>
             <div className="card__image-container">
             </div>
             <div className="card__content">
-              <h1 className="card__title font-soldier text-second text-5xl flex items-center justify-between uppercase">figma to responsive website <span className='text-second'>03</span></h1>
-              <p className="card__description">I convert Figma designs into fully responsive and functional websites with clean code and pixel-perfect accuracy. Every section is optimized for speed, usability, and smooth performance across all screen sizes.</p>
-              <Magnet magnetStrength={4}>
+              <h1 className="card__title font-soldier text-brand text-5xl flex items-center justify-between uppercase">figma to responsive website <span className='text-brand'>03</span></h1>
+              <p className="card__description text-brand">I convert Figma designs into fully responsive and functional websites with clean code and pixel-perfect accuracy. Every section is optimized for speed, usability, and smooth performance across all screen sizes.</p>
+              <Magnet magnetStrength={4} padding={20}>
                 <div className="magnetic-btn">
-                  <Link to={'/about'} className='ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this'>READ MORE</Link>
+                  <Link to={'/about'} className='ReadMoreButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this'>READ MORE</Link>
                 </div>
               </Magnet>
             </div>

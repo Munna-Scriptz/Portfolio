@@ -20,9 +20,34 @@ const Services = () => {
           </ScrollReveal>
         </div>
         {/* --------------Services Card-------------- */}
-      </div>
+
+        <div className='mt-13 lg:hidden flex items-center flex-col gap-6'>
+          <div className='bg-Primary p-6 pb-10 rounded-md' data-aos="fade-up">
+            <div className="text-brand font-soldier mb-6 text-2xl" data-aos="fade-up">Web App Development</div>
+              <p className="text-brand font-poppins" data-aos="fade-up">
+                Customer interactions, study and analysis of company branding
+                through creative briefs. Creation of mock-up designs by using
+                UI tools that simulate actions and pre-visualize the
+                reactions.
+              </p>
+          </div>
+          <div className='bg-Primary p-6 pb-10 rounded-md' data-aos="fade-up">
+            <div className="text-brand font-soldier mb-6 text-2xl" data-aos="fade-up">Api integration in website</div>
+              <p className="text-brand font-poppins" data-aos="fade-up">
+                API integration services focus on connecting different software applications and platforms to work together seamlessly. It allows businesses to automate workflows, enable real-time data sharing, and extend functionality by bringing in third-party tools or services.
+              </p>
+          </div>
+          <div className='bg-Primary p-6 pb-10 rounded-md' data-aos="fade-up">
+            <div className="text-brand font-soldier mb-6 text-2xl" data-aos="fade-up">Converting figma to website</div>
+              <p className="text-brand font-poppins" data-aos="fade-up">
+                Converting Figma to a website involves transforming design files into fully functional, responsive web pages. It ensures pixel-perfect accuracy, optimized code, and smooth user experiences across all devices, while maintaining the original design vision and brand identity.
+              </p>
+          </div>
+        </div>
+
+    </div>
     </section>
-    <div className="traineeship py-10 mt-[70px]">
+    <div className="traineeship py-10 mt-[70px] lg:block hidden">
       <div className="container">
         <div className="process-row flex md:flex-row gap-y-5 items-center justify-between flex-col gap-2">
           {/* Card 01 */}
@@ -76,10 +101,7 @@ const Services = () => {
               <div className="active lg:group-hover:w-[340px]">
                 <div className="title">Api integration in website</div>
                 <div className="sub-title">
-                  Customer interactions, study and analysis of company branding
-                  through creative briefs. Creation of mock-up designs by using
-                  UI tools that simulate actions and pre-visualize the
-                  reactions.
+                  API integration services focus on connecting different software applications and platforms to work together seamlessly. It allows businesses to automate workflows, enable real-time data sharing, and extend functionality by bringing in third-party tools or services.
                 </div>
               </div>
             </div>
@@ -106,10 +128,7 @@ const Services = () => {
               <div className="active lg:group-hover:w-[340px]">
                 <div className="title">Converting figma to website</div>
                 <div className="sub-title">
-                  Customer interactions, study and analysis of company branding
-                  through creative briefs. Creation of mock-up designs by using
-                  UI tools that simulate actions and pre-visualize the
-                  reactions.
+                  Converting Figma to a website involves transforming design files into fully functional, responsive web pages. It ensures pixel-perfect accuracy, optimized code, and smooth user experiences across all devices, while maintaining the original design vision and brand identity.
                 </div>
               </div>
             </div>
@@ -136,10 +155,7 @@ const Services = () => {
               <div className="active lg:group-hover:w-[340px]">
                 <div className="title">Responsive Web Design</div>
                 <div className="sub-title">
-                  Customer interactions, study and analysis of company branding
-                  through creative briefs. Creation of mock-up designs by using
-                  UI tools that simulate actions and pre-visualize the
-                  reactions.
+                  Responsive web design makes websites adapt smoothly to any device or screen size. It ensures a consistent user experience with flexible layouts and intuitive navigation.
                 </div>
               </div>
             </div>

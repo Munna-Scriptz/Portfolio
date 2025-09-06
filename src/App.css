@@ -34,6 +34,13 @@ body{
   color: white;
   background: #BF4A1A;
 }
+footer{
+  width: 100%;
+  background-image: url(../src/assets/images/FooterBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .a-section{
   background-color: #161616;
   width: 100vw; /* Full viewport width */

@@ -18,9 +18,9 @@ const Footer = () => {
                 <div id="Footer_Row" className='grid grid-cols-1 lg:place-items-start place-items-center sm:grid-cols-2 lg:grid-cols-4 gap-10 py-8 lg:py-[65px]'>
                     <div id="Row_1">
                         <Magnet data-aos="fade-up" padding={20} disabled={false} magnetStrength={2}>
-                            <Link to={'/'}><img src={FooterLogo} alt="Logo" className='w-[150px]'/></Link>
+                            <Link to={'/'}><img src={FooterLogo} alt="Logo" className='md:w-[150px] w-[120px] m-0 m-auto'/></Link>
                         </Magnet>
-                        <p data-aos="fade-up" className='text-sm text-second font-poppins font-light w-[130px] text-center mt-6'>©2025 Portfolio By Munna.</p>
+                        <p data-aos="fade-up" className='text-sm text-second font-poppins font-light md:w-[130px] w-[120px] text-center md:mt-6 mt-3'>©2025 Portfolio By Munna.</p>
                     </div>
                     <div id="Row_2">
                         <h2 data-aos="fade-up" className='font-soldier lg:text-6xl md:text-start text-center text-5xl text-Primary mb-6'>LINKS</h2>
@@ -70,7 +70,7 @@ const Footer = () => {
             </div>
             {/* ------------------Bottom Copyright------------------ */}
             <div className='border-t border-[#21212157] mt-10 pt-8 text-center'>
-                <p className='text-sm text-second font-poppins font-light'>©2025 By Munna. All rights reserved.</p>
+                <p className='text-sm text-second font-poppins font-light'>©2025 By Munna | All rights reserved.</p>
             </div>
         </footer>
     </>

@@ -6,7 +6,7 @@ import ScrollReveal from '../effects/ScrollReveal'
 const AboutText = () => {
   return (
     <>
-    <div id='AboutMeText' className='overflow-hidden'>
+    <div id='AboutMeText' className='overflow-hidden mt-[112px]'>
         <div className="container">
             <div id="AboutTextRow">
                 <div id='Text' className='lg:w-[600px] flex flex-col gap-7'>
@@ -19,7 +19,7 @@ const AboutText = () => {
                         </ScrollReveal>
                     {/* -----------Explore Work----------- */}
                     <Magnet padding={5} magnetStrength={30}>
-                        <Link to={'/'} className='hover-brown relative w-[200px] h-[200px] rounded-full border-1 border-coffee mt-10 flex items-center justify-center rotate-[-25deg] cursor-pointer hover:rotate-0 hover:bg-coffee duration-[.3s] group'>
+                        <Link to={'/projects'} className='hover-brown relative w-[200px] h-[200px] rounded-full border-1 border-coffee mt-10 flex items-center justify-center rotate-[-25deg] cursor-pointer hover:rotate-0 hover:bg-coffee duration-[.3s] group'>
                             <span className='absolute top-[-15px] left-0 w-full h-[200px] rotate-[-85deg] group-hover:rotate-0 group-hover:top-0 duration-[.3s] rounded-full border-1 border-coffee'></span>
                             <p className='text-4xl text-second text-center font-soldier group-hover:text-brand duration-[.3s]'>Explore <br /> my Work</p>
                         </Link>

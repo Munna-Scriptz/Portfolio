@@ -11,7 +11,7 @@ const ExploreMyWork = () => {
             <div id="Explore-Row" className='flex lg:flex-row flex-col items-center justify-between'>
                 {/* ---------------Right Side-------------- */}
                 <div>
-                    <p className='font-poppins text-Primary text-lg font-semibold uppercase'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=60%' scrollEnd='bottom bottom-=60%' stagger={0.03}>View My Projects</ScrollFloat></p>
+                    <div className='font-poppins text-Primary text-lg font-semibold uppercase'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=60%' scrollEnd='bottom bottom-=60%' stagger={0.03}>View My Projects</ScrollFloat></div>
                     <h2 className='font-soldier text-second lg:text-[148px] text-[54px] font-medium uppercase leading-[100%] lg:w-[500px] w-full md:mt-[50px] mt-[30px]'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=60%' scrollEnd='bottom bottom-=60%' stagger={0.03}>Explore My Work</ScrollFloat></h2>
                 </div>
                 {/* ---------------Left Side-------------- */}

@@ -191,7 +191,7 @@ const AllProjects = () => {
                             </div>
                             <div className='lg:w-[650px] w-full'>
                                 <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={280} animateBy="words" direction="bottom"/></h2>
-                                <p className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-4'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom"/></p>
+                                <h2 className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-4'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom"/></h2>
                                 <div className='flex items-center gap-4 mb-4'>
                                     <p className='font-poppins lg:text-[19px] text-[13px] text-second font-medium flex items-center gap-2'><BiCategory /> Type : {items.type}</p>
                                 </div>
@@ -232,7 +232,7 @@ const AllProjects = () => {
                             </div>
                             <div className='lg:w-[650px] w-full'>
                                 <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={280} animateBy="words" direction="bottom"/></h2>
-                                <p className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-4'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom"/></p>
+                                <h2 className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-4'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom"/></h2>
                                 
                                 <div className='flex items-center gap-4 mb-4'>
                                     <p className='font-poppins lg:text-[19px] text-[13px] text-second font-medium flex items-center gap-2'><BiCategory /> Type : {items.type}</p>

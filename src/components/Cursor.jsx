@@ -84,7 +84,7 @@ const Cursor = () => {
   return (
     <div
       ref={cursorRef}
-      className="Cursor fixed pointer-events-none rounded-full bg-transparent border-1 border-[#adadace3] z-[9999] transition-transform duration-300 ease-out"
+      className="Cursor fixed md:inline-block hidden pointer-events-none rounded-full bg-transparent border-1 border-[#adadace3] z-[9999] transition-transform duration-300 ease-out"
       style={{ width: 35, height: 35, transform: 'translate(-50%, -50%) scale(1)' }}
     />
   )

@@ -8,6 +8,9 @@ import prideAgency from '../../assets/images/PrideAgencyThumb.png'
 import appManagement from '../../assets/images/AppManagementThumb.png'
 import taskManage from '../../assets/images/TaskManageMentScroll.jpeg'
 import taskManageV2 from '../../assets/images/taskManagementV2.jpeg'
+import escolaEducation from '../../assets/images/EscolaEduImg.jpeg'
+import safwanPortfolio from '../../assets/images/safwanPortfolioProject.jpeg'
+import safwanPortfolioV2 from '../../assets/images/safwanV2Scroll.png'
 
 import ProjectImg2 from '../../assets/images/Project2.png'
 import ProjectImg3 from '../../assets/images/Project3.png'
@@ -102,6 +105,36 @@ const AllProjects = () => {
       'liveLink' : 'https://task-management-assistant.vercel.app/',
       'GithubRepo' : 'https://github.com/Munna-Scriptz'
     },
+    {
+      'ProjectImage' : escolaEducation,
+      'ProjectName' : 'Escola Education Full Website',
+      'Description' : 'Escola Education is a multi-page educational website built with React JS and Tailwind CSS, designed to provide a seamless learning experience. Featuring pages like About, Services, Service Details, Blog, and Contact, it’s fully responsive and crafted with a clean, engaging UI for smooth navigation across all devices.',
+      'technologies' : [ReactIcon , TailwindCss , AosIcon , JsIcon , HtmlIcon , CssIcon],
+      'Direction': 'lg:flex-row-reverse',
+      'AosDir' : 'fade-left',
+      'liveLink' : 'https://escola-education.vercel.app/',
+      'GithubRepo' : 'https://github.com/Munna-Scriptz'
+    },
+    {
+      'ProjectImage' : safwanPortfolio,
+      'ProjectName' : 'UI/UX Designer Portfolio',
+      'Description' : 'This UI/UX Designer Portfolio is a fully responsive landing page built with React JS and Tailwind CSS, designed to showcase creative projects and design expertise. With a clean, modern layout and smooth navigation, it highlights both aesthetic visuals and user-focused functionality across all devices.',
+      'technologies' : [ReactIcon , TailwindCss , FigmaIcon , AosIcon , JsIcon , HtmlIcon , CssIcon],
+      'Direction': 'lg:flex-row',
+      'AosDir' : 'fade-right',
+      'liveLink' : 'https://safwan-portfolio-neon.vercel.app/',
+      'GithubRepo' : 'https://github.com/Munna-Scriptz'
+    },
+    {
+      'ProjectImage' : safwanPortfolioV2,
+      'ProjectName' : 'UI/UX Designer Portfolio V2',
+      'Description' : 'This UI/UX Designer Portfolio V2 is a redesigned and fully responsive landing page built with React JS and CSS, focused on a fresh modern layout and improved user experience. It includes sections like About, Services, Projects, and Contact, crafted with cleaner visuals, smoother navigation, and better responsiveness across all devices to showcase design skills more effectively.',
+      'technologies' : [ReactIcon , TailwindCss , FigmaIcon , AosIcon , JsIcon , HtmlIcon , CssIcon],
+      'Direction': 'lg:flex-row-reverse',
+      'AosDir' : 'fade-left',
+      'liveLink' : 'https://safwan2-portfolio-v2.vercel.app/',
+      'GithubRepo' : 'https://github.com/Munna-Scriptz'
+    },
     ]
   return (
     <>
@@ -177,7 +210,7 @@ const AllProjects = () => {
                     MyProjectsScroll.map((items, i)=>(
                         <div key={i} id='HoverDivImg' className={`flex items-center ${items.Direction} flex-col lg:gap-20 gap-5`}>
                             <div className='lg:w-[640px] w-full' data-aos={`${items.AosDir}`} data-aos-offset="200" data-aos-easing="ease-in-sine">
-                                <div className='screen'>
+                                <div className='screen cursor-none'>
                                     <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
                                 </div>
                                 <h1 className='text-center mt-2 text-sm text-[#646464] font-medium font-poppins'>Hover On the image To Seek</h1>

@@ -8,8 +8,7 @@ import Loader from './components/Loader'
 import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
-import { SpeedInsights } from '@vercel/speed-insights/react';
-
+import { Analytics } from '@vercel/analytics/react';
 
 export const App = () => {
 let scrollTarget = window.scrollY;
@@ -91,7 +90,7 @@ function smoothScroll() {
       {
         showContent && <RouterProvider router={MyRoute} />
       }
-      <SpeedInsights />
+      <Analytics />
     </>
   )
 }

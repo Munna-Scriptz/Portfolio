@@ -31,6 +31,7 @@ import Magnet from '../effects/Magnet'
 import BlurText from '../effects/BlurText'
 import { GrTechnology } from 'react-icons/gr'
 import { Link } from 'react-router'
+import { BiCategory } from 'react-icons/bi'
 const AllProjects = () => {
 
     const MyProjects = [
@@ -41,6 +42,7 @@ const AllProjects = () => {
       'technologies' : [ReactIcon , TailwindCss , JsIcon , reduxIcon ,FigmaIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row',
       'AosDir' : 'fade-right',
+      'type' : 'E-Commerce',
       'liveLink' : 'https://nexton-e-commerce-chi.vercel.app/',
       'GithubRepo' : 'https://github.com/Munna-Scriptz/Nexton-E-Commerce.git'
     },
@@ -51,6 +53,7 @@ const AllProjects = () => {
       'technologies' : [ReactIcon , TailwindCss , JsIcon , reduxIcon , FigmaIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row-reverse',
       'AosDir' : 'fade-left',
+      'type' : 'E-Commerce',
       'liveLink' : 'https://hecto-e-commerce.vercel.app/',
       'GithubRepo' : 'https://github.com/Munna-Scriptz/Hecto-E-Commerce.git',
     },
@@ -61,6 +64,7 @@ const AllProjects = () => {
       'technologies' : [ReactIcon , TailwindCss , JsIcon , reduxIcon ,firebase , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row',
       'AosDir' : 'fade-right',
+      'type' : 'Note App',
       'liveLink' : 'https://note-app-pi-flame.vercel.app',
       'GithubRepo' : 'https://note-app-pi-flame.vercel.app'
     },
@@ -71,6 +75,7 @@ const AllProjects = () => {
       'technologies' : [ReactIcon , TailwindCss , JsIcon , AosIcon , reduxIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row-reverse',
       'AosDir' : 'fade-left',
+      'type' : 'Agency Landing Page',
       'liveLink' : 'https://pride-agency.vercel.app/',
       'GithubRepo' : 'https://github.com/Munna-Scriptz/web-hosing.git'
     },
@@ -81,6 +86,7 @@ const AllProjects = () => {
       'technologies' : [ReactIcon , TailwindCss ,AosIcon , JsIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row',
       'AosDir' : 'fade-right',
+      'type' : 'Landing Page',
       'liveLink' : 'https://mobile-app-management.vercel.app/',
       'GithubRepo' : 'https://mobile-app-management.vercel.app/'
     },
@@ -93,6 +99,7 @@ const AllProjects = () => {
       'technologies' : [ReactIcon , TailwindCss , AosIcon , JsIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row-reverse',
       'AosDir' : 'fade-left',
+      'type' : 'Web Page',
       'liveLink' : 'https://task-management-assistant.vercel.app/',
       'GithubRepo' : 'https://github.com/Munna-Scriptz'
     },
@@ -103,6 +110,7 @@ const AllProjects = () => {
       'technologies' : [ReactIcon , TailwindCss , AosIcon , JsIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row',
       'AosDir' : 'fade-right',
+      'type' : 'Web Page',
       'liveLink' : 'https://task-management-assistant.vercel.app/',
       'GithubRepo' : 'https://github.com/Munna-Scriptz'
     },
@@ -113,6 +121,7 @@ const AllProjects = () => {
       'technologies' : [ReactIcon , TailwindCss , AosIcon , JsIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row-reverse',
       'AosDir' : 'fade-left',
+      'type' : 'Education',
       'liveLink' : 'https://escola-education.vercel.app/',
       'GithubRepo' : 'https://github.com/Munna-Scriptz'
     },
@@ -123,6 +132,7 @@ const AllProjects = () => {
       'technologies' : [ReactIcon , TailwindCss , FigmaIcon , AosIcon , JsIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row',
       'AosDir' : 'fade-right',
+      'type' : 'Portfolio',
       'liveLink' : 'https://safwan-portfolio-neon.vercel.app/',
       'GithubRepo' : 'https://github.com/Munna-Scriptz'
     },
@@ -133,6 +143,7 @@ const AllProjects = () => {
       'technologies' : [ReactIcon , TailwindCss , FigmaIcon , AosIcon , JsIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row-reverse',
       'AosDir' : 'fade-left',
+      'type' : 'Portfolio',
       'liveLink' : 'https://photographer-portfolio-eight-green.vercel.app/',
       'GithubRepo' : 'https://github.com/Munna-Scriptz'
     },
@@ -180,8 +191,10 @@ const AllProjects = () => {
                             </div>
                             <div className='lg:w-[650px] w-full'>
                                 <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={280} animateBy="words" direction="bottom"/></h2>
-                                <h2 className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-6'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom"/></h2>
-                                
+                                <p className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-4'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom"/></p>
+                                <div className='flex items-center gap-4 mb-4'>
+                                    <p className='font-poppins lg:text-[19px] text-[13px] text-second font-medium flex items-center gap-2'><BiCategory /> Type : {items.type}</p>
+                                </div>
                                 <div className='flex items-center gap-4'>
                                     <p className='font-poppins lg:text-[19px] text-[14px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
                                     <div className='lg:w-[30px] w-[22px] flex items-center gap-2'>
@@ -214,12 +227,16 @@ const AllProjects = () => {
                                 <div className='screen cursor-none'>
                                     <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
                                 </div>
-                                <h1 className='text-center mt-2 text-sm text-[#646464] font-medium font-poppins'>Hover On the image To Seek</h1>
+                                <h2 className='text-center mt-2 text-sm text-[#646464] font-medium font-poppins lg:block hidden'>Hover On the image To Preview</h2>
+                                <h2 className='text-center mt-2 text-sm text-[#646464] font-medium font-poppins lg:hidden block'>Tap On the image To Preview</h2>
                             </div>
                             <div className='lg:w-[650px] w-full'>
                                 <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={280} animateBy="words" direction="bottom"/></h2>
-                                <h2 className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-6'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom"/></h2>
+                                <p className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-4'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom"/></p>
                                 
+                                <div className='flex items-center gap-4 mb-4'>
+                                    <p className='font-poppins lg:text-[19px] text-[13px] text-second font-medium flex items-center gap-2'><BiCategory /> Type : {items.type}</p>
+                                </div>
                                 <div className='flex items-center gap-4'>
                                     <p className='font-poppins lg:text-[19px] text-[14px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
                                     <div className='lg:w-[30px] w-[22px] flex items-center gap-2'>

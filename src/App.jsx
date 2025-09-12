@@ -8,6 +8,7 @@ import Loader from './components/Loader'
 import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 
 export const App = () => {
@@ -90,6 +91,7 @@ function smoothScroll() {
       {
         showContent && <RouterProvider router={MyRoute} />
       }
+      <SpeedInsights />
     </>
   )
 }

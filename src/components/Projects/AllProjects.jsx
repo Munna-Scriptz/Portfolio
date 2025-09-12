@@ -11,6 +11,7 @@ import taskManageV2 from '../../assets/images/taskManagementV2.jpeg'
 import escolaEducation from '../../assets/images/EscolaEduImg.jpeg'
 import safwanPortfolio from '../../assets/images/safwanPortfolioProject.jpeg'
 import safwanPortfolioV2 from '../../assets/images/safwanV2Scroll.png'
+import photographerPortfolio from '../../assets/images/photographerScroll.jpeg'
 
 import ProjectImg2 from '../../assets/images/Project2.png'
 import ProjectImg3 from '../../assets/images/Project3.png'
@@ -126,13 +127,13 @@ const AllProjects = () => {
       'GithubRepo' : 'https://github.com/Munna-Scriptz'
     },
     {
-      'ProjectImage' : safwanPortfolioV2,
-      'ProjectName' : 'UI/UX Designer Portfolio V2',
-      'Description' : 'This UI/UX Designer Portfolio V2 is a redesigned and fully responsive landing page built with React JS and CSS, focused on a fresh modern layout and improved user experience. It includes sections like About, Services, Projects, and Contact, crafted with cleaner visuals, smoother navigation, and better responsiveness across all devices to showcase design skills more effectively.',
+      'ProjectImage' : photographerPortfolio,
+      'ProjectName' : 'Photographer Portfolio V2',
+      'Description' : 'This Photographer Portfolio is a responsive landing page built with React JS and Tailwind CSS, showcasing a professional photographer’s creativity and skills. With sections like About, Gallery, Services, and Contact, it delivers a clean layout, engaging visuals, and smooth navigation across all devices.',
       'technologies' : [ReactIcon , TailwindCss , FigmaIcon , AosIcon , JsIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row-reverse',
       'AosDir' : 'fade-left',
-      'liveLink' : 'https://safwan2-portfolio-v2.vercel.app/',
+      'liveLink' : 'https://photographer-portfolio-eight-green.vercel.app/',
       'GithubRepo' : 'https://github.com/Munna-Scriptz'
     },
     ]

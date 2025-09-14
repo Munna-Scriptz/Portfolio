@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MdOutlineArrowBack } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
@@ -12,6 +12,15 @@ import Magnet from '../effects/Magnet';
 import ScrollFloat from '../effects/ScrollFloat';
 
 const ContactMe = () => {
+  const [formData , setFormData] = useState(
+    {
+      name : '' ,
+      email : '',
+      subject : '',
+      message : ''
+    }
+  )
+  console.log(formData)
   return (
     <>
       <section id='Contact' className='my-10 md:my-[112px]'>
@@ -28,28 +37,37 @@ const ContactMe = () => {
                   <p className='text-second'>01</p>
                   <h2 className='text-second text-lg md:text-[26px] font-poppins font-medium'>What's your name? *</h2>
                 </div>
-                <input type="user" className='w-full py-3 md:py-[15px] text-base md:text-[24px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='John Smith'/>
+                <input onChange={(e)=>setFormData((prev)=>({...prev , name: e.target.value}))} type="user" className='w-full py-3 md:py-[15px] text-base md:text-[24px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='John Smith'/>
               </div>
               <div className='border-1 border-borderCol p-4 md:p-[20px] rounded-xl' data-aos="fade-up">
                 <div className='flex items-center gap-4 md:gap-[24px]'>
                   <p className='text-second'>02</p>
                   <h2 className='text-second text-lg md:text-[26px] font-poppins font-medium'>What's your Email? *</h2>
                 </div>
-                <input type="user" className='w-full py-3 md:py-[15px] text-base md:text-[24px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='Eren@gmail.com'/>
+                <input onChange={(e)=>setFormData((prev)=>({...prev , email : e.target.value}))} type="email" id='email' className='w-full py-3 md:py-[15px] text-base md:text-[24px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='Eren@gmail.com'/>
               </div>
               <div className='border-1 border-borderCol p-4 md:p-[20px] rounded-xl' data-aos="fade-up">
                 <div className='flex items-center gap-4 md:gap-[24px]'>
                   <p className='text-second'>03</p>
                   <h2 className='text-second text-lg md:text-[26px] font-poppins font-medium'>What would you like to talk about? *</h2>
                 </div>
-                <input type="user" className='w-full py-3 md:py-[15px] text-base md:text-[24px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='Web Application build'/>
+                <select onChange={(e)=>setFormData((prev)=>({...prev , subject: e.target.value}))} className='w-full py-3 md:py-[15px] text-base md:text-[22px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='Web Application build'>
+                  <option>Please Choose An Option</option>
+                  <option value="Webpage Build">Webpage Build</option>
+                  <option value="Landing Page Build">Landing Page Build</option>
+                  <option value="E-Commerce Website">E-Commerce Website</option>
+                  <option value="Figma To Website">Figma To Website</option>
+                  <option value="Web Design">Web Design</option>
+                  <option value="Custom Website">Custom Website</option>
+                  <option value="Other">Other</option>
+                </select>
               </div>
               <div className='border-1 border-borderCol p-4 md:p-[20px] rounded-xl' data-aos="fade-up">
                 <div className='flex items-center gap-4 md:gap-[24px]'>
                   <p className='text-second'>04</p>
                   <h2 className='text-second text-lg md:text-[26px] font-poppins font-medium'>Your message *</h2>
                 </div>
-                <textarea name="TextArea" cols={40} rows={5} maxLength={2000} className='w-full pt-3 md:pt-[15px] text-base md:text-[24px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='Hello, How can u help me with...'></textarea>
+                <textarea onChange={(e)=>setFormData((prev)=>({...prev , message : e.target.value}))} name="TextArea" cols={40} rows={5} maxLength={2000} className='w-full pt-3 md:pt-[15px] text-base md:text-[24px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='Hello, How can u help me with...'></textarea>
               </div>
               <div data-aos="fade-up">
                 <button className='bg-coffee text-white font-medium font-poppins py-2 md:py-[12px] px-7 md:px-[28px] rounded-full cursor-pointer border-3 border-white outline-4 outline-coffee duration-300 hover:scale-[1.05] hover:bg-Primary hover:outline-Primary hover:outline-6'>Send Message</button>

@@ -69,7 +69,31 @@ const ContactMe = () => {
           transition: Bounce,
       })
     )
-    console.log(formData)
+    fetch('https://discord.com/api/webhooks/1380075486377545779/fSan3dmv4fkAsa9mw2zOqWAgREVWI1uSkqF369Pgy0KXuRbVDup3d4TW9uHRgqEzqi-G', {
+      method: 'POST',
+      headers: {
+          "Content-type": 'Application/json'
+      },
+      body: JSON.stringify(
+        {
+        "content": "",
+        "tts": false,
+        "embeds": [
+          {
+            "id": 10674342,
+            "title": "Client From Portfolio",
+            "description": `**Name ** : ${formData.name} \n\n**Email ** : ${formData.email} \n\n**Subject ** : ${formData.subject} \n\n**Message**  : ${formData.message} `,
+            "color": 2326507,
+            "fields": []
+          }
+        ],
+        "components": [],
+        "actions": {},
+        "flags": 0
+      }
+      )
+    })
+    setFormData((prev)=>({...prev , name : '' , email : '' , subject : '' , message : ''}))
     // -----------------Toasters-----------------------
     toast.success('Your message has been sent.', {
       position: "top-right",
@@ -111,7 +135,7 @@ const ContactMe = () => {
                   <p className='text-second'>01</p>
                   <h2 className='text-second text-lg md:text-[26px] font-poppins font-medium'>What's your name? *</h2>
                 </div>
-                <input onChange={(e)=>setFormData((prev)=>({...prev , name: e.target.value , nameError : 'hidden'}))} type="user" className='w-full py-3 md:py-[15px] text-base md:text-[24px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='John Smith'/>
+                <input value={formData.name} onChange={(e)=>setFormData((prev)=>({...prev , name: e.target.value , nameError : 'hidden'}))} type="user" className='w-full py-3 md:py-[15px] text-base md:text-[24px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='John Smith'/>
                 <p className={`text-coffee text-lg ml-10 ${formData.nameError}`}>Please fill out this field.</p>
               </div>
               <div className='border-1 border-borderCol p-4 md:p-[20px] rounded-xl' data-aos="fade-up">
@@ -119,7 +143,7 @@ const ContactMe = () => {
                   <p className='text-second'>02</p>
                   <h2 className='text-second text-lg md:text-[26px] font-poppins font-medium'>What's your Email? *</h2>
                 </div>
-                <input onChange={(e)=>setFormData((prev)=>({...prev , email : e.target.value , emailError : 'hidden'}))} type="email" id='email' className='w-full py-3 md:py-[15px] text-base md:text-[24px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='Eren@gmail.com'/>
+                <input value={formData.email} onChange={(e)=>setFormData((prev)=>({...prev , email : e.target.value , emailError : 'hidden'}))} type="email" id='email' className='w-full py-3 md:py-[15px] text-base md:text-[24px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='Eren@gmail.com'/>
                 <p className={`text-coffee text-lg ml-10 ${formData.emailError}`}>Please fill out this field.</p>
               </div>
               <div className='border-1 border-borderCol p-4 md:p-[20px] rounded-xl' data-aos="fade-up">
@@ -144,7 +168,7 @@ const ContactMe = () => {
                   <p className='text-second'>04</p>
                   <h2 className='text-second text-lg md:text-[26px] font-poppins font-medium'>Your message *</h2>
                 </div>
-                <textarea onChange={(e)=>setFormData((prev)=>({...prev , message : e.target.value}))} name="TextArea" cols={40} rows={5} maxLength={2000} className='w-full pt-3 md:pt-[15px] text-base md:text-[24px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='Hello, How can u help me with...'></textarea>
+                <textarea value={formData.message} onChange={(e)=>setFormData((prev)=>({...prev , message : e.target.value}))} name="TextArea" cols={40} rows={5} maxLength={2000} className='w-full pt-3 md:pt-[15px] text-base md:text-[24px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='Hello, How can u help me with...'></textarea>
               </div>
               <div data-aos="fade-up">
                 <button className='bg-coffee text-white font-medium font-poppins py-2 md:py-[12px] px-7 md:px-[28px] rounded-full cursor-pointer border-3 border-white outline-4 outline-coffee duration-300 hover:scale-[1.05] hover:bg-Primary hover:outline-Primary hover:outline-6'>Send Message</button>

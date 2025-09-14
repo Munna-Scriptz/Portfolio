@@ -12,6 +12,7 @@ import escolaEducation from '../../assets/images/EscolaEduImg.jpeg'
 import safwanPortfolio from '../../assets/images/safwanPortfolioProject.jpeg'
 import safwanPortfolioV2 from '../../assets/images/safwanV2Scroll.png'
 import photographerPortfolio from '../../assets/images/photographerScroll.jpeg'
+import canvixAgency from '../../assets/images/canvixProjectScroll.png'
 
 import ProjectImg2 from '../../assets/images/Project2.png'
 import ProjectImg3 from '../../assets/images/Project3.png'
@@ -30,7 +31,6 @@ import AosIcon from '../../assets/images/AosIcon.png'
 import Magnet from '../effects/Magnet'
 import BlurText from '../effects/BlurText'
 import { GrTechnology } from 'react-icons/gr'
-import { Link } from 'react-router'
 import { BiCategory } from 'react-icons/bi'
 const AllProjects = () => {
 
@@ -93,10 +93,32 @@ const AllProjects = () => {
     ]
     const MyProjectsScroll = [
     {
+      'ProjectImage' : canvixAgency,
+      'ProjectName' : 'Canvix Agency',
+      'Description' : 'Canvix Agency is a full multi-page website built with React JS and Tailwind CSS, designed for agencies to showcase services, portfolio, team, testimonials, blog, and contact. It features polished visuals, refined layout, and smooth transitions. Fully responsive across all devices, it highlights professionalism and strong content structure and usability.',
+      'technologies' : [ReactIcon , TailwindCss , FigmaIcon , AosIcon , JsIcon , HtmlIcon , CssIcon],
+      'Direction': 'lg:flex-row-reverse',
+      'AosDir' : 'fade-left',
+      'type' : 'Agency Full Website',
+      'liveLink' : 'https://canvix-agency.vercel.app/',
+      'GithubRepo' : 'https://github.com/Munna-Scriptz'
+    },
+    {
+      'ProjectImage' : escolaEducation,
+      'ProjectName' : 'Escola Education Full Website',
+      'Description' : 'Escola Education is a multi-page educational website built with React JS and Tailwind CSS, designed to provide a seamless learning experience. Featuring pages like About, Services, Service Details, Blog, and Contact, it’s fully responsive and crafted with a clean, engaging UI for smooth navigation across all devices.',
+      'technologies' : [ReactIcon , TailwindCss , FigmaIcon , AosIcon , JsIcon , HtmlIcon , CssIcon],
+      'Direction': 'lg:flex-row',
+      'AosDir' : 'fade-right',
+      'type' : 'Educational Full Website',
+      'liveLink' : 'https://escola-education.vercel.app/',
+      'GithubRepo' : 'https://github.com/Munna-Scriptz'
+    },
+    {
       'ProjectImage' : taskManage,
       'ProjectName' : 'Task Management Assistant',
       'Description' : 'The Task Management Assistant is a modern landing page built with React JS and enhanced with AOS animations for smooth interactions. Designed to be fully responsive, it delivers a clean and engaging experience across all devices.',
-      'technologies' : [ReactIcon , TailwindCss , AosIcon , JsIcon , HtmlIcon , CssIcon],
+      'technologies' : [ReactIcon , TailwindCss , FigmaIcon , AosIcon , JsIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row-reverse',
       'AosDir' : 'fade-left',
       'type' : 'Web Page',
@@ -107,7 +129,7 @@ const AllProjects = () => {
       'ProjectImage' : taskManageV2,
       'ProjectName' : 'Task Management Assistant V2',
       'Description' : 'The Task Management Assistant is a modern landing page built with React JS and enhanced with AOS animations for smooth interactions. Designed to be fully responsive, it delivers a clean and engaging experience across all devices.',
-      'technologies' : [ReactIcon , TailwindCss , AosIcon , JsIcon , HtmlIcon , CssIcon],
+      'technologies' : [ReactIcon , TailwindCss , FigmaIcon , AosIcon , JsIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row',
       'AosDir' : 'fade-right',
       'type' : 'Web Page',
@@ -115,25 +137,25 @@ const AllProjects = () => {
       'GithubRepo' : 'https://github.com/Munna-Scriptz'
     },
     {
-      'ProjectImage' : escolaEducation,
-      'ProjectName' : 'Escola Education Full Website',
-      'Description' : 'Escola Education is a multi-page educational website built with React JS and Tailwind CSS, designed to provide a seamless learning experience. Featuring pages like About, Services, Service Details, Blog, and Contact, it’s fully responsive and crafted with a clean, engaging UI for smooth navigation across all devices.',
-      'technologies' : [ReactIcon , TailwindCss , AosIcon , JsIcon , HtmlIcon , CssIcon],
-      'Direction': 'lg:flex-row-reverse',
-      'AosDir' : 'fade-left',
-      'type' : 'Education',
-      'liveLink' : 'https://escola-education.vercel.app/',
-      'GithubRepo' : 'https://github.com/Munna-Scriptz'
-    },
-    {
       'ProjectImage' : safwanPortfolio,
       'ProjectName' : 'UI/UX Designer Portfolio',
       'Description' : 'This UI/UX Designer Portfolio is a fully responsive landing page built with React JS and Tailwind CSS, designed to showcase creative projects and design expertise. With a clean, modern layout and smooth navigation, it highlights both aesthetic visuals and user-focused functionality across all devices.',
       'technologies' : [ReactIcon , TailwindCss , FigmaIcon , AosIcon , JsIcon , HtmlIcon , CssIcon],
+      'Direction': 'lg:flex-row-reverse',
+      'AosDir' : 'fade-left',
+      'type' : 'Portfolio',
+      'liveLink' : 'https://safwan-portfolio-neon.vercel.app/',
+      'GithubRepo' : 'https://github.com/Munna-Scriptz'
+    },
+    {
+      'ProjectImage' : safwanPortfolioV2,
+      'ProjectName' : 'UI/UX Designer Portfolio V2',
+      'Description' : 'This UI/UX Designer Portfolio V2 is a redesigned and fully responsive landing page built with React JS and CSS. It includes sections like About, Services, Projects, and Contact, crafted with cleaner visuals, smoother navigation, and better responsiveness across all devices to showcase design skills more effectively.',
+      'technologies' : [ReactIcon , TailwindCss , AosIcon , FigmaIcon , JsIcon , HtmlIcon , CssIcon],
       'Direction': 'lg:flex-row',
       'AosDir' : 'fade-right',
       'type' : 'Portfolio',
-      'liveLink' : 'https://safwan-portfolio-neon.vercel.app/',
+      'liveLink' : 'https://safwan2-portfolio-v2.vercel.app/',
       'GithubRepo' : 'https://github.com/Munna-Scriptz'
     },
     {

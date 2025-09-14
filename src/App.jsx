@@ -9,6 +9,7 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import { Analytics } from '@vercel/analytics/react';
+import { ToastContainer } from 'react-toastify'
 
 export const App = () => {
 let scrollTarget = window.scrollY;
@@ -91,6 +92,7 @@ function smoothScroll() {
         showContent && <RouterProvider router={MyRoute} />
       }
       <Analytics />
+      <ToastContainer />
     </>
   )
 }

@@ -20,52 +20,59 @@ import NoteAppThumb from '../../assets/images/NoteAppThumb.png'
 import HectoCommerce from '../../assets/images/HectoThumbnail.png'
 import prideAgency from '../../assets/images/PrideAgencyThumb.png'
 import appManagement from '../../assets/images/AppManagementThumb.png'
+
+import todoList from '../../assets/images/todoListJS.png'
+import weather from '../../assets/images/weatherJS.png'
+import guessGame from '../../assets/images/guessingGameJS.png'
+import imageSearch from '../../assets/images/imageSearchJS.png'
+import newsSearch from '../../assets/images/newsSearchJS.png'
+
 const JsProjects = () => {
     const JsProjectsData = [
         {
-          'ProjectImage' : ProjectImg1,
-          'ProjectName' : 'nexton e - commerce',
-          'Description' : 'Nexton is a sleek and modern e-commerce platform designed to offer a smooth shopping experience with dynamic product listings, variant selection, and responsive design. Built with React and crafted for performance and style',
-          'technologies' : [ReactIcon , TailwindCss , JsIcon , reduxIcon ,FigmaIcon , HtmlIcon , CssIcon],
-          'type' : 'E-Commerce',
-          'liveLink' : 'https://nexton-e-commerce-chi.vercel.app/',
-          'GithubRepo' : 'https://github.com/Munna-Scriptz/Nexton-E-Commerce.git'
+          'ProjectImage' : todoList,
+          'ProjectName' : 'To-Do List App',
+          'Description' : 'A To-Do List App built with Vanilla JavaScript featuring add, edit, update, complete, and delete options, designed with a clean and responsive interface for easy task management.',
+          'technologies' : [JsIcon, FigmaIcon , HtmlIcon , CssIcon],
+          'type' : 'To-Do List',
+          'liveLink' : 'https://munna-scriptz.github.io/To-Do-List/',
+          'GithubRepo' : 'https://github.com/Munna-Scriptz'
         },
         {
-          'ProjectImage' : HectoCommerce,
-          'ProjectName' : 'Hecto E-Commerce',
-          'Description' : 'The Hecto E-Commerce project is a responsive 15-page website showcasing stylish furniture with a clean, user-friendly interface. Built with React.js, Tailwind CSS, Redux, and Firebase, it delivers a seamless shopping experience with smooth navigation, interactive components, and API integrations, highlighting advanced web development skills.',
-          'technologies' : [ReactIcon , TailwindCss , JsIcon , reduxIcon , FigmaIcon , HtmlIcon , CssIcon],
-          'type' : 'E-Commerce',
-          'liveLink' : 'https://hecto-e-commerce.vercel.app/',
-          'GithubRepo' : 'https://github.com/Munna-Scriptz/Hecto-E-Commerce.git',
+          'ProjectImage' : weather,
+          'ProjectName' : 'Live Weather Check',
+          'Description' : 'A weather website built with Vanilla JavaScript and API integration to check live weather forecasts. Its a clean and simple tool for getting up-to-date weather info fast.',
+          'technologies' : [JsIcon,  FigmaIcon , HtmlIcon , CssIcon],
+          'type' : 'Weather With API',
+          'liveLink' : 'https://munna-scriptz.github.io/Weather/',
+          'GithubRepo' : 'https://github.com/Munna-Scriptz',
         },
         {
-          'ProjectImage' : NoteAppThumb,
-          'ProjectName' : 'Eclipse Note App',
-          'Description' : 'A responsive Note App built entirely with React JS, Tailwind CSS, and Firebase Realtime Database, featuring secure authentication, clean UI, and smooth note management. It includes create, edit, delete, and recover from bin options with real-time data sync.',
-          'technologies' : [ReactIcon , TailwindCss , JsIcon , reduxIcon ,firebase , HtmlIcon , CssIcon],
-          'type' : 'Note App',
-          'liveLink' : 'https://note-app-pi-flame.vercel.app',
-          'GithubRepo' : 'https://note-app-pi-flame.vercel.app'
+          'ProjectImage' : guessGame,
+          'ProjectName' : 'Drag & Drop Guessing Game',
+          'Description' : 'An amazing Drag-and-Drop Guessing Game built with Vanilla JavaScript. This interactive game lets you test your knowledge and challenges you to correctly match items using a smooth and intuitive drag-and-drop interface.',
+          'technologies' : [JsIcon , HtmlIcon , CssIcon],
+          'type' : 'Game',
+          'liveLink' : 'https://munna-scriptz.github.io/Js_Games/',
+          'GithubRepo' : 'https://github.com/Munna-Scriptz'
         },
         {
-          'ProjectImage' : prideAgency,
-          'ProjectName' : 'Pride Agency Domain Site',
-          'Description' : 'A fully responsive Domain Hosting website built with React JS and Tailwind CSS, designed with a clean and modern UI. It showcases hosting plans, services, and features in a professional single landing page layout.',
-          'technologies' : [ReactIcon , TailwindCss , JsIcon , AosIcon , reduxIcon , HtmlIcon , CssIcon],
-          'type' : 'Agency Landing Page',
-          'liveLink' : 'https://pride-agency.vercel.app/',
-          'GithubRepo' : 'https://github.com/Munna-Scriptz/web-hosing.git'
+          'ProjectImage' : imageSearch,
+          'ProjectName' : 'Image Gallery With API',
+          'Description' : `A sleek Image Search Engine built with Vanilla JavaScript and API integration. Just type in what you're looking for, and it pulls up high-quality images instantly. It's a fast and easy way to find what you need.`,
+          'technologies' : [JsIcon , HtmlIcon , CssIcon],
+          'type' : 'Image Search Engine',
+          'liveLink' : 'https://munna-scriptz.github.io/Js_Games/Search_Engine/Search.html',
+          'GithubRepo' : 'https://github.com/Munna-Scriptz'
         },
         {
-          'ProjectImage' : appManagement,
-          'ProjectName' : 'App Management Landing Page',
-          'Description' : 'A responsive Mobile App landing page built with React JS and Tailwind CSS, featuring a clean UI and modern design. It highlights how to use and manage the app with an easy-to-navigate layout.',
-          'technologies' : [ReactIcon , TailwindCss ,AosIcon , JsIcon , HtmlIcon , CssIcon],
-          'type' : 'Landing Page',
-          'liveLink' : 'https://mobile-app-management.vercel.app/',
-          'GithubRepo' : 'https://mobile-app-management.vercel.app/'
+          'ProjectImage' : newsSearch,
+          'ProjectName' : 'News Feed With API',
+          'Description' : 'A clean and fast News Search Engine built with Vanilla JavaScript and API integration. Just enter a topic, and it instantly pulls up the latest headlines and articles, making it a super easy way to stay informed.',
+          'technologies' : [ JsIcon , HtmlIcon , CssIcon],
+          'type' : 'News Search Engine',
+          'liveLink' : 'https://munna-scriptz.github.io/Js_Games/News-App/index.html',
+          'GithubRepo' : 'https://github.com/Munna-Scriptz'
         },
     ]
   return (

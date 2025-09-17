@@ -30,6 +30,7 @@ import safwanPortfolioV2 from '../../assets/images/safwanV2Scroll.png'
 import photographerPortfolio from '../../assets/images/photographerScroll.jpeg'
 import canvixAgency from '../../assets/images/canvixProjectScroll.png'
 import goTrip from '../../assets/images/goTripScroll.png'
+import JsProjects from './JsProjects'
 
 
 const AllProjects = () => {
@@ -296,8 +297,13 @@ const AllProjects = () => {
                 }
                     </div>
                 </div>
-                <img src="" alt="" />
 
+                {/* ==========================Border Start================================ */}
+                    <div className='lg:w-[673px] h-[3px] bg-[#051036] mt-20 rounded-[5px]'></div>
+                {/* ==========================Border End================================ */}
+
+                {/* ----------------------JavaScript Projects-------------------------- */}
+                <JsProjects/>
             </div>
         </section>
     </>

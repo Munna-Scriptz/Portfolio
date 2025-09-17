@@ -29,9 +29,7 @@ import safwanPortfolio from '../../assets/images/safwanPortfolioProject.jpeg'
 import safwanPortfolioV2 from '../../assets/images/safwanV2Scroll.png'
 import photographerPortfolio from '../../assets/images/photographerScroll.jpeg'
 import canvixAgency from '../../assets/images/canvixProjectScroll.png'
-
-import ProjectImg2 from '../../assets/images/Project2.png'
-import ProjectImg3 from '../../assets/images/Project3.png'
+import goTrip from '../../assets/images/goTripScroll.png'
 
 
 const AllProjects = () => {
@@ -102,6 +100,17 @@ const AllProjects = () => {
       'Direction': 'lg:flex-row-reverse',
       'AosDir' : 'fade-left',
       'type' : 'Agency Full Website',
+      'liveLink' : 'https://canvix-agency.vercel.app/',
+      'GithubRepo' : 'https://github.com/Munna-Scriptz'
+    },
+    {
+      'ProjectImage' : goTrip,
+      'ProjectName' : 'GoTrip Travel',
+      'Description' : 'GoTrip Travel is a modern multi-page website built with React JS, Tailwind CSS, and advanced UI components, designed to inspire and simplify travel planning. With pages like Home, Destinations, Services, Blog, and Contact, it features a cool and engaging interface, smooth navigation, and full responsiveness across all devices for an enjoyable browsing experience.',
+      'technologies' : [ReactIcon , TailwindCss , FigmaIcon , AosIcon , JsIcon , HtmlIcon , CssIcon],
+      'Direction': 'lg:flex-row',
+      'AosDir' : 'fade-right',
+      'type' : 'Hotel Booking Full Website',
       'liveLink' : 'https://canvix-agency.vercel.app/',
       'GithubRepo' : 'https://github.com/Munna-Scriptz'
     },

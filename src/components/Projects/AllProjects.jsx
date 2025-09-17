@@ -1,5 +1,21 @@
 import React from 'react'
 import { FaRegStar } from 'react-icons/fa'
+import Magnet from '../effects/Magnet'
+import BlurText from '../effects/BlurText'
+import { GrTechnology } from 'react-icons/gr'
+import { BiCategory } from 'react-icons/bi'
+// ------------Icons----------
+import ReactIcon from '../../assets/images/react.svg'
+import FigmaIcon from '../../assets/images/FigmaIcon.svg'
+import TailwindCss from '../../assets/images/TailwindCssIcon.svg'
+import reduxIcon from '../../assets/images/ReduxIcon.svg'
+import JsIcon from '../../assets/images/JsIcon.jpg'
+import HtmlIcon from '../../assets/images/HtmlIcon.svg'
+import CssIcon from '../../assets/images/CssIcon.svg'
+import Bootstrap from '../../assets/images/BootStrapIcon.svg'
+import firebase from '../../assets/images/FirebaseIcon.svg'
+import AosIcon from '../../assets/images/AosIcon.png'
+
 // ---------Project images 
 import ProjectImg1 from '../../assets/images/Project1.jpg'
 import NoteAppThumb from '../../assets/images/NoteAppThumb.png'
@@ -16,22 +32,8 @@ import canvixAgency from '../../assets/images/canvixProjectScroll.png'
 
 import ProjectImg2 from '../../assets/images/Project2.png'
 import ProjectImg3 from '../../assets/images/Project3.png'
-// ------------Icons----------
-import ReactIcon from '../../assets/images/react.svg'
-import FigmaIcon from '../../assets/images/FigmaIcon.svg'
-import TailwindCss from '../../assets/images/TailwindCssIcon.svg'
-import reduxIcon from '../../assets/images/ReduxIcon.svg'
-import JsIcon from '../../assets/images/JsIcon.jpg'
-import HtmlIcon from '../../assets/images/HtmlIcon.svg'
-import CssIcon from '../../assets/images/CssIcon.svg'
-import Bootstrap from '../../assets/images/BootStrapIcon.svg'
-import firebase from '../../assets/images/FirebaseIcon.svg'
-import AosIcon from '../../assets/images/AosIcon.png'
 
-import Magnet from '../effects/Magnet'
-import BlurText from '../effects/BlurText'
-import { GrTechnology } from 'react-icons/gr'
-import { BiCategory } from 'react-icons/bi'
+
 const AllProjects = () => {
 
     const MyProjects = [
@@ -285,6 +287,7 @@ const AllProjects = () => {
                 }
                     </div>
                 </div>
+                <img src="" alt="" />
 
             </div>
         </section>

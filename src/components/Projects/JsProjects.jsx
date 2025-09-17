@@ -26,6 +26,10 @@ import weather from '../../assets/images/weatherJS.png'
 import guessGame from '../../assets/images/guessingGameJS.png'
 import imageSearch from '../../assets/images/imageSearchJS.png'
 import newsSearch from '../../assets/images/newsSearchJS.png'
+import masterCard from '../../assets/images/masterCardJS.png'
+import numberGuess from '../../assets/images/numberGuessJS.png'
+import numberCounter from '../../assets/images/numberCounterJS.png'
+import calculator from '../../assets/images/calculatorJS.png'
 
 const JsProjects = () => {
     const JsProjectsData = [
@@ -74,6 +78,42 @@ const JsProjects = () => {
           'liveLink' : 'https://munna-scriptz.github.io/Js_Games/News-App/index.html',
           'GithubRepo' : 'https://github.com/Munna-Scriptz'
         },
+        {
+          'ProjectImage' : masterCard,
+          'ProjectName' : 'Master Card Generator',
+          'Description' : 'A MasterCard generator built with a Constructor Function. Just fill out your information to generate a virtual card, making it a straightforward and practical tool for creating and displaying card details.',
+          'technologies' : [ JsIcon , HtmlIcon , CssIcon],
+          'type' : 'Card Generator',
+          'liveLink' : 'https://munna-scriptz.github.io/Id_card_generator/',
+          'GithubRepo' : 'https://github.com/Munna-Scriptz'
+        },
+        {
+          'ProjectImage' : numberGuess,
+          'ProjectName' : 'Number Guessing Game',
+          'Description' : `An interactive two-player guessing game built with Vanilla JavaScript. The first player enters a secret number between 1 and 10, and the second player wins by correctly guessing the hidden value. It's a simple, conditional logic-based game.`,
+          'technologies' : [ JsIcon , HtmlIcon , CssIcon],
+          'type' : 'Guess Game',
+          'liveLink' : 'https://munna-scriptz.github.io/number-guessing-game/',
+          'GithubRepo' : 'https://github.com/Munna-Scriptz'
+        },
+        {
+          'ProjectImage' : numberCounter,
+          'ProjectName' : 'Number Counter',
+          'Description' : `A versatile number counter built with Vanilla JavaScript. Input your desired number to count up to it with full control over the speed and duration of the animation, all handled by a simple interval.`,
+          'technologies' : [ JsIcon , HtmlIcon , CssIcon],
+          'type' : 'Number Counter',
+          'liveLink' : 'https://munna-scriptz.github.io/Number-Counter/',
+          'GithubRepo' : 'https://github.com/Munna-Scriptz'
+        },
+        {
+          'ProjectImage' : calculator,
+          'ProjectName' : 'Calculator With JS',
+          'Description' : `A classic calculator app built with Vanilla JavaScript. It can perform basic arithmetic operations like addition, subtraction, multiplication, and division, all with a clean, user-friendly interface.`,
+          'technologies' : [ JsIcon , HtmlIcon , CssIcon],
+          'type' : 'Calculator',
+          'liveLink' : 'https://munna-scriptz.github.io/calculator-js/',
+          'GithubRepo' : 'https://github.com/Munna-Scriptz'
+        },
     ]
   return (
     <>
@@ -90,8 +130,8 @@ const JsProjects = () => {
                     <div className='w-full grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center'>
                         {
                             JsProjectsData.map((items, i)=>(
-                                <div key={i} className={`flex items-center flex-col lg:gap-7 gap-5 h-[700px]`}>
-                                    <div className='lg:w-[560px] w-full'>
+                                <div key={i} className={`flex items-center flex-col lg:gap-7 gap-5 lg:h-[700px] h-[550px]`}>
+                                    <div className='lg:w-[560px] w-full' data-aos="fade-up">
                                         <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
                                     </div>
                                     

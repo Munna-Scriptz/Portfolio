@@ -8,6 +8,7 @@ import ScrollToTop from '../components/effects/ScrollToTop';
 // --------Aos Imp 
 import Aos from 'aos'
 import "aos/dist/aos.css";
+import PageTransition from '../components/PageTransition';
 
 export const LayoutOne = () => {
   const location = useLocation()
@@ -24,6 +25,7 @@ export const LayoutOne = () => {
   }, [location]);
   return (
     <> 
+      <PageTransition/>
       <ScrollToTop/>
       <Cursor/>
       <Navbar/>

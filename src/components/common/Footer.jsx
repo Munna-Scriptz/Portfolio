@@ -32,12 +32,12 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div id="Row_3">
-                        <h2 data-aos="fade-up" className='font-soldier md:text-start text-center lg:text-6xl text-5xl text-Primary mb-6'>ABOUT ME</h2>
+                        <h2 data-aos="fade-up" className='font-soldier md:text-start text-center lg:text-6xl text-5xl text-Primary mb-6'>PAGES</h2>
                         <ul id='FooterLinks' className='flex md:items-start items-center flex-col gap-4 text-[#3f3f3f] font-poppins text-sm'>
-                            <li data-aos="fade-up"><Link to={'/about'}>ABOUT ME</Link></li>
-                            <li data-aos="fade-up"><Link to={'/projects'}>MY WORK</Link></li>
-                            <li data-aos="fade-up"><Link to={'/'}>DOWNLOAD CV</Link></li>
-                            <li data-aos="fade-up"><Link to={'/contact'}>CONTACT</Link></li>
+                            <li data-aos="fade-up"><Link className='transition-trigger' to={'/about'}>ABOUT ME</Link></li>
+                            <li data-aos="fade-up"><Link className='transition-trigger' to={'/projects'}>MY WORK</Link></li>
+                            <li data-aos="fade-up"><Link className='transition-trigger' to={'/'}>DOWNLOAD CV</Link></li>
+                            <li data-aos="fade-up"><Link className='transition-trigger' to={'/contact'}>CONTACT</Link></li>
                         </ul>
                     </div>
                     <div id="Row_4">

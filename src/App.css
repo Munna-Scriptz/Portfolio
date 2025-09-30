@@ -660,7 +660,7 @@ footer{
   transform: translateY(calc(-100% + 360px));
   transition: transform 8s linear; /* slow scroll up */
 }
-
+/* ---------------------------Skeleton Loader image  */
 
 
 
@@ -740,3 +740,24 @@ footer{
 	height: 3px;
 	background-color: #f70037;
 } */
+
+.transition-container {
+	position: fixed;
+	left: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	z-index: 10;
+	pointer-events: none;
+	span {
+		position: relative;
+	}
+	&.from-top {
+		span {
+			background: #161616;
+			height: 0%;
+			width: 100%;
+		}
+	}
+}

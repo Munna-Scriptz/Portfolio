@@ -105,7 +105,7 @@ const HtmlCssProjects = () => {
       <section id='HtmlCss-Projects' className='mt-[82px]'>
           {/* ----------------------HtmlCss Projects Header------------------------- */}
             <div className='flex items-center justify-center gap-5 mb-[60px]'>
-              <h2 className='text-second font-soldier lg:text-[46px] md:block hidden text-[32px] font-medium text-center' data-aos="fade-up"> Html-Css Projects — Built with Passion</h2> 
+              <h2 className='text-second font-soldier lg:text-[46px] md:block hidden text-[32px] font-medium text-center' data-aos="fade-up"> HTML-CSS Projects — Building the Web’s First Impression</h2> 
               <img className='w-[45px]' src={HtmlIcon} alt="JsIcon" />
               <h2 className='text-second font-soldier lg:text-[46px] md:hidden block text-[32px] font-medium text-center' data-aos="fade-up">Html-Css Projects</h2> 
             </div>

@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { FaRegStar } from 'react-icons/fa'
 // ------------Icons----------
+import nextIcon from '../../assets/images/NextJsIcon.svg'
 import ReactIcon from '../../assets/images/react.svg'
 import JsIcon from '../../assets/images/JsIcon.jpg'
 import HtmlIcon from '../../assets/images/HtmlIcon.svg'
 import JsProjects from './JsProjects'
 import ReactProjects from './ReactProjects'
 import HtmlCssProjects from './HtmlCssProjects'
+import NextProject from './NextProject'
 
 
 const AllProjects = () => {
@@ -16,6 +18,7 @@ const AllProjects = () => {
 
     const selectProjectBtn = [
         { id: "all", label: "All Projects", icon: <FaRegStar /> },
+        { id: "next", label: "Next Projects", icon: <img className="w-[20px]" src={nextIcon} alt="Next js" /> },
         { id: "react", label: "React Projects", icon: <img className="w-[20px]" src={ReactIcon} alt="React" /> },
         { id: "js", label: "JavaScript Projects", icon: <img className="w-[20px]" src={JsIcon} alt="JS" /> },
         { id: "html", label: "Html-Css Projects", icon: <img className="w-[20px]" src={HtmlIcon} alt="HTML" /> },
@@ -51,6 +54,10 @@ const AllProjects = () => {
 
                 {/* --------------------------All Projects-------------------------- */}
                 <div id='Projects-Cards-Row' className={`mt-[80px] ${selected === "all" ? "block" : "hidden"}`}>
+                    <NextProject />
+                    {/* ==========================Border Start================================ */}
+                        <div className='lg:w-[673px] h-[3px] bg-[#051036] mt-20 rounded-[5px]'></div>
+                    {/* ==========================Border End================================ */}
                     <ReactProjects/>
 
                     {/* ==========================Border Start================================ */}
@@ -71,6 +78,10 @@ const AllProjects = () => {
 
                 </div>
 
+                {/* -------------------------React Projects-------------------------- */}
+                <div className={`${selected === 'next'? 'block' : 'hidden' }`}>
+                    <NextProject/>
+                </div>
                 {/* -------------------------React Projects-------------------------- */}
                 <div className={`${selected === 'react'? 'block' : 'hidden' }`}>
                     <ReactProjects/>

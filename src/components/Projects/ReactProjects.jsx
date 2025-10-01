@@ -194,7 +194,7 @@ const ReactProjects = () => {
         <section id='React-Projects' className='mt-[82px]'>
             {/* ----------------------React Projects Header------------------------- */}
             <div className='flex items-center justify-center gap-5 mb-[60px]'>
-                <h2 className='text-second font-soldier lg:text-[46px] md:block hidden text-[32px] font-medium text-center' data-aos="fade-up"> React Projects — Built with Passion</h2> 
+                <h2 className='text-second font-soldier lg:text-[46px] md:block hidden text-[32px] font-medium text-center' data-aos="fade-up"> React Projects — UI That Reacts to You</h2> 
                 <img className='w-[45px]' src={ReactIcon} alt="JsIcon" />
                 <h2 className='text-second font-soldier lg:text-[46px] md:hidden block text-[32px] font-medium text-center' data-aos="fade-up">React Projects</h2> 
             </div>

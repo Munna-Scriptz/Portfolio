@@ -122,7 +122,7 @@ const JsProjects = () => {
                 <div id="JsProjects-Row">
                     {/* ----------------------JavaScript Projects Header------------------------- */}
                     <div className='flex items-center justify-center gap-5 mb-[60px]'>
-                        <h2 className='text-second font-soldier lg:text-[46px] md:block hidden text-[32px] font-medium text-center' data-aos="fade-up"> JavaScript Projects — Built with Passion</h2> 
+                        <h2 className='text-second font-soldier lg:text-[46px] md:block hidden text-[32px] font-medium text-center' data-aos="fade-up"> JavaScript Projects — Logic Turned Into Art</h2> 
                         <img className='w-[45px]' src={JsIcon} alt="JsIcon" />
                         <h2 className='text-second font-soldier lg:text-[46px] md:hidden block text-[32px] font-medium text-center' data-aos="fade-up">JavaScript Projects</h2> 
                     </div>

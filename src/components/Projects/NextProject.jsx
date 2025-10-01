@@ -17,6 +17,7 @@ import AosIcon from '../../assets/images/AosIcon.png'
 
 // ---------Project images 
 import sansaProject from '../../assets/images/sansaProject.jpg'
+import SkeletonLoader from '../effects/SkeletonLoader'
 
 const NextProject = () => {
     const MyProjects = [

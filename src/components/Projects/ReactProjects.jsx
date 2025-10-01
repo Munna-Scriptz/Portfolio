@@ -29,6 +29,8 @@ import safwanPortfolioV2 from '../../assets/images/safwanV2Scroll.png'
 import photographerPortfolio from '../../assets/images/photographerScroll.jpeg'
 import canvixAgency from '../../assets/images/canvixProjectScroll.png'
 import goTrip from '../../assets/images/goTripScroll.png'
+import { useInView } from 'react-intersection-observer'
+import SkeletonLoader from '../effects/SkeletonLoader'
 
 const ReactProjects = () => {
     const MyProjects = [
@@ -189,6 +191,11 @@ const ReactProjects = () => {
           'GithubRepo' : 'https://github.com/Munna-Scriptz'
         },
     ]
+
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.9,
+    });
   return (
     <>
         <section id='React-Projects' className='mt-[82px]'>
@@ -200,84 +207,94 @@ const ReactProjects = () => {
             </div>
             {/* ----------------------React Projects------------------------- */}
             <div className='flex flex-col gap-20'>
-                    {
+                <div ref={ref}>
+                    {inView ?
+                    
                         MyProjects.map((items, i)=>(
                             <div key={i} className={`flex items-center ${items.Direction} flex-col lg:gap-20 gap-5`}>
-                                <div className='lg:w-[640px] w-full' data-aos={`${items.AosDir}`} data-aos-offset="200" data-aos-easing="ease-in-sine">
-                                    <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
-                                </div>
-                                <div className='lg:w-[650px] w-full'>
-                                    <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={280} animateBy="words" direction="bottom"/></h2>
-                                    <h2 className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-4'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom"/></h2>
-                                    <div className='flex items-center gap-4 mb-4'>
-                                        <p className='font-poppins lg:text-[19px] text-[13px] text-second font-medium flex items-center gap-2'><BiCategory /> Type : {items.type}</p>
-                                    </div>
-                                    <div className='flex items-center gap-4'>
-                                        <p className='font-poppins lg:text-[19px] text-[14px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
-                                        <div className='lg:w-[30px] w-[22px] flex items-center gap-2'>
-                                            {
-                                                items.technologies.map((img , i)=>(
-                                                    <img src={img} key={i}/>
-                                                ))
-                                            }
-                                        </div>
-                                    </div>
-                                    <div className='mt-7 flex items-center lg:gap-4 gap-2'>
-                                        <Magnet padding={30} disabled={false} magnetStrength={5}>
-                                            <a href={items.liveLink} target='_blank' to={'/projects'} className='ContactButton font-poppins lg:px-[24px] py-[8px] px-[15px] font-medium lg:text-base text-sm text-Primary hover-this'>OPEN PROJECT</a>
-                                        </Magnet>
-                                        <Magnet padding={10} disabled={false} magnetStrength={5}>
-                                            <a href={`${items.GithubRepo}`} target='_blank' className='DownloadCv font-poppins font-medium lg:text-base text-sm text-Primary hover-brown'>
-                                                <span>GITHUB REPO</span>
-                                            </a>
-                                        </Magnet>
-                                    </div>
-                                </div>
+                                            <div className='lg:w-[640px] w-full' data-aos={`${items.AosDir}`} data-aos-offset="200" data-aos-easing="ease-in-sine">
+                                                <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
+                                            </div>
+                                            <div className='lg:w-[650px] w-full'>
+                                                <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={280} animateBy="words" direction="bottom"/></h2>
+                                                <h2 className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-4'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom"/></h2>
+                                                <div className='flex items-center gap-4 mb-4'>
+                                                    <p className='font-poppins lg:text-[19px] text-[13px] text-second font-medium flex items-center gap-2'><BiCategory /> Type : {items.type}</p>
+                                                </div>
+                                                <div className='flex items-center gap-4'>
+                                                    <p className='font-poppins lg:text-[19px] text-[14px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
+                                                    <div className='lg:w-[30px] w-[22px] flex items-center gap-2'>
+                                                        {
+                                                            items.technologies.map((img , i)=>(
+                                                                <img src={img} key={i}/>
+                                                            ))
+                                                        }
+                                                    </div>
+                                                </div>
+                                                <div className='mt-7 flex items-center lg:gap-4 gap-2'>
+                                                    <Magnet padding={30} disabled={false} magnetStrength={5}>
+                                                        <a href={items.liveLink} target='_blank' to={'/projects'} className='ContactButton font-poppins lg:px-[24px] py-[8px] px-[15px] font-medium lg:text-base text-sm text-Primary hover-this'>OPEN PROJECT</a>
+                                                    </Magnet>
+                                                    <Magnet padding={10} disabled={false} magnetStrength={5}>
+                                                        <a href={`${items.GithubRepo}`} target='_blank' className='DownloadCv font-poppins font-medium lg:text-base text-sm text-Primary hover-brown'>
+                                                            <span>GITHUB REPO</span>
+                                                        </a>
+                                                    </Magnet>
+                                                </div>
+                                            </div>
                             </div>
                         ))
+                        :
+                        <SkeletonLoader />
                     }
-                    {/* ----------------------------------Hover Scroll Project------------------------------- */}
+                </div>
+                {/* ----------------------------------Hover Scroll Project------------------------------- */}
+                <div ref={ref}>
                     {
+                        inView?
                         MyProjectsScroll.map((items, i)=>(
                             <div key={i} id='HoverDivImg' className={`flex items-center ${items.Direction} flex-col lg:gap-20 gap-5`}>
-                                <div className='lg:w-[640px] w-full' data-aos={`${items.AosDir}`} data-aos-offset="200" data-aos-easing="ease-in-sine">
-                                    <div className='screen cursor-none'>
-                                        <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
+                                    <div className='lg:w-[640px] w-full' data-aos={`${items.AosDir}`} data-aos-offset="200" data-aos-easing="ease-in-sine">
+                                        <div className='screen cursor-none'>
+                                            <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
+                                        </div>
+                                        <h2 className='text-center mt-2 text-sm text-[#646464] font-medium font-poppins lg:block hidden'>Hover On the image To Preview</h2>
+                                        <h2 className='text-center mt-2 text-sm text-[#646464] font-medium font-poppins lg:hidden block'>Tap On the image To Preview</h2>
                                     </div>
-                                    <h2 className='text-center mt-2 text-sm text-[#646464] font-medium font-poppins lg:block hidden'>Hover On the image To Preview</h2>
-                                    <h2 className='text-center mt-2 text-sm text-[#646464] font-medium font-poppins lg:hidden block'>Tap On the image To Preview</h2>
-                                </div>
-                                <div className='lg:w-[650px] w-full'>
-                                    <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={280} animateBy="words" direction="bottom"/></h2>
-                                    <h2 className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-4'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom"/></h2>
-                                    
-                                    <div className='flex items-center gap-4 mb-4'>
-                                        <p className='font-poppins lg:text-[19px] text-[13px] text-second font-medium flex items-center gap-2'><BiCategory /> Type : {items.type}</p>
-                                    </div>
-                                    <div className='flex items-center gap-4'>
-                                        <p className='font-poppins lg:text-[19px] text-[14px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
-                                        <div className='lg:w-[30px] w-[22px] flex items-center gap-2'>
-                                            {
-                                                items.technologies.map((img , i)=>(
-                                                    <img src={img} key={i}/>
-                                                ))
-                                            }
+                                    <div className='lg:w-[650px] w-full'>
+                                        <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={280} animateBy="words" direction="bottom"/></h2>
+                                        <h2 className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-4'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom"/></h2>
+                                        
+                                        <div className='flex items-center gap-4 mb-4'>
+                                            <p className='font-poppins lg:text-[19px] text-[13px] text-second font-medium flex items-center gap-2'><BiCategory /> Type : {items.type}</p>
+                                        </div>
+                                        <div className='flex items-center gap-4'>
+                                            <p className='font-poppins lg:text-[19px] text-[14px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
+                                            <div className='lg:w-[30px] w-[22px] flex items-center gap-2'>
+                                                {
+                                                    items.technologies.map((img , i)=>(
+                                                        <img src={img} key={i}/>
+                                                    ))
+                                                }
+                                            </div>
+                                        </div>
+                                        <div className='mt-7 flex items-center lg:gap-4 gap-2'>
+                                            <Magnet padding={30} disabled={false} magnetStrength={5}>
+                                                <a href={items.liveLink} target='_blank' to={'/projects'} className='ContactButton font-poppins lg:px-[24px] py-[8px] px-[15px] font-medium lg:text-base text-sm text-Primary hover-this'>OPEN PROJECT</a>
+                                            </Magnet>
+                                            <Magnet padding={10} disabled={false} magnetStrength={5}>
+                                                <a href={`${items.GithubRepo}`} target='_blank' className='DownloadCv font-poppins font-medium lg:text-base text-sm text-Primary hover-brown'>
+                                                    <span>GITHUB REPO</span>
+                                                </a>
+                                            </Magnet>
                                         </div>
                                     </div>
-                                    <div className='mt-7 flex items-center lg:gap-4 gap-2'>
-                                        <Magnet padding={30} disabled={false} magnetStrength={5}>
-                                            <a href={items.liveLink} target='_blank' to={'/projects'} className='ContactButton font-poppins lg:px-[24px] py-[8px] px-[15px] font-medium lg:text-base text-sm text-Primary hover-this'>OPEN PROJECT</a>
-                                        </Magnet>
-                                        <Magnet padding={10} disabled={false} magnetStrength={5}>
-                                            <a href={`${items.GithubRepo}`} target='_blank' className='DownloadCv font-poppins font-medium lg:text-base text-sm text-Primary hover-brown'>
-                                                <span>GITHUB REPO</span>
-                                            </a>
-                                        </Magnet>
-                                    </div>
-                                </div>
                             </div>
                         ))
+                        :
+                        <SkeletonLoader />
                     }
+                </div>
             </div>
         </section>
     </>

@@ -661,8 +661,45 @@ footer{
   transition: transform 8s linear; /* slow scroll up */
 }
 /* ---------------------------Skeleton Loader image  */
+.skeleton-loader {
+    position: relative;
+    height: 380px;
+    animation: fade-loader 1.5s ease-in-out infinite alternate;
 
-
+  }
+  .skeleton-loader:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-image: linear-gradient( 90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100% ), 
+        linear-gradient(#aaaaaa 21px, transparent 0), 
+        linear-gradient(#aaaaaa 16px, transparent 0), 
+        linear-gradient(#aaaaaa 16px, transparent 0), 
+        linear-gradient(#aaaaaa 16px, transparent 0), 
+        linear-gradient(#aaaaaa 16px, transparent 0), 
+        linear-gradient(#aaaaaa 340px, transparent 0), 
+        linear-gradient(#aaaaaa 17px, transparent 0), 
+        linear-gradient(#aaaaaa 17px, transparent 0), 
+        linear-gradient(#aaaaaa 24px, transparent 0), 
+        linear-gradient(#aaaaaa 24px, transparent 0), 
+        linear-gradient(#aaaaaa 17px, transparent 0), 
+        linear-gradient(#aaaaaa 17px, transparent 0), 
+        linear-gradient(#aaaaaa 16px, transparent 0), 
+      linear-gradient(#ffffff00 100%, transparent 0);
+    background-size: 500px 100%, 348px 21px, 600px 16px, 600px 16px, 600px 16px, 600px 16px, 476px 340px, 21px 17px, 200px 17px, 120px 24px, 120px 24px, 21px 17px, 200px 17px, 550px 16px, 100% 100%;
+    background-position: 0 0 , 553px 40px, 553px 88px, 553px 117px, 553px 146px, 553px 175px, 18px 21px, 553px 250px, 587px 250px, 553px 326px, 700px 326px, 553px 282px, 587px 282px, 553px 204px, 0 0;
+    animation: skeleton-animation ease-in-out 500ms infinite;
+  }
+  
+@keyframes fade-loader {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
 
 
 

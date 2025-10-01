@@ -9,6 +9,8 @@ import JsProjects from './JsProjects'
 import ReactProjects from './ReactProjects'
 import HtmlCssProjects from './HtmlCssProjects'
 import NextProject from './NextProject'
+import { useInView } from 'react-intersection-observer';
+import SkeletonLoader from '../effects/SkeletonLoader'
 
 
 const AllProjects = () => {
@@ -23,6 +25,12 @@ const AllProjects = () => {
         { id: "js", label: "JavaScript Projects", icon: <img className="w-[20px]" src={JsIcon} alt="JS" /> },
         { id: "html", label: "Html-Css Projects", icon: <img className="w-[20px]" src={HtmlIcon} alt="HTML" /> },
     ]
+
+    // -------------------------- Rendering -------------------
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
 
   return (
     <>
@@ -58,22 +66,30 @@ const AllProjects = () => {
                     {/* ==========================Border Start================================ */}
                         <div className='lg:w-[673px] h-[3px] bg-[#051036] mt-20 rounded-[5px]'></div>
                     {/* ==========================Border End================================ */}
-                    <ReactProjects/>
-
+                        <ReactProjects/>
+                    
                     {/* ==========================Border Start================================ */}
                         <div className='lg:w-[673px] h-[3px] bg-[#051036] mt-20 rounded-[5px]'></div>
                     {/* ==========================Border End================================ */}
 
-                    <div>
-                        <JsProjects/>
+                    <div ref={ref}>
+                        {inView ?
+                                <JsProjects/>
+                            : (
+                                <SkeletonLoader />
+                            )}
                     </div>
 
                     {/* ==========================Border Start================================ */}
                         <div className='lg:w-[673px] h-[3px] bg-[#051036] mt-20 rounded-[5px]'></div>
                     {/* ==========================Border End================================ */}
                     
-                    <div>
-                        <HtmlCssProjects/>
+                    <div ref={ref}>
+                        {inView ?
+                            <HtmlCssProjects/>
+                            : (
+                                <SkeletonLoader />
+                            )}
                     </div>
 
                 </div>

@@ -65,17 +65,17 @@ const Banner = () => {
                   </div>
                 </Magnet>
                 <Magnet padding={20} disabled={false} magnetStrength={2}>
-                  <div data-aos="fade-up" data-aos-duration="1600" data-aos-delay="2000" data-aos-easing="ease-in-sine">
+                  <div data-aos="fade-up" data-aos-duration="1600" data-aos-delay="2000" data-aos-easing="ease-in-sine" data-aos-offset="30">
                     <a href='https://github.com/Munna-Scriptz'><FaXTwitter className='text-[18px] hover-brown' /></a>
                   </div>
                 </Magnet>
                 <Magnet padding={20} disabled={false} magnetStrength={2}>
-                  <div data-aos="fade-up" data-aos-duration="1800" data-aos-delay="2200" data-aos-easing="ease-in-sine">
+                  <div data-aos="fade-up" data-aos-duration="1800" data-aos-delay="2200" data-aos-easing="ease-in-sine" data-aos-offset="30">
                     <a href='https://github.com/Munna-Scriptz'><FaGithub className='text-[18px] hover-brown' /></a>
                   </div>
                 </Magnet>
                 <Magnet padding={20} disabled={false} magnetStrength={2}>
-                  <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="2000" data-aos-easing="ease-in-sine">
+                  <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="2000" data-aos-easing="ease-in-sine" data-aos-offset="30">
                     <a href='https://github.com/Munna-Scriptz'><FaLinkedinIn className='text-[18px] hover-brown'/></a>
                   </div>
                 </Magnet>

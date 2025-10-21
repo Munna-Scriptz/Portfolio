@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router';
-import PortfolioPic from "../../assets/images/PortfolioShape.png"
+import PortfolioPic from "../../assets/images/portfolioImg2.png"
 // -----Animation Npm 
 import { TypeAnimation } from 'react-type-animation';
 import Magnet from '../effects/Magnet'
@@ -14,9 +14,9 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Banner = () => {
   return (
     <>
-       <section id="Banner" className='pt-8 lg:pt-22 h-screen overflow-hidden'>
+       <section id="Banner" className='pt-8 lg:pt-16 overflow-hidden'>
             <div className="container">
-                <div className='flex justify-between flex-col gap-10 lg:gap-0 lg:flex-row'>
+                <div className='flex justify-between items-start flex-col gap-10 lg:gap-0 lg:flex-row'>
                     <div className="bannerText" >
                         <p data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-sine" className='font-medium text-sm tracking-[2px] lg:text-base lg:tracking-[3px] text-[#212428]'>WELCOME TO MY PORTFOLIO</p>
                         <h1 data-aos="fade-right" data-aos-duration="1200" data-aos-delay="1200" data-aos-easing="ease-in-sine" className='font-poppins text-Primary text-[38px] lg:text-[68px] font-medium lg:mt-2 mt-4'>Hi, i'm <span className='text-[#BF4A1A]'>Munna</span></h1>
@@ -51,7 +51,6 @@ const Banner = () => {
                             </Magnet>
                         </div>
                         {/* -----Social Media Button------- */}
-                        
                         <div data-aos="fade-right" data-aos-duration="2200" data-aos-delay="4500" data-aos-easing="ease-in-sine" className='mt-10 flex items-center gap-7'>
                             <Magnet padding={20} disabled={false} magnetStrength={2}>
                               <a href='https://www.facebook.com/rexon.notfr' data-aos="fade-right" data-aos-duration="1200" data-aos-delay="1200" data-aos-easing="ease-in-sine"><FaFacebookF className='text-[18px] hover-brown'/></a>
@@ -70,7 +69,9 @@ const Banner = () => {
                             </Magnet>
                         </div>
                     </div>
-                    <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="2000" data-aos-easing="ease-in-sine" id="bannerPhoto">
+
+                    {/* ----------------------- Portfolio Image ---------------------- */}
+                    <div className='w-[650px]' data-aos="fade-left" data-aos-duration="2000" data-aos-delay="2000" data-aos-easing="ease-in-sine" id="bannerPhoto">
                         <img src={PortfolioPic} alt="Image" />
                     </div>
                 </div>

@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react'
-import { Outlet, useLocation } from 'react-router'
+import { Outlet, ScrollRestoration, useLocation } from 'react-router'
 import Cursor from '../components/Cursor'
 import { Navbar } from '../components/common/Navbar';
 import { ResNavbar } from '../components/common/ResNavbar';
 import Footer from '../components/common/Footer';
-import ScrollToTop from '../components/effects/ScrollToTop';
 // --------Aos Imp 
 import Aos from 'aos'
 import "aos/dist/aos.css";
@@ -24,14 +23,14 @@ export const LayoutOne = () => {
     };
   }, [location]);
   return (
-    <> 
-      <PageTransition/>
-      <ScrollToTop/>
-      <Cursor/>
-      <Navbar/>
-      <ResNavbar/>
-      <Outlet/>
-      <Footer/>
+    <>
+      <PageTransition />
+      <ScrollRestoration />
+      <Cursor />
+      <Navbar />
+      <ResNavbar />
+      <Outlet />
+      <Footer />
     </>
   )
 }

@@ -6,7 +6,7 @@ import InfoCards from './InfoCards'
 const HomeServices = () => {
   return (
     <>
-    <section id='Services' className='lg:mt-0 mt-80'>
+    <section id='Services' className='lg:mt-0 mt-40'>
         <div className="container">
             <div id="Services-Row">
                 {/* -----------------Header------------------ */}

@@ -194,7 +194,7 @@ const ReactProjects = () => {
 
     const { ref, inView } = useInView({
         triggerOnce: true,
-        threshold: 0.9,
+        threshold: 0.1,
     });
   return (
     <>
@@ -207,7 +207,7 @@ const ReactProjects = () => {
             </div>
             {/* ----------------------React Projects------------------------- */}
             <div className='flex flex-col gap-20'>
-                <div ref={ref}>
+                <div className='flex flex-col gap-15' ref={ref}>
                     {inView ?
                     
                         MyProjects.map((items, i)=>(
@@ -249,7 +249,7 @@ const ReactProjects = () => {
                     }
                 </div>
                 {/* ----------------------------------Hover Scroll Project------------------------------- */}
-                <div ref={ref}>
+                <div className='flex flex-col gap-15' ref={ref}>
                     {
                         inView?
                         MyProjectsScroll.map((items, i)=>(

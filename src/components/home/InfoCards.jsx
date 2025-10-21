@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react'
 import Magnet from '../effects/Magnet'
 import { Link } from 'react-router'
+import { AiOutlineApi } from "react-icons/ai";
+import { SlGlobe } from "react-icons/sl";
+import { FaFigma } from "react-icons/fa";
+import { MdManageHistory } from "react-icons/md";
 
 const InfoCards = () => {
     useEffect(() => {
@@ -15,7 +19,7 @@ const InfoCards = () => {
         cardsContainer.style.setProperty('--card-height', `${cards[0].clientHeight}px`)
     
         Array.from(cards).forEach((card, index) => {
-          const offsetTop = 20 + index * 20
+          const offsetTop = 15 + index * 15
           card.style.paddingTop = `${offsetTop}px`
     
           if (index === cards.length - 1) return
@@ -43,12 +47,12 @@ const InfoCards = () => {
     }, [])
   return (
     <>
-    <section id='ScrollCards' className='container'>
+    <section id='ScrollCards'>
       <div className="cards">
         <div className="card" data-index="0">
           <div className="card__inner" id='ServicesBG'>
             <div className="card__content">
-              <h1 className="card__title font-soldier text-brand text-5xl flex items-center justify-between uppercase">Web development <span className='text-brand'>01</span></h1>
+              <h1 className="card__title font-soldier text-brand text-5xl flex items-center justify-between uppercase"><span className='flex items-center gap-2.5'><SlGlobe />Web development</span> <span className='text-brand'>01</span></h1>
               <p className="card__description text-brand">I specialize in creating modern, responsive, and user-friendly websites using the latest frontend technologies. From clean UI design to smooth functionality, I build web experiences that are fast, scalable, and optimized for all devices.</p>
               <Magnet magnetStrength={4} padding={20}>
                 <div className="magnetic-btn">
@@ -64,7 +68,7 @@ const InfoCards = () => {
             <div className="card__image-container">
             </div>
             <div className="card__content">
-              <h1 className="card__title font-soldier text-second text-5xl flex items-center justify-between uppercase">Api integration <span className='text-second'>02</span></h1>
+              <h1 className="card__title font-soldier text-second text-5xl flex items-center justify-between uppercase"><span className='flex items-center gap-2.5'><AiOutlineApi />Api integration</span> <span className='text-second'>02</span></h1>
               <p className="card__description">I integrate powerful APIs to connect frontend apps with real-time data and dynamic features. Whether it's fetching content, handling user inputs, or syncing services, I ensure seamless communication between the client and backend.</p>
               <Magnet magnetStrength={4} >
                 <div className="magnetic-btn">
@@ -80,7 +84,7 @@ const InfoCards = () => {
             <div className="card__image-container">
             </div>
             <div className="card__content">
-              <h1 className="card__title font-soldier text-brand text-5xl flex items-center justify-between uppercase">figma to responsive website <span className='text-brand'>03</span></h1>
+              <h1 className="card__title font-soldier text-brand text-5xl flex items-center justify-between uppercase"><span className='flex items-center gap-2.5'><FaFigma />figma to website</span> <span className='text-brand'>03</span></h1>
               <p className="card__description text-brand">I convert Figma designs into fully responsive and functional websites with clean code and pixel-perfect accuracy. Every section is optimized for speed, usability, and smooth performance across all screen sizes.</p>
               <Magnet magnetStrength={4} padding={20}>
                 <div className="magnetic-btn">
@@ -96,7 +100,7 @@ const InfoCards = () => {
             <div className="card__image-container">
             </div>
             <div className="card__content">
-              <h1 className="card__title font-soldier text-second text-5xl flex items-center justify-between uppercase">Web management <span className='text-second'>04</span></h1>
+              <h1 className="card__title font-soldier text-second text-5xl flex items-center justify-between uppercase"><span className='flex items-center gap-2.5'><MdManageHistory />Web management</span> <span className='text-second'>04</span></h1>
               <p className="card__description">Web Management services that keep your site running smoothly — from regular updates, security monitoring, and speed optimization to content management and backups. I ensure your website stays secure, fast, and user-friendly so you can focus on growing your business without worries.
 </p>
               <Magnet magnetStrength={4}>

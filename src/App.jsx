@@ -10,6 +10,7 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import { Analytics } from '@vercel/analytics/react';
 import { ToastContainer } from 'react-toastify'
+import ScrollProgress from './components/effects/ScrollProgress'
 
 export const App = () => {
 let scrollTarget = window.scrollY;
@@ -58,8 +59,8 @@ function smoothScroll() {
 
   useEffect(() => {
     const handlePageLoad = () => {
-      setTimeout(() => setLoading(false), 6100);
-      setTimeout(() => setShowContent(true), 4500);
+      setTimeout(() => setLoading(false), 100); //6100
+      setTimeout(() => setShowContent(true), 100); //4500
     };
 
     if (document.readyState === "complete") {
@@ -91,6 +92,7 @@ function smoothScroll() {
       {
         showContent && <RouterProvider router={MyRoute} />
       }
+      <ScrollProgress />
       <Analytics />
       <ToastContainer />
     </>

@@ -4,6 +4,7 @@ import Magnet from '../effects/Magnet'
 import BlurText from '../effects/BlurText'
 import { GrTechnology } from 'react-icons/gr'
 import { BiCategory } from 'react-icons/bi'
+import { useInView } from 'react-intersection-observer'
 // ------------Icons----------
 import ReactIcon from '../../assets/images/react.svg'
 import FigmaIcon from '../../assets/images/FigmaIcon.svg'
@@ -29,10 +30,11 @@ import safwanPortfolioV2 from '../../assets/images/safwanV2Scroll.png'
 import photographerPortfolio from '../../assets/images/photographerScroll.jpeg'
 import canvixAgency from '../../assets/images/canvixProjectScroll.png'
 import goTrip from '../../assets/images/goTripScroll.png'
-import { useInView } from 'react-intersection-observer'
+import rexScale from '../../assets/images/rexScaleReal.png'
 import SkeletonLoader from '../effects/SkeletonLoader'
 
-const ReactProjects = () => {
+const ReactProjects = ({proLength}) => {
+    
     const MyProjects = [
         {
           'ProjectImage' : ProjectImg1,
@@ -114,9 +116,9 @@ const ReactProjects = () => {
           'GithubRepo' : 'https://github.com/Munna-Scriptz'
         },
         {
-          'ProjectImage' : goTrip,
-          'ProjectName' : 'GoTrip Travel',
-          'Description' : 'GoTrip Travel is a modern multi-page website built with React JS, Tailwind CSS, and advanced UI components, designed to inspire and simplify travel planning. With pages like Home, Destinations, Services, Blog, and Contact, it features a cool and engaging interface, smooth navigation, and full responsiveness across all devices for an enjoyable browsing experience.',
+          'ProjectImage' : rexScale,
+          'ProjectName' : 'RexScale Real-Estate',
+          'Description' : 'RexScale Travel is a modern multi-page website built with React JS, Tailwind CSS, and advanced UI components, designed to inspire and simplify Real estate businesses. With pages like Home, Properties, contact and about.',
           'technologies' : [ReactIcon , TailwindCss , FigmaIcon , AosIcon , JsIcon , HtmlIcon , CssIcon],
           'Direction': 'lg:flex-row-reverse',
           'AosDir' : 'fade-left',

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { FaRegStar } from 'react-icons/fa'
 import Magnet from '../effects/Magnet'
 import BlurText from '../effects/BlurText'
 import { GrTechnology } from 'react-icons/gr'

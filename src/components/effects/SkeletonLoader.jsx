@@ -2,7 +2,7 @@ import React from 'react'
 
 const SkeletonLoader = () => {
   return (
-    <div class="skeleton-loader"></div>
+    <div className="skeleton-loader"></div>
   )
 }
 

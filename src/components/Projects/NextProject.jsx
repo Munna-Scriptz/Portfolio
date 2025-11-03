@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Magnet from '../effects/Magnet'
 import BlurText from '../effects/BlurText'
 import { GrTechnology } from 'react-icons/gr'
@@ -19,7 +19,7 @@ import AosIcon from '../../assets/images/AosIcon.png'
 import sansaProject from '../../assets/images/sansaProject.jpg'
 import SkeletonLoader from '../effects/SkeletonLoader'
 
-const NextProject = () => {
+const NextProject = ({ proLength }) => {
     const MyProjects = [
         {
           'ProjectImage' : sansaProject,
@@ -34,6 +34,12 @@ const NextProject = () => {
         },
         
     ]
+
+    useEffect(() => {
+        if (typeof proLength === "function") {
+            proLength(MyProjects.length);
+        }
+    }, [proLength]);
   return (
     <>
         <section id='React-Projects' className='mt-[82px]'>

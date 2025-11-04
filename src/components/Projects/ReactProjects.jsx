@@ -30,6 +30,7 @@ import photographerPortfolio from '../../assets/images/photographerScroll.jpeg'
 import canvixAgency from '../../assets/images/canvixProjectScroll.png'
 import goTrip from '../../assets/images/goTripScroll.png'
 import rexScale from '../../assets/images/rexScaleReal.png'
+import rexMotors from '../../assets/images/rexMotors.png'
 import SkeletonLoader from '../effects/SkeletonLoader'
 
 const ReactProjects = ({ proLength }) => {
@@ -92,36 +93,36 @@ const ReactProjects = ({ proLength }) => {
     ]
     const MyProjectsScroll = [
         {
-            'ProjectImage': canvixAgency,
-            'ProjectName': 'Canvix Agency',
-            'Description': 'Canvix Agency is a full multi-page website built with React JS and Tailwind CSS, designed for agencies to showcase services, portfolio, team, testimonials, blog, and contact. It features polished visuals, refined layout, and smooth transitions. Fully responsive across all devices, it highlights professionalism and strong content structure and usability.',
-            'technologies': [ReactIcon, TailwindCss, FigmaIcon, AosIcon, JsIcon, HtmlIcon, CssIcon],
-            'Direction': 'lg:flex-row-reverse',
-            'AosDir': 'fade-left',
-            'type': 'Agency Full Website',
-            'liveLink': 'https://canvix-agency.vercel.app/',
-            'GithubRepo': 'https://github.com/Munna-Scriptz'
-        },
-        {
-            'ProjectImage': goTrip,
-            'ProjectName': 'GoTrip Travel',
-            'Description': 'GoTrip Travel is a modern multi-page website built with React JS, Tailwind CSS, and advanced UI components, designed to inspire and simplify travel planning. With pages like Home, Destinations, Services, Blog, and Contact, it features a cool and engaging interface, smooth navigation, and full responsiveness across all devices for an enjoyable browsing experience.',
-            'technologies': [ReactIcon, TailwindCss, FigmaIcon, AosIcon, JsIcon, HtmlIcon, CssIcon],
-            'Direction': 'lg:flex-row',
-            'AosDir': 'fade-right',
-            'type': 'Hotel Booking Full Website',
-            'liveLink': 'https://canvix-agency.vercel.app/',
-            'GithubRepo': 'https://github.com/Munna-Scriptz'
-        },
-        {
             'ProjectImage': rexScale,
             'ProjectName': 'RexScale Real-Estate',
             'Description': 'RexScale Travel is a modern multi-page website built with React JS, Tailwind CSS, and advanced UI components, designed to inspire and simplify Real estate businesses. With pages like Home, Properties, contact and about.',
             'technologies': [ReactIcon, TailwindCss, FigmaIcon, AosIcon, JsIcon, HtmlIcon, CssIcon],
             'Direction': 'lg:flex-row-reverse',
             'AosDir': 'fade-left',
-            'type': 'Hotel Booking Full Website',
+            'type': 'E-commerce',
             'liveLink': 'https://canvix-agency.vercel.app/',
+            'GithubRepo': 'https://github.com/Munna-Scriptz'
+        },
+        {
+            'ProjectImage': canvixAgency,
+            'ProjectName': 'Canvix Agency',
+            'Description': 'Canvix Agency is a full multi-page website built with React JS and Tailwind CSS, designed for agencies to showcase services, portfolio, team, testimonials, blog, and contact. It features polished visuals, refined layout, and smooth transitions. Fully responsive across all devices, it highlights professionalism and strong content structure and usability.',
+            'technologies': [ReactIcon, TailwindCss, FigmaIcon, AosIcon, JsIcon, HtmlIcon, CssIcon],
+            'Direction': 'lg:flex-row',
+            'AosDir': 'fade-right',
+            'type': 'Agency Full Website',
+            'liveLink': 'https://canvix-agency.vercel.app/',
+            'GithubRepo': 'https://github.com/Munna-Scriptz'
+        },
+        {
+            'ProjectImage': rexMotors,
+            'ProjectName': 'Rex-Motors',
+            'Description': 'Rex-Motors is a E-commerce landing page website built with React JS and Tailwind CSS, designed to provide a seamless UI/UX experience. Featuring pages like About, responsive across all devices.',
+            'technologies': [ReactIcon, TailwindCss, FigmaIcon, AosIcon, JsIcon, HtmlIcon, CssIcon],
+            'Direction': 'lg:flex-row-reverse',
+            'AosDir': 'fade-left',
+            'type': 'E-commerce',
+            'liveLink': 'https://rex-motors.vercel.app/',
             'GithubRepo': 'https://github.com/Munna-Scriptz'
         },
         {
@@ -133,6 +134,28 @@ const ReactProjects = ({ proLength }) => {
             'AosDir': 'fade-right',
             'type': 'Educational Full Website',
             'liveLink': 'https://escola-education.vercel.app/',
+            'GithubRepo': 'https://github.com/Munna-Scriptz'
+        },
+        {
+            'ProjectImage': escolaEducation,
+            'ProjectName': 'Escola Education Full Website',
+            'Description': 'Escola Education is a multi-page educational website built with React JS and Tailwind CSS, designed to provide a seamless learning experience. Featuring pages like About, Services, Service Details, Blog, and Contact, it’s fully responsive and crafted with a clean, engaging UI for smooth navigation across all devices.',
+            'technologies': [ReactIcon, TailwindCss, FigmaIcon, AosIcon, JsIcon, HtmlIcon, CssIcon],
+            'Direction': 'lg:flex-row-reverse',
+            'AosDir': 'fade-left',
+            'type': 'Educational Full Website',
+            'liveLink': 'https://escola-education.vercel.app/',
+            'GithubRepo': 'https://github.com/Munna-Scriptz'
+        },
+        {
+            'ProjectImage': goTrip,
+            'ProjectName': 'GoTrip Travel',
+            'Description': 'GoTrip Travel is a modern multi-page website built with React JS, Tailwind CSS, and advanced UI components, designed to inspire and simplify travel planning. With pages like Home, Destinations, Services, Blog, and Contact, it features a cool and engaging interface, smooth navigation, and full responsiveness across all devices for an enjoyable browsing experience.',
+            'technologies': [ReactIcon, TailwindCss, FigmaIcon, AosIcon, JsIcon, HtmlIcon, CssIcon],
+            'Direction': 'lg:flex-row',
+            'AosDir': 'fade-right',
+            'type': 'Hotel Booking Full Website',
+            'liveLink': 'https://canvix-agency.vercel.app/',
             'GithubRepo': 'https://github.com/Munna-Scriptz'
         },
         {

@@ -100,7 +100,7 @@ const ReactProjects = ({ proLength }) => {
             'Direction': 'lg:flex-row-reverse',
             'AosDir': 'fade-left',
             'type': 'E-commerce',
-            'liveLink': 'https://canvix-agency.vercel.app/',
+            'liveLink': 'https://rex-scale-real-estate.vercel.app/',
             'GithubRepo': 'https://github.com/Munna-Scriptz'
         },
         {

@@ -33,7 +33,7 @@ const AboutBan = () => {
                     </div>
                     {/* -----Center Text------- */}
                     <div className='mb-[120px]'>
-                        <p className='font-poppins uppercase text-lg text-[#313131] tracking-wide font-medium text-center md:block hidden' data-aos="fade-up" data-aos-duration="3000">MAHINUL ISLAM MUNNA</p>
+                        <p className='font-poppins uppercase text-lg text-[#313131] tracking-wide font-medium text-center md:block hidden' data-aos="fade-up" data-aos-duration="3000">MUNNA SCRIPTZ</p>
                         <p className='font-poppins uppercase text-lg text-[#313131] tracking-wide font-medium text-center md:hidden block' data-aos="fade-up" data-aos-duration="3000">Let's Work Together</p>
                         <h2 className='font-soldier text-[#242424] lg:leading-[130%] font-medium lg:text-[180px] text-[70px] text-center' data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1400">ABOUT ME</h2>
                         <p className='font-poppins uppercase lg:text-lg text-base text-[#525252] tracking-wide font-medium text-center mx-auto lg:w-[400px] w-full' data-aos="fade-up" data-aos-duration="3000" data-aos-delay="2000">A learner, creator, and coder exploring the art of web development</p>

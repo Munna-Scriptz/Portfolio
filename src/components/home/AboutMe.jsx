@@ -15,7 +15,7 @@ const AboutMe = () => {
     return (
         <>
 
-            <section id='About_Me'>
+            <section id='About_Me' className='w-full md:mt-0 mt-18'>
                 <div className="container overflow-x-hidden">
                     <div className="AboutMe flex lg:flex-row flex-col justify-between">
                         <div className="aboutMeText">

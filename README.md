@@ -74,10 +74,9 @@ This portfolio is built to:
 
 ## 📸 **Preview**
 
-Add screenshots or GIFs here:
-
 ```
 ![Preview](https://munna-scriptz.vercel.app/preview.png)
+
 ```
 
 ---

@@ -1,12 +1,112 @@
-# React + Vite
+# **🌐 My Animated Developer Portfolio**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="https://munna-scriptz.vercel.app/preview.png" width="500" />
+</p>
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 **Overview**
 
-## Expanding the ESLint configuration
+This is my personal developer portfolio — a fully animated, modern, and responsive website built to showcase my skills, projects, and creativity.
+It features smooth transitions, micro-interactions, and advanced animations powered by **Framer Motion**, **GSAP**, and other animation libraries.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ **Features**
+
+* ⚡ Fully responsive modern UI
+* 🎨 Tailwind CSS custom design system
+* 🎬 Framer Motion page + element animations
+* 🌀 GSAP smooth scroll & advanced motion effects
+* 🧩 Reusable React components
+* 🎯 Project showcase section
+* 📝 About me + Skills + Contact + Projects
+* 🌙 Dark/Light mode
+
+---
+
+## 🛠️ **Tech Stack**
+
+**Frontend:**
+
+* React.js
+* Tailwind CSS
+* Framer Motion
+* GSAP
+* React Icons
+* Redux
+* Codepen
+* Other animation libraries
+
+**Tools:**
+
+* VS Code
+* Git & GitHub
+* Figma (for design planning)
+
+---
+
+## 📂 **Project Structure**
+
+```
+/src
+  /components
+  /pages
+  /assets
+  App.jsx
+  main.jsx
+  index.css
+```
+
+---
+
+## 🎯 **Purpose**
+
+This portfolio is built to:
+
+* Showcase my frontend skills
+* Display my best works and projects
+* Highlight my animation & UI/UX abilities
+* Build an online presence as a developer
+
+---
+
+## 📸 **Preview**
+
+Add screenshots or GIFs here:
+
+```
+![Preview](https://munna-scriptz.vercel.app/preview.png)
+```
+
+---
+
+## 🔧 **Installation**
+
+To run the project locally:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
+cd YOUR-REPO
+npm install
+npm run dev
+```
+
+---
+
+## 📬 **Contact**
+
+If you want to reach out or collaborate:
+
+**Portfolio:** https://munna-scriptz.vercel.app
+**Instagram:** https://www.instagram.com/rexon.notfr/
+**Email:** munnascriptz@gmail.com
+
+---
+
+## ⭐ **Support**
+
+If you like this portfolio, consider giving it a **star** ⭐
+It helps a lot!
+

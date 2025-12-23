@@ -578,69 +578,6 @@ footer{
     width: 70%;
     float: right;
 }
-.traineeship .inactive {
-    padding: 30px;
-}
-.traineeship .inactive .title {
-  border-bottom: 3px solid #161616;
-  font-family: "Big Shoulders", "sans-serif";
-  font-size: 28px;
-  padding-bottom: 5px;
-  width: max-content;
-  color: #161616;
-}
-.traineeship .activity .active {
-    display: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    height: auto;
-    min-height: 100%;
-    padding: 25px 30px 50px;
-}
-.traineeship .activity .active .title {
-    color: #1f1f1f;
-    font-family: "Big Shoulders", sans-serif;
-    font-size: 26px;
-    line-height: 32px;
-}
-.traineeship .activity .active .sub-title {
-    margin-top: 10px;
-    color: #616161;
-    font-family: "Poppins", "sans-serif";
-    font-size: 14px;
-    line-height: 28px;
-    text-align: left;
-}
-.traineeship .activity .active .ul {
-    margin-bottom: 45px;
-    margin-top: 10px;
-}
-.traineeship .activity .active .li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 30px;
-    color: #616161;
-    font-size: 16px;
-    line-height: 26px;
-}
-.traineeship .activity:hover .title {
-  color: #e5e5e5;
-}
-.traineeship .activity:hover .sub-title {
-  color: #e5e5e5ad;
-}
-.traineeship .activity:hover .inactive {
-  display: none;
-}
-.traineeship .activity:hover .active {
-  display: flex;
-}
 /* ----------------------------------------------------Scroll Image----------------------------------------------------- */
 .screen {
   height: 360px;
@@ -778,24 +715,3 @@ footer{
 	height: 3px;
 	background-color: #f70037;
 } */
-
-.transition-container {
-	position: fixed;
-	left: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	z-index: 10;
-	pointer-events: none;
-	span {
-		position: relative;
-	}
-	&.from-top {
-		span {
-			background: #161616;
-			height: 0%;
-			width: 100%;
-		}
-	}
-}

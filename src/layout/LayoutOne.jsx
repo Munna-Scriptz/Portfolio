@@ -4,10 +4,10 @@ import Cursor from '../components/Cursor'
 import { Navbar } from '../components/common/Navbar';
 import { ResNavbar } from '../components/common/ResNavbar';
 import Footer from '../components/common/Footer';
+import PageTransition from '../components/PageTransition';
 // --------Aos Imp 
 import Aos from 'aos'
 import "aos/dist/aos.css";
-import PageTransition from '../components/PageTransition';
 
 export const LayoutOne = () => {
   const location = useLocation()

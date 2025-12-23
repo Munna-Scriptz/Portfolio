@@ -102,7 +102,7 @@ const ProjectsShow = () => {
                                     <div className='lg:w-[30px] w-[22px] flex items-center gap-2'>
                                         {
                                             items.technologies.map((img , i)=>(
-                                                <img src={img} key={i}/>
+                                                <img src={img} alt='project Technologies' key={i}/>
                                             ))
                                         }
                                     </div>

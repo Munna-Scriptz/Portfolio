@@ -42,29 +42,29 @@ const Footer = () => {
             </div>
             <div id="Row_4">
               <h2 data-aos="fade-up" className='font-soldier md:text-start text-center lg:text-6xl text-5xl text-Primary mb-4'>CONTACT</h2>
-              <ul id='FooterLinks' className='flex md:items-start items-center flex-col gap-3 text-[#3f3f3f] font-poppins font-medium'>
-                <li data-aos="fade-up"><Link to={'/'}>DHAKA, BANGLADESH</Link></li>
-                <li data-aos="fade-up"><Link to={'/'}>munnascriptz@gmail.com</Link></li>
-                <li data-aos="fade-up"><Link to={'/'}>+8801908905391</Link></li>
+              <div id='FooterLinks' className='flex md:items-start items-center flex-col gap-3 text-[#3f3f3f] font-poppins font-medium'>
+                <div data-aos="fade-up"><Link to={'/'}>DHAKA, BANGLADESH</Link></div>
+                <div data-aos="fade-up"><Link to={'/'}>munnascriptz@gmail.com</Link></div>
+                <div data-aos="fade-up"><Link to={'/'}>+8801908905391</Link></div>
 
                 <div className='mt-3 flex items-center gap-7'>
                   <Magnet padding={20} disabled={false} magnetStrength={2}>
-                    <a target='_blank' href='https://www.facebook.com/rexon.notfr'><FaFacebookF className='text-[18px] hover-brown' /></a>
+                    <a target='_blank' href='https://www.facebook.com/rexon.notfr' aria-label="Visit my Facebook profile"><FaFacebookF className='text-[18px] hover-brown' /></a>
                   </Magnet>
                   <Magnet padding={20} disabled={false} magnetStrength={2}>
-                    <a target='_blank' href='https://www.instagram.com/rexon.notfr/?__pwa=1'><FaInstagram className='text-[18px] hover-brown' /></a>
+                    <a target='_blank' href='https://www.instagram.com/rexon.notfr/?__pwa=1' aria-label="Visit my Instagram profile"><FaInstagram className='text-[18px] hover-brown' /></a>
                   </Magnet>
                   <Magnet padding={20} disabled={false} magnetStrength={2}>
-                    <a target='_blank' href='https://github.com/Munna-Scriptz'><FaXTwitter className='text-[18px] hover-brown' /></a>
+                    <a target='_blank' href='https://github.com/Munna-Scriptz' aria-label="Visit my Twitter profile"><FaXTwitter className='text-[18px] hover-brown' /></a>
                   </Magnet>
                   <Magnet padding={20} disabled={false} magnetStrength={2}>
-                    <a target='_blank' href='https://github.com/Munna-Scriptz'><FaGithub className='text-[18px] hover-brown' /></a>
+                    <a target='_blank' href='https://github.com/Munna-Scriptz' aria-label="Visit my Github profile"><FaGithub className='text-[18px] hover-brown' /></a>
                   </Magnet>
                   <Magnet padding={20} disabled={false} magnetStrength={2}>
-                    <a target='_blank' href='https://github.com/Munna-Scriptz'><FaLinkedinIn className='text-[18px] hover-brown' /></a>
+                    <a target='_blank' href='https://www.linkedin.com/in/munna-scriptz-25287635b/' aria-label="Visit my Linkedin profile"><FaLinkedinIn className='text-[18px] hover-brown' /></a>
                   </Magnet>
                 </div>
-              </ul>
+              </div>
             </div>
           </div>
         </div>

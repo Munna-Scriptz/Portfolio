@@ -151,7 +151,8 @@ const ContactMe = () => {
                   <p className='text-second'>03</p>
                   <h2 className='text-second text-lg md:text-[26px] font-poppins font-medium'>What would you like to talk about? *</h2>
                 </div>
-                <select onChange={(e)=>setFormData((prev)=>({...prev , subject: e.target.value , subjectError : 'hidden'}))} className='w-full py-3 md:py-[15px] text-base md:text-[22px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='Web Application build'>
+                <label htmlFor="subject" className="sr-only">Project Type</label>
+                <select onChange={(e)=>setFormData((prev)=>({...prev , subject: e.target.value , subjectError : 'hidden'}))} id="subject" aria-label="Project Type" className='w-full py-3 md:py-[15px] text-base md:text-[22px] text-borderCol pl-6 md:pl-[40px] outline-none' placeholder='Web Application build'>
                   <option>Please Choose An Option</option>
                   <option value="Webpage Build">Webpage Build</option>
                   <option value="Landing Page Build">Landing Page Build</option>

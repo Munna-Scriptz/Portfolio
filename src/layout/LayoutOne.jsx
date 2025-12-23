@@ -23,7 +23,7 @@ export const LayoutOne = () => {
     };
   }, [location]);
   return (
-    <>
+    <main id='main-content'>
       <PageTransition />
       <ScrollRestoration />
       <Cursor />
@@ -31,6 +31,6 @@ export const LayoutOne = () => {
       <ResNavbar />
       <Outlet />
       <Footer />
-    </>
+    </main>
   )
 }

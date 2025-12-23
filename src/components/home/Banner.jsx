@@ -56,27 +56,27 @@ const Banner = () => {
               <div className='mt-10 flex items-center gap-7'>
                 <Magnet padding={20} disabled={false} magnetStrength={2}>
                   <div data-aos="fade-right" data-aos-duration="1300" data-aos-delay="1200" data-aos-easing="ease-in-sine" data-aos-offset="30" >
-                    <a target='_blank' href='https://www.facebook.com/rexon.notfr'><FaFacebookF className='text-[18px] hover-brown' /></a>
+                    <a target='_blank' href='https://www.facebook.com/rexon.notfr' aria-label="Visit my Facebook profile"><FaFacebookF className='text-[18px] hover-brown' /></a>
                   </div>
                 </Magnet>
                 <Magnet padding={20} disabled={false} magnetStrength={2}>
                   <div data-aos="fade-up" data-aos-duration="1400" data-aos-delay="1800" data-aos-easing="ease-in-sine" data-aos-offset="30">
-                    <a target='_blank' href='https://www.instagram.com/rexon.notfr/?__pwa=1' ><FaInstagram className='text-[18px] hover-brown' /></a>
+                    <a target='_blank' href='https://www.instagram.com/rexon.notfr/?__pwa=1' aria-label="Visit my Instagram profile"><FaInstagram className='text-[18px] hover-brown' /></a>
                   </div>
                 </Magnet>
                 <Magnet padding={20} disabled={false} magnetStrength={2}>
                   <div data-aos="fade-up" data-aos-duration="1600" data-aos-delay="2000" data-aos-easing="ease-in-sine" data-aos-offset="30">
-                    <a target='_blank' href='https://github.com/Munna-Scriptz'><FaXTwitter className='text-[18px] hover-brown' /></a>
+                    <a target='_blank' href='https://github.com/Munna-Scriptz' aria-label="Visit my Twitter profile"><FaXTwitter className='text-[18px] hover-brown' /></a>
                   </div>
                 </Magnet>
                 <Magnet padding={20} disabled={false} magnetStrength={2}>
                   <div data-aos="fade-up" data-aos-duration="1800" data-aos-delay="2200" data-aos-easing="ease-in-sine" data-aos-offset="30">
-                    <a target='_blank' href='https://github.com/Munna-Scriptz'><FaGithub className='text-[18px] hover-brown' /></a>
+                    <a target='_blank' href='https://github.com/Munna-Scriptz' aria-label="Visit my Github profile"><FaGithub className='text-[18px] hover-brown' /></a>
                   </div>
                 </Magnet>
                 <Magnet padding={20} disabled={false} magnetStrength={2}>
                   <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="2000" data-aos-easing="ease-in-sine" data-aos-offset="30">
-                    <a target='_blank' href='https://github.com/Munna-Scriptz'><FaLinkedinIn className='text-[18px] hover-brown'/></a>
+                    <a target='_blank' href='https://www.linkedin.com/in/munna-scriptz-25287635b/' aria-label="Visit my Linkedin profile"><FaLinkedinIn className='text-[18px] hover-brown'/></a>
                   </div>
                 </Magnet>
               </div>

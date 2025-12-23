@@ -56,7 +56,7 @@ const InfoCards = () => {
                 <p className="card__description text-brand">I specialize in creating modern, responsive, and user-friendly websites using the latest frontend technologies. From clean UI design to smooth functionality, I build web experiences that are fast, scalable, and optimized for all devices.</p>
                 <Magnet magnetStrength={4} padding={20}>
                   <div className="magnetic-btn">
-                    <Link to={'/about'} className='ReadMoreButton transition-trigger font-poppins font-medium px-[24px] py-[8px] text-base hover-this'>READ MORE</Link>
+                    <Link to={'/about'} className='ReadMoreButton transition-trigger font-poppins font-medium px-[24px] py-[8px] text-base hover-this' aria-label="view projects">VIEW PROJECTS</Link>
                   </div>
                 </Magnet>
               </div>
@@ -72,7 +72,7 @@ const InfoCards = () => {
                 <p className="card__description">I integrate powerful APIs to connect frontend apps with real-time data and dynamic features. Whether it's fetching content, handling user inputs, or syncing services, I ensure seamless communication between the client and backend.</p>
                 <Magnet magnetStrength={4} >
                   <div className="magnetic-btn">
-                    <Link to={'/about'} className='ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this'>READ MORE</Link>
+                    <Link to={'/about'} className='ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this' aria-label="view projects">VIEW PROJECTS</Link>
                   </div>
                 </Magnet>
               </div>
@@ -88,7 +88,7 @@ const InfoCards = () => {
                 <p className="card__description text-brand">I convert Figma designs into fully responsive and functional websites with clean code and pixel-perfect accuracy. Every section is optimized for speed, usability, and smooth performance across all screen sizes.</p>
                 <Magnet magnetStrength={4} padding={20}>
                   <div className="magnetic-btn">
-                    <Link to={'/about'} className='ReadMoreButton transition-trigger font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this'>READ MORE</Link>
+                    <Link to={'/about'} className='ReadMoreButton transition-trigger font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this' aria-label="view projects">VIEW PROJECTS</Link>
                   </div>
                 </Magnet>
               </div>
@@ -105,7 +105,7 @@ const InfoCards = () => {
                 </p>
                 <Magnet magnetStrength={4}>
                   <div className="magnetic-btn">
-                    <Link to={'/about'} className='ContactButton transition-trigger font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this'>READ MORE</Link>
+                    <Link to={'/about'} className='ContactButton transition-trigger font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this' aria-label="view projects">VIEW PROJECTS</Link>
                   </div>
                 </Magnet>
               </div>

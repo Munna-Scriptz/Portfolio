@@ -1,56 +1,62 @@
-import { useEffect, useRef, useState , React } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from 'react-scroll';
 
 const ScrollProgress = () => {
-    
-    const circleRef = useRef(null);
-    const [progress, setProgress] = useState(0);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
-    const radius = 10;
-    const circumference = 2 * Math.PI * radius;
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      setScrollProgress(progress);
+    };
 
-    const updateProgress = () => {
-  const scrollTop = window.scrollY;
-  const windowHeight = window.innerHeight;
-  const docHeight = document.documentElement.scrollHeight;
-  const scrollableHeight = docHeight - windowHeight;
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const scrollPercent =
-    scrollableHeight > 0 ? (scrollTop / scrollableHeight) * 100 : 0;
+  return (
+    <Link to="top" smooth={true} duration={500} className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 flex flex-col items-center group animate-float">
+      <div
+        className="relative w-14 h-20 md:w-16 md:h-24 rounded-xl md:rounded-2xl border border-white/20 bg-white/5 backdrop-blur-md overflow-hidden cursor-pointer shadow-2xl transition-transform active:scale-95"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      >
+        {/* The Fill Layer */}
+        <div
+          className="absolute bottom-0 left-0 w-full bg-[#BF4A1A] transition-all duration-700 ease-out shadow-[0_-5px_20px_#BF4A1A]"
+          style={{ height: `${scrollProgress}%` }}
+        />
 
-  setProgress(scrollPercent);
+        {/* Responsive Icons & Text */}
+        <div className="relative z-10 h-full flex flex-col items-center justify-center gap-1 md:gap-2">
+          <svg
+            className={`w-5 h-5 md:w-6 md:h-6 transition-colors duration-500 ${scrollProgress > 75 ? 'text-white' : 'text-[#BF4A1A]'}`}
+            fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 15l7-7 7 7" />
+          </svg>
+
+          <span className={`text-[10px] md:text-xs font-black transition-colors duration-500 ${scrollProgress > 35 ? 'text-white' : 'text-[#BF4A1A]'}`}>
+            {Math.round(scrollProgress)}%
+          </span>
+        </div>
+      </div>
+
+      <style>{`
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
+    }
+    /* Disable float on very small screens if it feels too jumpy */
+    @media (max-width: 640px) {
+      .animate-float { animation: none; }
+    }
+  `}</style>
+    </Link>
+  );
 };
 
-
-    useEffect(() => {
-        const circle = circleRef.current;
-        if (circle) {
-          circle.style.strokeDasharray = circumference;
-          circle.style.strokeDashoffset = circumference;
-        }
-
-        window.addEventListener("scroll", updateProgress);
-        updateProgress();
-
-        return () => window.removeEventListener("scroll", updateProgress);
-    }, []);
-
-  // Stroke offset based on scroll progress
-  const strokeOffset = circumference - (progress / 100) * circumference;
-  return (
-    <>
-        <div className="fixed bottom-0 right-5 -translate-y-1/2 bg-black/40 backdrop-blur-md rounded-[40px] px-5 py-3 flex items-center gap-4 cursor-pointer z-[1000]" style={{backdropFilter: 'blur(10px)'}}>
-            <div className="w-6 h-6 relative">
-                <svg viewBox="0 0 24 24" className="absolute top-0 left-0 w-full h-full -rotate-90" >
-                    <circle cx="12" cy="12" r="10" className="fill-none stroke-[#ffffffa6] stroke-[2]"/>
-                    <circle ref={circleRef} cx="12" cy="12" r="10" className="fill-none stroke-[#BF4A1A] stroke-[2] stroke-linecap-round transition-[stroke-dashoffset] duration-300 ease-in-out" style={{ strokeDasharray: circumference, strokeDashoffset: strokeOffset, }}/>
-                </svg>
-            </div>
-            {/* -------------- Percentage ---------------- */}
-            <div className="text-white font-manrope">{Math.round(progress)}%</div>
-        </div>
-
-    </>
-  )
-}
-
-export default ScrollProgress
+export default ScrollProgress;

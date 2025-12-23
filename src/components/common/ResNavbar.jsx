@@ -17,7 +17,7 @@ export const ResNavbar = () => {
         {/* ------Nav Menu------ */}
         <div onClick={()=>SetValue(!Value)} className='font-soldier select-none cursor-pointer flex duration-[.3s] items-center gap-3 text-xl text-Primary z-50' data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1200" data-aos-easing="ease-in-sine">
           <p>{Value? 'MENU' : 'CLOSE'}</p>
-          <button className='relative w-[32px] h-[19px] cursor-pointer'>
+          <button className='relative w-[32px] h-[19px] cursor-pointer' aria-label="Open menu">
             <span className={`w-[20px] h-[2px] rounded-[8px] bg-Primary absolute right-[10px] duration-[.3s] ${Value? 'rotate-[0deg] top-[3px]' : 'rotate-[45deg] top-[7px]'}`} ></span>
             <span className={`w-[20px] h-[2px] rounded-[8px] bg-Primary absolute top-[9px] right-[10px] duration-[.3s] ${Value? 'opacity-100' : 'opacity-0'}`}></span>
             <span className={`w-[20px] h-[2px] rounded-[8px] bg-Primary absolute right-[10px] duration-[.3s] ${Value? 'rotate-[0deg] top-[14px]' : 'rotate-[-45deg] top-[7px]' }`}></span>

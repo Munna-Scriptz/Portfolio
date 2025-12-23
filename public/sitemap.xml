@@ -4,4 +4,16 @@
     <loc>https://munna-scriptz.vercel.app/</loc>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://munna-scriptz.vercel.app/projects</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://munna-scriptz.vercel.app/about</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://munna-scriptz.vercel.app/contact</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>

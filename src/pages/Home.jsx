@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { useLenis } from 'lenis/react';
 
 // Your components...
 import Banner from '../components/home/Banner';
@@ -13,19 +12,10 @@ import ContactMe from '../components/home/ContactMe';
 
 export default function Home() {
   const cardRefs = useRef([]);
-
-  // Lenis hook for optional parallax or extra effects
-  useLenis(({ scroll }) => {
-    cardRefs.current.forEach((card, index) => {
-      if (!card) return;
-      const rect = card.getBoundingClientRect();
-    });
-  });
-
   const sections = [
     { component: <LetsWorkTogether />, color: 'bg-transparent', height: 'h-screen' },
     { component: <AboutMe />, color: 'bg-brand', height: 'h-screen' },
-    { component: <Skills />, color: 'bg-brand', height: 'h-[800px]' },
+    { component: <Skills />, color: 'bg-brand', height: 'h-[900px]' },
   ];
 
   return (
@@ -39,7 +29,6 @@ export default function Home() {
           <div
             key={index}
             ref={(el) => (cardRefs.current[index] = el)}
-            // sticky top-0 makes it stay at the top when it hits 0
             className={`sticky top-0 w-full flex items-center overflow-hidden border-t border-black/10 ${section.color} ${section.height} `}
             style={{ zIndex: index + 1 }}
           >

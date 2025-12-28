@@ -4,7 +4,6 @@ import { useLenis } from 'lenis/react';
 const ScrollProgress = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  // Hook directly into Lenis for frame-by-frame progress 🏎️
   const lenis = useLenis(({ scroll, limit }) => {
     const progress = (scroll / limit) * 100;
     setScrollProgress(progress);
@@ -37,7 +36,7 @@ const ScrollProgress = () => {
           </svg>
 
           <span className={`text-[10px] md:text-xs font-black duration-300 ${scrollProgress > 35 ? 'text-white' : 'text-[#BF4A1A]'}`}>
-            {Math.round(scrollProgress)}%
+            {Math.round(scrollProgress) || 0}%
           </span>
         </div>
       </div>

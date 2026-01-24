@@ -1,4 +1,4 @@
-# Personal MERN Stack Portfolio
+# My Personal MERN Stack Portfolio
 
 <p align="center">
   <img src="https://munna-scriptz.vercel.app/preview.png" alt="Portfolio Preview" width="700" />

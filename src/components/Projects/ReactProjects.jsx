@@ -215,10 +215,45 @@ const ReactProjects = ({ proLength }) => {
         },
     ]
 
+    const [visibleCount1, setVisibleCount1] = useState(0);
+    const [visibleCount2, setVisibleCount2] = useState(0);
+
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.1,
     });
+
+    useEffect(() => {
+        if (inView) {
+            const interval = setInterval(() => {
+                setVisibleCount1(prev => {
+                    if (prev < MyProjects.length) {
+                        return prev + 1;
+                    } else {
+                        clearInterval(interval);
+                        return prev;
+                    }
+                });
+            }, 500);
+            return () => clearInterval(interval);
+        }
+    }, [inView]);
+
+    useEffect(() => {
+        if (visibleCount1 === MyProjects.length) {
+            const interval = setInterval(() => {
+                setVisibleCount2(prev => {
+                    if (prev < MyProjectsScroll.length) {
+                        return prev + 1;
+                    } else {
+                        clearInterval(interval);
+                        return prev;
+                    }
+                });
+            }, 500);
+            return () => clearInterval(interval);
+        }
+    }, [visibleCount1]);
 
     useEffect(() => {
         if (typeof proLength === "function") {
@@ -239,8 +274,8 @@ const ReactProjects = ({ proLength }) => {
                     <div className='flex flex-col gap-15' ref={ref}>
                         {inView ?
 
-                            MyProjects.map((items, i) => (
-                                <div key={i} className={`flex items-center ${items.Direction} flex-col lg:gap-20 gap-5`}>
+                            MyProjects.slice(0, visibleCount1).map((items, i) => (
+                                <div key={i} className={`flex items-center ${items.Direction} flex-col lg:gap-20 gap-5 fade-in`}>
                                     <div className='lg:w-[640px] w-full' data-aos={`${items.AosDir}`} data-aos-offset="200" data-aos-easing="ease-in-sine">
                                         <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
                                     </div>
@@ -274,15 +309,15 @@ const ReactProjects = ({ proLength }) => {
                                 </div>
                             ))
                             :
-                            <SkeletonLoader />
+                            MyProjects.map((_, i) => <SkeletonLoader key={i} />)
                         }
                     </div>
                     {/* ----------------------------------Hover Scroll Project------------------------------- */}
                     <div className='flex flex-col gap-15' ref={ref}>
                         {
                             inView ?
-                                MyProjectsScroll.map((items, i) => (
-                                    <div key={i} id='HoverDivImg' className={`flex items-center ${items.Direction} flex-col lg:gap-20 gap-5`}>
+                                MyProjectsScroll.slice(0, visibleCount2).map((items, i) => (
+                                    <div key={i} id='HoverDivImg' className={`flex items-center ${items.Direction} flex-col lg:gap-20 gap-5 fade-in`}>
                                         <div className='lg:w-[640px] w-full' data-aos={`${items.AosDir}`} data-aos-offset="200" data-aos-easing="ease-in-sine">
                                             <div className='screen cursor-none'>
                                                 <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
@@ -321,7 +356,7 @@ const ReactProjects = ({ proLength }) => {
                                     </div>
                                 ))
                                 :
-                                <SkeletonLoader />
+                                MyProjectsScroll.map((_, i) => <SkeletonLoader key={i} />)
                         }
                     </div>
                 </div>

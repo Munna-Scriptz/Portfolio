@@ -638,6 +638,31 @@ footer{
     animation: skeleton-animation ease-in-out 1s infinite;
   }
   
+/* Mobile responsiveness for skeleton loader */
+@media (max-width: 768px) {
+  .skeleton-loader {
+    height: 320px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+  .skeleton-loader:after {
+    background-size: 400px 100%, 280px 18px, 400px 14px, 400px 14px, 400px 14px, 400px 14px, 350px 280px, 18px 15px, 150px 15px, 100px 20px, 100px 20px, 18px 15px, 150px 15px, 400px 14px, 100% 100%;
+    background-position: 0 0 , 400px 35px, 400px 70px, 400px 95px, 400px 120px, 400px 145px, 15px 18px, 400px 200px, 430px 200px, 400px 260px, 520px 260px, 400px 225px, 430px 225px, 400px 170px, 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .skeleton-loader {
+    height: 280px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+  }
+  .skeleton-loader:after {
+    background-size: 350px 100%, 240px 16px, 350px 12px, 350px 12px, 350px 12px, 350px 12px, 300px 240px, 16px 13px, 120px 13px, 80px 18px, 80px 18px, 16px 13px, 120px 13px, 350px 12px, 100% 100%;
+    background-position: 0 0 , 350px 30px, 350px 60px, 350px 80px, 350px 100px, 350px 120px, 12px 15px, 350px 170px, 380px 170px, 350px 220px, 450px 220px, 350px 190px, 380px 190px, 350px 140px, 0 0;
+  }
+}
+  
 @keyframes fade-loader {
     from { opacity: 0.3; }
     to { opacity: 1; }

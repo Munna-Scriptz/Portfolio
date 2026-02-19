@@ -13,7 +13,7 @@ export const ResNavbar = () => {
     <nav id='Navbar' className='py-[25px] lg:hidden relative'>
       <div id='NavRow' className='flex container items-center justify-between overflow-hidden'>
         {/* ------Logo------ */}
-        <Link data-aos="fade-down" data-aos-duration="1500" data-aos-delay="800" data-aos-easing="ease-in-sine" to={'/'} className='w-[40px] h-[40px] z-50 transition-trigger'><img src={ResLogo} alt="Logo" /></Link>
+        <Link data-aos="fade-down" data-aos-duration="1500" data-aos-delay="800" data-aos-easing="ease-in-sine" to={'/'} className='w-[40px] h-[40px] z-50 transition-trigger transition-link'><img src={ResLogo} alt="Logo" /></Link>
         {/* ------Nav Menu------ */}
         <div onClick={()=>SetValue(!Value)} className='font-soldier select-none cursor-pointer flex duration-[.3s] items-center gap-3 text-xl text-Primary z-50' data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1200" data-aos-easing="ease-in-sine">
           <p>{Value? 'MENU' : 'CLOSE'}</p>
@@ -33,16 +33,16 @@ export const ResNavbar = () => {
             {/* ------------Nav Links-------- */}
             <ul className={`flex flex-col items-center gap-8 text-3xl font-soldier mt-32 transition-all duration-[.4s] ${Value ? 'opacity-0 -translate-y-10' : 'opacity-100 translate-y-0'}`}>
               <li className={`transition-all duration-[.4s] delay-200 ${Value ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}`}>
-                <Link onClick={() => SetValue(!Value)} className='text-Primary font-manrope font-medium flex items-center gap-2 transition-trigger' to={'/'}><IoHomeOutline/> Home</Link>
+                <Link onClick={() => SetValue(!Value)} className='text-Primary font-manrope font-medium flex items-center gap-2 transition-trigger transition-link' to={'/'}><IoHomeOutline/> Home</Link>
               </li>
               <li className={`transition-all duration-[.4s] delay-300 ${Value ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}`}>
-                <Link onClick={() => SetValue(!Value)} className='text-Primary font-manrope font-medium flex items-center gap-2 transition-trigger' to={'/about'}><GrContactInfo /> About me</Link>
+                <Link onClick={() => SetValue(!Value)} className='text-Primary font-manrope font-medium flex items-center gap-2 transition-trigger transition-link' to={'/about'}><GrContactInfo /> About me</Link>
               </li>
               <li className={`transition-all duration-[.4s] delay-400 ${Value ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}`}>
-                <Link onClick={() => SetValue(!Value)} className='text-Primary font-manrope font-medium flex items-center gap-2 transition-trigger' to={'/projects'}><GrProjects className='text-xl'/> Projects</Link>
+                <Link onClick={() => SetValue(!Value)} className='text-Primary font-manrope font-medium flex items-center gap-2 transition-trigger transition-link' to={'/projects'}><GrProjects className='text-xl'/> Projects</Link>
               </li>
               <li className={`transition-all duration-[.4s] delay-500 ${Value ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}`}>
-                <Link onClick={() => SetValue(!Value)} className='text-Primary font-manrope font-medium flex items-center gap-2 transition-trigger' to={'/contact'}><GrContact className='text-[22px]' /> Contact</Link>
+                <Link onClick={() => SetValue(!Value)} className='text-Primary font-manrope font-medium flex items-center gap-2 transition-trigger transition-link' to={'/contact'}><GrContact className='text-[22px]' /> Contact</Link>
               </li>
             </ul>
           </div>

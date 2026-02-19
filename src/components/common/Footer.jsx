@@ -18,7 +18,7 @@ const Footer = () => {
           <div id="Footer_Row" className='grid grid-cols-1 lg:place-items-start place-items-center sm:grid-cols-2 lg:grid-cols-4 gap-10 py-8 lg:py-[65px]'>
             <div id="Row_1">
               <Magnet data-aos="fade-up" padding={20} disabled={false} magnetStrength={2}>
-                <Link to={'/'}><img src={FooterLogo} alt="Logo" className='md:w-[150px] w-[120px] m-0 m-auto' /></Link>
+                <Link to={'/'} className='transition-link'><img src={FooterLogo} alt="Logo" className='md:w-[150px] w-[120px] m-0 m-auto' /></Link>
               </Magnet>
               <p data-aos="fade-up" className='text-sm text-second font-poppins font-light md:w-[130px] w-[120px] text-center md:mt-6 mt-3'>©2025 Portfolio By Munna.</p>
             </div>
@@ -34,10 +34,10 @@ const Footer = () => {
             <div id="Row_3">
               <h2 data-aos="fade-up" className='font-soldier md:text-start text-center lg:text-6xl text-5xl text-Primary mb-6'>PAGES</h2>
               <ul id='FooterLinks' className='flex md:items-start items-center flex-col gap-4 text-[#3f3f3f] font-poppins text-sm'>
-                <li data-aos="fade-up"><Link className='transition-trigger' to={'/about'}>ABOUT ME</Link></li>
-                <li data-aos="fade-up"><Link className='transition-trigger' to={'/projects'}>MY WORK</Link></li>
-                <li data-aos="fade-up"><Link className='transition-trigger' to={'/'}>DOWNLOAD CV</Link></li>
-                <li data-aos="fade-up"><Link className='transition-trigger' to={'/contact'}>CONTACT</Link></li>
+                <li data-aos="fade-up"><Link className='transition-trigger transition-link' to={'/about'}>ABOUT ME</Link></li>
+                <li data-aos="fade-up"><Link className='transition-trigger transition-link' to={'/projects'}>MY WORK</Link></li>
+                <li data-aos="fade-up"><Link className='transition-trigger transition-link' to={'/'}>DOWNLOAD CV</Link></li>
+                <li data-aos="fade-up"><Link className='transition-trigger transition-link' to={'/contact'}>CONTACT</Link></li>
               </ul>
             </div>
             <div id="Row_4">

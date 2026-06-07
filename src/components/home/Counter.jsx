@@ -1,69 +1,94 @@
 import React, { useEffect, useRef } from 'react'
-import CountUp from 'react-countup';
+import CountUp from 'react-countup'
 import ProjectsIcon from '../../assets/images/CounterProjectIcon.png'
-import TeamICon from '../../assets/images/CounterTeamIcon.png'
+import TeamIcon from '../../assets/images/CounterTeamIcon.png'
 import ReviewIcon from '../../assets/images/CounterReviewIcon.png'
-import CompleteICon from '../../assets/images/ReviewCompleteICon.png'
+import CompleteIcon from '../../assets/images/ReviewCompleteICon.png'
+
+const counterItems = [
+  {
+    label: 'Projects delivered',
+    value: 38,
+    suffix: '+',
+    icon: ProjectsIcon,
+  },
+  {
+    label: 'Client reviews',
+    value: 90,
+    suffix: '+',
+    icon: ReviewIcon,
+  },
+  {
+    label: 'Team members',
+    value: 12,
+    suffix: '+',
+    icon: TeamIcon,
+  },
+  {
+    label: 'Completed work',
+    value: 100,
+    suffix: '+',
+    icon: CompleteIcon,
+  },
+]
 
 const Counter = () => {
-
-    const expandRef = useRef(null);
-    const speed = 6;
+  const expandRef = useRef(null)
+  const speed = 6
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      const scrollAndSpeed = scrollTop / speed;
-      const newWidth = Math.min(Math.max(scrollAndSpeed, 60), 100); // clamp between 20% and 95%
-      if (expandRef.current) {
-        expandRef.current.style.width = `${newWidth}%`;
-      }
-    };
+    let animationFrameId = null
 
-    window.addEventListener('scroll', () => requestAnimationFrame(handleScroll));
+    const handleScroll = () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId)
+      }
+
+      animationFrameId = requestAnimationFrame(() => {
+        const scrollAndSpeed = window.pageYOffset / speed
+        const newWidth = Math.min(Math.max(scrollAndSpeed, 72), 100)
+
+        if (expandRef.current) {
+          expandRef.current.style.width = `${newWidth}%`
+        }
+      })
+    }
+
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
 
     return () => {
-      window.removeEventListener('scroll', () => requestAnimationFrame(handleScroll));
-    };
-  }, []);
-
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId)
+      }
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
-    <div id='Counter' className='flex justify-center items-center lg:mt-0 mt-[140px]'>
-        <section id='CounterBG' className='py-[25px] px-[30px] w-[50%] rounded-[10px] mb-20' ref={expandRef}>
-            <div id="counterDiv" className='flex lg:flex-row lg:gap-0 gap-7 flex-col  lg:items-center justify-around'>
-                <div className='flex items-center gap-5'>
-                    <div className='w-[50px]'><img src={ProjectsIcon} alt="Icon" /></div>
-                    <div>
-                        <h2 className='text-4xl text-brand font-poppins font-medium'><CountUp enableScrollSpy  end={38}  duration={5} />+</h2>
-                        <p className='text-base text-[#E5E3DC] font-poppins font-medium'>Projects</p>
-                    </div>
-                </div>
-                <div className='flex items-center gap-5'>
-                    <div className='w-[50px]'><img src={ReviewIcon} alt="Icon" /></div>
-                    <div>
-                        <h2 className='text-4xl text-brand font-poppins font-medium'><CountUp end={90} enableScrollSpy  duration={5} />+</h2>
-                        <p className='text-base text-[#E5E3DC] font-poppins font-medium'>Client Review</p>
-                    </div>
-                </div>
-                <div className='flex items-center gap-5'>
-                    <div className='w-[50px]'><img src={TeamICon} alt="Icon" /></div>
-                    <div>
-                        <h2 className='text-4xl text-brand font-poppins font-medium'><CountUp end={12} enableScrollSpy  duration={5} />+</h2>
-                        <p className='text-base text-[#E5E3DC] font-poppins font-medium'>Team members</p>
-                    </div>
-                </div>
-                <div className='flex items-center gap-5'>
-                    <div className='w-[40px]'><img src={CompleteICon} alt="Icon" /></div>
-                    <div>
-                        <h2 className='text-4xl text-brand font-poppins font-medium'><CountUp end={100} enableScrollSpy  duration={5} />+</h2>
-                        <p className='text-base text-[#E5E3DC] font-poppins font-medium'>Completed Work</p>
-                    </div>
-                </div>
+    <div id="Counter" className="counter-wrap">
+      <section id="CounterBG" className="counter-panel" ref={expandRef}>
+        <div className="counter-panel__intro">
+          <span>Impact snapshot</span>
+          <p>Recent project outcomes and delivery numbers</p>
+        </div>
+
+        <div id="counterDiv" className="counter-grid">
+          {counterItems.map((item) => (
+            <div className="counter-card" key={item.label}>
+              <span className="counter-card__icon">
+                <img src={item.icon} alt="" />
+              </span>
+              <span className="counter-card__value">
+                <CountUp enableScrollSpy end={item.value} duration={4} />
+                {item.suffix}
+              </span>
+              <p>{item.label}</p>
             </div>
-        </section>
+          ))}
+        </div>
+      </section>
     </div>
-    
   )
 }
 

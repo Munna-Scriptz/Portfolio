@@ -1,199 +1,135 @@
 import React from 'react'
-import lines from '../../assets/images/TextLines.svg'
-import { MdOutlineArrowBack } from 'react-icons/md'
+import { AiOutlineApi } from 'react-icons/ai'
+import { FaFigma } from 'react-icons/fa'
+import { MdManageHistory, MdOutlineArrowBack } from 'react-icons/md'
+import { SlGlobe } from 'react-icons/sl'
+import { TbDeviceMobileCode } from 'react-icons/tb'
 import ScrollFloat from '../effects/ScrollFloat'
 import ScrollReveal from '../effects/ScrollReveal'
+
+const services = [
+  {
+    id: '01',
+    title: 'Web App Development',
+    shortTitle: 'Web Apps',
+    icon: SlGlobe,
+    description:
+      'Modern, responsive web applications built with clean frontend architecture, fast interactions, and interfaces that feel polished on every screen.',
+    tags: ['React', 'Performance', 'Scalable UI'],
+  },
+  {
+    id: '02',
+    title: 'API Integration',
+    shortTitle: 'APIs',
+    icon: AiOutlineApi,
+    description:
+      'Reliable API connections that bring live data, third-party services, auth flows, and dynamic features into a smooth user experience.',
+    tags: ['REST APIs', 'Data Flow', 'Automation'],
+  },
+  {
+    id: '03',
+    title: 'Figma to Website',
+    shortTitle: 'Figma',
+    icon: FaFigma,
+    description:
+      'Pixel-aware Figma conversions with responsive layouts, reusable components, optimized styling, and careful attention to design details.',
+    tags: ['Pixel Perfect', 'Tailwind', 'Responsive'],
+  },
+  {
+    id: '04',
+    title: 'Responsive Web Design',
+    shortTitle: 'Responsive',
+    icon: TbDeviceMobileCode,
+    description:
+      'Flexible layouts and device-friendly interfaces that stay readable, balanced, and easy to use across phones, tablets, and desktops.',
+    tags: ['Mobile First', 'Accessibility', 'UX Polish'],
+  },
+  {
+    id: '05',
+    title: 'Web Management',
+    shortTitle: 'Care',
+    icon: MdManageHistory,
+    description:
+      'Ongoing improvements, content updates, UI cleanup, speed tuning, and maintenance that keep websites sharp after launch.',
+    tags: ['Updates', 'Optimization', 'Support'],
+  },
+]
+
 const Services = () => {
   return (
-    <>
-    <section id='Services' className='mt-[112px]'>
+    <section id='Services' className='mt-[112px] pb-8'>
       <div className="container">
-        {/* --------------Header-------------- */}
         <div>
-          <div className='font-poppins text-Primary text-lg font-semibold uppercase'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=50%' scrollEnd='bottom bottom-=40%' stagger={0.03}>What I Do</ScrollFloat></div>
-            <div className='flex items-center justify-between'>
-              <div className='font-soldier text-Primary lg:text-[152px] text-[64px] font-medium uppercase'><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=50%' scrollEnd='bottom bottom-=40%' stagger={0.03}>Services</ScrollFloat></div>
-              <MdOutlineArrowBack data-aos="fade-up" className='hidden md:block text-[200px] md:text-[300px] rotate-[-45deg] text-borderCol'/>
+          <div className='font-poppins text-Primary text-lg font-semibold uppercase'>
+            <ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=50%' scrollEnd='bottom bottom-=40%' stagger={0.03}>
+              What I Do
+            </ScrollFloat>
+          </div>
+          <div className='flex items-center justify-between'>
+            <div className='font-soldier text-Primary lg:text-[152px] text-[64px] font-medium uppercase leading-[0.95]'>
+              <ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=50%' scrollEnd='bottom bottom-=40%' stagger={0.03}>
+                Services
+              </ScrollFloat>
             </div>
-            <ScrollReveal containerClassName='font-poppins text-second lg:text-xl text-lg lg:w-[400px] uppercase lg:ml-[100px]'>
-              Comprehensive digital services to boost your online presence and achieve impactful results.
+            <MdOutlineArrowBack data-aos="fade-up" className='hidden md:block text-[200px] md:text-[300px] rotate-[-45deg] text-borderCol' />
+          </div>
+          <ScrollReveal containerClassName='font-poppins text-second lg:text-xl text-lg lg:w-[440px] uppercase lg:ml-[100px]'>
+            Comprehensive digital services to boost your online presence and achieve impactful results.
           </ScrollReveal>
         </div>
-        {/* --------------Services Card-------------- */}
 
-        <div className='mt-13 lg:hidden flex items-center flex-col gap-6'>
-          <div className='bg-Primary p-6 pb-10 rounded-md' data-aos="fade-up">
-            <div className="text-brand font-soldier mb-6 text-2xl" data-aos="fade-up">Web App Development</div>
-              <p className="text-brand font-poppins" data-aos="fade-up">
-                Customer interactions, study and analysis of company branding
-                through creative briefs. Creation of mock-up designs by using
-                UI tools that simulate actions and pre-visualize the
-                reactions.
-              </p>
-          </div>
-          <div className='bg-Primary p-6 pb-10 rounded-md' data-aos="fade-up">
-            <div className="text-brand font-soldier mb-6 text-2xl" data-aos="fade-up">Api integration in website</div>
-              <p className="text-brand font-poppins" data-aos="fade-up">
-                API integration services focus on connecting different software applications and platforms to work together seamlessly. It allows businesses to automate workflows, enable real-time data sharing, and extend functionality by bringing in third-party tools or services.
-              </p>
-          </div>
-          <div className='bg-Primary p-6 pb-10 rounded-md' data-aos="fade-up">
-            <div className="text-brand font-soldier mb-6 text-2xl" data-aos="fade-up">Converting figma to website</div>
-              <p className="text-brand font-poppins" data-aos="fade-up">
-                Converting Figma to a website involves transforming design files into fully functional, responsive web pages. It ensures pixel-perfect accuracy, optimized code, and smooth user experiences across all devices, while maintaining the original design vision and brand identity.
-              </p>
-          </div>
-        </div>
+        <div className='mt-14 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5'>
+          {services.map((service, index) => {
+            const Icon = service.icon
 
-    </div>
-    </section>
-    <div className="traineeship py-10 mt-[70px] lg:block hidden">
-      <div className="container">
-        <div className="process-row flex md:flex-row gap-y-5 items-center justify-between flex-col gap-2">
-          {/* Card 01 */}
-          <div className="activity animate-from-bottom__0 lg:w-[267px] w-full bg-brand lg:hover:w-[558px] hover:bg-Primary group ">
-            <div className="relative-block">
-              <div className="activity-icon">
-                <img
-                  alt="An image"
-                  src="https://i.ibb.co/ZWp3Yts/ad-operations-process-strategy.png"
-                />
-              </div>
-              <div className="inactive">
-                <div className="title">Web App</div>
-                <div className='mt-[20px] flex flex-col items-center gap-6'>
-                  <img src={lines} alt="lines" />
-                  <img src={lines} alt="lines" />
-                  <img src={lines} alt="lines" />
-                  <img src={lines} alt="lines" />
-                </div>
-              </div>
-              <div className="active lg:group-hover:w-[340px]">
-                <div className="title">Web App Development</div>
-                <div className="sub-title">
-                  Customer interactions, study and analysis of company branding
-                  through creative briefs. Creation of mock-up designs by using
-                  UI tools that simulate actions and pre-visualize the
-                  reactions.
-                </div>
-              </div>
-            </div>
-          </div>
+            return (
+              <article
+                key={service.id}
+                data-aos="fade-up"
+                data-aos-delay={index * 80}
+                className='group relative min-h-[330px] overflow-hidden rounded-lg border border-Primary/15 bg-brand/70 p-5 shadow-[0_20px_60px_rgba(22,22,22,0.08)] backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-coffee/50 hover:bg-Primary hover:shadow-[0_28px_80px_rgba(22,22,22,0.22)]'
+              >
+                <div className='pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-coffee/60 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100' />
+                <div className='pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full border border-Primary/10 transition-all duration-500 group-hover:scale-125 group-hover:border-brand/10' />
+                <div className='relative z-10 flex h-full flex-col'>
+                  <div className='flex items-start justify-between gap-4'>
+                    <div className='flex h-13 w-13 items-center justify-center rounded-md border border-Primary/10 bg-Primary text-2xl text-brand transition-all duration-500 group-hover:border-brand/15 group-hover:bg-brand group-hover:text-Primary'>
+                      <Icon />
+                    </div>
+                    <span className='font-soldier text-4xl font-medium leading-none text-Primary/20 transition-colors duration-500 group-hover:text-brand/20'>
+                      {service.id}
+                    </span>
+                  </div>
 
-          {/* Card 02 */}
-          <div className="activity animate-from-bottom__1 lg:w-[267px] w-full bg-brand lg:hover:w-[558px] hover:bg-Primary group ">
-            <div className="relative-block">
-              <div className="activity-icon">
-                <img
-                  alt="An image"
-                  src="https://i.ibb.co/s2nghrT/ad-operations-process-strategy-activation.png"
-                />
-              </div>
-              <div className="inactive">
-                <div className="title">Api integration</div>
-                <div className='mt-[20px] flex flex-col items-center gap-6'>
-                  <img src={lines} alt="lines" />
-                  <img src={lines} alt="lines" />
-                  <img src={lines} alt="lines" />
-                  <img src={lines} alt="lines" />
-                </div>
-              </div>
-              <div className="active lg:group-hover:w-[340px]">
-                <div className="title">Api integration in website</div>
-                <div className="sub-title">
-                  API integration services focus on connecting different software applications and platforms to work together seamlessly. It allows businesses to automate workflows, enable real-time data sharing, and extend functionality by bringing in third-party tools or services.
-                </div>
-              </div>
-            </div>
-          </div>
+                  <div className='mt-12'>
+                    <p className='font-poppins text-xs font-semibold uppercase tracking-[0.18em] text-coffee transition-colors duration-500 group-hover:text-brand/60'>
+                      {service.shortTitle}
+                    </p>
+                    <h3 className='mt-3 font-soldier text-[34px] font-medium uppercase leading-[0.95] text-Primary transition-colors duration-500 group-hover:text-brand'>
+                      {service.title}
+                    </h3>
+                    <p className='mt-5 font-poppins text-[15px] leading-7 text-second/80 transition-colors duration-500 group-hover:text-brand/75'>
+                      {service.description}
+                    </p>
+                  </div>
 
-          {/* Card 03 */}
-          <div className="activity animate-from-bottom__2 lg:w-[267px] w-full bg-brand lg:hover:w-[558px] hover:bg-Primary group ">
-            <div className="relative-block">
-              <div className="activity-icon">
-                <img
-                  alt="An image"
-                  src="https://i.ibb.co/ZWp3Yts/ad-operations-process-strategy.png"
-                />
-              </div>
-              <div className="inactive">
-                <div className="title">Figma to web </div>
-                <div className='mt-[20px] flex flex-col items-center gap-6'>
-                  <img src={lines} alt="lines" />
-                  <img src={lines} alt="lines" />
-                  <img src={lines} alt="lines" />
-                  <img src={lines} alt="lines" />
+                  <div className='mt-auto flex flex-wrap gap-2 pt-8'>
+                    {service.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className='rounded-full border border-Primary/10 px-3 py-1 font-poppins text-[11px] font-medium uppercase text-Primary/70 transition-colors duration-500 group-hover:border-brand/15 group-hover:text-brand/70'
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className="active lg:group-hover:w-[340px]">
-                <div className="title">Converting figma to website</div>
-                <div className="sub-title">
-                  Converting Figma to a website involves transforming design files into fully functional, responsive web pages. It ensures pixel-perfect accuracy, optimized code, and smooth user experiences across all devices, while maintaining the original design vision and brand identity.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 04 */}
-          <div className="activity animate-from-bottom__3 lg:w-[267px] w-full bg-brand lg:hover:w-[558px] hover:bg-Primary group ">
-            <div className="relative-block">
-              <div className="activity-icon">
-                <img
-                  alt="An image"
-                  src="https://i.ibb.co/s2nghrT/ad-operations-process-strategy-activation.png"
-                />
-              </div>
-              <div className="inactive">
-                <div className="title">Responsive</div>
-                <div className='mt-[20px] flex flex-col items-center gap-6'>
-                  <img src={lines} alt="lines" />
-                  <img src={lines} alt="lines" />
-                  <img src={lines} alt="lines" />
-                  <img src={lines} alt="lines" />
-                </div>
-              </div>
-              <div className="active lg:group-hover:w-[340px]">
-                <div className="title">Responsive Web Design</div>
-                <div className="sub-title">
-                  Responsive web design makes websites adapt smoothly to any device or screen size. It ensures a consistent user experience with flexible layouts and intuitive navigation.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 05 */}
-          <div className="activity animate-from-bottom__4 lg:w-[267px] w-full bg-brand lg:hover:w-[558px] hover:bg-Primary group ">
-            <div className="relative-block">
-              <div className="activity-icon">
-                <img
-                  alt="An image"
-                  src="https://i.ibb.co/ZWp3Yts/ad-operations-process-strategy.png"
-                />
-              </div>
-              <div className="inactive">
-                <div className="title">UI / UX Design</div>
-                <div className='mt-[20px] flex flex-col items-center gap-6'>
-                  <img src={lines} alt="lines" />
-                  <img src={lines} alt="lines" />
-                  <img src={lines} alt="lines" />
-                  <img src={lines} alt="lines" />
-                </div>
-              </div>
-              <div className="active lg:group-hover:w-[340px]">
-                <div className="title">UI / UX Design</div>
-                <div className="sub-title">
-                  Customer interactions, study and analysis of company branding
-                  through creative briefs. Creation of mock-up designs by using
-                  UI tools that simulate actions and pre-visualize the
-                  reactions.
-                </div>
-              </div>
-            </div>
-          </div>
+              </article>
+            )
+          })}
         </div>
       </div>
-    </div>
-    </>
+    </section>
   )
 }
 

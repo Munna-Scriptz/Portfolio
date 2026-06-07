@@ -1,17 +1,62 @@
 import React, { useEffect } from 'react'
-import Magnet from '../effects/Magnet'
 import { Link } from 'react-router'
-import { AiOutlineApi } from "react-icons/ai";
-import { SlGlobe } from "react-icons/sl";
-import { FaFigma } from "react-icons/fa";
-import { MdManageHistory } from "react-icons/md";
+import { AiOutlineApi } from 'react-icons/ai'
+import { SlGlobe } from 'react-icons/sl'
+import { FaFigma } from 'react-icons/fa'
+import { MdManageHistory } from 'react-icons/md'
+import { FiArrowUpRight, FiCheckCircle } from 'react-icons/fi'
+import Magnet from '../effects/Magnet'
+
+const services = [
+  {
+    number: '01',
+    title: 'Web development',
+    label: 'Frontend builds',
+    icon: SlGlobe,
+    theme: 'dark',
+    description:
+      'I create modern, responsive, and user-friendly websites with clean UI systems, smooth interactions, fast load times, and scalable frontend architecture for every screen size.',
+    points: ['Responsive layouts', 'Modern frontend stack', 'Performance-minded UI'],
+  },
+  {
+    number: '02',
+    title: 'Api integration',
+    label: 'Connected apps',
+    icon: AiOutlineApi,
+    theme: 'light',
+    description:
+      'I connect frontend products with reliable APIs, real-time data, dynamic content, forms, dashboards, and backend services so the experience feels seamless from end to end.',
+    points: ['Real-time data flows', 'Client-server sync', 'Clean error states'],
+  },
+  {
+    number: '03',
+    title: 'Figma to website',
+    label: 'Design to code',
+    icon: FaFigma,
+    theme: 'dark',
+    description:
+      'I convert Figma designs into responsive, production-ready websites with careful spacing, sharp visual details, reusable components, and polished behavior across devices.',
+    points: ['Pixel-conscious builds', 'Reusable components', 'Responsive sections'],
+  },
+  {
+    number: '04',
+    title: 'Web management',
+    label: 'Ongoing care',
+    icon: MdManageHistory,
+    theme: 'light',
+    description:
+      'I keep websites healthy with updates, security monitoring, speed optimization, content support, and backups so the product stays fast, secure, and easy to maintain.',
+    points: ['Regular maintenance', 'Speed optimization', 'Security checks'],
+  },
+]
 
 const InfoCards = () => {
   useEffect(() => {
-    const { ScrollObserver, valueAtPercentage } = aat
+    if (typeof aat === 'undefined') return
 
-    const cardsContainer = document.querySelector('.cards')
-    const cards = document.querySelectorAll('.card')
+    const { ScrollObserver, valueAtPercentage } = aat
+    const cardsContainer = document.querySelector('#ScrollCards .cards')
+    const cards = document.querySelectorAll('#ScrollCards .card')
 
     if (!cardsContainer || cards.length === 0) return
 
@@ -30,90 +75,84 @@ const InfoCards = () => {
 
       ScrollObserver.Element(nextCard, {
         offsetTop,
-        offsetBottom: window.innerHeight - card.clientHeight
+        offsetBottom: window.innerHeight - card.clientHeight,
       }).onScroll(({ percentageY }) => {
         cardInner.style.scale = valueAtPercentage({
           from: 1,
           to: toScale,
-          percentage: percentageY
+          percentage: percentageY,
         })
         cardInner.style.filter = `brightness(${valueAtPercentage({
           from: 1,
           to: 0.6,
-          percentage: percentageY
+          percentage: percentageY,
         })})`
       })
     })
   }, [])
+
   return (
-    <>
-      <section id='ScrollCards'>
-        <div className="cards">
-          <div className="card" data-index="0">
-            <div className="card__inner" id='ServicesBG'>
-              <div className="card__content">
-                <div className="card__title font-soldier text-brand text-5xl flex items-center justify-between uppercase"><span className='flex items-center gap-2.5'><SlGlobe />Web development</span> <span className='text-brand'>01</span></div>
-                <p className="card__description text-brand">I specialize in creating modern, responsive, and user-friendly websites using the latest frontend technologies. From clean UI design to smooth functionality, I build web experiences that are fast, scalable, and optimized for all devices.</p>
-                <Magnet magnetStrength={4} padding={20}>
-                  <div className="magnetic-btn">
-                    <Link to={'/about'} className='ReadMoreButton transition-trigger font-poppins font-medium px-[24px] py-[8px] text-base hover-this' aria-label="view projects">VIEW PROJECTS</Link>
-                  </div>
-                </Magnet>
-              </div>
-            </div>
-          </div>
+    <section id="ScrollCards">
+      <div className="cards">
+        {services.map((service, index) => {
+          const Icon = service.icon
+          const isDark = service.theme === 'dark'
 
-          <div className="card" data-index="1">
-            <div className="card__inner">
-              <div className="card__image-container">
-              </div>
-              <div className="card__content">
-                <div className="card__title font-soldier text-second text-5xl flex items-center justify-between uppercase"><span className='flex items-center gap-2.5'><AiOutlineApi />Api integration</span> <span className='text-second'>02</span></div>
-                <p className="card__description">I integrate powerful APIs to connect frontend apps with real-time data and dynamic features. Whether it's fetching content, handling user inputs, or syncing services, I ensure seamless communication between the client and backend.</p>
-                <Magnet magnetStrength={4} >
-                  <div className="magnetic-btn">
-                    <Link to={'/about'} className='ContactButton font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this' aria-label="view projects">VIEW PROJECTS</Link>
+          return (
+            <div className="card" data-index={index} key={service.number}>
+              <div
+                className={`card__inner info-card info-card--${service.theme}`}
+                id={isDark ? 'ServicesBG' : undefined}
+              >
+                <div className="card__content info-card__content">
+                  <div className="info-card__top">
+                    <span className="info-card__label">{service.label}</span>
+                    <span className="info-card__number">{service.number}</span>
                   </div>
-                </Magnet>
-              </div>
-            </div>
-          </div>
 
-          <div className="card" data-index="2">
-            <div className="card__inner" id='ServicesBG'>
-              <div className="card__image-container">
-              </div>
-              <div className="card__content">
-                <div className="card__title font-soldier text-brand text-5xl flex items-center justify-between uppercase"><span className='flex items-center gap-2.5'><FaFigma />figma to website</span> <span className='text-brand'>03</span></div>
-                <p className="card__description text-brand">I convert Figma designs into fully responsive and functional websites with clean code and pixel-perfect accuracy. Every section is optimized for speed, usability, and smooth performance across all screen sizes.</p>
-                <Magnet magnetStrength={4} padding={20}>
-                  <div className="magnetic-btn">
-                    <Link to={'/about'} className='ReadMoreButton transition-trigger font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this' aria-label="view projects">VIEW PROJECTS</Link>
+                  <div className="info-card__heading">
+                    <span className="info-card__icon" aria-hidden="true">
+                      <Icon />
+                    </span>
+                    <h3 className="card__title info-card__title font-soldier uppercase">
+                      {service.title}
+                    </h3>
                   </div>
-                </Magnet>
-              </div>
-            </div>
-          </div>
 
-          <div className="card" data-index="3">
-            <div className="card__inner">
-              <div className="card__image-container">
-              </div>
-              <div className="card__content">
-                <div className="card__title font-soldier text-second text-5xl flex items-center justify-between uppercase"><span className='flex items-center gap-2.5'><MdManageHistory />Web management</span> <span className='text-second'>04</span></div>
-                <p className="card__description">Web Management services that keep your site running smoothly — from regular updates, security monitoring, and speed optimization to content management and backups. I ensure your website stays secure, fast, and user-friendly so you can focus on growing your business without worries.
-                </p>
-                <Magnet magnetStrength={4}>
-                  <div className="magnetic-btn">
-                    <Link to={'/about'} className='ContactButton transition-trigger font-poppins font-medium px-[24px] py-[8px] text-base text-Primary hover-this' aria-label="view projects">VIEW PROJECTS</Link>
+                  <p className="card__description info-card__description">
+                    {service.description}
+                  </p>
+
+                  <div className="info-card__footer">
+                    <ul className="info-card__points">
+                      {service.points.map((point) => (
+                        <li key={point}>
+                          <FiCheckCircle aria-hidden="true" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <Magnet magnetStrength={4} padding={20}>
+                      <div className="magnetic-btn">
+                        <Link
+                          to="/about"
+                          className="info-card__link transition-trigger font-poppins font-semibold hover-this"
+                          aria-label={`View projects for ${service.title}`}
+                        >
+                          <span>View projects</span>
+                          <FiArrowUpRight aria-hidden="true" />
+                        </Link>
+                      </div>
+                    </Magnet>
                   </div>
-                </Magnet>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-    </>
+          )
+        })}
+      </div>
+    </section>
   )
 }
 

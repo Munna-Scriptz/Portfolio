@@ -7,7 +7,6 @@ const PreloaderWrapper = ({ children }) => {
 
     useEffect(() => {
         const handlePageLoad = () => {
-            // Your exact timing logic
             setTimeout(() => setShowContent(true), 4500);
             setTimeout(() => setLoading(false), 6100);
         };

@@ -15,7 +15,7 @@ export default function Home() {
   const sections = [
     { component: <LetsWorkTogether />, color: 'bg-transparent', height: 'h-screen' },
     { component: <AboutMe />, color: 'bg-brand', height: 'h-screen' },
-    { component: <Skills />, color: 'bg-brand', height: 'h-[900px]' },
+    { component: <Skills />, color: 'bg-brand', height: 'min-h-screen py-16' },
   ];
 
   return (

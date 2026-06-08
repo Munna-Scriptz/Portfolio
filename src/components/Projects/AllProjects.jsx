@@ -37,10 +37,10 @@ const AllProjects = () => {
                                 <FiLayers aria-hidden="true" />
                                 Portfolio archive
                             </span>
-                            <h2 className='mt-5 text-second font-soldier lg:text-[66px] text-[42px] leading-[0.9] font-semibold uppercase' data-aos="fade-up">
-                                Project work across modern web stacks
+                            <h2 className='mt-5 text-second font-soldier lg:text-[66px] md:text-[42px] text-3xl font-semibold uppercase' data-aos="fade-up">
+                                Project & works
                             </h2>
-                            <p className="mt-5 max-w-2xl font-poppins text-sm leading-7 text-Primary/70 md:text-base">
+                            <p className="mt-4 md:mt-5 max-w-2xl font-poppins text-sm md:leading-7 leadin-6 text-Primary/70 md:text-base">
                                 Browse production-style builds, landing pages, apps, and JavaScript experiments with clear previews, tools, and direct project links.
                             </p>
                         </div>
@@ -57,7 +57,13 @@ const AllProjects = () => {
                     </div>
 
                     <div data-aos="fade-up" className='mt-8'>
-                        <div className="flex items-center gap-2 overflow-x-auto rounded-2xl border border-Primary/10 bg-Primary p-2">
+                        <div className="flex items-center gap-2 overflow-x-auto rounded-2xl border border-Primary/10 bg-Primary p-2"
+                            style={{
+                                overflow: "auto",
+                                scrollbarWidth: "thin",
+                                scrollbarColor: "rgba(156,163,175,.5) transparent",
+                                msOverflowStyle: "none",
+                            }}>
                             {selectProjectBtn.map((btn) => (
                                 <button
                                     key={btn.id}

@@ -26,6 +26,29 @@ body{
   background-position: center;
   background-image: url(/src/assets/images/CounterBg.svg);
 }
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(165, 180, 210, 0.12);
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(114, 123, 141, 0.22);
+}
+
+/* Firefox scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #BF4A1A transparent;
+}
+
 ::-moz-selection {
   color: white;
   background: #BF4A1A;

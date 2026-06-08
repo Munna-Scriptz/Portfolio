@@ -1,33 +1,17 @@
 import React, { useEffect } from 'react'
-import Magnet from '../effects/Magnet'
-import BlurText from '../effects/BlurText'
-import { GrTechnology } from 'react-icons/gr'
-import { BiCategory } from 'react-icons/bi'
 // ------------Icons----------
 import FigmaIcon from '../../assets/images/FigmaIcon.svg'
 import JsIcon from '../../assets/images/JsIcon.jpg'
 import HtmlIcon from '../../assets/images/HtmlIcon.svg'
 import CssIcon from '../../assets/images/CssIcon.svg'
 import AosIcon from '../../assets/images/AosIcon.png'
-
-// ---------Project images 
-import taskManage from '../../assets/images/TaskManageMentScroll.jpeg'
-import taskManageV2 from '../../assets/images/taskManagementV2.jpeg'
-import escolaEducation from '../../assets/images/EscolaEduImg.jpeg'
-import safwanPortfolio from '../../assets/images/safwanPortfolioProject.jpeg'
-import safwanPortfolioV2 from '../../assets/images/safwanV2Scroll.png'
-import photographerPortfolio from '../../assets/images/photographerScroll.jpeg'
-import canvixAgency from '../../assets/images/canvixProjectScroll.png'
-import goTrip from '../../assets/images/goTripScroll.png'
-
-
-
 import scooter from '../../assets/images/scooterHtml.png'
 import furniture from '../../assets/images/furnitureHtml.png'
 import planty from '../../assets/images/plantyHtml.png'
 import nescafe from '../../assets/images/nescafeHtml.png'
 import residential from '../../assets/images/residentialHtml.png'
 import solarSystem from '../../assets/images/solarHtml.png'
+import ProjectCard from './ProjectCard'
 
 
 
@@ -37,7 +21,7 @@ const HtmlCssProjects = ({ proLength }) => {
       'ProjectImage': scooter,
       'ProjectName': 'E-Scooter',
       'Description': 'An impressive e-commerce landing page for futuristic e-scooters, built with HTML, CSS, and Vanilla JavaScript. It featuresclean, modern UI and uses AOS animations to create a dynamic and engaging user experience.',
-      'technologies': [FigmaIcon, AosIcon, JsIcon, , HtmlIcon, CssIcon],
+      'technologies': [FigmaIcon, AosIcon, JsIcon, HtmlIcon, CssIcon],
       'Direction': 'lg:flex-row-reverse',
       'AosDir': 'fade-left',
       'type': 'E-Commerce Landing Page',
@@ -117,47 +101,11 @@ const HtmlCssProjects = ({ proLength }) => {
           <h2 className='text-second font-soldier lg:text-[46px] md:hidden block text-[32px] font-medium text-center' data-aos="fade-up">Html-Css Projects</h2>
         </div>
         {/* ----------------------HtmlCss Projects------------------------- */}
-        {
-          htmlCssData.map((items, i) => (
-            <div key={i} id='HoverDivImg' className={`flex items-center ${items.Direction} flex-col lg:gap-20 mt-10 gap-5`}>
-              <div className='lg:w-[640px] w-full' data-aos={`${items.AosDir}`} data-aos-offset="200" data-aos-easing="ease-in-sine">
-                <div className='screen cursor-none'>
-                  <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
-                </div>
-                <h2 className='text-center mt-2 text-sm text-[#646464] font-medium font-poppins lg:block hidden'>Hover On the image To Preview</h2>
-                <h2 className='text-center mt-2 text-sm text-[#646464] font-medium font-poppins lg:hidden block'>Tap On the image To Preview</h2>
-              </div>
-              <div className='lg:w-[650px] w-full'>
-                <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={280} animateBy="words" direction="bottom" /></h2>
-                <h2 className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-4'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom" /></h2>
-
-                <div className='flex items-center gap-4 mb-4'>
-                  <p className='font-poppins lg:text-[19px] text-[13px] text-second font-medium flex items-center gap-2'><BiCategory /> Type : {items.type}</p>
-                </div>
-                <div className='flex items-center gap-4'>
-                  <p className='font-poppins lg:text-[19px] text-[14px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
-                  <div className='lg:w-[30px] w-[22px] flex items-center gap-2'>
-                    {
-                      items.technologies.map((img, i) => (
-                        <img src={img} key={i} />
-                      ))
-                    }
-                  </div>
-                </div>
-                <div className='mt-7 flex items-center lg:gap-4 gap-2'>
-                  <Magnet padding={30} disabled={false} magnetStrength={5}>
-                    <a href={items.liveLink} target='_blank' to={'/projects'} className='ContactButton font-poppins lg:px-[24px] py-[8px] px-[15px] font-medium lg:text-base text-sm text-Primary hover-this'>OPEN PROJECT</a>
-                  </Magnet>
-                  <Magnet padding={10} disabled={false} magnetStrength={5}>
-                    <a href={`${items.GithubRepo}`} target='_blank' className='DownloadCv font-poppins font-medium lg:text-base text-sm text-Primary hover-brown'>
-                      <span>GITHUB REPO</span>
-                    </a>
-                  </Magnet>
-                </div>
-              </div>
-            </div>
-          ))
-        }
+        <div className="flex flex-col gap-10">
+          {htmlCssData.map((items, i) => (
+            <ProjectCard key={items.ProjectName} project={items} index={i} scrollPreview />
+          ))}
+        </div>
       </section>
     </>
   )

@@ -1,9 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import Magnet from '../effects/Magnet'
-import BlurText from '../effects/BlurText'
-import { GrTechnology } from 'react-icons/gr'
-import { BiCategory } from 'react-icons/bi'
-import { useInView } from 'react-intersection-observer'
+import React, { useEffect } from 'react'
+import ProjectCard from './ProjectCard'
 // ------------Icons----------
 import ReactIcon from '../../assets/images/react.svg'
 import FigmaIcon from '../../assets/images/FigmaIcon.svg'
@@ -31,7 +27,6 @@ import canvixAgency from '../../assets/images/canvixProjectScroll.png'
 import goTrip from '../../assets/images/goTripScroll.png'
 import rexScale from '../../assets/images/rexScaleReal.png'
 import rexMotors from '../../assets/images/rexMotors.png'
-import SkeletonLoader from '../effects/SkeletonLoader'
 
 const ReactProjects = ({ proLength }) => {
     const MyProjects = [
@@ -215,46 +210,6 @@ const ReactProjects = ({ proLength }) => {
         },
     ]
 
-    const [visibleCount1, setVisibleCount1] = useState(0);
-    const [visibleCount2, setVisibleCount2] = useState(0);
-
-    const { ref, inView } = useInView({
-        triggerOnce: true,
-        threshold: 0.1,
-    });
-
-    useEffect(() => {
-        if (inView) {
-            const interval = setInterval(() => {
-                setVisibleCount1(prev => {
-                    if (prev < MyProjects.length) {
-                        return prev + 1;
-                    } else {
-                        clearInterval(interval);
-                        return prev;
-                    }
-                });
-            }, 500);
-            return () => clearInterval(interval);
-        }
-    }, [inView]);
-
-    useEffect(() => {
-        if (visibleCount1 === MyProjects.length) {
-            const interval = setInterval(() => {
-                setVisibleCount2(prev => {
-                    if (prev < MyProjectsScroll.length) {
-                        return prev + 1;
-                    } else {
-                        clearInterval(interval);
-                        return prev;
-                    }
-                });
-            }, 500);
-            return () => clearInterval(interval);
-        }
-    }, [visibleCount1]);
-
     useEffect(() => {
         if (typeof proLength === "function") {
             proLength(MyProjects.length + MyProjectsScroll.length);
@@ -271,93 +226,21 @@ const ReactProjects = ({ proLength }) => {
                 </div>
                 {/* ----------------------React Projects------------------------- */}
                 <div className='flex flex-col gap-20'>
-                    <div className='flex flex-col gap-15' ref={ref}>
-                        {inView ?
-
-                            MyProjects.slice(0, visibleCount1).map((items, i) => (
-                                <div key={i} className={`flex items-center ${items.Direction} flex-col lg:gap-20 gap-5 fade-in`}>
-                                    <div className='lg:w-[640px] w-full' data-aos={`${items.AosDir}`} data-aos-offset="200" data-aos-easing="ease-in-sine">
-                                        <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
-                                    </div>
-                                    <div className='lg:w-[650px] w-full'>
-                                        <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={280} animateBy="words" direction="bottom" /></h2>
-                                        <h2 className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-4'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom" /></h2>
-                                        <div className='flex items-center gap-4 mb-4'>
-                                            <p className='font-poppins lg:text-[19px] text-[13px] text-second font-medium flex items-center gap-2'><BiCategory /> Type : {items.type}</p>
-                                        </div>
-                                        <div className='flex items-center gap-4'>
-                                            <p className='font-poppins lg:text-[19px] text-[14px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
-                                            <div className='lg:w-[30px] w-[22px] flex items-center gap-2'>
-                                                {
-                                                    items.technologies.map((img, i) => (
-                                                        <img src={img} key={i} />
-                                                    ))
-                                                }
-                                            </div>
-                                        </div>
-                                        <div className='mt-7 flex items-center lg:gap-4 gap-2'>
-                                            <Magnet padding={30} disabled={false} magnetStrength={5}>
-                                                <a href={items.liveLink} target='_blank' to={'/projects'} className='ContactButton font-poppins lg:px-[24px] py-[8px] px-[15px] font-medium lg:text-base text-sm text-Primary hover-this'>OPEN PROJECT</a>
-                                            </Magnet>
-                                            <Magnet padding={10} disabled={false} magnetStrength={5}>
-                                                <a href={`${items.GithubRepo}`} target='_blank' className='DownloadCv font-poppins font-medium lg:text-base text-sm text-Primary hover-brown'>
-                                                    <span>GITHUB REPO</span>
-                                                </a>
-                                            </Magnet>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))
-                            :
-                            MyProjects.map((_, i) => <SkeletonLoader key={i} />)
-                        }
+                    <div className='flex flex-col gap-10'>
+                        {MyProjects.map((items, i) => (
+                            <ProjectCard key={items.ProjectName} project={items} index={i} />
+                        ))}
                     </div>
                     {/* ----------------------------------Hover Scroll Project------------------------------- */}
-                    <div className='flex flex-col gap-15' ref={ref}>
-                        {
-                            inView ?
-                                MyProjectsScroll.slice(0, visibleCount2).map((items, i) => (
-                                    <div key={i} id='HoverDivImg' className={`flex items-center ${items.Direction} flex-col lg:gap-20 gap-5 fade-in`}>
-                                        <div className='lg:w-[640px] w-full' data-aos={`${items.AosDir}`} data-aos-offset="200" data-aos-easing="ease-in-sine">
-                                            <div className='screen cursor-none'>
-                                                <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
-                                            </div>
-                                            <h2 className='text-center mt-2 text-sm text-[#646464] font-medium font-poppins lg:block hidden'>Hover On the image To Preview</h2>
-                                            <h2 className='text-center mt-2 text-sm text-[#646464] font-medium font-poppins lg:hidden block'>Tap On the image To Preview</h2>
-                                        </div>
-                                        <div className='lg:w-[650px] w-full'>
-                                            <h2 className='font-soldier lg:text-[44px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={280} animateBy="words" direction="bottom" /></h2>
-                                            <h2 className='font-poppins lg:text-[19px] text-[14px] text-Primary font-normal mb-4'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom" /></h2>
-
-                                            <div className='flex items-center gap-4 mb-4'>
-                                                <p className='font-poppins lg:text-[19px] text-[13px] text-second font-medium flex items-center gap-2'><BiCategory /> Type : {items.type}</p>
-                                            </div>
-                                            <div className='flex items-center gap-4'>
-                                                <p className='font-poppins lg:text-[19px] text-[14px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
-                                                <div className='lg:w-[30px] w-[22px] flex items-center gap-2'>
-                                                    {
-                                                        items.technologies.map((img, i) => (
-                                                            <img src={img} key={i} />
-                                                        ))
-                                                    }
-                                                </div>
-                                            </div>
-                                            <div className='mt-7 flex items-center lg:gap-4 gap-2'>
-                                                <Magnet padding={30} disabled={false} magnetStrength={5}>
-                                                    <a href={items.liveLink} target='_blank' to={'/projects'} className='ContactButton font-poppins lg:px-[24px] py-[8px] px-[15px] font-medium lg:text-base text-sm text-Primary hover-this'>OPEN PROJECT</a>
-                                                </Magnet>
-                                                <Magnet padding={10} disabled={false} magnetStrength={5}>
-                                                    <a href={`${items.GithubRepo}`} target='_blank' className='DownloadCv font-poppins font-medium lg:text-base text-sm text-Primary hover-brown'>
-                                                        <span>GITHUB REPO</span>
-                                                    </a>
-                                                </Magnet>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))
-                                :
-                                MyProjectsScroll.map((_, i) => <SkeletonLoader key={i} />)
-                        }
+                    <div className='flex flex-col gap-10'>
+                        {MyProjectsScroll.map((items, i) => (
+                            <ProjectCard
+                                key={`${items.ProjectName}-${i}`}
+                                project={items}
+                                index={MyProjects.length + i}
+                                scrollPreview
+                            />
+                        ))}
                     </div>
                 </div>
             </section>

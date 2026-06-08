@@ -1,25 +1,9 @@
 import React, { useEffect } from 'react'
-import { FaRegStar } from 'react-icons/fa'
-import Magnet from '../effects/Magnet'
-import BlurText from '../effects/BlurText'
-import { GrTechnology } from 'react-icons/gr'
-import { BiCategory } from 'react-icons/bi'
 // ------------Icons----------
-import ReactIcon from '../../assets/images/react.svg'
 import FigmaIcon from '../../assets/images/FigmaIcon.svg'
-import TailwindCss from '../../assets/images/TailwindCssIcon.svg'
-import reduxIcon from '../../assets/images/ReduxIcon.svg'
 import JsIcon from '../../assets/images/JsIcon.jpg'
 import HtmlIcon from '../../assets/images/HtmlIcon.svg'
 import CssIcon from '../../assets/images/CssIcon.svg'
-import Bootstrap from '../../assets/images/BootStrapIcon.svg'
-import firebase from '../../assets/images/FirebaseIcon.svg'
-import AosIcon from '../../assets/images/AosIcon.png'
-import ProjectImg1 from '../../assets/images/Project1.jpg'
-import NoteAppThumb from '../../assets/images/NoteAppThumb.png'
-import HectoCommerce from '../../assets/images/HectoThumbnail.png'
-import prideAgency from '../../assets/images/PrideAgencyThumb.png'
-import appManagement from '../../assets/images/AppManagementThumb.png'
 
 import todoList from '../../assets/images/todoListJS.png'
 import weather from '../../assets/images/weatherJS.png'
@@ -30,6 +14,7 @@ import masterCard from '../../assets/images/masterCardJS.png'
 import numberGuess from '../../assets/images/numberGuessJS.png'
 import numberCounter from '../../assets/images/numberCounterJS.png'
 import calculator from '../../assets/images/calculatorJS.png'
+import ProjectCard from './ProjectCard'
 
 const JsProjects = ({ proLength }) => {
   const JsProjectsData = [
@@ -133,42 +118,10 @@ const JsProjects = ({ proLength }) => {
               <h2 className='text-second font-soldier lg:text-[46px] md:hidden block text-[32px] font-medium text-center' data-aos="fade-up">JavaScript Projects</h2>
             </div>
             {/* ----------------------JavaScript Projects------------------------- */}
-            <div className='w-full grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center'>
+            <div className='w-full grid grid-cols-1 gap-6 lg:grid-cols-2'>
               {
                 JsProjectsData.map((items, i) => (
-                  <div key={i} className={`flex items-center flex-col lg:gap-7 gap-5 lg:h-[700px] h-[550px]`}>
-                    <div className='lg:w-[560px] w-full' data-aos="fade-up">
-                      <img className='rounded-xl' src={items.ProjectImage} alt="Project Image" />
-                    </div>
-
-                    <div className='lg:w-[560px] w-full'>
-                      <h2 className='font-soldier lg:text-[36px] text-[32px] text-Primary font-medium mb-4 uppercase'><BlurText text={items.ProjectName} delay={280} animateBy="words" direction="bottom" /></h2>
-                      <h2 className='font-poppins lg:text-[17px] text-[14px] text-Primary font-normal mb-4'><BlurText text={items.Description} delay={50} animateBy="words" direction="bottom" /></h2>
-                      <div className='flex items-center gap-4 mb-4'>
-                        <p className='font-poppins lg:text-[18px] text-[13px] text-second font-medium flex items-center gap-2'><BiCategory /> Type : {items.type}</p>
-                      </div>
-                      <div className='flex items-center gap-4'>
-                        <p className='font-poppins lg:text-[18px] text-[14px] text-second font-medium flex items-center gap-2'><GrTechnology /> Tools Used :</p>
-                        <div className='lg:w-[30px] w-[22px] flex items-center gap-2'>
-                          {
-                            items.technologies.map((img, i) => (
-                              <img src={img} key={i} />
-                            ))
-                          }
-                        </div>
-                      </div>
-                      <div className='mt-7 flex items-center lg:gap-4 gap-2'>
-                        <Magnet padding={30} disabled={false} magnetStrength={5}>
-                          <a href={items.liveLink} target='_blank' to={'/projects'} className='ContactButton font-poppins lg:px-[24px] py-[8px] px-[15px] font-medium lg:text-base text-sm text-Primary hover-this'>OPEN PROJECT</a>
-                        </Magnet>
-                        <Magnet padding={10} disabled={false} magnetStrength={5}>
-                          <a href={`${items.GithubRepo}`} target='_blank' className='DownloadCv font-poppins font-medium lg:text-base text-sm text-Primary hover-brown'>
-                            <span>GITHUB REPO</span>
-                          </a>
-                        </Magnet>
-                      </div>
-                    </div>
-                  </div>
+                  <ProjectCard key={items.ProjectName} project={items} index={i} layout="grid" />
                 ))
               }
             </div>

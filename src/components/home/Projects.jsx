@@ -6,8 +6,8 @@ import { FiArrowUpRight } from 'react-icons/fi';
 const Projects = () => {
   return (
     <>
-    <section id="Projects" className='lg:mt-70 mt-60 overflow-hidden'>
-      <div className="container">
+      <section id="Projects" className='lg:mt-70 mt-60 overflow-hidden'>
+        <div className="container">
           <div className="mb-16 flex flex-col items-start justify-between gap-8 border-y border-Primary/15 py-8 md:flex-row md:items-end lg:mb-20">
             <div>
               <div className='font-poppins text-Primary/70 font-semibold uppercase lg:text-base text-sm'>
@@ -25,11 +25,11 @@ const Projects = () => {
               <FiArrowUpRight className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
           </div>
-          <ProjectsShow/>
-      </div>
-        
-    </section>
-    
+          <ProjectsShow />
+        </div>
+
+      </section>
+
     </>
   )
 }

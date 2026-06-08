@@ -38,7 +38,7 @@ const ProjectCard = ({
       </>
     )
 
-    const className = `inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 font-poppins text-xs font-bold uppercase transition ${actionClass}`
+    const className = `inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 font-poppins text-[11px] md:text-xs font-bold uppercase transition ${actionClass}`
 
     if (action.to) {
       return (
@@ -92,7 +92,7 @@ const ProjectCard = ({
         )}
       </div>
 
-      <div className={`flex flex-col p-6 md:p-8 ${isGrid ? '' : 'lg:p-10'}`}>
+      <div className={`flex flex-col p-5 md:p-8 ${isGrid ? '' : 'lg:p-10'}`}>
         <div className="mb-5 flex flex-wrap items-center gap-3">
           {project.type && (
             <span className="inline-flex items-center gap-2 rounded-full border border-coffee/20 bg-coffee/10 px-3 py-2 font-poppins text-xs font-bold uppercase text-coffee">
@@ -106,15 +106,15 @@ const ProjectCard = ({
           </span>
         </div>
 
-        <h3 className={`${isGrid ? 'text-[34px]' : 'text-[42px] lg:text-[54px]'} font-soldier font-semibold uppercase leading-[0.9] text-Primary`}>
+        <h3 className={`${isGrid ? 'text-[34px]' : 'text-[30px] md:text-[42px] lg:text-[54px]'} font-soldier font-semibold uppercase leading-[0.9] text-Primary`}>
           {project.ProjectName}
         </h3>
 
-        <p className={`${isGrid ? 'text-sm leading-6' : 'text-base leading-7 lg:text-[17px] lg:leading-8'} mt-5 font-poppins text-Primary/70`}>
+        <p className={`${isGrid ? 'text-sm leading-6' : 'text-sm md:text-base leading-5.5 md:leading-7 lg:text-[17px] lg:leading-8'} mt-5 font-poppins text-Primary/70`}>
           {project.Description}
         </p>
 
-        <div className="mt-6 flex flex-wrap items-center gap-2">
+        <div className="mt-6 flex flex-wrap items-center gap-1.5 md:gap-2">
           {technologies.map((img, techIndex) => (
             <span
               key={`${project.ProjectName}-${techIndex}`}

@@ -2,7 +2,7 @@ import React from 'react'
 import { SiExpress, SiMongodb, SiNodedotjs, SiVercel } from 'react-icons/si'
 import { TbApi, TbBrandFramerMotion } from 'react-icons/tb'
 import ScrollFloat from '../effects/ScrollFloat'
-import ScrollingGithubBall from './ScrollingGithubBall'
+import GithubActivity from './GithubActivity'
 import ReactImg from '../../assets/images/react.svg'
 import JsIcon from '../../assets/images/JsIcon.jpg'
 import NextJsIcon from '../../assets/images/NextJsIcon.svg'
@@ -127,7 +127,7 @@ export const Skills = () => {
             ))}
           </div>
 
-          <ScrollingGithubBall />
+          <GithubActivity />
         </div>
       </div>
     </section>

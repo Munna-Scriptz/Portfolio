@@ -188,10 +188,10 @@ const ContactMe = () => {
                   <FaLocationDot />
                   <p>Dhaka, bangladesh</p>
                 </div>
-                <div data-aos="fade-up" className='font-poppins text-second font-medium text-base md:text-[19px] max-w-full md:max-w-[500px] mt-4 md:mt-6 uppercase flex items-center gap-3 md:gap-5'>
+                {/* <div data-aos="fade-up" className='font-poppins text-second font-medium text-base md:text-[19px] max-w-full md:max-w-[500px] mt-4 md:mt-6 uppercase flex items-center gap-3 md:gap-5'>
                   <IoCall />
                   <p>+(880) 190 8905 391</p>
-                </div>
+                </div> */}
                 <div data-aos="fade-up" className='font-poppins text-second font-medium text-base md:text-[19px] max-w-full md:max-w-[500px] mt-4 md:mt-6 flex items-center gap-3 md:gap-5'>
                   <MdEmail />
                   <p>munnascriptz@gmail.com</p>

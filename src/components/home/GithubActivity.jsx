@@ -29,7 +29,7 @@ const getEventIcon = (type) => {
   return <FiRefreshCw aria-hidden="true" />
 }
 
-const ScrollingGithubBall = () => {
+const GithubActivity = () => {
   const [profile, setProfile] = useState(null)
   const [events, setEvents] = useState([])
   const [status, setStatus] = useState('loading')
@@ -155,4 +155,4 @@ const ScrollingGithubBall = () => {
   )
 }
 
-export default ScrollingGithubBall
+export default GithubActivity

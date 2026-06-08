@@ -1,50 +1,87 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router'
+import React, { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router'
 import ResLogo from "../../assets/images/Logo.png"
 import { IoHomeOutline } from 'react-icons/io5';
 import { GrContact, GrContactInfo, GrProjects } from 'react-icons/gr';
+import { FiArrowUpRight } from 'react-icons/fi';
 
 export const ResNavbar = () => {
 
-  const [Value , SetValue] = useState('true')
+  const [isClosed, setIsClosed] = useState(true)
+  const { pathname } = useLocation();
+  const navLinks = [
+    { label: 'Home', path: '/', icon: IoHomeOutline },
+    { label: 'About me', path: '/about', icon: GrContactInfo },
+    { label: 'Projects', path: '/projects', icon: GrProjects },
+    { label: 'Contact', path: '/contact', icon: GrContact },
+  ];
+
+  useEffect(() => {
+    document.body.style.overflow = isClosed ? '' : 'hidden';
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isClosed]);
 
   return (
   <>
-    <nav id='Navbar' className='py-[25px] lg:hidden relative'>
-      <div id='NavRow' className='flex container items-center justify-between overflow-hidden'>
+    <nav id='Navbar' className='sticky top-0 z-[90] py-4 lg:hidden'>
+      <div id='NavRow' className='container flex items-center justify-between'>
         {/* ------Logo------ */}
-        <Link data-aos="fade-down" data-aos-duration="1500" data-aos-delay="800" data-aos-easing="ease-in-sine" to={'/'} className='w-[40px] h-[40px] z-50 transition-trigger transition-link'><img src={ResLogo} alt="Logo" /></Link>
+        <Link data-aos="fade-down" data-aos-duration="1500" data-aos-delay="800" data-aos-easing="ease-in-sine" to={'/'} className='z-[70] flex size-12 items-center justify-center rounded-full border border-Primary/10 bg-brand/80 shadow-[0_14px_34px_rgba(22,22,22,0.1)] backdrop-blur-xl transition-trigger transition-link'><img className='w-9' src={ResLogo} alt="Logo" /></Link>
         {/* ------Nav Menu------ */}
-        <div onClick={()=>SetValue(!Value)} className='font-soldier select-none cursor-pointer flex duration-[.3s] items-center gap-3 text-xl text-Primary z-50' data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1200" data-aos-easing="ease-in-sine">
-          <p>{Value? 'MENU' : 'CLOSE'}</p>
-          <button className='relative w-[32px] h-[19px] cursor-pointer' aria-label="Open menu">
-            <span className={`w-[20px] h-[2px] rounded-[8px] bg-Primary absolute right-[10px] duration-[.3s] ${Value? 'rotate-[0deg] top-[3px]' : 'rotate-[45deg] top-[7px]'}`} ></span>
-            <span className={`w-[20px] h-[2px] rounded-[8px] bg-Primary absolute top-[9px] right-[10px] duration-[.3s] ${Value? 'opacity-100' : 'opacity-0'}`}></span>
-            <span className={`w-[20px] h-[2px] rounded-[8px] bg-Primary absolute right-[10px] duration-[.3s] ${Value? 'rotate-[0deg] top-[14px]' : 'rotate-[-45deg] top-[7px]' }`}></span>
+        <div className='z-[70]' data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1200" data-aos-easing="ease-in-sine">
+          <button onClick={()=>setIsClosed(!isClosed)} className={`group flex min-h-12 cursor-pointer select-none items-center gap-3 rounded-full border px-4 font-soldier text-xl font-semibold uppercase shadow-[0_14px_34px_rgba(22,22,22,0.1)] backdrop-blur-xl duration-300 ${isClosed ? 'border-Primary/10 bg-brand/80 text-Primary' : 'border-brand/10 bg-Primary text-brand'}`} aria-label={isClosed ? "Open menu" : "Close menu"} aria-expanded={!isClosed}>
+            <span>{isClosed? 'Menu' : 'Close'}</span>
+            <span className='relative size-8 rounded-full bg-current/10'>
+              <span className={`absolute left-1/2 h-[2px] w-4 -translate-x-1/2 rounded-full bg-current duration-300 ${isClosed? 'top-[9px] rotate-0' : 'top-[15px] rotate-45'}`} ></span>
+              <span className={`absolute left-1/2 top-[15px] h-[2px] w-4 -translate-x-1/2 rounded-full bg-current duration-300 ${isClosed? 'opacity-100' : 'opacity-0'}`}></span>
+              <span className={`absolute left-1/2 h-[2px] w-4 -translate-x-1/2 rounded-full bg-current duration-300 ${isClosed? 'top-[21px] rotate-0' : 'top-[15px] -rotate-45' }`}></span>
+            </span>
           </button>
         </div>
         {/* ------Button Menu------ */}
-        <div className={`fixed top-0 left-0 w-full h-screen transition-opacity duration-[.8s] ${Value ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'} z-[40]`}>
+        <div className={`fixed left-0 top-0 z-[60] h-dvh w-full transition-opacity duration-500 ${isClosed ? 'pointer-events-none opacity-0' : 'pointer-events-auto opacity-100'}`}>
           {/*------------Overlay----------- */}
-          <div onClick={() => SetValue(!Value)} className={`w-full h-screen fixed top-0 left-0 bg-[#00000070] transition-opacity duration-300 ${Value ? 'opacity-0' : 'opacity-100'}`}></div>
+          <div onClick={() => setIsClosed(true)} className={`fixed left-0 top-0 h-dvh w-full bg-Primary/55 backdrop-blur-sm transition-opacity duration-300 ${isClosed ? 'opacity-0' : 'opacity-100'}`}></div>
 
           {/* ------------Drawer----------- */}
-          <div className={`h-full w-full fixed bottom-0 bg-[#E5E3DC] p-5 duration-[.4s] shadow-[0_3px_10px_rgb(0,0,0,0.2)] overflow-hidden transform ${Value ? 'translate-y-full' : 'translate-y-0'} z-[60]`}>
+          <div className={`fixed bottom-0 left-0 z-[65] h-[88dvh] w-full overflow-hidden rounded-t-[30px] border border-Primary/10 bg-brand p-5 shadow-[0_-30px_90px_rgba(22,22,22,0.28)] duration-500 ease-out ${isClosed ? 'translate-y-full' : 'translate-y-0'}`}>
+            <div className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_8%,rgba(191,74,26,0.18),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.55),transparent_45%)]'></div>
+            <div className='relative flex items-center justify-between border-b border-Primary/10 pb-5'>
+              <div>
+                <p className='font-poppins text-xs font-bold uppercase text-coffee'>Navigation</p>
+                <h2 className='mt-1 font-soldier text-5xl font-semibold uppercase leading-none text-Primary'>Menu</h2>
+              </div>
+              <span className='flex size-11 items-center justify-center rounded-full bg-Primary text-brand'>
+                <FiArrowUpRight className='rotate-45' />
+              </span>
+            </div>
             {/* ------------Nav Links-------- */}
-            <ul className={`flex flex-col items-center gap-8 text-3xl font-soldier mt-32 transition-all duration-[.4s] ${Value ? 'opacity-0 -translate-y-10' : 'opacity-100 translate-y-0'}`}>
-              <li className={`transition-all duration-[.4s] delay-200 ${Value ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}`}>
-                <Link onClick={() => SetValue(!Value)} className='text-Primary font-manrope font-medium flex items-center gap-2 transition-trigger transition-link' to={'/'}><IoHomeOutline/> Home</Link>
-              </li>
-              <li className={`transition-all duration-[.4s] delay-300 ${Value ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}`}>
-                <Link onClick={() => SetValue(!Value)} className='text-Primary font-manrope font-medium flex items-center gap-2 transition-trigger transition-link' to={'/about'}><GrContactInfo /> About me</Link>
-              </li>
-              <li className={`transition-all duration-[.4s] delay-400 ${Value ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}`}>
-                <Link onClick={() => SetValue(!Value)} className='text-Primary font-manrope font-medium flex items-center gap-2 transition-trigger transition-link' to={'/projects'}><GrProjects className='text-xl'/> Projects</Link>
-              </li>
-              <li className={`transition-all duration-[.4s] delay-500 ${Value ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}`}>
-                <Link onClick={() => SetValue(!Value)} className='text-Primary font-manrope font-medium flex items-center gap-2 transition-trigger transition-link' to={'/contact'}><GrContact className='text-[22px]' /> Contact</Link>
-              </li>
+            <ul className={`relative mt-8 flex flex-col gap-3 transition-all duration-500 ${isClosed ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100'}`}>
+              {navLinks.map((item, index) => {
+                const Icon = item.icon;
+                const isActive = pathname === item.path;
+
+                return (
+                  <li key={item.path} className={`transition-all duration-500 ${isClosed ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100'}`} style={{ transitionDelay: isClosed ? '0ms' : `${180 + index * 80}ms` }}>
+                    <Link onClick={() => setIsClosed(true)} className={`group flex min-h-[72px] items-center justify-between rounded-2xl border px-4 font-manrope font-semibold transition-trigger transition-link duration-300 ${isActive ? 'border-Primary bg-Primary text-brand shadow-[0_18px_40px_rgba(22,22,22,0.18)]' : 'border-Primary/10 bg-white/35 text-Primary hover:border-coffee/35 hover:bg-white/60'}`} to={item.path}>
+                      <span className='flex items-center gap-4'>
+                        <span className={`flex size-11 items-center justify-center rounded-full text-xl transition duration-300 ${isActive ? 'bg-brand text-Primary' : 'bg-Primary text-brand group-hover:bg-coffee'}`}>
+                          <Icon />
+                        </span>
+                        <span className='text-xl'>{item.label}</span>
+                      </span>
+                      <FiArrowUpRight className='text-xl transition duration-300 group-hover:rotate-45' />
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
+            <div className={`relative mt-8 rounded-2xl border border-Primary/10 bg-white/30 p-4 transition-all duration-500 ${isClosed ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100'}`} style={{ transitionDelay: isClosed ? '0ms' : '560ms' }}>
+              <p className='font-poppins text-xs font-semibold uppercase leading-5 text-Primary/55'>Frontend developer focused on polished interfaces, smooth interactions, and practical product experiences.</p>
+            </div>
           </div>
       </div>
     </div>

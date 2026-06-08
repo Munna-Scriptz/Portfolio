@@ -80,7 +80,7 @@ export const Skills = () => {
     <section className="skills-section md:pt-20 pt-25">
       <div className="container">
         <div className="skills-section__header">
-          <p className="font-poppins text-Primary font-semibold lg:text-2xl text-lg">
+          <div className="font-poppins text-Primary font-semibold lg:text-2xl text-lg">
             <ScrollFloat
               animationDuration={1}
               ease="back.inOut(2)"
@@ -90,7 +90,7 @@ export const Skills = () => {
             >
               MY SKILLS
             </ScrollFloat>
-          </p>
+          </div>
           <h2 className="font-soldier text-Primary font-medium lg:text-5xl text-[30px] uppercase">
             <ScrollFloat
               animationDuration={1}

@@ -93,7 +93,7 @@ const GithubActivity = () => {
         ))}
       </div>
 
-      <div className="mt-6 rounded-2xl border border-brand/10 bg-brand/[0.06] p-4">
+      <div className="mt-6 rounded-2xl border border-brand/10 bg-brand/[0.06] md:p-4">
         {status === 'loading' && <p className="font-poppins text-sm text-brand/70">Loading GitHub profile...</p>}
         {status === 'error' && (
           <p className="font-poppins text-sm leading-6 text-brand/70">
@@ -101,13 +101,21 @@ const GithubActivity = () => {
             be opened from the profile link.
           </p>
         )}
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto" style={{
+          overflow: "auto",
+          scrollbarWidth: "thin",
+          scrollbarColor: "rgba(156,163,175,.5) transparent",
+          msOverflowStyle: "none",
+        }}>
+          <div className='max-w-[300px] md:w-auto'>
           <img
             src={CONTRIBUTION_GRAPH}
             alt={`${GITHUB_USERNAME} GitHub contribution calendar for the last year`}
             className="min-w-[660px] rounded-xl bg-brand p-3"
             loading="lazy"
           />
+
+          </div>
         </div>
       </div>
     </div>

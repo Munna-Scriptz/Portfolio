@@ -15,6 +15,43 @@ const initialForm = {
   isFeatured: true,
 };
 
+const technologyOptions = [
+  "nextjs",
+  "react",
+  "tailwind",
+  "javascript",
+  "typescript",
+  "html",
+  "css",
+  "redux",
+  "zustand",
+  "figma",
+  "firebase",
+  "mongodb",
+  "postgresql",
+  "bcrypt",
+  "authentication",
+  "AOS",
+  "JWT",
+  "cloudinary",
+  "socket.io",
+  "Axios",
+  "nodemailer",
+  "stripe",
+  "express",
+  "nodejs",
+  "prisma",
+  "mongoose",
+  "react-router",
+  "vite",
+  "sass",
+  "bootstrap",
+  "framer-motion",
+  "gsap",
+  "rest api",
+  "graphql",
+];
+
 const AdminAdd = () => {
   const [form, setForm] = useState(initialForm);
   const [thumbnail, setThumbnail] = useState(null);
@@ -94,6 +131,17 @@ const AdminAdd = () => {
 
   const removeTechnology = (technology) => {
     setTechnologies((prev) => prev.filter((item) => item !== technology));
+  };
+
+  const toggleTechnology = (technology) => {
+    setTechnologies((prev) => {
+      const exists = prev.some((item) => item.toLowerCase() === technology.toLowerCase());
+      if (exists) {
+        return prev.filter((item) => item.toLowerCase() !== technology.toLowerCase());
+      }
+      return [...prev, technology];
+    });
+    setErrors((prev) => ({ ...prev, technologies: "" }));
   };
 
   const validate = () => {
@@ -309,6 +357,25 @@ const AdminAdd = () => {
                 <button type="button" onClick={addTechnology} className="rounded-xl bg-slate-900 px-4 text-white">
                   <FiPlus />
                 </button>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {technologyOptions.map((technology) => {
+                  const active = technologies.some((item) => item.toLowerCase() === technology.toLowerCase());
+                  return (
+                    <button
+                      key={technology}
+                      type="button"
+                      onClick={() => toggleTechnology(technology)}
+                      className={`rounded-full border px-3 py-2 text-sm font-semibold transition ${
+                        active
+                          ? "border-red-500 bg-red-500 text-white"
+                          : "border-slate-200 bg-slate-50 text-slate-700 hover:border-red-300 hover:text-red-600"
+                      }`}
+                    >
+                      {technology}
+                    </button>
+                  );
+                })}
               </div>
               <div className="mt-4 flex flex-wrap gap-2">
                 {technologies.map((technology) => (

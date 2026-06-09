@@ -46,9 +46,9 @@ export const App = () => {
       <SmoothScroll>
         <Cursor />
 
-        {/* <PreloaderWrapper> */}
+        <PreloaderWrapper>
           <RouterProvider router={MyRoute} />
-        {/* </PreloaderWrapper> */}
+        </PreloaderWrapper>
 
         <ScrollProgress />
         <Analytics />

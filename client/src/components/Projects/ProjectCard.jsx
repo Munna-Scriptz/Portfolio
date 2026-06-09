@@ -3,6 +3,7 @@ import { BiCategory } from 'react-icons/bi'
 import { FiArrowUpRight, FiCode, FiExternalLink } from 'react-icons/fi'
 import { GrTechnology } from 'react-icons/gr'
 import { Link } from 'react-router'
+import TechIcon from '../utils/TechIcon'
 
 const ProjectCard = ({
   project,
@@ -115,12 +116,15 @@ const ProjectCard = ({
         </p>
 
         <div className="mt-6 flex flex-wrap items-center gap-1.5 md:gap-2">
-          {technologies.map((img, techIndex) => (
+          {technologies.map((tech, techIndex) => (
             <span
               key={`${project.ProjectName}-${techIndex}`}
-              className="flex size-10 items-center justify-center rounded-full border border-Primary/10 bg-white/70"
+              className="flex size-10 items-center justify-center overflow-hidden rounded-full border border-Primary/10 bg-white/70 p-1.5"
             >
-              <img className="max-h-5 max-w-5 rounded-full object-contain" src={img} alt="" loading="lazy" />
+              {typeof tech === 'string' && /^https?:\/\//.test(tech)
+                ? <img className="max-h-5 max-w-5 rounded-full object-contain" src={tech} alt="" loading="lazy" />
+                : <TechIcon tech={tech} className="h-5 w-5" />
+              }
             </span>
           ))}
         </div>

@@ -1,13 +1,6 @@
 import React, { useEffect } from 'react'
 // ------------Icons----------
 import nextIcon from '../../assets/images/NextJsIcon.svg'
-import ReactIcon from '../../assets/images/react.svg'
-import FigmaIcon from '../../assets/images/FigmaIcon.svg'
-import TailwindCss from '../../assets/images/TailwindCssIcon.svg'
-import reduxIcon from '../../assets/images/ReduxIcon.svg'
-import JsIcon from '../../assets/images/JsIcon.jpg'
-import HtmlIcon from '../../assets/images/HtmlIcon.svg'
-import CssIcon from '../../assets/images/CssIcon.svg'
 
 // ---------Project images 
 import sansaProject from '../../assets/images/sansaProject.jpg'
@@ -19,7 +12,7 @@ const NextProject = ({ proLength }) => {
           'ProjectImage' : sansaProject,
           'ProjectName' : 'Sansa e - commerce',
           'Description' : 'Sansa is a website which provide users to order online and pick up product eastly, If you need a platform to buy products with good quality so that platform would be Sansa. Made with next js and fully responsive across all devices.',
-          'technologies' : [nextIcon ,ReactIcon , TailwindCss , JsIcon , reduxIcon ,FigmaIcon , HtmlIcon , CssIcon],
+          'technologies' : ["nextjs" ,"react" , "tailwind" , "javascript" , "redux" ,"figma" , "html" , "css"],
           'Direction': 'lg:flex-row',
           'AosDir' : 'fade-right',
           'type' : 'E-Commerce',

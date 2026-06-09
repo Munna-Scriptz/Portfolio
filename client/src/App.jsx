@@ -12,6 +12,13 @@ import { ToastContainer } from 'react-toastify'
 import ScrollProgress from './components/effects/ScrollProgress'
 import SmoothScroll from './components/utils/SmoothScroll'
 import PreloaderWrapper from './components/utils/PreloaderWrapper'
+import AdminLayout from './layout/AdminLayout'
+import AdminAdd from './pages/AdminAdd'
+import AdminCategory from './pages/AdminCategory'
+import Cursor from './components/Cursor'
+import AdminSkills from './pages/AdminSkills'
+import AdminSettings from './pages/AdminSettings'
+import AdminLogin from './pages/AdminLogin'
 
 export const App = () => {
   // ---------------Routing 
@@ -23,6 +30,13 @@ export const App = () => {
         <Route path='/projects' element={<Projects />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
       </Route>
+      <Route path='/admin' element={<AdminLayout />}>
+        <Route index element={<AdminAdd />}></Route>
+        <Route path='category' element={<AdminCategory />}></Route>
+        <Route path='skills' element={<AdminSkills />}></Route>
+        <Route path='settings' element={<AdminSettings />}></Route>
+      </Route>
+      <Route path='/admin/login' element={<AdminLogin />}></Route>
     </Route>
   ))
 
@@ -30,9 +44,11 @@ export const App = () => {
   return (
     <>
       <SmoothScroll>
-        <PreloaderWrapper>
+        <Cursor />
+
+        {/* <PreloaderWrapper> */}
           <RouterProvider router={MyRoute} />
-        </PreloaderWrapper>
+        {/* </PreloaderWrapper> */}
 
         <ScrollProgress />
         <Analytics />

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { Outlet, ScrollRestoration, useLocation } from 'react-router'
-import Cursor from '../components/Cursor'
 import { Navbar } from '../components/common/Navbar';
 import { ResNavbar } from '../components/common/ResNavbar';
 import Footer from '../components/common/Footer';
@@ -25,7 +24,6 @@ export const LayoutOne = () => {
   return (
     <main id='main-content'>
       <ScrollRestoration />
-      <Cursor />
       <Navbar />
       <ResNavbar />
       <Outlet />

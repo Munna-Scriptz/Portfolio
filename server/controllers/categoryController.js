@@ -1,5 +1,4 @@
 const categorySchema = require("../models/categorySchema")
-const { cloudUpload } = require("../services/cloudUpload")
 const resHandler = require("../utils/resHandler")
 
 // ================= Create Category =====================
@@ -10,6 +9,9 @@ const createCategory = async (req, res) => {
         // ---------- Validations 
         if (!slug) return resHandler.error(res, 400, "Category slug is required")
         if (!name) return resHandler.error(res, 400, "Category name is required")
+
+        const existingCategory = await categorySchema.findOne({ slug })
+        if (existingCategory) return resHandler.error(res, 409, "Category already exists")
 
         // ----------- Send to DB 
         await categorySchema.create({
@@ -35,10 +37,10 @@ const updateCategory = async (req, res) => {
         if (!existingCategory) return resHandler.error(res, 404, "Couldn't found any category")
 
         // ------- Changes
-        if (name) existingCategory.title = title
+        if (name) existingCategory.name = name
 
         // ---- Save
-        existingCategory.save()
+        await existingCategory.save()
 
         // --------- Success 
         resHandler.success(res, 200, "Category updated successfully")
@@ -46,7 +48,6 @@ const updateCategory = async (req, res) => {
         resHandler.error(res, 500, 'Internal Server Error')
     }
 }
-
 
 // ================= Get All Category =====================
 const getCategories = async (req, res) => {
@@ -62,8 +63,6 @@ const getCategories = async (req, res) => {
         { $set: { totalProjects: { $size: "$projects" } } },
         { $project: { projects: 0, __v: 0 } }
         ]);
-
-        if (!categories.length) return resHandler.error(res, 404, "Categories not found");
 
         resHandler.success(res, 200, "Category fetched successfully", categories);
     } catch (error) {

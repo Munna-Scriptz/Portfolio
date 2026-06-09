@@ -7,8 +7,8 @@ const addProject = async (req, res) => {
     try {
         const { title, category, description, liveLink, githubRepo, type, badge, isFeatured } = req.body
         let technologies = [];
-        const thumbnail = req.files?.thumbnail?.[0]
-        if (req.body.technologies) size = JSON.parse(req.body.technologies);;
+        const thumbnail = req.file
+        if (req.body.technologies) technologies = JSON.parse(req.body.technologies);
 
         // ---------- Validation ----------
         if (!title) return resHandler.error(res, 400, 'Title is required')
@@ -30,11 +30,11 @@ const addProject = async (req, res) => {
             type,
             thumbnail: thumbRes.secure_url,
             badge,
-            isFeatured,
+            isFeatured: isFeatured === true || isFeatured === "true",
         })
 
         // ------------ Success 
-        resHandler.success(res, 201, "Product created successfully")
+        resHandler.success(res, 201, "Project created successfully")
     } catch (error) {
         resHandler.error(res, 500, 'Internal Server Error')
     }
@@ -51,7 +51,7 @@ const getAll = async (req, res) => {
         // -------- filter
         const filter = {};
 
-        if (language) { filter.category = category; }
+        if (category) { filter.category = category; }
 
         // -------- total count
         const total = await projectSchema.countDocuments(filter);
@@ -113,10 +113,10 @@ const deleteProduct = async (req, res) => {
         // ------------ Thumbnail -------------
         cloudDelete({ folder: "project", file: existingProduct.thumbnail }) // --- Delete previous thumbnail
 
-        await projectSchema.findByIdAndDelete(productId)
+        await projectSchema.findByIdAndDelete(projectId)
 
         // --------- Success 
-        resHandler.success(res, 200, "Product deleted successfully")
+        resHandler.success(res, 200, "Project deleted successfully")
     } catch (error) {
         resHandler.error(res, 500, 'Internal Server Error')
     }

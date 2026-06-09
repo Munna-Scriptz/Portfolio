@@ -1,5 +1,6 @@
 const userSchema = require("../models/userSchema")
 const { generateAccToken } = require("../services/tokens")
+const resHandler = require("../utils/resHandler")
 
 // ========================== Sign Up ===========================
 const signUp = async (req, res) => {
@@ -42,18 +43,38 @@ const signIn = async (req, res) => {
         const accToken = generateAccToken(existingUser)
         res.cookie("X-AS-TOKEN", accToken, {
             httpOnly: true,
-            secure: true,
-            sameSite: "none",
+            secure: process.env.NODE_ENV === "production",
+            sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
             maxAge: 120 * 24 * 60 * 60 * 1000
         })
 
         // ------------ Success 
-        res.status(200).send({ message: "Login Successfully completed!" })
+        res.status(200).send({
+            message: "Login Successfully completed!",
+            data: {
+                _id: existingUser._id,
+                email: existingUser.email,
+                role: existingUser.role,
+            }
+        })
     } catch (error) {
         res.status(500).send({ message: "Internal server error" })
     }
 }
 
+// ========================== Profile =============================
+const getProfile = async (req, res) => {
+    try {
+        if (!req.user?._id) return resHandler.error(res, 401, "Unauthorized")
+
+        const user = await userSchema.findById(req.user._id).select("_id email role")
+        if (!user) return resHandler.error(res, 404, "User not found")
+
+        resHandler.success(res, 200, "Profile fetched successfully", user)
+    } catch (error) {
+        resHandler.error(res, 500, "Internal server error")
+    }
+}
 
 
-module.exports = { signUp, signIn }
+module.exports = { signUp, signIn, getProfile }

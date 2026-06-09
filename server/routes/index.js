@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
 const auth = require('./auth')
-const product = require('./product')
+const projects = require('./projects')
 
 // ------------ All routes 
 router.use('/auth', auth)
-router.use('/product', product)
+router.use('/projects', projects)
 
 router.get('/', (req, res)=>{
     res.send("Hello world")

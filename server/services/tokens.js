@@ -16,21 +16,6 @@ const generateAccToken = (data) => {
     }
 }
 
-const generateRefToken = (data) => {
-    try {
-        const token = jwt.sign({
-            _id: data._id,
-            email: data.email,
-            role: data.role
-
-        }, process.env.JWT_SEC, { expiresIn: '120d' });
-        return token
-
-    } catch (error) {
-        return null
-    }
-}
-
 const verifyToken = (token) => {
     try {
         const decoded = jwt.verify(token, process.env.JWT_SEC);
@@ -43,4 +28,4 @@ const verifyToken = (token) => {
 
 
 
-module.exports = { generateAccToken, generateRefToken, verifyToken }
+module.exports = { generateAccToken, verifyToken }

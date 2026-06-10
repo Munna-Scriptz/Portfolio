@@ -1,5 +1,6 @@
 import React from 'react'
-import { SiExpress, SiMongodb, SiNodedotjs, SiVercel } from 'react-icons/si'
+import { SiExpress, SiMongodb, SiNodedotjs, SiRailway, SiRender, SiVercel } from 'react-icons/si'
+import { BiLogoNetlify } from "react-icons/bi";
 import { TbApi, TbBrandFramerMotion } from 'react-icons/tb'
 import ScrollFloat from '../effects/ScrollFloat'
 import GithubActivity from './GithubActivity'
@@ -26,6 +27,10 @@ const skillGroups = [
       { name: 'React', image: ReactImg },
       { name: 'Next.js', image: NextJsIcon },
       { name: 'JavaScript', image: JsIcon },
+      { name: 'TypeScript', image: "https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg" },
+      { name: 'Vite', image: "https://www.vectorlogo.zone/logos/vitejsdev/vitejsdev-icon.svg" },
+      { name: 'Axios', image: "https://icon.icepanel.io/Technology/svg/Azios.svg" },
+      { name: 'React-Router', image: "https://www.vectorlogo.zone/logos/reactrouter/reactrouter-icon.svg" },
       { name: 'HTML', image: HtmlIcon },
       { name: 'CSS', image: CssIcon },
       { name: 'Tailwind CSS', image: TailwindCssIcon },
@@ -37,18 +42,23 @@ const skillGroups = [
     title: 'Backend',
     summary: 'APIs, server logic, authentication flows, and application data handling.',
     skills: [
-      { name: 'REST APIs', icon: TbApi },
-      { name: 'Node.js', icon: SiNodedotjs },
+      { name: 'Node.js', image: "https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" },
       { name: 'Express', icon: SiExpress },
+      { name: 'Socket.io', image: "https://www.vectorlogo.zone/logos/socketio/socketio-icon.svg" },
+      { name: 'Auth0', image: "https://www.vectorlogo.zone/logos/auth0/auth0-icon.svg" },
+      { name: 'Mongoose', image: "https://icon.icepanel.io/Technology/svg/Mongoose.js.svg" },
       { name: 'Firebase', image: FirebaseIcon },
+      { name: 'REST APIs', icon: TbApi },
     ],
   },
   {
     title: 'Database',
     summary: 'Structured data, realtime services, and project-ready persistence.',
     skills: [
+      { name: 'MongoDB', image: "https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" },
+      { name: 'Supabase', image: "https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg" },
+      { name: 'MySQL', image: "https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" },
       { name: 'Firebase DB', image: FirebaseIcon },
-      { name: 'MongoDB', icon: SiMongodb },
     ],
   },
   {
@@ -58,10 +68,14 @@ const skillGroups = [
       { name: 'Figma', image: FigmaIcon },
       { name: 'VS Code', image: VsCodeIcon },
       { name: 'GitHub', image: GithubIcon },
+      { name: 'Npm', image: "https://www.vectorlogo.zone/logos/npmjs/npmjs-icon.svg" },
       { name: 'GSAP', image: GsapIcon },
       { name: 'AOS', image: AosIcon },
       { name: 'Framer Motion', icon: TbBrandFramerMotion },
       { name: 'Vercel', icon: SiVercel },
+      { name: 'Netlify', icon: BiLogoNetlify },
+      { name: 'Render', icon: SiRender },
+      { name: 'Railway', icon: SiRailway },
     ],
   },
 ]

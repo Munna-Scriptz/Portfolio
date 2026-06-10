@@ -8,33 +8,55 @@ const Cursor = () => {
   useEffect(() => {
     const big = bigRef.current;
     const dot = dotRef.current;
-    const hoverEls = document.querySelectorAll(".hover-this");
-    const brownEls = document.querySelectorAll(".hover-brown");
-    const links = document.querySelectorAll("a");
+
+    if (!big || !dot || typeof window === "undefined") return undefined;
+
+    const supportsFinePointer =
+      window.matchMedia && window.matchMedia("(pointer: fine)").matches;
+
+    if (!supportsFinePointer) {
+      document.body.style.cursor = "";
+      return undefined;
+    }
+
+    const hoverSelector = ".hover-this";
+    const brownSelector = ".hover-brown";
+    const interactiveSelector =
+      "a, button, [role='button'], input, textarea, select, summary";
+
+    let isVisible = true;
+    let hideTimer = null;
+
+    const setVisible = (visible) => {
+      isVisible = visible;
+      big.style.opacity = visible ? "1" : "0";
+      dot.style.opacity = visible ? "1" : "0";
+      document.body.style.cursor = visible ? "none" : "";
+    };
 
     const moveCursor = (e) => {
-      // 👇 Small dot moves fast (tight follow)
+      if (!isVisible) return;
+
       gsap.to(dot, {
-        duration: 0.1,
+        duration: 0.08,
         x: e.clientX,
         y: e.clientY,
-        ease: "power3.out",
+        ease: "power2.out",
       });
 
-      // 👇 Big circle lags slightly behind
       gsap.to(big, {
-        duration: 0.3,
+        duration: 0.22,
         x: e.clientX,
         y: e.clientY,
-        ease: "power3.out",
+        ease: "power2.out",
       });
     };
 
     const handleMouseEnter = () => {
       gsap.to(big, {
-        duration: 0.3,
+        duration: 0.2,
         scale: 2,
-        ease: "power3.out",
+        ease: "power2.out",
         mixBlendMode: "difference",
         background: "white",
       });
@@ -42,9 +64,9 @@ const Cursor = () => {
 
     const handleMouseLeave = () => {
       gsap.to(big, {
-        duration: 0.3,
+        duration: 0.2,
         scale: 1,
-        ease: "power3.out",
+        ease: "power2.out",
         mixBlendMode: "normal",
         background: "transparent",
       });
@@ -52,9 +74,9 @@ const Cursor = () => {
 
     const handleBrownEnter = () => {
       gsap.to(big, {
-        duration: 0.3,
+        duration: 0.2,
         scale: 1.5,
-        ease: "power3.out",
+        ease: "power2.out",
         borderColor: "#BF4A1A",
         background: "transparent",
       });
@@ -62,94 +84,96 @@ const Cursor = () => {
 
     const handleBrownLeave = () => {
       gsap.to(big, {
-        duration: 0.3,
+        duration: 0.2,
         scale: 1,
-        ease: "power3.out",
+        ease: "power2.out",
         borderColor: "#adadace3",
         background: "transparent",
       });
     };
 
     const handleMouseDown = () => {
-      gsap.to(big, { scale: 0.7, duration: 0.15, ease: "power3.out" });
-      gsap.to(dot, { scale: 0.5, duration: 0.1 });
+      gsap.to(big, { scale: 0.72, duration: 0.12, ease: "power2.out" });
+      gsap.to(dot, { scale: 0.5, duration: 0.08, ease: "power2.out" });
     };
 
     const handleMouseUp = () => {
-      gsap.to(big, { scale: 1, duration: 0.25, ease: "power3.out" });
-      gsap.to(dot, { scale: 1, duration: 0.2 });
+      gsap.to(big, { scale: 1, duration: 0.18, ease: "power2.out" });
+      gsap.to(dot, { scale: 1, duration: 0.12, ease: "power2.out" });
     };
 
-    const handleLinkClick = () => {
-      document.body.style.cursor = "default";
-      big.style.opacity = "0";
-      dot.style.opacity = "0";
-
-      setTimeout(() => {
-        document.body.style.cursor = "none";
-        big.style.opacity = "1";
-        dot.style.opacity = "1";
-      }, 600);
+    const handlePointerOver = (e) => {
+      if (e.target?.closest?.(hoverSelector)) handleMouseEnter();
+      if (e.target?.closest?.(brownSelector)) handleBrownEnter();
     };
 
-    hoverEls.forEach((el) => {
-      el.addEventListener("mouseenter", handleMouseEnter);
-      el.addEventListener("mouseleave", handleMouseLeave);
-    });
+    const handlePointerOut = (e) => {
+      if (e.target?.closest?.(hoverSelector)) handleMouseLeave();
+      if (e.target?.closest?.(brownSelector)) handleBrownLeave();
+    };
 
-    brownEls.forEach((el) => {
-      el.addEventListener("mouseenter", handleBrownEnter);
-      el.addEventListener("mouseleave", handleBrownLeave);
-    });
+    const handleFocusIn = (e) => {
+      if (e.target?.closest?.(interactiveSelector)) setVisible(true);
+    };
 
-    links.forEach((link) => {
-      link.addEventListener("click", handleLinkClick);
-    });
+    const restoreAfterBlur = () => {
+      setVisible(false);
+      clearTimeout(hideTimer);
+      hideTimer = window.setTimeout(() => setVisible(true), 220);
+    };
 
     window.addEventListener("mousemove", moveCursor);
     window.addEventListener("mousedown", handleMouseDown);
     window.addEventListener("mouseup", handleMouseUp);
+    window.addEventListener("pointerover", handlePointerOver);
+    window.addEventListener("pointerout", handlePointerOut);
+    window.addEventListener("focusin", handleFocusIn);
+    window.addEventListener("blur", restoreAfterBlur);
 
-    window.addEventListener("pageshow", () => {
-      document.body.style.cursor = "none";
-      big.style.opacity = "1";
-      dot.style.opacity = "1";
-    });
+    setVisible(true);
 
     return () => {
+      clearTimeout(hideTimer);
       window.removeEventListener("mousemove", moveCursor);
       window.removeEventListener("mousedown", handleMouseDown);
       window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("pointerover", handlePointerOver);
+      window.removeEventListener("pointerout", handlePointerOut);
+      window.removeEventListener("focusin", handleFocusIn);
+      window.removeEventListener("blur", restoreAfterBlur);
+      document.body.style.cursor = "";
+      big.style.opacity = "";
+      dot.style.opacity = "";
     };
   }, []);
 
   return (
     <>
-      {/* 🔵 Big lagging circle */}
       <div
         ref={bigRef}
-        className="fixed md:inline-block hidden pointer-events-none rounded-full bg-transparent border border-[#222831a8] z-[9999] transition-transform duration-300 ease-out"
+        aria-hidden="true"
+        className="fixed md:inline-block hidden pointer-events-none rounded-full bg-transparent border border-[#222831a8] z-[9999] will-change-transform transition-transform duration-200 ease-out"
         style={{
           width: 40,
           height: 40,
           transform: "translate(-50%, -50%) scale(1)",
+          opacity: 1,
         }}
-      ></div>
+      />
 
-      {/* ⚪ Fast chasing dot */}
       <div
         ref={dotRef}
-        className="fixed md:inline-block hidden pointer-events-none z-[10000] rounded-full bg-[#BF4A1A]"
+        aria-hidden="true"
+        className="fixed md:inline-block hidden pointer-events-none z-[10000] rounded-full bg-[#BF4A1A] will-change-transform"
         style={{
           width: 7,
           height: 7,
           transform: "translate(-50%, -50%)",
+          opacity: 1,
         }}
-      ></div>
+      />
     </>
   );
 };
 
 export default Cursor;
-
-

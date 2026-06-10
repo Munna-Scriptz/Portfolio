@@ -15,6 +15,10 @@ const Banner = () => {
   return (
     <>
       <section id="Banner" className='pt-8 lg:pt-16 overflow-hidden lg:pb-16 pb-0'>
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute left-[-8%] md:top-20 top-0 h-72 w-72 rounded-full bg-[#BF4A1A]/10 blur-3xl" />
+          <div className="absolute right-[-5%] top-24 h-80 w-80 rounded-full bg-[#222831]/5 blur-3xl" />
+        </div>
         <div className="container">
           <div className='flex justify-between items-start md:flex-nowrap flex-wrap gap-10 lg:gap-0'>
             <div className="bannerText" >
@@ -43,7 +47,7 @@ const Banner = () => {
               <div className='mt-6 flex items-center gap-3'>
                 <Magnet padding={10} disabled={false} magnetStrength={5}>
                   <div data-aos="fade-right" data-aos-duration="2600" data-aos-delay="3000" data-aos-easing="ease-in-sine">
-                    <Link to={'/contact'}  className='ContactButton transition-trigger transition-link px-[24px] py-[8px] font-poppins font-medium lg:text-base text-sm text-Primary hover-this'>CONTACT</Link>
+                    <Link to={'/contact'} className='ContactButton transition-trigger transition-link px-[24px] py-[8px] font-poppins font-medium lg:text-base text-sm text-Primary hover-this'>CONTACT</Link>
                   </div>
                 </Magnet>
                 <Magnet padding={10} disabled={false} magnetStrength={5}>
@@ -76,7 +80,7 @@ const Banner = () => {
                 </Magnet>
                 <Magnet padding={20} disabled={false} magnetStrength={2}>
                   <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="2000" data-aos-easing="ease-in-sine" data-aos-offset="30">
-                    <a target='_blank' href='https://www.linkedin.com/in/munna-scriptz-25287635b/' aria-label="Visit my Linkedin profile"><FaLinkedinIn className='text-[18px] hover-brown'/></a>
+                    <a target='_blank' href='https://www.linkedin.com/in/munna-scriptz-25287635b/' aria-label="Visit my Linkedin profile"><FaLinkedinIn className='text-[18px] hover-brown' /></a>
                   </div>
                 </Magnet>
               </div>

@@ -20,7 +20,7 @@ export const LetsWorkTogether = () => {
       <div className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(191,74,26,0.28),transparent_28%),linear-gradient(135deg,rgba(229,227,220,0.08),transparent_34%)]'></div>
       <div className='pointer-events-none absolute inset-5 rounded-[30px] md:border md:border-brand/10'></div>
 
-      <div className='pointer-events-none absolute left-1/2 top-10 hidden w-[130vw] -translate-x-1/2 rotate-[7deg] border-y border-brand/10 bg-brand/[0.08] py-3 md:block'>
+      <div className='pointer-events-none absolute left-1/2 top-10 w-[130vw] -translate-x-1/2 rotate-[7deg] border-y border-brand/10 bg-brand/[0.08] py-3 block'>
         <div className='flex whitespace-nowrap font-soldier text-[44px] font-semibold uppercase leading-none text-brand/45 [animation:a-text-scroll_34s_linear_infinite]'>
           <span className='px-5'>Let's work together / Creative front-end / Better interfaces /</span>
           <span className='px-5'>Let's work together / Creative front-end / Better interfaces /</span>
@@ -28,7 +28,7 @@ export const LetsWorkTogether = () => {
         </div>
       </div>
 
-      <div className='pointer-events-none absolute bottom-14 left-1/2 hidden w-[130vw] -translate-x-1/2 -rotate-[6deg] border-y border-coffee/25 bg-coffee/12 py-3 md:block'>
+      <div className='pointer-events-none absolute bottom-14 left-1/2 w-[130vw] -translate-x-1/2 -rotate-[6deg] border-y border-coffee/25 bg-coffee/12 py-3 block'>
         <div className='flex whitespace-nowrap font-soldier text-[44px] font-semibold uppercase leading-none text-coffee/70 [animation:b-text-scroll_38s_linear_infinite]'>
           <span className='px-5'>Available for projects / Portfolio sites / Web apps / Landing pages /</span>
           <span className='px-5'>Available for projects / Portfolio sites / Web apps / Landing pages /</span>

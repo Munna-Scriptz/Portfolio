@@ -31,9 +31,6 @@ const projectSchema = new mongoose.Schema({
     type: {
         type: String
     },
-    badge: {
-        type: String
-    },
     scrollPreview: {
         type: Boolean,
         default: false

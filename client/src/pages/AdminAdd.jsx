@@ -10,7 +10,6 @@ const initialForm = {
   liveLink: "",
   githubRepo: "",
   type: "",
-  badge: "",
   technologyInput: "",
   isFeatured: true,
   scrollPreview: false,
@@ -154,7 +153,7 @@ const AdminAdd = () => {
     if (technologies.length === 0) nextErrors.technologies = "Add at least one technology";
     return nextErrors;
   };
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     const nextErrors = validate();
@@ -171,7 +170,6 @@ const AdminAdd = () => {
     payload.append("liveLink", form.liveLink.trim());
     payload.append("githubRepo", form.githubRepo.trim());
     payload.append("type", form.type.trim());
-    payload.append("badge", form.badge.trim());
     payload.append("isFeatured", String(form.isFeatured));
     payload.append("scrollPreview", String(form.scrollPreview));
     payload.append("technologies", JSON.stringify(technologies));
@@ -277,19 +275,6 @@ const AdminAdd = () => {
                   value={form.githubRepo}
                   onChange={handleInputChange}
                   placeholder="https://github.com/user/repo"
-                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none focus:border-red-500"
-                />
-              </div>
-            </div>
-
-            <div className="grid gap-4 md:grid-cols-2">
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-700">Badge</label>
-                <input
-                  name="badge"
-                  value={form.badge}
-                  onChange={handleInputChange}
-                  placeholder="Featured"
                   className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none focus:border-red-500"
                 />
               </div>

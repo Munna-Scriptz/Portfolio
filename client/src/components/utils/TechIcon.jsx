@@ -5,7 +5,6 @@ import { MdOutlineAnimation } from "react-icons/md";
 import nextJsIcon from "../../assets/images/NextJsIcon.svg";
 import ReactIcon from "../../assets/images/react.svg";
 import TailwindIcon from "../../assets/images/TailwindCssIcon.svg";
-import ReduxIcon from "../../assets/images/ReduxIcon.svg";
 import FigmaIcon from "../../assets/images/FigmaIcon.svg";
 import FirebaseIcon from "../../assets/images/FirebaseIcon.svg";
 import HtmlIcon from "../../assets/images/HtmlIcon.svg";
@@ -13,6 +12,10 @@ import CssIcon from "../../assets/images/CssIcon.svg";
 import BootstrapIcon from "../../assets/images/BootStrapIcon.svg";
 import GithubIcon from "../../assets/images/GithubIcon.svg";
 import AosIcon from "../../assets/images/AosIcon.png";
+import reduxIcon from "../../assets/images/ReduxIcon.svg";
+import reactRouterIcon from "../../assets/icons/reactRouter.svg";
+import apiIcon from "../../assets/icons/apiIcon.svg";
+import restApi from "../../assets/icons/restApiI.svg";
 
 const iconClass = "h-full w-full object-contain";
 
@@ -24,9 +27,11 @@ const iconMap = {
   typescript: { type: "icon", node: SiTypescript, color: "#3178C6" },
   html: { type: "asset", src: HtmlIcon, alt: "HTML" },
   css: { type: "asset", src: CssIcon, alt: "CSS" },
-  redux: { type: "asset", src: ReduxIcon, alt: "Redux" },
+  redux: { type: "asset", src: reduxIcon, alt: "Redux" },
   zustand: { type: "icon", node: FaUserShield, color: "#ff7a00" },
   figma: { type: "asset", src: FigmaIcon, alt: "Figma" },
+  api: { type: "asset", src: apiIcon, alt: "Api" },
+  "rest api": { type: "asset", src: restApi, alt: "Rest-Api" },
   firebase: { type: "asset", src: FirebaseIcon, alt: "Firebase" },
   mongodb: { type: "icon", node: SiMongodb, color: "#47A248" },
   postgresql: { type: "icon", node: SiPrisma, color: "#0EA5E9" },
@@ -36,6 +41,7 @@ const iconMap = {
   jwt: { type: "icon", node: SiJsonwebtokens, color: "#f97316" },
   cloudinary: { type: "icon", node: SiCloudinary, color: "#0f52ba" },
   "socket.io": { type: "icon", node: SiSocketdotio, color: "#111827" },
+  "react-router": { type: "asset", src: reactRouterIcon, alt: "React-Router" },
   axios: { type: "icon", node: SiAxios, color: "#5A29E4" },
   stripe: { type: "icon", node: SiStripe, color: "#635BFF" },
   express: { type: "icon", node: SiExpress, color: "#000000" },
@@ -56,7 +62,6 @@ const inferTechFromAsset = (tech) => {
   if (typeof tech !== "string") return "";
   const lower = tech.toLowerCase();
   if (lower.includes("nextjsicon")) return "nextjs";
-  if (lower.includes("react")) return "react";
   if (lower.includes("tailwind")) return "tailwind";
   if (lower.includes("redux")) return "redux";
   if (lower.includes("figma")) return "figma";

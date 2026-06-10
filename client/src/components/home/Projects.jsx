@@ -1,9 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ScrollFloat from '../effects/ScrollFloat';
-import ProjectsShow from './ProjectsShow';
 import { FiArrowUpRight } from 'react-icons/fi';
+import { api } from '../../api';
+import ProjectCard from '../Projects/ProjectCard';
 
 const Projects = () => {
+  const [projects, setProjects] = useState([])
+
+  useEffect(() => {
+    let active = true
+
+    const fetchFeaturedProjects = async () => {
+      try {
+        const res = await api.get('/projects/featured', {
+          params: { limit: 10 },
+        })
+        const data = res?.data?.data || res?.data || []
+        if (active) setProjects(Array.isArray(data) ? data : [])
+      } catch (error) {
+        if (active) setProjects([])
+      }
+    }
+
+    fetchFeaturedProjects()
+
+    return () => {
+      active = false
+    }
+  }, [])
   return (
     <>
       <section id="Projects" className='lg:mt-70 mt-60 overflow-hidden'>
@@ -25,7 +49,20 @@ const Projects = () => {
               <FiArrowUpRight className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
           </div>
-          <ProjectsShow />
+
+          {/* ============= Projects ============ */}
+          <div className='flex flex-col gap-10 '>
+            {
+              projects.map((items, i) => (
+                <ProjectCard
+                  key={i}
+                  scrollPreview={items.scrollPreview}
+                  project={items}
+                  index={i}
+                />
+              ))
+            }
+          </div>
         </div>
 
       </section>

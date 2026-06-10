@@ -137,7 +137,7 @@ const AllProjects = () => {
                         {projects.length > 0 ? (
                             <div className='flex flex-col gap-10'>
                                 {projects.map((project, index) => (
-                                    <ProjectCard key={`${project.ProjectName}-${index}`} project={project} scrollPreview={project.scrollPreview} index={index} />
+                                    <ProjectCard key={index} project={project} scrollPreview={project.scrollPreview} index={index} />
                                 ))}
                             </div>
                         ) : (

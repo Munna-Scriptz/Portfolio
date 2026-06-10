@@ -73,9 +73,9 @@ const ProjectCard = ({
             <img src={project.thumbnail} alt={`${project.title} preview`} />
           </div>
         ) : (
-          <div className="aspect-[16/11] overflow-hidden rounded-[20px] border border-Primary/10 bg-white">
+          <div className="md:w-[650px] w-auto h-full overflow-hidden rounded-[20px] border border-Primary/10 bg-white">
             <img
-              className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+              className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.04]"
               src={project.thumbnail}
               alt={`${project.title} preview`}
               loading="lazy"

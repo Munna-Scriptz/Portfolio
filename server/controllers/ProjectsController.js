@@ -5,7 +5,7 @@ const resHandler = require("../utils/resHandler")
 // =============== Add Project ==================
 const addProject = async (req, res) => {
     try {
-        const { title, category, description, liveLink, githubRepo, type, badge, isFeatured } = req.body
+        const { title, category, description, liveLink, githubRepo, type, isFeatured, scrollPreview } = req.body
         let technologies = [];
         const thumbnail = req.file
         if (req.body.technologies) technologies = JSON.parse(req.body.technologies);
@@ -29,8 +29,8 @@ const addProject = async (req, res) => {
             technologies,
             type,
             thumbnail: thumbRes.secure_url,
-            badge,
             isFeatured: isFeatured === true || isFeatured === "true",
+            scrollPreview: scrollPreview === true || scrollPreview === "true"
         })
 
         // ------------ Success 

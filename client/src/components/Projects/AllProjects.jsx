@@ -1,31 +1,77 @@
-import React, { useState } from 'react'
-import { FaRegStar } from 'react-icons/fa'
+import React, { useEffect, useMemo, useState } from 'react'
 import { FiGrid, FiLayers } from 'react-icons/fi'
-import nextIcon from '../../assets/images/NextJsIcon.svg'
-import ReactIcon from '../../assets/images/react.svg'
-import JsIcon from '../../assets/images/JsIcon.jpg'
-import HtmlIcon from '../../assets/images/HtmlIcon.svg'
-import JsProjects from './JsProjects'
-import ReactProjects from './ReactProjects'
-import HtmlCssProjects from './HtmlCssProjects'
-import NextProject from './NextProject'
+import { api, categoryServices } from '../../api'
+import ProjectCard from './ProjectCard'
+
+const normalizeProject = (project) => ({
+    ProjectImage: project.thumbnail,
+    ProjectName: project.title,
+    Description: project.description,
+    technologies: project.technologies || [],
+    type: project.type || project.badge || 'Project',
+    liveLink: project.liveLink,
+    GithubRepo: project.githubRepo,
+})
+
 
 const AllProjects = () => {
-    const [reactLe, setReactLe] = useState(0)
-    const [nextLe, setNextLe] = useState(0)
-    const [jsLe, setJsLe] = useState(0)
-    const [htmlLe, setHtmlLe] = useState(0)
-    const [selected, setSelected] = useState('top')
+    const [categories, setCategories] = useState([])
+    const [projects, setProjects] = useState([])
+    const [selected, setSelected] = useState('6a2823ca63bc33c979653720')
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState('')
 
-    const totalProjects = nextLe + reactLe + jsLe + htmlLe
+    useEffect(() => {
+        let active = true
 
-    const selectProjectBtn = [
-        { id: 'top', label: 'Top Projects', count: nextLe + reactLe, icon: <FaRegStar /> },
-        { id: 'next', label: 'Next.js', count: nextLe, icon: <img className="size-5 rounded-full" src={nextIcon} alt="Next.js" /> },
-        { id: 'react', label: 'React', count: reactLe, icon: <img className="size-5" src={ReactIcon} alt="React" /> },
-        { id: 'js', label: 'JavaScript', count: jsLe, icon: <img className="size-5 rounded-full" src={JsIcon} alt="JavaScript" /> },
-        { id: 'html', label: 'HTML/CSS', count: htmlLe, icon: <img className="size-5" src={HtmlIcon} alt="HTML" /> },
-    ]
+        const fetchProjects = async () => {
+            try {
+                setLoading(true)
+                setError('')
+
+                const [categoryRes, projectRes] = await Promise.all([
+                    categoryServices.getCategories(),
+                    api.get(`/projects`, {
+                        params: {
+                            limit: 1000,
+                            category: selected,
+                        },
+                    }),
+                ])
+                const categoryData = categoryRes?.data || categoryRes || []
+                const projectData = projectRes?.data?.data?.projects || []
+
+                if (!active) return
+
+                setCategories(categoryData)
+                setProjects(projectData)
+            } catch (err) {
+                if (!active) return
+                setError(err.message || 'Failed to load projects')
+            } finally {
+                if (active) setLoading(false)
+            }
+        }
+
+        fetchProjects()
+
+        return () => {
+            active = false
+        }
+    }, [selected])
+
+    const totalProjects = projects.length
+
+    const categoryButtons = useMemo(() => {
+        return categories.map((category) => ({
+            id: String(category._id),
+            label: category.name,
+            count: category.totalProjects || 0,
+            icon: <FiLayers aria-hidden="true" />,
+        })).reverse()
+    }, [categories, totalProjects])
+
+    const visibleProjects = projects.map(normalizeProject)
 
     return (
         <section className='my-[112px] overflow-hidden'>
@@ -41,7 +87,7 @@ const AllProjects = () => {
                                 Project & works
                             </h2>
                             <p className="mt-4 md:mt-5 max-w-2xl font-poppins text-sm md:leading-7 leadin-6 text-Primary/70 md:text-base">
-                                Browse production-style builds, landing pages, apps, and JavaScript experiments with clear previews, tools, and direct project links.
+                                Browse live projects grouped by category directly from the server.
                             </p>
                         </div>
                         <div className="grid grid-cols-2 gap-3 sm:flex">
@@ -50,8 +96,8 @@ const AllProjects = () => {
                                 <span className="mt-1 block font-poppins text-xs font-semibold uppercase text-Primary/60">Projects</span>
                             </div>
                             <div className="rounded-2xl border border-Primary/10 bg-white/45 px-5 py-4">
-                                <strong className="block font-soldier text-4xl leading-none text-Primary">4</strong>
-                                <span className="mt-1 block font-poppins text-xs font-semibold uppercase text-Primary/60">Stacks</span>
+                                <strong className="block font-soldier text-4xl leading-none text-Primary">{categories.length || '--'}</strong>
+                                <span className="mt-1 block font-poppins text-xs font-semibold uppercase text-Primary/60">Categories</span>
                             </div>
                         </div>
                     </div>
@@ -64,7 +110,7 @@ const AllProjects = () => {
                                 scrollbarColor: "rgba(156,163,175,.5) transparent",
                                 msOverflowStyle: "none",
                             }}>
-                            {selectProjectBtn.map((btn) => (
+                            {categoryButtons.map((btn) => (
                                 <button
                                     key={btn.id}
                                     onClick={() => setSelected(btn.id)}
@@ -84,32 +130,35 @@ const AllProjects = () => {
                     </div>
                 </div>
 
-                <div id='Projects-Cards-Row' className={`mt-[80px] ${selected === 'top' ? 'block' : 'hidden'}`}>
-                    <NextProject proLength={(len) => setNextLe(len)} />
-                    <div className='my-20 flex items-center gap-4'>
-                        <span className="flex size-11 items-center justify-center rounded-full bg-Primary text-brand">
-                            <FiGrid aria-hidden="true" />
-                        </span>
-                        <div className='h-px flex-1 bg-Primary/20'></div>
+                {loading ? (
+                    <div className="mt-[80px] rounded-[28px] border border-Primary/10 bg-white/50 p-8 font-poppins text-sm text-Primary/70">
+                        Loading projects...
                     </div>
-                    <ReactProjects proLength={(len) => setReactLe(len)} />
-                </div>
-
-                <div className={`${selected === 'next' ? 'block' : 'hidden'}`}>
-                    <NextProject />
-                </div>
-
-                <div className={`${selected === 'react' ? 'block' : 'hidden'}`}>
-                    <ReactProjects />
-                </div>
-
-                <div className={`${selected === 'js' ? 'block' : 'hidden'}`}>
-                    <JsProjects proLength={(len) => setJsLe(len)} />
-                </div>
-
-                <div className={`${selected === 'html' ? 'block' : 'hidden'}`}>
-                    <HtmlCssProjects proLength={(len) => setHtmlLe(len)} />
-                </div>
+                ) : error ? (
+                    <div className="mt-[80px] rounded-[28px] border border-red-200 bg-red-50 p-8 font-poppins text-sm text-red-700">
+                        {error}
+                    </div>
+                ) : (
+                    <div id='Projects-Cards-Row' className="mt-[80px]">
+                        <div className='mb-20 flex items-center gap-4'>
+                            <span className="flex size-11 items-center justify-center rounded-full bg-Primary text-brand">
+                                <FiGrid aria-hidden="true" />
+                            </span>
+                            <div className='h-px flex-1 bg-Primary/20'></div>
+                        </div>
+                        {visibleProjects.length > 0 ? (
+                            <div className='flex flex-col gap-10'>
+                                {visibleProjects.map((project, index) => (
+                                    <ProjectCard key={`${project.ProjectName}-${index}`} project={project} index={index} />
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="rounded-[28px] border border-Primary/10 bg-white/50 p-8 font-poppins text-sm text-Primary/70">
+                                No projects found in this category.
+                            </div>
+                        )}
+                    </div>
+                )}
             </div>
         </section>
     )

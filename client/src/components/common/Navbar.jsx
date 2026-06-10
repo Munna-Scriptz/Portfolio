@@ -30,9 +30,9 @@ export const Navbar = () => {
             {/* ----Button---- */}
             <Magnet magnetStrength={2} padding={20}>
               <div className="magnetic-btn" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="2200" data-aos-easing="ease-in-sine">
-                <Link aria-label="Contact Munna Scriptz" to={'/contact'} className='group inline-flex min-h-12 items-center gap-3 rounded-full border border-Primary/15 px-5 font-poppins text-sm font-semibold uppercase text-Primary transition-trigger transition-link duration-300 hover-this hover:border-coffee hover:bg-coffee'>
+                <Link aria-label="Contact Munna Scriptz" to={'/contact'} className='group inline-flex min-h-12 items-center gap-3 rounded-full border border-Primary/15 px-5 font-poppins text-sm font-semibold uppercase text-Primary hover:text-brand transition-trigger transition-link duration-300 hover-this hover:border-coffee hover:bg-coffee'>
                   Contact
-                  <span className='flex size-7 items-center justify-center rounded-full bg-Primary text-brand transition duration-300 group-hover:rotate-45'>
+                  <span className='flex size-7 items-center justify-center rounded-full group-hover:bg-brand group-hover:text-Primary bg-Primary text-brand transition duration-300 group-hover:rotate-45'>
                     <FiArrowUpRight />
                   </span>
                 </Link>

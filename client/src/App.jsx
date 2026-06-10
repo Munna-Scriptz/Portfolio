@@ -44,11 +44,11 @@ export const App = () => {
   return (
     <>
       <SmoothScroll>
-        <Cursor />
 
-        <PreloaderWrapper>
+        {/* <PreloaderWrapper> */}
+          <Cursor />
           <RouterProvider router={MyRoute} />
-        </PreloaderWrapper>
+        {/* </PreloaderWrapper> */}
 
         <ScrollProgress />
         <Analytics />

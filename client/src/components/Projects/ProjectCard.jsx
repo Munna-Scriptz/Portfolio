@@ -8,21 +8,18 @@ import TechIcon from '../utils/TechIcon'
 const ProjectCard = ({
   project,
   index = 0,
-  layout = 'feature',
   scrollPreview = false,
   primaryAction,
   secondaryAction,
 }) => {
-  const isGrid = layout === 'grid'
-  const isReverse = project.Direction?.includes('reverse')
+  const isReverse = index % 2 === 1
   const technologies = project.technologies?.filter(Boolean) || []
-  const aosDirection = project.AosDir || 'fade-up'
 
   const defaultPrimary = project.liveLink
     ? { label: 'Open project', href: project.liveLink }
     : null
-  const defaultSecondary = project.GithubRepo
-    ? { label: 'GitHub repo', href: project.GithubRepo }
+  const defaultSecondary = project.githubRepo
+    ? { label: 'GitHub repo', href: project.githubRepo }
     : null
 
   const actions = [primaryAction || defaultPrimary, secondaryAction || defaultSecondary].filter(Boolean)
@@ -58,11 +55,11 @@ const ProjectCard = ({
 
   return (
     <article
-      className={`group overflow-hidden rounded-[26px] border border-Primary/10 bg-[#f4f1e8]/80 shadow-[0_22px_70px_rgba(22,22,22,0.08)] transition duration-300 hover:-translate-y-1 hover:border-coffee/30 hover:shadow-[0_30px_90px_rgba(22,22,22,0.14)] ${isGrid ? 'flex h-full flex-col' : 'grid gap-0 lg:grid-cols-2'}`}
+      className="group overflow-hidden rounded-[26px] border border-Primary/10 bg-[#f4f1e8]/80 shadow-[0_22px_70px_rgba(22,22,22,0.08)] transition duration-300 hover:-translate-y-1 hover:border-coffee/30 hover:shadow-[0_30px_90px_rgba(22,22,22,0.14)] flex flex-col lg:flex-row"
     >
       <div
-        className={`relative bg-Primary/5 p-3 ${!isGrid && isReverse ? 'lg:order-2' : ''}`}
-        data-aos={aosDirection}
+        className={`relative bg-Primary/5 p-3 ${isReverse ? 'lg:order-2' : ''}`}
+        data-aos="auto"
         data-aos-offset="180"
         data-aos-easing="ease-in-sine"
       >
@@ -72,15 +69,15 @@ const ProjectCard = ({
         </div>
 
         {scrollPreview ? (
-          <div className="screen min-h-[320px] rounded-[20px] border border-Primary/10 bg-white cursor-none">
-            <img src={project.ProjectImage} alt={`${project.ProjectName} preview`} />
+          <div className="screen min-h-[92%] rounded-[20px] border border-Primary/10 bg-white cursor-none">
+            <img src={project.thumbnail} alt={`${project.title} preview`} />
           </div>
         ) : (
-          <div className={`${isGrid ? 'aspect-[4/3]' : 'aspect-[16/11]'} overflow-hidden rounded-[20px] border border-Primary/10 bg-white`}>
+          <div className="aspect-[16/11] overflow-hidden rounded-[20px] border border-Primary/10 bg-white">
             <img
               className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
-              src={project.ProjectImage}
-              alt={`${project.ProjectName} preview`}
+              src={project.thumbnail}
+              alt={`${project.title} preview`}
               loading="lazy"
             />
           </div>
@@ -93,12 +90,12 @@ const ProjectCard = ({
         )}
       </div>
 
-      <div className={`flex flex-col p-5 md:p-8 ${isGrid ? '' : 'lg:p-10'}`}>
+      <div className="flex flex-col p-5 md:p-8 lg:p-10">
         <div className="mb-5 flex flex-wrap items-center gap-3">
           {project.type && (
             <span className="inline-flex items-center gap-2 rounded-full border border-coffee/20 bg-coffee/10 px-3 py-2 font-poppins text-xs font-bold uppercase text-coffee">
               <BiCategory aria-hidden="true" />
-              {project.type}
+              {project.type || "Project"}
             </span>
           )}
           <span className="inline-flex items-center gap-2 rounded-full border border-Primary/10 bg-white/55 px-3 py-2 font-poppins text-xs font-bold uppercase text-Primary/65">
@@ -107,18 +104,18 @@ const ProjectCard = ({
           </span>
         </div>
 
-        <h3 className={`${isGrid ? 'text-[34px]' : 'text-[30px] md:text-[42px] lg:text-[54px]'} font-soldier font-semibold uppercase leading-[0.9] text-Primary`}>
-          {project.ProjectName}
+        <h3 className="text-[30px] md:text-[42px] lg:text-[54px] font-soldier font-semibold uppercase leading-[0.9] text-Primary">
+          {project.title}
         </h3>
 
-        <p className={`${isGrid ? 'text-sm leading-6' : 'text-sm md:text-base leading-5.5 md:leading-7 lg:text-[17px] lg:leading-8'} mt-5 font-poppins text-Primary/70`}>
-          {project.Description}
+        <p className="mt-5 text-sm md:text-base leading-5.5 md:leading-7 lg:text-[17px] lg:leading-8 font-poppins text-Primary/70">
+          {project.description}
         </p>
 
         <div className="mt-6 flex flex-wrap items-center gap-1.5 md:gap-2">
           {technologies.map((tech, techIndex) => (
             <span
-              key={`${project.ProjectName}-${techIndex}`}
+              key={`${project.title}-${techIndex}`}
               className="flex size-10 items-center justify-center overflow-hidden rounded-full border border-Primary/10 bg-white/70 p-1.5"
             >
               {typeof tech === 'string' && /^https?:\/\//.test(tech)

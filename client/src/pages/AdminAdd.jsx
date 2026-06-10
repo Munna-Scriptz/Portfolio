@@ -13,6 +13,7 @@ const initialForm = {
   badge: "",
   technologyInput: "",
   isFeatured: true,
+  scrollPreview: false,
 };
 
 const technologyOptions = [
@@ -172,6 +173,7 @@ const AdminAdd = () => {
     payload.append("type", form.type.trim());
     payload.append("badge", form.badge.trim());
     payload.append("isFeatured", String(form.isFeatured));
+    payload.append("scrollPreview", String(form.scrollPreview));
     payload.append("technologies", JSON.stringify(technologies));
     payload.append("thumbnail", thumbnail);
 
@@ -291,6 +293,9 @@ const AdminAdd = () => {
                   className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none focus:border-red-500"
                 />
               </div>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2">
 
               <div className="flex flex-col justify-center gap-2">
                 <span className="text-sm font-semibold text-slate-700">Featured</span>
@@ -303,6 +308,20 @@ const AdminAdd = () => {
                     className="h-5 w-5 rounded border-slate-300 text-red-500"
                   />
                   <span className="text-sm text-slate-600">{form.isFeatured ? "Shown in featured projects" : "Hidden from featured projects"}</span>
+                </label>
+              </div>
+
+              <div className="flex flex-col justify-center gap-2">
+                <span className="text-sm font-semibold text-slate-700">Preview</span>
+                <label className="inline-flex cursor-pointer items-center gap-3">
+                  <input
+                    type="checkbox"
+                    name="scrollPreview"
+                    checked={form.scrollPreview}
+                    onChange={handleInputChange}
+                    className="h-5 w-5 rounded border-slate-300 text-red-500"
+                  />
+                  <span className="text-sm text-slate-600">{form.scrollPreview ? "Shown Scroll preview" : "No scroll preview"}</span>
                 </label>
               </div>
             </div>
@@ -366,11 +385,10 @@ const AdminAdd = () => {
                       key={technology}
                       type="button"
                       onClick={() => toggleTechnology(technology)}
-                      className={`rounded-full border px-3 py-2 text-sm font-semibold transition ${
-                        active
-                          ? "border-red-500 bg-red-500 text-white"
-                          : "border-slate-200 bg-slate-50 text-slate-700 hover:border-red-300 hover:text-red-600"
-                      }`}
+                      className={`rounded-full border px-3 py-2 text-sm font-semibold transition ${active
+                        ? "border-red-500 bg-red-500 text-white"
+                        : "border-slate-200 bg-slate-50 text-slate-700 hover:border-red-300 hover:text-red-600"
+                        }`}
                     >
                       {technology}
                     </button>

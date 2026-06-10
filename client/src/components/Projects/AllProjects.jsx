@@ -3,17 +3,6 @@ import { FiGrid, FiLayers } from 'react-icons/fi'
 import { api, categoryServices } from '../../api'
 import ProjectCard from './ProjectCard'
 
-const normalizeProject = (project) => ({
-    ProjectImage: project.thumbnail,
-    ProjectName: project.title,
-    Description: project.description,
-    technologies: project.technologies || [],
-    type: project.type || project.badge || 'Project',
-    liveLink: project.liveLink,
-    GithubRepo: project.githubRepo,
-})
-
-
 const AllProjects = () => {
     const [categories, setCategories] = useState([])
     const [projects, setProjects] = useState([])
@@ -71,7 +60,6 @@ const AllProjects = () => {
         })).reverse()
     }, [categories, totalProjects])
 
-    const visibleProjects = projects.map(normalizeProject)
 
     return (
         <section className='my-[112px] overflow-hidden'>
@@ -146,10 +134,10 @@ const AllProjects = () => {
                             </span>
                             <div className='h-px flex-1 bg-Primary/20'></div>
                         </div>
-                        {visibleProjects.length > 0 ? (
+                        {projects.length > 0 ? (
                             <div className='flex flex-col gap-10'>
-                                {visibleProjects.map((project, index) => (
-                                    <ProjectCard key={`${project.ProjectName}-${index}`} project={project} index={index} />
+                                {projects.map((project, index) => (
+                                    <ProjectCard key={`${project.ProjectName}-${index}`} project={project} scrollPreview={project.scrollPreview} index={index} />
                                 ))}
                             </div>
                         ) : (

@@ -45,10 +45,10 @@ export const App = () => {
     <>
       <SmoothScroll>
 
-        {/* <PreloaderWrapper> */}
+        <PreloaderWrapper>
           <Cursor />
           <RouterProvider router={MyRoute} />
-        {/* </PreloaderWrapper> */}
+        </PreloaderWrapper>
 
         <ScrollProgress />
         <Analytics />

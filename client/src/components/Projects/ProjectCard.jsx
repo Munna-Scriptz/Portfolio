@@ -63,7 +63,7 @@ const ProjectCard = ({
         data-aos-offset="180"
         data-aos-easing="ease-in-sine"
       >
-        <div className="absolute left-6 top-6 z-10 inline-flex items-center gap-2 rounded-full border border-white/20 bg-Primary/80 px-3 py-2 font-poppins text-[11px] font-bold uppercase text-brand backdrop-blur">
+        <div className="absolute left-6 top-6 z-10 inline-flex items-center gap-2 rounded-full border border-white/20 bg-Primary/80 px-3 py-2 font-poppins text-[11px] font-bold uppercase text-brand ">
           <FiCode aria-hidden="true" />
           {String(index + 1).padStart(2, '0')}
         </div>

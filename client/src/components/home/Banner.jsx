@@ -28,12 +28,13 @@ const Banner = () => {
               <div data-aos="fade-right" data-aos-duration="1500" data-aos-delay="2300" data-aos-easing="ease-in-sine">
                 <TypeAnimation
                   sequence={[
-                    // Same substring at the start will only be typed out once, initially
                     `A Frontend Developer.`,
-                    1000, // wait 1s before replacing "Mice" with "Hamsters"
+                    1000,
                     `A Backend Developer.`,
                     1000,
                     `A Fullstack Developer.`,
+                    1000,
+                    `A MERN Stack Developer.`,
                     1000,
                   ]}
                   className='text-[25px] lg:text-[38px] text-second'

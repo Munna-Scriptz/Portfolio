@@ -87,7 +87,7 @@ const getFeatured = async (req, res) => {
         const limit = parseInt(req.query.limit) || 10
 
         // ---------- Find product 
-        const projects = await projectSchema.find({ isFeatured: true }).limit(limit)
+        const projects = await projectSchema.find({ isFeatured: true }).limit(limit).sort({ createdAt: -1 })
         if (!projects) return resHandler.error(res, 404, "No projects available")
 
         // ---------- Success 

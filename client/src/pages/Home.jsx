@@ -1,6 +1,4 @@
 import React, { useRef } from "react";
-
-// Your components...
 import Banner from '../components/home/Banner';
 import Counter from '../components/home/Counter';
 import { LetsWorkTogether } from '../components/home/LetsWorkTogether';

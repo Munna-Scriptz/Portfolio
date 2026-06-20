@@ -17,7 +17,6 @@ const Banner = () => {
       <section id="Banner" className='pt-8 lg:pt-16 overflow-hidden lg:pb-16 pb-0'>
         <div className="pointer-events-none absolute inset-0 -z-10">
           <div className="absolute left-[-8%] md:top-20 top-0 h-72 w-72 rounded-full bg-[#BF4A1A]/10 blur-3xl" />
-          <div className="absolute right-[-5%] top-24 h-80 w-80 rounded-full bg-[#222831]/5 blur-3xl" />
         </div>
         <div className="container">
           <div className='flex justify-between items-start md:flex-nowrap flex-wrap gap-10 lg:gap-0'>

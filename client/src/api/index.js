@@ -46,5 +46,19 @@ const categoryServices = {
     },
 };
 
+const contactServices = {
+    sendContact: async (data) => {
+        const res = await api.post("/contact/send", data);
+        return res.data;
+    },
+    getContacts: async ({ page = 1, limit = 8 } = {}) => {
+        const res = await api.get(`/contact/all?page=${page}&limit=${limit}`);
+        return res.data;
+    },
+    deleteContact: async (id) => {
+        const res = await api.delete(`/contact/delete/${id}`);
+        return res.data;
+    },
+};
 
-export { api, authServices, projectServices, categoryServices };
+export { api, authServices, projectServices, categoryServices, contactServices };

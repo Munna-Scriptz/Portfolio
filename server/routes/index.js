@@ -3,11 +3,13 @@ const router = express.Router()
 const auth = require('./auth')
 const category = require('./category')
 const projects = require('./projects')
+const contact = require('./contact')
 
 // ------------ All routes 
 router.use('/auth', auth)
 router.use('/category', category)
 router.use('/projects', projects)
+router.use('/contact', contact)
 
 
 

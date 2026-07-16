@@ -1,7 +1,7 @@
 import React, { useState } from 'react';;
 import { NavLink } from 'react-router';
 import { FaChartBar, FaUpload } from 'react-icons/fa';
-import { FiMenu, FiSettings, FiShield, FiX } from 'react-icons/fi';
+import { FiMenu, FiMessageSquare, FiSettings, FiShield, FiX } from 'react-icons/fi';
 import { SiHyperskill } from 'react-icons/si';
 
 const AdminNavbar = () => {
@@ -16,6 +16,7 @@ const AdminNavbar = () => {
     const links = [
         { name: "Add Project", to: "/admin", icon: FaUpload },
         { name: "Categories", to: "/admin/category", icon: FaChartBar },
+        { name: "Messages", to: "/admin/messages", icon: FiMessageSquare },
         { name: "Skills", to: "/admin/skills", icon: SiHyperskill },
         { name: "Settings", to: "/admin/settings", icon: FiSettings },
     ];

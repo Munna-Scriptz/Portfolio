@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './App.css'
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router'
 import { LayoutOne } from './layout/LayoutOne'
@@ -17,8 +17,8 @@ import AdminAdd from './pages/AdminAdd'
 import AdminCategory from './pages/AdminCategory'
 import Cursor from './components/Cursor'
 import AdminSkills from './pages/AdminSkills'
-import AdminSettings from './pages/AdminSettings'
 import AdminLogin from './pages/AdminLogin'
+import AdminMessages from './pages/AdminMessages'
 
 export const App = () => {
   // ---------------Routing 
@@ -30,12 +30,14 @@ export const App = () => {
         <Route path='/projects' element={<Projects />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
       </Route>
+
       <Route path='/admin' element={<AdminLayout />}>
         <Route index element={<AdminAdd />}></Route>
         <Route path='category' element={<AdminCategory />}></Route>
         <Route path='skills' element={<AdminSkills />}></Route>
-        <Route path='settings' element={<AdminSettings />}></Route>
+        <Route path='messages' element={<AdminMessages />}></Route>
       </Route>
+
       <Route path='/admin/login' element={<AdminLogin />}></Route>
     </Route>
   ))

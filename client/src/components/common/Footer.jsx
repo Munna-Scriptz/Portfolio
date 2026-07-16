@@ -45,7 +45,6 @@ const Footer = () => {
               <div id='FooterLinks' className='flex md:items-start items-center flex-col gap-3 text-[#3f3f3f] font-poppins font-medium'>
                 <div data-aos="fade-up"><Link to={'/'}>DHAKA, BANGLADESH</Link></div>
                 <div data-aos="fade-up"><Link to={'/'}>munnascriptz@gmail.com</Link></div>
-                {/* <div data-aos="fade-up"><Link to={'/'}>+8801908905391</Link></div> */}
 
                 <div className='mt-3 flex items-center gap-7'>
                   <Magnet padding={20} disabled={false} magnetStrength={2}>

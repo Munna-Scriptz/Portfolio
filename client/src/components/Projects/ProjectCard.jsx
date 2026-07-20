@@ -49,6 +49,7 @@ const ProjectCard = ({
 
   return (
     <article
+      data-aos="fade-up"
       className="group overflow-hidden rounded-[26px] border border-Primary/10 bg-[#f4f1e8]/80 shadow-[0_22px_70px_rgba(22,22,22,0.08)] transition duration-300 hover:-translate-y-1 hover:border-coffee/30 hover:shadow-[0_30px_90px_rgba(22,22,22,0.14)] flex flex-col lg:flex-row"
     >
       <div

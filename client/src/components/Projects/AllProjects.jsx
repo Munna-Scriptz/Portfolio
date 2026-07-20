@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react'
-import { FiGrid, FiLayers } from 'react-icons/fi'
+import { FiAlertCircle, FiGrid, FiLayers } from 'react-icons/fi'
 import { api, categoryServices } from '../../api'
 import ProjectCard from './ProjectCard'
 
@@ -123,23 +123,39 @@ const AllProjects = () => {
 
             <div className="container">
                 {loading ? (
-                    <div className="mt-[80px] rounded-[28px] border border-Primary/10 bg-white/50 p-8 font-poppins text-sm text-Primary/70">
-                        Loading projects...
+                    <div className="mt-[80px] flex flex-col items-center justify-center gap-4 py-10">
+                        <div className="relative size-10">
+                            <span className="absolute inset-0 rounded-full border-2 border-Primary/15"></span>
+                            <span className="absolute inset-0 animate-spin rounded-full border-2 border-transparent border-t-coffee"></span>
+                            <span className="absolute inset-[7px] animate-[spin_0.9s_linear_infinite_reverse] rounded-full border-2 border-transparent border-b-coffee/50"></span>
+                        </div>
+                        <p className="flex items-center gap-1 font-manrope text-xs font-semibold tracking-widest text-Primary/60 uppercase">
+                            Loading projects
+                            <span className="inline-flex gap-0.5">
+                                <span className="size-1 animate-bounce rounded-full bg-coffee [animation-delay:-0.3s]"></span>
+                                <span className="size-1 animate-bounce rounded-full bg-coffee [animation-delay:-0.15s]"></span>
+                                <span className="size-1 animate-bounce rounded-full bg-coffee"></span>
+                            </span>
+                        </p>
                     </div>
                 ) : error ? (
-                    <div className="mt-[80px] rounded-[28px] border border-red-200 bg-red-50 p-8 font-poppins text-sm text-red-700">
-                        {error}
+                    <div className="mt-[80px] flex flex-col items-center justify-center gap-3 py-10 text-center">
+                        <span className="flex size-11 items-center justify-center rounded-full border border-red-500/20 text-red-500">
+                            <FiAlertCircle className="text-xl" aria-hidden="true" />
+                        </span>
+                        <p className="font-manrope text-sm font-bold text-Primary">Something went wrong</p>
+                        <p className="max-w-xs font-poppins text-xs text-Primary/60">{error}</p>
                     </div>
                 ) : (
-                    <div id='Projects-Cards-Row' className="mt-[80px]">
-                        <div className='mb-20 flex items-center gap-4'>
+                    <div id='Projects-Cards-Row' className="mt-10">
+                        <div className='mb-6 flex items-center gap-4'>
                             <span className="flex size-11 items-center justify-center rounded-full bg-Primary text-brand">
                                 <FiGrid aria-hidden="true" />
                             </span>
                             <div className='h-px flex-1 bg-Primary/20'></div>
                         </div>
                         {projects.length > 0 ? (
-                            <div className='flex flex-col gap-10'>
+                            <div className='flex flex-col md:gap-10 gap-6'>
                                 {projects.map((project, index) => (
                                     <ProjectCard key={index} project={project} scrollPreview={project.scrollPreview} index={index} />
                                 ))}

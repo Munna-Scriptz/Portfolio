@@ -15,19 +15,13 @@ const ProjectCard = ({
   const isReverse = index % 2 === 1
   const technologies = project.technologies?.filter(Boolean) || []
 
-  const defaultPrimary = project.liveLink
-    ? { label: 'Open project', href: project.liveLink }
-    : null
-  const defaultSecondary = project.githubRepo
-    ? { label: 'GitHub repo', href: project.githubRepo }
-    : null
+  const defaultPrimary = project.liveLink ? { label: 'Open project', href: project.liveLink } : null
+  const defaultSecondary = project.githubRepo ? { label: 'GitHub repo', href: project.githubRepo } : null
 
   const actions = [primaryAction || defaultPrimary, secondaryAction || defaultSecondary].filter(Boolean)
 
   const renderAction = (action, actionIndex) => {
-    const actionClass = actionIndex === 0
-      ? 'bg-Primary text-brand hover:bg-coffee'
-      : 'border border-Primary/15 bg-white/60 text-Primary hover:border-coffee hover:text-coffee'
+    const actionClass = actionIndex === 0 ? 'bg-Primary text-brand hover:bg-coffee' : 'border border-Primary/15 bg-white/60 text-Primary hover:border-coffee hover:text-coffee'
 
     const content = (
       <>

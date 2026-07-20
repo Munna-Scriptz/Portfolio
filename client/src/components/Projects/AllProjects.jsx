@@ -50,7 +50,7 @@ const AllProjects = () => {
     }, [selected])
 
     const totalProjects = projects.length
-
+    console.log(projects)
     const categoryButtons = useMemo(() => {
         return categories.map((category) => ({
             id: String(category._id),
@@ -62,62 +62,66 @@ const AllProjects = () => {
 
 
     return (
-        <section className='my-[112px] overflow-hidden'>
-            <div className="container">
-                <div id="Projects-Header-Row" className="rounded-[28px] border border-Primary/10 bg-[#f2f0e9]/70 p-5 shadow-[0_24px_70px_rgba(22,22,22,0.08)] md:p-8">
-                    <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
-                        <div className="max-w-3xl">
-                            <span className="inline-flex items-center gap-2 rounded-full border border-coffee/25 bg-coffee/10 px-4 py-2 font-poppins text-xs font-bold uppercase text-coffee">
-                                <FiLayers aria-hidden="true" />
-                                Portfolio archive
-                            </span>
-                            <h2 className='mt-5 text-second font-soldier lg:text-[66px] md:text-[42px] text-3xl font-semibold uppercase' data-aos="fade-up">
-                                Project & works
-                            </h2>
-                            <p className="mt-4 md:mt-5 max-w-2xl font-poppins text-sm md:leading-7 leadin-6 text-Primary/70 md:text-base">
-                                Browse live projects grouped by category directly from the server.
-                            </p>
-                        </div>
-                        <div className="grid grid-cols-2 gap-3 sm:flex">
-                            <div className="rounded-2xl border border-Primary/10 bg-white/45 px-5 py-4">
-                                <strong className="block font-soldier text-4xl leading-none text-Primary">{totalProjects || '--'}</strong>
-                                <span className="mt-1 block font-poppins text-xs font-semibold uppercase text-Primary/60">Projects</span>
-                            </div>
-                            <div className="rounded-2xl border border-Primary/10 bg-white/45 px-5 py-4">
-                                <strong className="block font-soldier text-4xl leading-none text-Primary">{categories.length || '--'}</strong>
-                                <span className="mt-1 block font-poppins text-xs font-semibold uppercase text-Primary/60">Categories</span>
-                            </div>
-                        </div>
+        <section className='mb-20 overflow-hidden'>
+            <div id="Projects-Header-Row" className="max-w-7xl w-full mx-auto rounded-3xl border-0 md:border border-Primary/10 bg-transparent md:bg-[#f2f0e9]/70 p-0 md:p-8 md:shadow-[0_24px_70px_rgba(22,22,22,0.08)]">
+                <div className="md:p-0 p-4 flex flex-col justify-between gap-6 md:gap-8 lg:flex-row lg:items-end">
+                    <div>
+                        <span className="hidden md:inline-flex items-center gap-2 rounded-full border border-coffee/25 bg-coffee/10 px-3.5 py-1.5 md:px-4 md:py-2 font-poppins text-[11px] md:text-xs font-bold uppercase text-coffee">
+                            <FiLayers aria-hidden="true" />
+                            Portfolio archive
+                        </span>
+                        <h2 className='mt-3 md:mt-5 text-second font-soldier lg:text-[66px] md:text-[42px] text-3xl font-semibold uppercase tracking-tight' data-aos="fade-up">
+                            Project & works
+                        </h2>
+                        <p className="mt-2 md:mt-5 max-w-2xl font-poppins text-xs md:text-base leading-relaxed text-Primary/70" data-aos="fade-up">
+                            Browse live projects grouped by category directly from the server.
+                        </p>
                     </div>
 
-                    <div data-aos="fade-up" className='mt-8'>
-                        <div className="flex items-center gap-2 overflow-x-auto rounded-2xl border border-Primary/10 bg-Primary p-2"
-                            style={{
-                                overflow: "auto",
-                                scrollbarWidth: "thin",
-                                scrollbarColor: "rgba(156,163,175,.5) transparent",
-                                msOverflowStyle: "none",
-                            }}>
-                            {categoryButtons.map((btn) => (
-                                <button
-                                    key={btn.id}
-                                    onClick={() => setSelected(btn.id)}
-                                    className={`shrink-0 py-3 px-4 duration-300 flex items-center gap-2 rounded-xl font-manrope text-xs font-bold cursor-pointer ${selected === btn.id
-                                        ? 'bg-coffee text-white shadow-lg shadow-coffee/25'
-                                        : 'bg-brand/10 text-brand/75 hover:bg-brand/20 hover:text-brand'
-                                        }`}
-                                >
-                                    {btn.icon}
-                                    <span>{btn.label}</span>
-                                    <span className={`rounded-full px-2 py-0.5 text-[11px] ${selected === btn.id ? 'bg-white/20' : 'bg-black/15'}`}>
-                                        {btn.count || 0}
-                                    </span>
-                                </button>
-                            ))}
+                    {/* Counter Stats Grid */}
+                    <div className="grid grid-cols-2 gap-2.5 sm:gap-3 sm:flex" data-aos="fade-up">
+                        <div className="rounded-2xl border border-Primary/10 bg-white/60 md:bg-white/45 p-3.5 md:px-5 md:py-4 backdrop-blur-sm">
+                            <strong className="block font-soldier text-3xl md:text-4xl leading-none text-Primary">{totalProjects || '--'}</strong>
+                            <span className="mt-1 block font-poppins text-[10px] md:text-xs font-semibold uppercase text-Primary/60">Projects</span>
+                        </div>
+                        <div className="rounded-2xl border border-Primary/10 bg-white/60 md:bg-white/45 p-3.5 md:px-5 md:py-4 backdrop-blur-sm">
+                            <strong className="block font-soldier text-3xl md:text-4xl leading-none text-Primary">{categories.length || '--'}</strong>
+                            <span className="mt-1 block font-poppins text-[10px] md:text-xs font-semibold uppercase text-Primary/60">Categories</span>
                         </div>
                     </div>
                 </div>
 
+                <div data-aos="fade-up" className='relative mt-2 md:mt-8'>
+                    {/* Fade Overlay */}
+                    <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-6 md:w-8 bg-gradient-to-r from-Primary via-Primary/60 to-transparent rounded-l-2xl" />
+                    <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-8 md:w-12 bg-gradient-to-l from-Primary via-Primary/80 to-transparent rounded-r-2xl" />
+
+                    <div className="flex items-center gap-2 overflow-x-auto md:rounded-2xl rounded-lg border border-Primary/10 bg-Primary p-2" style={{
+                        scrollbarWidth: 'none',
+                        msOverflowStyle: 'none',
+                        WebkitOverflowScrolling: 'touch'
+                    }}>
+                        {categoryButtons.map((btn) => (
+                            <button
+                                key={btn.id}
+                                onClick={() => setSelected(btn.id)}
+                                className={`shrink-0 py-2.5 px-3.5 md:py-3 md:px-4 duration-300 flex items-center gap-2 rounded-xl font-manrope text-xs font-bold cursor-pointer transition-all active:scale-95 ${selected === btn.id
+                                    ? 'bg-coffee text-white shadow-lg shadow-coffee/25'
+                                    : 'bg-brand/10 text-brand/75 hover:bg-brand/20 hover:text-brand'
+                                    }`}
+                            >
+                                {btn.icon}
+                                <span>{btn.label}</span>
+                                <span className={`rounded-full px-2 py-0.5 text-[10px] font-mono ${selected === btn.id ? 'bg-white/20' : 'bg-black/15'}`}>
+                                    {btn.count || 0}
+                                </span>
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            <div className="container">
                 {loading ? (
                     <div className="mt-[80px] rounded-[28px] border border-Primary/10 bg-white/50 p-8 font-poppins text-sm text-Primary/70">
                         Loading projects...

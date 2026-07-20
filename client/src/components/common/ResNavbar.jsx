@@ -29,9 +29,9 @@ export const ResNavbar = () => {
       <nav id='Navbar' className='sticky top-0 z-[90] py-4 lg:hidden'>
         <div id='NavRow' className='container flex items-center justify-between'>
           {/* ------Logo------ */}
-          <Link data-aos="fade-down" data-aos-duration="1500" data-aos-delay="800" data-aos-easing="ease-in-sine" to={'/'} className='z-[70] flex size-12 items-center justify-center rounded-full border border-Primary/10 bg-brand/80 shadow-[0_14px_34px_rgba(22,22,22,0.1)] backdrop-blur-xl transition-trigger transition-link'><img className='w-9' src={ResLogo} alt="Logo" /></Link>
+          <Link data-aos="fade-down" data-aos-duration="500" data-aos-delay="0" data-aos-easing="ease-out-cubic" to={'/'} className='z-[70] flex size-12 items-center justify-center rounded-full border border-Primary/10 bg-brand/80 shadow-[0_14px_34px_rgba(22,22,22,0.1)] backdrop-blur-xl transition-trigger transition-link'><img className='w-9' src={ResLogo} alt="Logo" /></Link>
           {/* ------Nav Menu------ */}
-          <div className='z-[70]' data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1200" data-aos-easing="ease-in-sine">
+          <div className='z-[70]' data-aos="fade-down" data-aos-duration="500" data-aos-delay="150" data-aos-easing="ease-out-cubic">
             <button onClick={() => setIsClosed(!isClosed)} className={`group flex min-h-12 cursor-pointer select-none items-center gap-3 rounded-full border px-4 font-soldier text-xl font-semibold uppercase shadow-[0_14px_34px_rgba(22,22,22,0.1)] backdrop-blur-xl duration-300 ${isClosed ? 'border-Primary/10 bg-brand/80 text-Primary' : 'border-brand/10 bg-Primary text-brand'}`} aria-label={isClosed ? "Open menu" : "Close menu"} aria-expanded={!isClosed}>
               <span>{isClosed ? 'Menu' : 'Close'}</span>
               <span className='relative size-8 rounded-full bg-current/10'>

@@ -15,21 +15,21 @@ export const Navbar = () => {
             {/* ----Logo---- */}
             <Magnet padding={40}>
               <Link to={'/'} className='hover-this transition-link' >
-                <img className='w-[60px] transition-trigger' src={Logo} alt="Logo" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1200" data-aos-easing="ease-in-sine" />
+                <img className='w-[60px] transition-trigger' src={Logo} alt="Logo" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0" data-aos-easing="ease-out-cubic" />
               </Link>
             </Magnet>
             {/* ----NavLinks---- */}
             <div>
               <ul className='font-soldier flex items-center gap-6 text-2xl text-Primary'>
-                <li data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1400" data-aos-easing="ease-in-sine"><Link aria-label="Home" to={'/'} className={`flex items-center NavLinks hover-brown transition-trigger transition-link`}>HOME<LuDot /></Link></li>
-                <li data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1600" data-aos-easing="ease-in-sine"><Link aria-label="About" to={'/about'} className='flex items-center NavLinks hover-brown transition-trigger transition-link'>ABOUT<LuDot /></Link></li>
-                <li data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1800" data-aos-easing="ease-in-sine"><Link aria-label="Projects" to={'/projects'} className='flex items-center NavLinks hover-brown transition-trigger transition-link'>PROJECTS<LuDot /></Link></li>
-                <li data-aos="fade-down" data-aos-duration="1500" data-aos-delay="2000" data-aos-easing="ease-in-sine"><Link aria-label="Contact" to={'/contact'} className='flex items-center NavLinks hover-brown transition-trigger transition-link'>CONTACT<LuDot /></Link></li>
+                <li data-aos="fade-down" data-aos-duration="500" data-aos-delay="100" data-aos-easing="ease-out-cubic"><Link aria-label="Home" to={'/'} className={`flex items-center NavLinks hover-brown transition-trigger transition-link`}>HOME<LuDot /></Link></li>
+                <li data-aos="fade-down" data-aos-duration="500" data-aos-delay="180" data-aos-easing="ease-out-cubic"><Link aria-label="About" to={'/about'} className='flex items-center NavLinks hover-brown transition-trigger transition-link'>ABOUT<LuDot /></Link></li>
+                <li data-aos="fade-down" data-aos-duration="500" data-aos-delay="260" data-aos-easing="ease-out-cubic"><Link aria-label="Projects" to={'/projects'} className='flex items-center NavLinks hover-brown transition-trigger transition-link'>PROJECTS<LuDot /></Link></li>
+                <li data-aos="fade-down" data-aos-duration="500" data-aos-delay="340" data-aos-easing="ease-out-cubic"><Link aria-label="Contact" to={'/contact'} className='flex items-center NavLinks hover-brown transition-trigger transition-link'>CONTACT<LuDot /></Link></li>
               </ul>
             </div>
             {/* ----Button---- */}
             <Magnet magnetStrength={2} padding={20}>
-              <div className="magnetic-btn" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="2200" data-aos-easing="ease-in-sine">
+              <div className="magnetic-btn" data-aos="fade-down" data-aos-duration="500" data-aos-delay="420" data-aos-easing="ease-out-cubic">
                 <Link aria-label="Contact Munna Scriptz" to={'/contact'} className='group inline-flex min-h-12 items-center gap-3 rounded-full border border-Primary/15 px-5 font-poppins text-sm font-semibold uppercase text-Primary hover:text-brand transition-trigger transition-link duration-300 hover-this hover:border-coffee hover:bg-coffee'>
                   Contact
                   <span className='flex size-7 items-center justify-center rounded-full group-hover:bg-brand group-hover:text-Primary bg-Primary text-brand transition duration-300 group-hover:rotate-45'>

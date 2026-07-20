@@ -9,7 +9,6 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import { Analytics } from '@vercel/analytics/react';
 import { ToastContainer } from 'react-toastify'
-import ScrollProgress from './components/effects/ScrollProgress'
 import SmoothScroll from './components/utils/SmoothScroll'
 import PreloaderWrapper from './components/utils/PreloaderWrapper'
 import AdminLayout from './layout/AdminLayout'
@@ -52,7 +51,6 @@ export const App = () => {
           <RouterProvider router={MyRoute} />
         </PreloaderWrapper>
 
-        <ScrollProgress />
         <Analytics />
         <ToastContainer />
 

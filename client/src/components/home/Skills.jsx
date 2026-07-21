@@ -91,35 +91,33 @@ const SkillIcon = ({ skill }) => {
 
 export const Skills = () => {
   return (
-    <section className="skills-section md:pt-20 pt-25">
+    <section className="md:pt-20 pt-25">
       <div className="container">
-        <div className="skills-section__header">
-          <div className="font-poppins text-Primary font-semibold lg:text-2xl text-lg">
-            <ScrollFloat
-              animationDuration={1}
-              ease="back.inOut(2)"
-              scrollStart="center bottom+=80%"
-              scrollEnd="bottom bottom-=80%"
-              stagger={0.03}
-            >
-              MY SKILLS
-            </ScrollFloat>
-          </div>
-          <h2 className="font-soldier text-Primary font-medium lg:text-5xl text-[30px] uppercase">
-            <ScrollFloat
-              animationDuration={1}
-              ease="back.inOut(2)"
-              scrollStart="center bottom+=30%"
-              scrollEnd="bottom bottom-=60%"
-              stagger={0.03}
-            >
-              Technologies & expertise
-            </ScrollFloat>
-          </h2>
+        <div className="font-poppins text-Primary font-semibold lg:text-2xl text-lg text-center">
+          <ScrollFloat
+            animationDuration={1}
+            ease="back.inOut(2)"
+            scrollStart="center bottom+=80%"
+            scrollEnd="bottom bottom-=80%"
+            stagger={0.03}
+          >
+            MY SKILLS
+          </ScrollFloat>
         </div>
+        <h2 className="font-soldier text-Primary font-medium lg:text-5xl text-[30px] uppercase text-center">
+          <ScrollFloat
+            animationDuration={1}
+            ease="back.inOut(2)"
+            scrollStart="center bottom+=30%"
+            scrollEnd="bottom bottom-=60%"
+            stagger={0.03}
+          >
+            Technologies & expertise
+          </ScrollFloat>
+        </h2>
 
-        <div className="skills-layout">
-          <div className="skills-grid">
+        <div className="md:mt-14 mt-8 grid items-stretch gap-6 grid-cols-1 xl:grid-cols-[minmax(0,1fr)_minmax(340px,420px)]">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {skillGroups.map((group) => (
               <article className="skill-group" data-aos="fade-up" key={group.title}>
                 <div className="skill-group__header">

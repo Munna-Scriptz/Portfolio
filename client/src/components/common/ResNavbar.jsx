@@ -66,7 +66,7 @@ export const ResNavbar = () => {
 
                   return (
                     <li key={item.path} className={`transition-all duration-500 ${isClosed ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100'}`} style={{ transitionDelay: isClosed ? '0ms' : `${180 + index * 80}ms` }}>
-                      <Link onClick={() => setIsClosed(true)} className={`group flex min-h-[72px] items-center justify-between rounded-2xl border px-4 font-manrope font-semibold transition-trigger transition-link duration-300 ${isActive ? 'border-Primary bg-Primary text-brand shadow-[0_18px_40px_rgba(22,22,22,0.18)]' : 'border-Primary/10 bg-white/35 text-Primary hover:border-coffee/35 hover:bg-white/60'}`} to={item.path}>
+                      <Link onClick={() => setIsClosed(true)} className={`group flex min-h-[72px] items-center justify-between rounded-2xl border px-4 font-poppins font-semibold transition-trigger transition-link duration-300 ${isActive ? 'border-Primary bg-Primary text-brand shadow-[0_18px_40px_rgba(22,22,22,0.18)]' : 'border-Primary/10 bg-white/35 text-Primary hover:border-coffee/35 hover:bg-white/60'}`} to={item.path}>
                         <span className='flex items-center gap-4'>
                           <span className={`flex size-11 items-center justify-center rounded-full text-xl transition duration-300 ${isActive ? 'bg-brand text-Primary' : 'bg-Primary text-brand group-hover:bg-coffee'}`}>
                             <Icon />

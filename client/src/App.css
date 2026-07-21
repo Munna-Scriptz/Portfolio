@@ -1,7 +1,6 @@
 /* --------Font Family---------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* ---------Common Css--------- */
 html{
@@ -439,33 +438,6 @@ footer{
   color: rgba(229, 227, 220, 0.74);
 }
 
-.skills-section {
-  width: 100%;
-}
-
-.skills-section__header {
-  text-align: center;
-}
-
-.skills-section__header h2 {
-  margin-top: 12px;
-  letter-spacing: 0;
-}
-
-.skills-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(340px, 420px);
-  gap: 24px;
-  align-items: stretch;
-  margin-top: 56px;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
 .skill-group,
 .github-activity {
   border-radius: 18px;
@@ -736,10 +708,6 @@ footer{
     width: 100% !important;
     min-width: 0;
   }
-
-  .skills-layout {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 768px) {
@@ -763,17 +731,12 @@ footer{
     text-align: left;
   }
 
-  .counter-grid,
-  .skills-grid {
+  .counter-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .counter-card {
     min-height: 132px;
-  }
-
-  .skills-layout {
-    margin-top: 36px;
   }
 
   .skill-group__header {
@@ -788,9 +751,6 @@ footer{
 
 @media (max-width: 520px) {
   .counter-grid,
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
 
   .skill-group,
   .github-activity {

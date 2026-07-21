@@ -105,7 +105,7 @@ const AllProjects = () => {
                             <button
                                 key={btn.id}
                                 onClick={() => setSelected(btn.id)}
-                                className={`shrink-0 py-2.5 px-3.5 md:py-3 md:px-4 duration-300 flex items-center gap-2 rounded-xl font-manrope text-xs font-bold cursor-pointer transition-all active:scale-95 ${selected === btn.id
+                                className={`shrink-0 py-2.5 px-3.5 md:py-3 md:px-4 duration-300 flex items-center gap-2 rounded-xl font-poppins text-xs font-bold cursor-pointer transition-all active:scale-95 ${selected === btn.id
                                     ? 'bg-coffee text-white shadow-lg shadow-coffee/25'
                                     : 'bg-brand/10 text-brand/75 hover:bg-brand/20 hover:text-brand'
                                     }`}
@@ -129,7 +129,7 @@ const AllProjects = () => {
                             <span className="absolute inset-0 animate-spin rounded-full border-2 border-transparent border-t-coffee"></span>
                             <span className="absolute inset-[7px] animate-[spin_0.9s_linear_infinite_reverse] rounded-full border-2 border-transparent border-b-coffee/50"></span>
                         </div>
-                        <p className="flex items-center gap-1 font-manrope text-xs font-semibold tracking-widest text-Primary/60 uppercase">
+                        <p className="flex items-center gap-1 font-poppins text-xs font-semibold tracking-widest text-Primary/60 uppercase">
                             Loading projects
                             <span className="inline-flex gap-0.5">
                                 <span className="size-1 animate-bounce rounded-full bg-coffee [animation-delay:-0.3s]"></span>
@@ -143,7 +143,7 @@ const AllProjects = () => {
                         <span className="flex size-11 items-center justify-center rounded-full border border-red-500/20 text-red-500">
                             <FiAlertCircle className="text-xl" aria-hidden="true" />
                         </span>
-                        <p className="font-manrope text-sm font-bold text-Primary">Something went wrong</p>
+                        <p className="font-poppins text-sm font-bold text-Primary">Something went wrong</p>
                         <p className="max-w-xs font-poppins text-xs text-Primary/60">{error}</p>
                     </div>
                 ) : (

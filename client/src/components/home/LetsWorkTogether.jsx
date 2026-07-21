@@ -48,7 +48,7 @@ export const LetsWorkTogether = () => {
               Let's build something sharp.
             </h2>
 
-            <p className='mt-7 max-w-2xl font-poppins text-base font-medium leading-8 text-brand/[0.68] md:text-lg'>
+            <p className='mt-7 max-w-2xl font-poppins text-xs font-medium md:leading-8 text-brand/[0.68] md:text-lg'>
               I design and develop polished front-end experiences with strong layout, practical motion, and a clear path from concept to launch.
             </p>
 
@@ -74,7 +74,7 @@ export const LetsWorkTogether = () => {
             <div className='flex items-start justify-between gap-5 border-b border-brand/10 pb-5'>
               <div>
                 <p className='font-poppins text-xs font-bold uppercase text-coffee'>Project fit</p>
-                <h3 className='mt-2 font-soldier text-5xl font-semibold uppercase leading-none text-brand'>Modern web UI</h3>
+                <h3 className='mt-2 font-soldier md:text-5xl text-3xl font-semibold uppercase leading-none text-brand'>Modern web UI</h3>
               </div>
               <span className='flex size-12 shrink-0 items-center justify-center rounded-full bg-coffee text-xl text-white'>
                 <FiMail />

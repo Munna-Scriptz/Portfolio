@@ -19,9 +19,7 @@ export default function Home() {
   return (
     <div className="w-full">
       <Banner />
-      <Counter />
 
-      {/* The Stack Wrapper */}
       <section className="relative hidden md:block">
         {sections.map((section, index) => (
           <div
@@ -37,7 +35,7 @@ export default function Home() {
         ))}
       </section>
 
-      {/* Mobile Flow - No stacking, just normal scrolling */}
+      {/* Mobile Flow */}
       <section className="md:hidden flex flex-col w-full gap-y-10">
         {sections.map((s, i) => <div key={i} className={s.color}>{s.component}</div>)}
       </section>

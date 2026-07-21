@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BiCategory } from 'react-icons/bi'
 import { FiArrowUpRight, FiCode, FiExternalLink } from 'react-icons/fi'
 import { GrTechnology } from 'react-icons/gr'
@@ -14,6 +14,7 @@ const ProjectCard = ({
 }) => {
   const isReverse = index % 2 === 1
   const technologies = project.technologies?.filter(Boolean) || []
+  const [isExpanded, setIsExpanded] = useState(false)
 
   const defaultPrimary = project.liveLink ? { label: 'Open project', href: project.liveLink } : null
   const defaultSecondary = project.githubRepo ? { label: 'GitHub repo', href: project.githubRepo } : null
@@ -68,9 +69,9 @@ const ProjectCard = ({
             <img src={project.thumbnail} alt={`${project.title} preview`} />
           </div>
         ) : (
-          <div className="md:w-[650px] w-auto h-full overflow-hidden rounded-[20px] border border-Primary/10 bg-white">
+          <div className="w-full md:w-[650px] max-h-[500px] md:h-full h-[200px] overflow-hidden rounded-[20px] border border-Primary/10 bg-white duration-300">
             <img
-              className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.04]"
+              className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
               src={project.thumbnail}
               alt={`${project.title} preview`}
               loading="lazy"
@@ -85,7 +86,7 @@ const ProjectCard = ({
         )}
       </div>
 
-      <div className="flex flex-col p-5 md:p-8 lg:p-10">
+      <div className="flex flex-col p-4 md:p-6">
         <div className="mb-5 flex flex-wrap items-center gap-3">
           {project.type && (
             <span className="inline-flex items-center gap-2 rounded-full border border-coffee/20 bg-coffee/10 px-3 py-2 font-poppins text-xs font-bold uppercase text-coffee">
@@ -103,9 +104,24 @@ const ProjectCard = ({
           {project.title}
         </h3>
 
-        <p className="mt-5 text-sm md:text-base leading-5.5 md:leading-7 lg:text-[17px] lg:leading-8 font-poppins text-Primary/70">
-          {project.description}
-        </p>
+        <div className="mt-5">
+          <p
+            className="text-sm md:text-base leading-5.5 md:leading-7 lg:text-[17px] lg:leading-8 font-poppins text-Primary/70"
+            style={isExpanded ? undefined : { display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
+          >
+            {project.description}
+          </p>
+
+          {project.description && (
+            <button
+              type="button"
+              onClick={() => setIsExpanded((prev) => !prev)}
+              className="mt-2 font-poppins text-sm font-semibold uppercase text-coffee transition hover:text-Primary"
+            >
+              {isExpanded ? 'Less' : 'More'}
+            </button>
+          )}
+        </div>
 
         <div className="mt-6 flex flex-wrap items-center gap-1.5 md:gap-2">
           {technologies.map((tech, techIndex) => (

@@ -6,6 +6,7 @@ import ProjectCard from './ProjectCard'
 const AllProjects = () => {
     const [categories, setCategories] = useState([])
     const [projects, setProjects] = useState([])
+    const [pagination, setPagination] = useState([])
     const [selected, setSelected] = useState('6a2823ca63bc33c979653720')
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState('')
@@ -29,11 +30,13 @@ const AllProjects = () => {
                 ])
                 const categoryData = categoryRes?.data || categoryRes || []
                 const projectData = projectRes?.data?.data?.projects || []
+                const paginationData = projectRes?.data?.data?.pagination || []
 
                 if (!active) return
 
                 setCategories(categoryData)
                 setProjects(projectData)
+                setPagination(paginationData)
             } catch (err) {
                 if (!active) return
                 setError(err.message || 'Failed to load projects')
@@ -50,7 +53,6 @@ const AllProjects = () => {
     }, [selected])
 
     const totalProjects = projects.length
-    console.log(projects)
     const categoryButtons = useMemo(() => {
         return categories.map((category) => ({
             id: String(category._id),
@@ -81,7 +83,7 @@ const AllProjects = () => {
                     {/* Counter Stats Grid */}
                     <div className="grid grid-cols-2 gap-2.5 sm:gap-3 sm:flex" data-aos="fade-up">
                         <div className="rounded-2xl border border-Primary/10 bg-white/60 md:bg-white/45 p-3.5 md:px-5 md:py-4 backdrop-blur-sm">
-                            <strong className="block font-soldier text-3xl md:text-4xl leading-none text-Primary">{totalProjects || '--'}</strong>
+                            <strong className="block font-soldier text-3xl md:text-4xl leading-none text-Primary">{pagination?.total || '--'}</strong>
                             <span className="mt-1 block font-poppins text-[10px] md:text-xs font-semibold uppercase text-Primary/60">Projects</span>
                         </div>
                         <div className="rounded-2xl border border-Primary/10 bg-white/60 md:bg-white/45 p-3.5 md:px-5 md:py-4 backdrop-blur-sm">

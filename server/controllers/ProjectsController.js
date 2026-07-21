@@ -54,7 +54,7 @@ const getAll = async (req, res) => {
         if (category) { filter.category = category; }
 
         // -------- total count
-        const total = await projectSchema.countDocuments(filter);
+        const total = await projectSchema.countDocuments();
 
         // -------- data
         const projects = await projectSchema.find(filter)

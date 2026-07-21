@@ -87,7 +87,7 @@ const Services = () => {
                 key={service.id}
                 data-aos="fade-up"
                 data-aos-delay={index * 80}
-                className='group relative min-h-[330px] overflow-hidden rounded-lg border border-Primary/15 bg-brand/70 p-5 shadow-[0_20px_60px_rgba(22,22,22,0.08)] backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-coffee/50 hover:bg-Primary hover:shadow-[0_28px_80px_rgba(22,22,22,0.22)]'
+                className='group relative min-h-[330px] overflow-hidden rounded-lg border border-Primary/15 bg-brand/70 p-5 shadow-[0_20px_60px_rgba(22,22,22,0.08)] transition-all duration-500 hover:-translate-y-2 hover:border-coffee/50 hover:bg-Primary hover:shadow-[0_28px_80px_rgba(22,22,22,0.22)]'
               >
                 <div className='pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-coffee/60 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100' />
                 <div className='pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full border border-Primary/10 transition-all duration-500 group-hover:scale-125 group-hover:border-brand/10' />

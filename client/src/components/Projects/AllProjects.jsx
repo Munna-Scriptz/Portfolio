@@ -62,7 +62,7 @@ const AllProjects = () => {
 
 
     return (
-        <section className='mb-20 overflow-hidden'>
+        <section id='AllProjects-Section' className='mb-20 overflow-hidden'>
             <div id="Projects-Header-Row" className="max-w-7xl w-full mx-auto rounded-3xl border-0 md:border border-Primary/10 bg-transparent md:bg-[#f2f0e9]/70 p-0 md:p-8 md:shadow-[0_24px_70px_rgba(22,22,22,0.08)]">
                 <div className="md:p-0 p-4 flex flex-col justify-between gap-6 md:gap-8 lg:flex-row lg:items-end">
                     <div>

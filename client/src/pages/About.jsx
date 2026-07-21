@@ -1,23 +1,30 @@
 import React from 'react'
+import PageBanner from '../components/common/PageBanner'
 import AboutText from '../components/About Me/AboutText'
 import Services from '../components/About Me/Services'
 import Review from '../components/About Me/Review'
-import AboutBan from '../components/About Me/AboutBan'
 import ExploreMyWork from '../components/common/ExploreMyWork'
 
 const About = () => {
 
   return (
     <>
-    <section className='my-[122px]'>
-      <AboutBan/>
-      <AboutText/>
-      <Services/>
-      <Review/>
-      <div className='pt-[130px]'>
-        <ExploreMyWork/>
-      </div>
-    </section>
+      <section className='my-20'>
+        <PageBanner
+          id='AboutBanner'
+          kicker='MUNNA SCRIPTZ'
+          kickerMobile="Let's Work Together"
+          title='ABOUT ME'
+          description='A learner, creator, and coder exploring the art of web development'
+          scrollTarget='#AboutMeText'
+        />
+        <AboutText />
+        <Services />
+        <Review />
+        <div className='pt-[130px]'>
+          <ExploreMyWork />
+        </div>
+      </section>
     </>
   )
 }

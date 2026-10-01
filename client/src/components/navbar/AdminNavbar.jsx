@@ -32,7 +32,7 @@ const AdminNavbar = () => {
                     >
                         <FiMenu size={22} />
                     </button>
-                    <span className="text-white font-extrabold tracking-wider text-xs uppercase">Tenshi Wear Admin</span>
+                    <span className="text-white font-extrabold tracking-wider text-xs uppercase">Admin</span>
                 </div>
             </div>
 
